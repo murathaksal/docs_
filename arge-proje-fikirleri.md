@@ -217,6 +217,61 @@ Türkiye özelinde: 5746 sayılı kanun kapsamındaki 1.300+ Ar-Ge/Tasarım Merk
 - **#4 (Bilgi Grafı)** matriste doğrudan pazar puanı düşük görünse de #1, #3, #6 ve #10'un kalitesini belirleyen altyapıdır — kendi geliriyle değil, taşıdığı ürünlerin geliriyle değerlendirilmelidir.
 - **Salt iç veriyle çalışan fikirler** (#1, #2, #4, #6, #7) dış lisans/API riski taşımaz ve Argelog'un birikmiş müşteri verisini hendeğe çevirir; dış veri gerektirenler ise pazar tavanı daha yüksek ama işletim maliyetli ürünlerdir — portföy iki grubu dengelemelidir.
 
+---
+
+## Market-Fit Analizi
+
+Her fikir, Türkiye pazarı özelinde web araştırmasıyla (rakipler, mevzuat sinyalleri, talep kanıtları) ayrı ayrı analiz edildi; skorlar fikirler arası karşılaştırılabilirlik için tek kalemden normalize edildi.
+
+**Skala:** Acı şiddeti — 5: zorunlu/yakıcı ihtiyaç … 1: hoş-olur. PMF riski — 5: talep tamamen varsayımsal … 1: neredeyse garanti talep. *Hiçbir fikir acıda 5 almadı; her acı bugün danışman + Excel + genel LLM üçlüsüyle "yeterince iyi" gideriliyor — bu, tüm portföyün ortak gerçeğidir.*
+
+### Market-Fit Özet Matrisi
+
+| # | Fikir | Acı şiddeti | PMF riski | Alıcı persona | Ödeme kancası |
+|---|---|---|---|---|---|
+| 5 | RegTech | **4/5** | **2/5** 🟢 | Ar-Ge Md. + CFO | Teşvik iptali/geri ödeme riski (sigorta değeri) |
+| 1 | Copilot | 3/5 | 3/5 🟢 | Ar-Ge Merkezi Müdürü | Zorunlu yıllık rapor + TEYDEB yükü |
+| 2 | Fikir Motoru | 2/5 | 3/5 🟡 | İnovasyon Yöneticisi | Komite iş yükü, program güvenilirliği |
+| 7 | THS Asistanı | 3/5 | 4/5 🟡 | Ar-Ge/Program Direktörü | TEYDEB ön değerlendirme + SSB/EYDEP pratiği |
+| 9 | IP Zekâsı | 3/5 | 4/5 🟡 | Ar-Ge Dir. / IP Yöneticisi | 6769 SMK çalışan buluşu yükümlülüğü |
+| 3 | Teknoloji Kâşifi | 2/5 | 4/5 🔴 | Teknoloji/Strateji Müdürü | Yol haritasını kanıtla savunma |
+| 4 | Bilgi Grafı | 2/5 | 4/5 🔴 | Ar-Ge Direktörü / CTO | Personel devriyle bilgi kaybı |
+| 6 | Prediktif Portföy | 2/5 | 4/5 🔴 | PMO/Program Direktörü | Gecikme cezaları, portföy raporu |
+| 8 | Açık İnovasyon Ağı | 2/5 | 4/5 🔴 | İnovasyon/İş Gel. Direktörü | Konsorsiyum ortağı bulma (dönemsel) |
+| 10 | Foresight | 2/5 | 4/5 🔴 | Strateji Direktörü / GMY | YK'ya "geleceğe hazırız" hikâyesi |
+
+**PMF olasılığı en yüksek üçlü: #5 → #1 → #2. En riskli üçlü: #10, #8, #4.**
+
+### Fikir Bazında Market-Fit Detayı
+
+**#1 Copilot** — Hedef: 1.300+ Ar-Ge/Tasarım Merkezi; gerçekçi ilk küme mevcut müşteriler + düzenli TEYDEB başvurucusu ~100-200 hesap. Alternatifler: teşvik danışmanları, Word şablonları ve giderek artan genel ChatGPT kullanımı; TEYDEB/5746 formatına özel Türkçe rakip ürün aramalarda bulunamadı. Ödeme: bağımsız üründe düşük, mevcut lisansa %25-40 "AI eklentisi" olarak yüksek; on-prem kurulumda premium. **En büyük risk: "ChatGPT yeter" ikamesi** — fark, kurumsal arşiv entegrasyonu ve format doğruluğuyla kanıtlanmalı. Talep kanıtı güçlü: TÜBİTAK'ın Üretken YZ kullanım rehberi yayınlaması başvurularda YZ'yi meşrulaştırdı; Horizon Europe 2025'ten beri YZ kullanım beyanı istiyor; globalde Grantable/Grant Assistant kategoriyi doğruladı. Doğrulama: 5-8 müşteriyle ücretli pilot ön-satışı (3+ ödeme taahhüdü hedefi); ürün yazmadan danışman+LLM ile concierge TEYDEB önerisi üretimi.
+
+**#2 Fikir Motoru** — Hedef: aktif öneri programı olan ~150-300 kuruluş (İSO 500 ∩ Ar-Ge merkezleri). Alternatifler ciddi: globalde Qmarkets/ITONICS/Brightidea'da bu yetenek standartlaştı; Türkiye'de innoCentrum pazar lideri, oneri.io YZ ile mükerrer tespiti zaten pazarlıyor. **En büyük risk: "ürün değil özellik"** — ayrı ödeme istekliliği oluşmayabilir; ikincisi başarı skoru için cold-start. Konumlandırma savunma amaçlı olmalı: innoCentrum/oneri.io'ya karşı İnovasyon Modülü'nün elde tutma hattı; ayrıştırıcı, Ar-Ge modülündeki geçmiş TEYDEB/proje verisinden gelen başarı skoru. Doğrulama: 5-10 müşterinin gerçek fikir havuzuyla PoC (komite süresindeki azalmayı ölç); fiyat etiketli LOI kampanyası (10 görüşmede 3 yazılı niyet).
+
+**#3 Teknoloji Kâşifi** — Hedef: teknoloji yönetimi olgunluğu olan ~150-300 firma; Argelog'un erişebildiği çekirdek ~30-80 hesap. Acı normalize edilerek 2'ye çekildi: teknoloji izleme mevzuatla zorunlu değil, patent vekillerinin ucuz manuel izlemesi ve ücretsiz Espacenet "yeterince iyi". Globalde kategori kalabalık (PatSnap, Questel, Cypris — $20-80K/yıl); Türkiye'de yerli SaaS rakip bulunamadı, ama bu boşluk kanıtlanmış yazılım talebinin zayıflığına da işaret. Dolaylı kanca: 5746 performans göstergelerindeki patent kriteri; savunmada STM ThinkTech'in varlığı segment talebini gösteriyor. **Satış biçimi kritik: self-servis SaaS değil, danışmanlıkla paketlenmiş "yönetilen scouting raporu".** Doğrulama: yarı-manuel aylık zayıf sinyal raporunu 3 ay ücretli pilot olarak sat (>%50 yenileme hedefi); mevcut Teknoloji Radarı ekranına fake-door "Ajan Uyarıları" butonu.
+
+**#4 Bilgi Grafı** — Hedef: 100+ Ar-Ge personelli çok-projeli yapılar (~150-250 firma). Acı gerçek ama kronik/gizli: "uzman bulamama"nın maliyeti hissediliyor ama bütçe önceliği almıyor; alıcı "graf altyapısı" değil somut senaryo satın alır. **En büyük risk: altyapı katmanının tek başına bütçelenmemesi + Microsoft 365 Copilot/Glean gibi genel amaçlı araçların aynı ihtiyacı "bedavaya yakın" karşılaması.** Türkiye'de Ar-Ge'ye özel rakip yok, ama talep de şimdilik varsayımsal. Market-fit açısından doğru konum: müşteriye satılan ürün değil, #1/#3/#6'yı güçlendiren iç altyapı; dışa dönük yüzü yalnızca "uzman bulma + denetim izlenebilirliği" senaryoları olmalı. Doğrulama: "son uzman bulamadığınızda maliyeti ne oldu?" görüşmeleri (3 LOI hedefi); tek müşteride 4-6 haftalık ücretli PoC.
+
+**#5 RegTech** — **Portföyün en güçlü market-fit'i.** Tek fikir ki acısı mevzuata bağlı: faaliyet raporu Mayıs sonu zorunlu, merkezler en geç 2 yılda bir denetleniyor, eksiklikte 3 ay durdurma/belge iptali/teşvik geri ödemesi var; teşvikler 2028 sonuna kadar uzatıldı (pazar garantili). Alıcı çift başlı: Ar-Ge Müdürü + CFO — "sigorta + tasarruf" argümanı bütçe açtırıyor. Dikkat: pazar boş değil — ArgeMemory (Vertex) ve Ar-GeNet zaten 5746/4691 hesaplama satıyor; farklılaşma LLM tabanlı denetim öncesi tutarsızlık tespiti ve mevzuat etki analizi katmanında (bu katmanın yerli muadili bulunamadı). Globalde Boast.ai/Neo.tax kategoriyi doğruladı. **En büyük risk: mevcut araçların "yeterince iyi" görülmesi** — YMM'lerle rekabet değil ortaklık kurgusu şart. Doğrulama: 2-3 müşterinin dönemlik bordro/teşvik verisiyle "tespit edilen risk/eksik teşvik: X TL" concierge raporu (rapora ödeme = gerçek WTP testi); "5746 denetim hazırlık" webinarı (30 günde 20+ nitelikli demo talebi hedefi).
+
+**#6 Prediktif Portföy** — Hedef: 20+ eşzamanlı proje yürüten ~150-300 firma. Acı normalize edilerek 2'ye indi: yakıcı olduğu savunma ana yüklenicilerinde sorun zaten Primavera Risk/Safran + Monte Carlo pratiğiyle çözülmüş; orta segment ise eksikliği dert etmiyor. **En büyük risk: veri kıtlığı** — tek merkezin onlarca projelik tarihçesi "öğrenen ML" vaadini besleyemez, ürün kural tabanlı simülasyona geriler ve nPlan (750.000+ takvimle eğitilmiş) tarzı gerçek ML ile arasındaki fark güven sorunu yaratır; savunmada müşteriler arası veri havuzlama fiilen imkânsız. Doğrulama önce gelsin: 3-5 müşterinin geçmiş verisiyle retrospektif "gecikmeyi tahmin edebilir miydik?" analizi — hem veri yeterliliğini hem tahmin değerini ürün yazmadan ölçer.
+
+**#7 THS Asistanı** — Hedef: SAHA'nın 1.000+ üyesi içinde aktif ürün geliştiren ~250-400 firma; çekirdek, ana yüklenici (ASELSAN/TUSAŞ/ROKETSAN) alt tedarikçileri. Mevzuat kancası yarım: THS beyanı 2020'den beri TEYDEB ön değerlendirme kriteri ve SSB kılavuz yayınlamış/EYDEP değerlendiriyor — ama **kanıta dayalı denetlenebilir zincir henüz hiçbir kurumca zorunlu değil; ürünün çekirdek vaadi bu zorunluluk gelmeden "hoş-olur"da kalabilir (en büyük risk).** Acı dönemsel (başvuru/denetim anları), bugün TÜBİTAK'ın Excel soru setleri + danışmanla çözülüyor; alternatiflerin ucuz/bedava olması fiyat çıpasını düşürüyor. İkinci engel: savunma verisinde bulut LLM kabul edilmez — on-prem mimari şart. Doğrulama: EYDEP danışmanlarıyla kanal ortaklığı görüşmesi; gerçek test raporları üzerinden yarı-manuel ücretli THS raporu satışı.
+
+**#8 Açık İnovasyon Ağı** — Acı normalize edilerek 2'ye indi: ortak bulma ihtiyacı kanıtlı (SAHA EXPO'da 25.000+ B2B görüşme planı, TÜBİTAK'ın eşleştirme etkinlikleri) ama dönemsel ve **ücretsiz/kamu sübvanseli ikamelerle gideriliyor: İSTKA destekli Zemin360, Here2Next, AB'nin ücretsiz Funding&Tenders/B2Match araçları, SAHA'nın kendi yerlileştirme portalı.** En büyük risk: soğuk başlangıç + bedava rakipler — ücretli talep bugün büyük ölçüde varsayımsal. Market-fit'e giden yol bağımsız pazaryeri değil: mevcut ürüne gömülü "çağrı-yetkinlik eşleştirme radarı" (paraya bağlanan tek kanca TÜBİTAK/UA çağrıları ve savunmada yerlileştirme taraması). Doğrulama: 3-5 müşteriye elle yapılan ücretli "teknoloji tarama raporu" (50-100 bin TL); TTO ortaklı pilotta arz tarafının profil doldurma oranı (<%20 = soğuk başlangıç doğrulandı).
+
+**#9 IP Zekâsı** — Hedef: düzenli patent başvurusu yapan ~200-400 firma (patent aktivitesi az sayıda büyük firmada yoğun — 2025'te Türk Telekom tek başına 921 başvuru). Mevzuat kancası gerçek ama baskısı zayıf: 6769 SMK çalışan buluşu bildirimi + 4 aylık hak talebi süresi dava riski doğuruyor, ama çoğu firma e-posta/Excel + vekille idare ediyor. **En büyük risk: IP işinin "vekile devredilmiş dış hizmet" olarak görülmesi** — vekil ücretsiz ön araştırmayla modülü gereksizleştirebilir. Doğru kurgu: vekillerle rekabet değil kanal ortaklığı; zaman damgası bileşeni emtia (TÜBİTAK zaman damgası zaten ucuz), değer SMK uyum iş akışı + faaliyet raporu patent göstergesi entegrasyonunda. Doğrulama: 15-20 müşteriyle bildirim süreci/vekil harcaması sayısallaştırma görüşmesi; ücretli "patentlenebilirlik ön analizi + süreç kurulumu" concierge paketi.
+
+**#10 Foresight** — Hedef en dar segment: foresight fonksiyonu kurabilecek ~50-150 kurum (1.300+ Ar-Ge merkezinin büyük çoğunluğu alıcı değil). **İki yapısal sorun: talep proje bazlı ve süreksiz (kurumlar senaryo çalışmasını 2-3 yılda bir danışmanlık projesi olarak alıyor — EY, Istanbul Foresight Institute, MindEx bu talebi bugün danışmanlıkla topluyor) ve çekirdek vaat genel amaçlı LLM'lerle neredeyse bedavaya taklit edilebilir.** Ayrıca alıcı persona (strateji ofisi) Argelog'un alıştığı Ar-Ge Müdürü'nden farklı — yeni satış kası gerekir. Uygun model salt SaaS değil: 6-12 aylık ücretli foresight projesi içine gömülü platform, sonra Teknoloji Modülü'ne eklenti lisans. Doğrulama ilk adımı acımasız olmalı: müşterilere "son 3 yılda foresight'a fiilen para harcadınız mı, kime, ne kadar?" — harcama geçmişi yoksa talep varsayımsaldır.
+
+### Portföy Düzeyi Market-Fit Çıkarımları
+
+1. **Acıyı belirleyen tek tutarlı eksen mevzuat kancası:** 5746 denetim/geri ödeme riskine bağlanan RegTech (#5) tek başına 4 seviyesinde; zorunlu ama dönemsel yükümlülüğe dayananlar (#1, #7, #9) 3'te; düzenleyici tetikleyicisi olmayan verimlilik fikirleri (#2, #3, #4, #6, #8, #10) 2'de kümeleniyor.
+2. **On fikrin tamamı mevcut tabana upsell** — bu Argelog'un kanal gücüyle örtüşüyor ama ortak zayıflık: #5 hariç neredeyse hiçbiri bağımsız bütçe kalemi açtıramıyor. Doğru fiyatlama, tek tek ürünler değil mevcut üç modüle %20-40 bandında "AI katmanı" eklentileri; bu da gelir tavanını mevcut müşteri sayısına bağlıyor — büyüme için müşteri adedi de artmalı.
+3. **Tekrarlayan en büyük PMF riski rekabet değil ikame:** genel amaçlı LLM'ler (#1, #2, #10'un çekirdek vaadini bedavaya taklit ediyor), ücretsiz/kamu sübvanseli platformlar (#8) ve mevcut dış hizmet sağlayıcılar — danışmanlar, YMM'ler, patent vekilleri (#5, #7, #9). Savunulabilir tek ayrıştırıcı, Argelog modüllerinde halihazırda biriken kurum içi proje/fikir/teşvik verisi; bu avantajın en somut olduğu fikirler #5 ve #1.
+4. **Analitik/ML iddialı fikirler (#4, #6, kısmen #3) ortak cold-start sorunu paylaşıyor:** müşteri başına tarihsel veri "öğrenen sistem" vaadini besleyecek hacimde değil. Bunlar önce ürün olarak değil, hibrit modele uygun "yönetilen danışmanlık raporu" formatında test edilmeli; ürünleştirme kararı pilot yenileme oranına ertelenmeli.
+5. **Çekirdek-çevre yapısı:** önce #5 ile zorunlu-tekrarlayan acıya çapa at, #1'i aynı alıcıya doküman katmanı olarak bindir, #2'yi İnovasyon Modülü'nün savunma hattı (innoCentrum/oneri.io'ya karşı) olarak konumla. #8 ve #10 Argelog'un satış modeliyle yapısal uyumsuz (biri iki taraflı pazaryeri, diğeri farklı alıcı persona) — en son ele alınmalı.
+
 ## Önceliklendirme Önerisi
 
 | Ufuk | Projeler | Gerekçe |
@@ -226,6 +281,8 @@ Türkiye özelinde: 5746 sayılı kanun kapsamındaki 1.300+ Ar-Ge/Tasarım Merk
 | **Uzun vade (24+ ay)** | #3 Tech Scouting Ajanı, #9 IP Zekâsı, #8 Açık İnovasyon Ağı, #10 Foresight | Dış veri hatları ve ağ etkisi gerektirir; Argelog'u araçtan platforma taşır |
 
 Projelerin tamamı TÜBİTAK 1501/1507 kapsamında desteklenebilir nitelikte yazılım Ar-Ge'si içerir; #3, #9 için TÜRKPATENT, #8 için teknopark/üniversite işbirlikleri başvuru gücünü artırır.
+
+**Market-fit analiziyle güncellenen sıralama:** Kısa vade üçlüsü doğrulandı ancak iç sırası değişti — giriş noktası #5 (RegTech) olmalı (tek zorunlu-tekrarlayan acı, en düşük PMF riski), #1 (Copilot) aynı alıcıya ikinci katman olarak bindirilmeli, #2 savunma amaçlı (rekabete karşı) konumlanmalı. #8 ve #10, teknik yol haritasında "uzun vade"de dursa da market-fit açısından portföyün en riskli fikirleri: ikisi de önce ucuz doğrulama deneylerinden geçmeden yatırım almamalı.
 
 ---
 
