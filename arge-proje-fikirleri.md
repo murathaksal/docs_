@@ -307,6 +307,95 @@ Projelerin tamamı TÜBİTAK 1501/1507 kapsamında desteklenebilir nitelikte yaz
 
 ---
 
+## Proje Seçimi: Gereksinim, Bütçe ve Zaman Planı
+
+### Varsayımlar
+
+Tüm hesaplar şu varsayımlara dayanır; değişirse tablolar orantılı güncellenmelidir:
+
+- **Adam-ay tam maliyeti: ortalama 250 bin TL** (2026 ikinci yarı; brüt ücret + işveren yükleri + genel gider payı; kıdem karışımına göre 180–350 bin TL bandı). Argelog ~10 kişilik ekip olduğundan aynı anda **en fazla 1,5–2 projelik kapasite** (4–6 FTE geliştirme) gerçekçidir — plan buna göre kademelidir.
+- **LLM/bulut işletimi** geliştirme döneminde proje başına aylık 30–60 bin TL; canlıda müşteri sayısıyla ölçeklenir (fiyatlamaya maliyet+marj olarak yansıtılmalı).
+- **TÜBİTAK finansmanı:** Argelog KOBİ olduğundan 1507/1501 kapsamında destek oranı ~%75; çağrı bütçe üst limitleri dönemsel değiştiği için başvuru öncesi güncel çağrı duyurusundan teyit edilmeli. Büyük bütçeli projeler gerekirse faz bölünerek ayrı projeler hâlinde sunulur.
+
+### Tüm Portföy: Kaba Efor, Süre ve Bütçe
+
+| # | Proje | Süre (MVP) | Efor (adam-ay) | Bütçe bandı | Not |
+|---|---|---|---|---|---|
+| 5 | RegTech | 9 ay | 22–26 | 6,5–8 M TL | + mevzuat/YMM danışmanlığı dahil |
+| 1 | Copilot | 9 ay | 18–22 | 5,5–7 M TL | on-prem GPU opsiyonu +1,5–2 M TL |
+| 9 | IP Zekâsı | 8 ay | 15–18 | 4,5–5,5 M TL | SMK iş akışı 2 ayda ayrılabilir quick-win |
+| 2 | Fikir Motoru | 6–8 ay | 12–16 | 3,5–4,5 M TL | dedup/kümeleme ilk 3 ayda çıkar |
+| 7 | THS Asistanı | 6–8 ay | 12–16 | 3,5–4,5 M TL | on-prem şartı bütçeyi artırır |
+| 10 | Foresight | 8–10 ay | 16–20 | 5–6 M TL | danışmanlık projesine gömülü başlamalı |
+| 6 | Prediktif Portföy | 9–12 ay | 18–24 | 5,5–7 M TL | önce retrospektif veri analizi (1 ay, ~300 bin TL) |
+| 4 | Bilgi Grafı | 10–12 ay | 24–30 | 7–9 M TL | ontoloji tasarımı dahil; altyapı yatırımı |
+| 3 | Teknoloji Kâşifi | 12–15 ay | 30–40 | 9–12 M TL | + yıllık 1,5–2 M TL veri/işletim gideri |
+| 8 | Açık İnovasyon Ağı | 12–18 ay | 30–40 | 9–12 M TL | + ekosistem geliştirme ekibi (yazılım dışı) |
+
+**Seçim okuması:** Kale sinyali alan üçlü (#5+#1+#9) toplamda ~55–66 adam-ay ve 16,5–20,5 M TL — TÜBİTAK %75 desteğiyle net yük ~4–5 M TL'ye iner ve üçü aynı alıcıya satıldığı için tek ticari kanalla geri kazanılır. Aynı bütçeyle #3 veya #8'den yalnızca biri yapılabilirdi ve ikisinin de PMF riski 4/5. Seçim net: **program = #5 → #9 (quick-win) → #1.**
+
+### Seçilen Üçlü: Detay Planlar
+
+#### #5 RegTech — 9 ay, 22–26 adam-ay, 6,5–8 M TL
+
+**MVP gereksinimleri (kapsam içi):** 5746 teşvik hesaplama motoru (stopaj, SGK, KV indirimi; versiyonlanabilir kural seti); personel zaman/proje eşleştirmesinden teşvik matrahı üretimi; en az 2 bordro entegrasyonu (Logo + 1 diğeri; Kale'nin kullandığı sistem öncelikli); denetim hazırlık panosu (eksik/tutarsız veri tespiti — önce kural tabanlı, LLM doğrulama ay 6+); faaliyet raporu veri tutarlılık kontrolü. **Kapsam dışı (v2):** 4691 teknopark modu, mevzuat değişikliği otomatik etki analizi, ERP çeşitliliğinin tamamı.
+
+| İş paketi | Aylar | Efor (AA) |
+|---|---|---|
+| İP1 — Mevzuat kural setinin çıkarılması ve doğrulanması (YMM danışmanıyla) | 1–3 | 4 |
+| İP2 — Hesaplama motoru + kural motoru altyapısı | 2–6 | 8 |
+| İP3 — Bordro entegrasyonları (2 konnektör) | 4–7 | 5 |
+| İP4 — Denetim hazırlık panosu + LLM belge doğrulama | 5–8 | 5 |
+| İP5 — Kale pilotu: gerçek dönem verisiyle paralel hesap + "risk/eksik teşvik" raporu | 7–9 | 3 |
+
+**Bütçe:** personel 24 AA × 250 bin = 6,0 M; YMM/mevzuat danışmanlığı 0,6 M; bulut/LLM 0,35 M; entegrasyon test ortamları ve lisanslar 0,3 M; beklenmedik %10 ≈ **toplam ~7,9 M TL**. Kritik kabul testi: motorun çıktısı, Kale'nin bir döneminde YMM hesabıyla kuruş düzeyinde mutabık kalmalı.
+
+#### #9 IP Zekâsı — 8 ay, 15–18 adam-ay, 4,5–5,5 M TL
+
+**Gereksinimler — iki fazlı:** **Faz A (ay 1–2, quick-win):** 6769 SMK çalışan buluşu bildirim iş akışı (bildirim formu, 4 aylık yasal süre takibi, onay zinciri, RFC 3161 zaman damgası, faaliyet raporu patent göstergesine otomatik besleme) — mevcut platform altyapısıyla yazılır, Kale'ye 2. ayın sonunda canlı gösterilir. **Faz B (ay 3–8):** patentlenebilirlik ön analizi (EPO OPS + PATENTSCOPE + TÜRKPATENT taraması, benzerlik araması, LLM yenilik farkı özeti) ve rakip portföy izleme (aylık otomatik rapor).
+
+| İş paketi | Aylar | Efor (AA) |
+|---|---|---|
+| İP1 — SMK buluş bildirimi iş akışı + zaman damgası (Faz A) | 1–2 | 3 |
+| İP2 — Patent veri hattı (EPO/WIPO/TÜRKPATENT erişimi) | 3–5 | 4 |
+| İP3 — Benzerlik araması + LLM yenilik farkı raporu | 4–7 | 5 |
+| İP4 — Rakip portföy izleme + Kale pilotu (gerçek buluş bildirimleriyle) | 6–8 | 3 |
+
+**Bütçe:** personel 15 AA × 250 bin = 3,75 M; patent vekili danışmanlığı (rapor kalitesi doğrulama) 0,3 M; veri erişimi (EPO OPS ücretsiz; olası ticari tamamlayıcı) 0,4 M; bulut/LLM 0,25 M; beklenmedik %10 ≈ **toplam ~5,2 M TL**. Not: İP2 hattı ileride #3'e (Teknoloji Kâşifi) doğrudan taşınır — bütçenin bir kısmı gelecek projenin ön yatırımıdır.
+
+#### #1 Copilot — 9 ay, 18–22 adam-ay, 5,5–7 M TL
+
+**MVP gereksinimleri (kapsam içi):** doküman işleme hattı (mevcut modüllerdeki proje kayıtları + yüklenen arşiv; OCR, parçalama, erişim yetkisine saygılı indeksleme); RAG tabanlı Türkçe soru-cevap (kaynak gösterimli — halüsinasyon kontrolü için zorunlu); faaliyet raporu bölüm taslağı üretimi (Bakanlık formatına şablonlu); TEYDEB öneri taslağı asistanı (bölüm bölüm, insan onaylı akış); müşteri başına veri izolasyonu. **Kapsam dışı (v2):** on-prem LLM (pilot bulutta KVKK uyumlu başlar; Kale görüşmesinde on-prem şartı çıkarsa +2 ay ve +1,5–2 M TL GPU sunucu bütçelenir), çok dilli destek, otomatik gönderim.
+
+| İş paketi | Aylar | Efor (AA) |
+|---|---|---|
+| İP1 — Doküman işleme ve indeksleme hattı | 1–3 | 5 |
+| İP2 — RAG çekirdeği + kaynak gösterimli Türkçe QA | 2–5 | 5 |
+| İP3 — Faaliyet raporu + TEYDEB taslak üreteçleri | 4–7 | 5 |
+| İP4 — Değerlendirme seti (kalite ölçümü), KVKK/güvenlik sertleşmesi | 6–8 | 3 |
+| İP5 — Kale pilotu: kendi arşivleriyle canlı kullanım, 1 gerçek TEYDEB önerisi | 7–9 | 2 |
+
+**Bütçe:** personel 20 AA × 250 bin = 5,0 M; LLM API/bulut 0,5 M; embedding/vektör altyapısı 0,15 M; veri hazırlama danışmanlığı (Kale arşiv taraması) 0,2 M; beklenmedik %10 ≈ **toplam ~6,5 M TL** (+on-prem opsiyonu ayrı kalem).
+
+### Birleşik Program Takvimi (18 ay)
+
+Kapasite kısıtı (4–6 FTE) nedeniyle üç proje kademeli yürür; #5 ile #9-Faz A paralel başlar, #1 ekip #5'ten boşaldıkça devreye girer:
+
+| Ay | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| #5 RegTech | ██ | ██ | ██ | ██ | ██ | ██ | ██ | ██ | ██ | | | | | | | | | |
+| #9 Faz A (SMK) | ██ | ██ | | | | | | | | | | | | | | | | |
+| #9 Faz B (patent) | | | | | | | | | | ██ | ██ | ██ | ██ | ██ | ██ | | | |
+| #1 Copilot | | | | | | | ██ | ██ | ██ | ██ | ██ | ██ | ██ | ██ | ██ | | | |
+| Kale pilotları | | ▒▒ | | | | | ▒▒ | ▒▒ | ▒▒ | | | | ▒▒ | ▒▒ | ▒▒ | ▒▒ | | |
+| Ticarileşme (diğer hesaplara satış) | | | | | | | | | | ▒▒ | ▒▒ | ▒▒ | ▒▒ | ▒▒ | ▒▒ | ██ | ██ | ██ |
+
+**Kilometre taşları:** Ay 2 — SMK iş akışı Kale'de canlı (ilk görünür teslimat); Ay 9 — RegTech MVP + Kale mutabakat testi; Ay 12 — Copilot ilk gerçek TEYDEB önerisi; Ay 15 — üç ürün pilotta doğrulanmış; Ay 16–18 — referanslı satış kampanyası.
+
+**Program bütçesi ve finansman:** Toplam ~19,6 M TL (üç projenin toplamı) / 18 ay. TÜBİTAK kurgusu: #5 ve #1 ayrı 1501/1507 projeleri, #9 daha küçük bütçesiyle 1507'ye uygun; %75 destek gerçekleşirse net öz kaynak yükü **~5 M TL** (aylık ~280 bin TL) — Kale pilot gelirleri (hedef: proje başına 0,3–0,8 M TL) ve mevcut nakit akışıyla taşınabilir düzey. Başvuru takvimi programın 1.–2. ayında tamamlanmalı; destek kararı beklenmeden Faz A (SMK) öz kaynakla başlatılmalı ki Kale ivmesi kaçmasın.
+
+---
+
 ## Kaynaklar
 
 - [Argelog – Çözümler](https://argelog.com.tr/cozumler) · [Hakkımızda](https://argelog.com.tr/hakkimizda) · [Ar-Ge Yönetimi](https://argelog.com.tr/arge-yonetimi) · [İnovasyon ve Teknoloji Yönetimi](https://argelog.com.tr/inovasyon-ve-teknoloji-yonetimi)
