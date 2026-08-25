@@ -272,6 +272,27 @@ Her fikir, Türkiye pazarı özelinde web araştırmasıyla (rakipler, mevzuat s
 4. **Analitik/ML iddialı fikirler (#4, #6, kısmen #3) ortak cold-start sorunu paylaşıyor:** müşteri başına tarihsel veri "öğrenen sistem" vaadini besleyecek hacimde değil. Bunlar önce ürün olarak değil, hibrit modele uygun "yönetilen danışmanlık raporu" formatında test edilmeli; ürünleştirme kararı pilot yenileme oranına ertelenmeli.
 5. **Çekirdek-çevre yapısı:** önce #5 ile zorunlu-tekrarlayan acıya çapa at, #1'i aynı alıcıya doküman katmanı olarak bindir, #2'yi İnovasyon Modülü'nün savunma hattı (innoCentrum/oneri.io'ya karşı) olarak konumla. #8 ve #10 Argelog'un satış modeliyle yapısal uyumsuz (biri iki taraflı pazaryeri, diğeri farklı alıcı persona) — en son ele alınmalı.
 
+### Sahadan İlk Doğrulama Sinyali: Kale (#1, #5, #9)
+
+Kale'den gelen görüş, #1 (Copilot), #5 (RegTech) ve #9 (IP Zekâsı) için bu bağlamda ihtiyaçları olduğu yönünde — analizden sonra gelen ilk gerçek saha talebi.
+
+**Sinyalin anlamı:** Üçlünün seçimi rastgele değil; market-fit analizindeki mevzuat kancalı grubun (acı 3-4 bandı) tam kendisi ve üçü de **aynı alıcı personada** birleşiyor (Ar-Ge Merkezi yönetimi + mali işler/hukuk). Birlikte tutarlı bir **"Ar-Ge Merkezi Uyum ve Üretkenlik Paketi"** oluşturuyorlar: #5 zorunlu uyum çekirdeği, #1 aynı verinin üzerine doküman üretim katmanı, #9 Ar-Ge çıktısının IP tarafını kapatan halka. Tek platform + tek satış görüşmesi + tek pilot ile üçü birden test edilebilir.
+
+**Fikir bazında ne değişti:**
+- **#9 için en kritik güncelleme:** PMF riski "talep büyük ölçüde varsayımsal" gerekçesiyle 4/5'ti — Kale görüşü bu fikir için ilk somut talep beyanı. Görüşmede vekil harcaması ve buluş bildirim hacmi sayısallaştırılırsa risk okuması aşağı çekilebilir.
+- **#1 için:** "ChatGPT yeter" ikame riskine karşı ilk kurumsal karşı-kanıt — demek ki genel LLM'ler bu ihtiyacı kapatmıyor. Kale'nin kendi arşiviyle concierge pilot için ideal aday.
+- **#5 için:** Zaten en güçlü PMF'ye sahipti; sinyal, dokümandaki 1 numaralı doğrulama deneyini (yapılandırılmış görüşme) doğrudan başlatma fırsatı verdi.
+
+*Not: Tek hesabın beyanı pazar geneli PMF skorlarını değiştirmez; skorlar korunuyor. Değişen şey doğrulama yolu: Kale, "design partner" adayı olarak deney sürecini aylarca kısaltır ve pilot sonucu (yenileme + referans) diğer İSO 100 hesaplara satışın kanıtı olur.*
+
+**Önerilen hamle — keşif görüşmesi soru seti** (doğrulama deneylerinden derlenmiş):
+1. **#5:** Teşvik hesabı ve denetim hazırlığına bugün kim, kaç saat harcıyor? Son denetimde ne çıktı? Hangi araç kullanılıyor (ArgeMemory/Ar-GeNet/Excel/YMM)? — rekabet istihbaratı için de kritik.
+2. **#1:** TEYDEB önerilerini ve faaliyet raporunu kim yazıyor, yıllık danışman maliyeti ne? KVKK/bilgi güvenliği tarafında on-prem şartı var mı? (Savunma bağlantılı işlerde bulut LLM engeli baştan netleşmeli.)
+3. **#9:** Son 2 yılda kaç buluş bildirimi ve patent başvurusu yapıldı, vekile yıllık ödeme ne? 6769 SMK çalışan buluşu süreci bugün nasıl yönetiliyor (e-posta/Excel mi)?
+4. **Ödeme testi:** Görüşme, ücretli pilot teklifiyle kapanmalı — ücretsiz PoC değil. Ödeme taahhüdü, analizdeki tüm doğrulama deneylerinin ortak eşiği.
+
+**Pilot kurgusu önerisi (8-12 hafta, ücretli):** #5'ten başla — bir dönemlik bordro/teşvik verisiyle "tespit edilen risk / eksik teşvik: X TL" raporu (concierge, ürün yazmadan); üzerine #1'den bir faaliyet raporu bölümü + bir TEYDEB önerisi taslağı üretimi; #9'dan buluş bildirimi iş akışının kurulumu. Çıkış kriterleri: pilot ücretinin ödenmesi, yenileme niyeti ve referans olma onayı.
+
 ## Önceliklendirme Önerisi
 
 | Ufuk | Projeler | Gerekçe |
