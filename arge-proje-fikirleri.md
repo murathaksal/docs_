@@ -293,6 +293,8 @@ Kale'den gelen görüş, #1 (Copilot), #5 (RegTech) ve #9 (IP Zekâsı) için bu
 
 **Pilot kurgusu önerisi (8-12 hafta, ücretli):** #5'ten başla — bir dönemlik bordro/teşvik verisiyle "tespit edilen risk / eksik teşvik: X TL" raporu (concierge, ürün yazmadan); üzerine #1'den bir faaliyet raporu bölümü + bir TEYDEB önerisi taslağı üretimi; #9'dan buluş bildirimi iş akışının kurulumu. Çıkış kriterleri: pilot ücretinin ödenmesi, yenileme niyeti ve referans olma onayı.
 
+> **#5 için teknopark proje başvuru dosyası taslağı hazırlandı:** bkz. [`teknopark-proje-basvurusu-regtech.md`](teknopark-proje-basvurusu-regtech.md) (ARGUS çalışma adıyla; 12 ay, 28 adam-ay, ~8,65 M TL, iki pilot dahil).
+
 ### İkinci Sinyal: #5 İçin İkinci Görüş
 
 #5 (RegTech) için ikinci bir firmadan da bu yönde ihtiyaç görüşü geldi — **#5 artık portföyde iki bağımsız saha sinyali olan tek fikir** ve çekirdek proje statüsü kesinleşti. Bu, zaten en düşük olan PMF riskini (2/5) teyit ediyor; ancak doğrulama eşiği değişmedi: iki görüş de henüz ödeme değil, gerçek test hâlâ ücretli pilot.
