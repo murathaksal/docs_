@@ -293,6 +293,17 @@ Kale'den gelen görüş, #1 (Copilot), #5 (RegTech) ve #9 (IP Zekâsı) için bu
 
 **Pilot kurgusu önerisi (8-12 hafta, ücretli):** #5'ten başla — bir dönemlik bordro/teşvik verisiyle "tespit edilen risk / eksik teşvik: X TL" raporu (concierge, ürün yazmadan); üzerine #1'den bir faaliyet raporu bölümü + bir TEYDEB önerisi taslağı üretimi; #9'dan buluş bildirimi iş akışının kurulumu. Çıkış kriterleri: pilot ücretinin ödenmesi, yenileme niyeti ve referans olma onayı.
 
+### İkinci Sinyal: #5 İçin İkinci Görüş
+
+#5 (RegTech) için ikinci bir firmadan da bu yönde ihtiyaç görüşü geldi — **#5 artık portföyde iki bağımsız saha sinyali olan tek fikir** ve çekirdek proje statüsü kesinleşti. Bu, zaten en düşük olan PMF riskini (2/5) teyit ediyor; ancak doğrulama eşiği değişmedi: iki görüş de henüz ödeme değil, gerçek test hâlâ ücretli pilot.
+
+**İkinci sinyalin somut etkileri:**
+1. **Pilot kurgusu güçleniyor:** İki aday, sıralı iki pilot demek — Kale ile başla, ikinci firmayı 4-6 hafta arayla ardına al. İkinci pilot, ilkinin bulgularının **tekrarlanabilirlik testi** olur: aynı concierge rapor formatı farklı bir bordro düzeninde de değer üretiyorsa ürünleştirme kararı sağlam zemine oturur.
+2. **İP3 (bordro entegrasyonları) gereksinimi gerçek veriyle netleşir:** İki firmanın kullandığı bordro/ERP sistemleri farklıysa, plandaki "2 konnektör" hedefi iki gerçek müşteriyle test edilir — test ortamı ihtiyacı azalır, konnektör önceliği varsayımla değil sahayla belirlenir. Keşif görüşmelerinde her iki firmanın bordro sistemi mutlaka öğrenilmeli.
+3. **Fiyatlama A/B testi imkânı:** İki hesapta iki farklı fiyat noktası/paket denenebilir (ör. yıllık abonelik vs. abonelik + bulunan eksik teşvik üzerinden başarı primi) — tek hesapla yapılamayan ödeme istekliliği ölçümü.
+4. **TÜBİTAK başvurusu güçlenir:** İki sanayi firmasından niyet mektubu (LOI), 1501/1507 önerisinin ticarileşme/yaygın etki bölümünü somutlaştırır — görüşmelerin hedeflerinden biri yazılı LOI olmalı.
+5. **Program takvimine etki:** #5'in kapsamı ve önceliği değişmiyor (zaten programın ilk projesi); değişen, İP5'in tek pilot yerine iki pilotu kapsaması — ikinci pilot ay 9-11'e denk gelir ve efora ~2 adam-ay eklenir (bütçe etkisi ~0,5 M TL, pilot geliriyle karşılanabilir).
+
 ## Önceliklendirme Önerisi
 
 | Ufuk | Projeler | Gerekçe |
