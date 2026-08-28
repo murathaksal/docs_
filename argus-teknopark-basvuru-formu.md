@@ -32,6 +32,7 @@ Proje, rutin yazılım geliştirmenin ötesinde dört teknik belirsizlik/araşt�
 2. **Halüsinasyonsuz doğrulama:** Kural tabanlı kesin kontroller ile LLM'in yalnızca dayanak gösterebildiği bulguları raporlayabildiği hibrit, açıklanabilir doğrulama mimarisi; "dayanaksız bulgu = 0" ölçülebilir kabul kriteridir.
 3. **Zamansal kural versiyonlama ve mevzuat değişikliği etki analizi:** Hangi dönemin hangi kural setiyle hesaplanacağının bitemporal modellenmesi; yeni düzenleme yayımlandığında etkilenen kural, müşteri ve geçmiş hesapların otomatik tespiti.
 4. **Heterojen bordro verisinde çapraz tutarlılık denetimi:** Farklı bordro/ERP şemalarının ortak modele normalize edilmesi ve proje-personel-zaman-teşvik zincirinde çelişki tespiti.
+5. **Yerel modellerle hedef doğruluk:** KVKK kısıtı gereği tüm YZ işleme yerel çalışacağından, sınırlı parametreli açık ağırlıklı modellerin Türkçe mali-mevzuat alanında — alan uyarlaması (LoRA), sentetik veri üretimi, bilgi damıtma ve RAG optimizasyonuyla — büyük bulut modellerinin referans doğruluğunun **≥%95'ine**, tek 48GB GPU'da çalışacak biçimde ulaştırılması. Doğruluk-donanım-maliyet üçgeninde ölçülü model kademelendirme, projenin özgün mühendislik katkılarındandır.
 
 **Mevcut duruma göre farklar:** Yerli teşvik yazılımları (ArgeMemory, Ar-GeNet) hesaplama/puantaj odaklıdır; LLM destekli dayanak-gösterimli denetim öncesi doğrulama ve mevzuat değişikliği etki analizi katmanı hiçbirinde yoktur. Global R&D-tax otomasyon ürünleri (Boast.ai, Neo.tax) ABD/Kanada mevzuatına özeldir. Projenin doğrulama katmanı ulusal düzeyde ilktir.
 
@@ -45,7 +46,8 @@ Proje, rutin yazılım geliştirmenin ötesinde dört teknik belirsizlik/araşt�
 | **API / uygulama katmanı** | .NET 8 (C#) Web API — mevcut Argelog platform yığınıyla hizalanır; REST + kısmi gRPC (konnektör iletişimi) | Kurumsal müşteri BT onaylarında güçlü; decimal hassasiyetli mali hesap için olgun tip sistemi |
 | **Kural motoru (özgün geliştirme)** | YAML/JSON tabanlı kural tanım dili (DSL) + özel yürütme motoru; bitemporal versiyonlama (geçerlilik dönemi × yayım tarihi); karşılaştırma değerlendirmesi için NRules | Projenin Ar-Ge çekirdeği; hazır kural motorları zamansal mevzuat versiyonlamayı desteklemediği için özgün geliştirilir |
 | **Hesaplama çekirdeği** | Deterministik decimal aritmetik; event-sourcing ile her hesabın denetim izi; property-based test (FsCheck) + altın set regresyonu | "Kuruş mutabakatı" kabul kriteri ve denetlenebilirlik zorunluluğu |
-| **YZ/NLP katmanı** | Birincil: Claude API (Sonnet 5 — analiz; Haiku 4.5 — yüksek hacimli ön eleme, maliyet kademelemesi). RAG: mevzuat korpusu üzerinde embedding tabanlı erişim + zorunlu dayanak-atıflı yapılandırılmış çıktı (tool use/structured output). On-prem seçeneği: açık ağırlıklı Türkçe-yetkin model (Qwen/Llama sınıfı) + vLLM sunumu | AS1/AS2 araştırma soruları; bulut LLM kabul etmeyen müşteriler için mimari eşdeğerlik |
+| **YZ/NLP katmanı — tamamen yerel LLM** | Açık ağırlıklı modeller: birincil aday **Qwen3-32B sınıfı** (Türkçe yetkinliği yüksek); karşılaştırma havuzunda Llama 3.x, Gemma 3 ve Türkçe-uyarlanmış açık modeller; yüksek hacimli ön eleme için 8–14B küçük model kademesi. **Alan uyarlama:** mevzuat korpusuyla LoRA ince ayar + sentetik soru-cevap seti üretimi. **Yapılandırılmış çıktı:** kısıtlı çözümleme (constrained decoding — xgrammar/outlines) ile dayanak-atıf şeması model düzeyinde zorunlu kılınır. Embedding: BGE-M3 / multilingual-e5 (açık ağırlıklı) | **Tasarım kısıtı: bordro verisi kurum dışına çıkamaz (KVKK).** Tüm YZ işleme müşteri altyapısında veya yurtiçi özel ortamda çalışır; hiçbir harici LLM API'ye veri gönderilmez. Model seçimi İP1'de kurulacak değerlendirme havuzunda ölçümle yapılır |
+| **LLM sunum ve GPU altyapısı** | vLLM sunum katmanı + AWQ/FP8 nicemleme; geliştirme/test için 2× 48GB GPU'lu sunucu; müşteri kurulum hedefi: nicemlenmiş 24–32B model **tek 48GB GPU'lu sunucuda** (donanım maliyetini müşteri için taşınabilir tutmak ürün gereksinimi) | Nicemleme + model kademelendirme, doğruluk-donanım-maliyet dengesinin ayarlanabilir olmasını sağlar; bulut GPU kiralama yalnızca yük testlerinde (sentetik/anonim veriyle) kullanılır |
 | **Vektör arama / mevzuat deposu** | PostgreSQL 16 + pgvector (mevzuat maddeleri, embedding'ler, kural-madde bağları tek veri tabanında) | Ayrı vektör DB işletim yükü olmadan dayanak-izlenebilirliği; bitemporal şema ile aynı yerde |
 | **Veri katmanı** | PostgreSQL 16 (şema-bazlı çok kiracılı izolasyon), Redis (önbellek/kuyruk), MinIO (S3-uyumlu belge deposu — bordro dosyaları, kanıt belgeleri) | KVKK gereği müşteri başına izolasyon; on-prem'de aynı yığın değişmeden kurulur |
 | **Entegrasyon katmanı** | Konnektör çerçevesi: Logo/Netsis/Mikro/SAP bordro sistemleri için adaptörler (REST/DB görünümü/dosya); e-bildirge, muhtasar-prim XML/CSV içe aktarım; SFTP toplu aktarım; webhook'lar | İP3 kapsamı; pilot firmaların gerçek sistemleri konnektör önceliğini belirler |
@@ -56,11 +58,12 @@ Proje, rutin yazılım geliştirmenin ötesinde dört teknik belirsizlik/araşt�
 
 ### 6.2 Mimari özet
 
-Çok kiracılı web platformu → konnektörlerle bordro/ERP verisi normalize edilir → bitemporal kural motoru dönem bazlı teşvik hesabını üretir (deterministik, denetim izli) → hibrit doğrulama katmanı (kural kontrolleri + dayanak-kısıtlı LLM) tutarsızlıkları mevzuat atıflarıyla raporlar → denetim hazırlık panosu ve resmi rapor çıktıları. Tüm YZ çıktıları insan onaylı akışa bağlıdır; sistem "karar destek" konumundadır.
+Çok kiracılı web platformu → konnektörlerle bordro/ERP verisi normalize edilir → bitemporal kural motoru dönem bazlı teşvik hesabını üretir (deterministik, denetim izli) → hibrit doğrulama katmanı (kural kontrolleri + dayanak-kısıtlı **yerel** LLM) tutarsızlıkları mevzuat atıflarıyla raporlar → denetim hazırlık panosu ve resmi rapor çıktıları. **Tüm YZ bileşenleri müşteri altyapısında veya yurtiçi özel ortamda çalışır; kişisel veri hiçbir harici API'ye gönderilmez.** Tüm YZ çıktıları insan onaylı akışa bağlıdır; sistem "karar destek" konumundadır.
 
 ## 7. Projenin Katma Değer Unsurları ve Uygulanabilirliği
 
-- **Ölçülebilir başarı kriterleri:** YMM hesabıyla kuruş mutabakatı (tolerans 0); hata-enjeksiyon setinde ≥%90 yakalama / ≤%10 yanlış alarm; dayanaksız bulgu 0; mevzuat değişikliğinin kural setine yansıması <1 iş günü; 2 canlı bordro konnektörü.
+- **Ölçülebilir başarı kriterleri:** YMM hesabıyla kuruş mutabakatı (tolerans 0); hata-enjeksiyon setinde ≥%90 yakalama / ≤%10 yanlış alarm; dayanaksız bulgu 0; mevzuat değişikliğinin kural setine yansıması <1 iş günü; 2 canlı bordro konnektörü; yerel modelin referans doğruluğun ≥%95'ine tek 48GB GPU'da ulaşması.
+- **KVKK-tam-uyum ayrıştırıcısı:** Veri kurum dışına hiç çıkmadığından kurumsal BT/KVKK onay süreci kısalır — bulut LLM'e bağımlı olası rakiplere karşı yapısal satış avantajı ve savunma sanayii tedarik zincirine (SAHA ekosistemi) giriş ön şartı.
 - **Uygulanabilirlik kanıtı:** İki sanayi kuruluşundan (biri Kale grubu bünyesinde) yazılı ihtiyaç görüşü alınmıştır; her ikisiyle ücretli saha pilotu proje planına dahildir (İP5-İP6).
 - **Firma yetkinliği:** Argelog 2013'ten beri 5746/TEYDEB alanında İSO 100 firmalarına yazılım geliştirmektedir; alan bilgisi ve müşteri verisi erişimi mevcuttur.
 
@@ -68,14 +71,14 @@ Proje, rutin yazılım geliştirmenin ötesinde dört teknik belirsizlik/araşt�
 
 | İP | Başlık | Aylar | Efor (AA) | Çıktı |
 |---|---|---|---|---|
-| İP1 | Mevzuat analizi, kural envanteri, text-to-rule deneyleri | 1–3 | 4 | Onaylı kural kataloğu + çıkarım hattı prototipi |
+| İP1 | Mevzuat analizi, kural envanteri, text-to-rule deneyleri; **yerel model değerlendirme havuzu ve GPU altyapısının kurulumu** | 1–3 | 5 | Onaylı kural kataloğu + çıkarım hattı prototipi + model karşılaştırma raporu |
 | İP2 | Bitemporal kural motoru ve hesaplama çekirdeği | 2–6 | 8 | Kuruş-mutabakat testi geçen çekirdek |
 | İP3 | Bordro/ERP konnektörleri (2 adet) ve veri normalizasyonu | 4–7 | 5 | Canlı veri akışı |
-| İP4 | Hibrit doğrulama katmanı + denetim hazırlık panosu | 5–8 | 5 | ≥%90 yakalama / ≤%10 yanlış alarm raporu |
-| İP5 | Saha doğrulama — Pilot 1 (Kale) | 8–10 | 3 | Pilot 1 kabul raporu, "risk/eksik teşvik" çıktısı |
+| İP4 | Hibrit doğrulama katmanı + denetim hazırlık panosu; **LoRA alan uyarlaması, nicemleme ve tek-GPU hedef optimizasyonu** | 5–8 | 6 | ≥%90 yakalama / ≤%10 yanlış alarm raporu + AS5 doğruluk raporu |
+| İP5 | Saha doğrulama — Pilot 1 (Kale), **müşteri ortamında on-prem kurulum** | 8–10 | 3 | Pilot 1 kabul raporu, "risk/eksik teşvik" çıktısı |
 | İP6 | Saha doğrulama — Pilot 2, fiyat doğrulama, sürüm 1.0 | 10–12 | 3 | Pilot 2 raporu + ARGUS v1.0 |
 
-Toplam: **28 adam-ay / 12 ay** (ort. ~2,3 FTE + danışmanlık).
+Toplam: **30 adam-ay / 12 ay** (ort. ~2,5 FTE + danışmanlık).
 
 ## 9. Proje Personeli
 
@@ -83,7 +86,8 @@ Toplam: **28 adam-ay / 12 ay** (ort. ~2,3 FTE + danışmanlık).
 |---|---|---|---|
 | Proje yöneticisi / ürün sahibi | 1 | Planlama, pilot koordinasyonu, kabul kriterleri | 3 |
 | Kıdemli arka uç geliştirici | 2 | Kural motoru, hesaplama çekirdeği, konnektörler | 14 |
-| YZ/NLP mühendisi | 1 | Text-to-rule, doğrulama katmanı, değerlendirme düzeneği | 7 |
+| YZ/NLP mühendisi | 1 | Text-to-rule, doğrulama katmanı, LoRA alan uyarlaması, model değerlendirme | 8 |
+| MLOps/altyapı mühendisi | 1 (kısmi) | GPU altyapısı, vLLM sunum katmanı, nicemleme, on-prem paketleme | 1 |
 | Ön yüz geliştirici | 1 (yarı zamanlı) | Pano ve iş akışı arayüzleri | 3 |
 | Test/kalite uzmanı | 1 (kısmi) | Altın setler, hata enjeksiyonu, regresyon | 1 |
 | Mevzuat/YMM uzmanı | Hizmet alımı | Kural doğrulama, mutabakat denetimi | — |
@@ -92,12 +96,15 @@ Toplam: **28 adam-ay / 12 ay** (ort. ~2,3 FTE + danışmanlık).
 
 | Kalem | Tutar (TL) |
 |---|---|
-| Personel (28 AA × 250.000 ort. tam maliyet) | 7.000.000 |
+| Personel (30 AA × 250.000 ort. tam maliyet) | 7.500.000 |
 | Danışmanlık — mevzuat/YMM (hizmet alımı) | 600.000 |
-| Bulut altyapısı + LLM API kullanımı | 350.000 |
+| **GPU sunucu — geliştirme/test (2× 48GB GPU'lu sunucu)** | 2.000.000 |
+| Bulut GPU kiralama (yalnızca yük testleri, sentetik/anonim veriyle) | 150.000 |
 | Entegrasyon test ortamları ve yazılım lisansları | 300.000 |
-| Beklenmedik giderler (~%5) | 400.000 |
-| **Toplam** | **8.650.000** |
+| Beklenmedik giderler (~%4) | 450.000 |
+| **Toplam** | **11.000.000** |
+
+*Not:* Harici LLM API kalemi yoktur — tüm YZ işleme yerel modellerle yapılır (KVKK tasarım kısıtı). GPU sunucu, proje sonrası ürünün sürekli geliştirme/test altyapısı olarak kullanılmaya devam eder; makine-teçhizat kalemi olarak amortismana tabidir.
 
 ## 11. Proje Çıktısının Ticarileştirilmesi ve Pazar Analizi
 
@@ -112,9 +119,10 @@ Toplam: **28 adam-ay / 12 ay** (ort. ~2,3 FTE + danışmanlık).
 | Risk | O/E | Önlem |
 |---|---|---|
 | Mevzuat değişim hızının kural bakımını aşması | Orta/Yüksek | Bitemporal versiyonlama baştan mimaride; YMM ile aylık gözden geçirme; Resmî Gazete izleme yarı-otomasyonu |
-| LLM doğrulamanın hedef doğruluğa ulaşamaması | Orta/Orta | Hibrit mimari: kural tabanlı kontroller tek başına ürünleşebilir; LLM katmanı önce öneri modunda, insan onaylı devreye alınır |
+| Yerel LLM'in hedef doğruluğa ulaşamaması | Orta/Orta | Model kademelendirme (32B→70B nicemlenmiş) + LoRA yinelemeleri; hibrit mimari sayesinde kural tabanlı kontroller tek başına ürünleşebilir; LLM katmanı önce öneri modunda, insan onaylı devreye alınır |
+| GPU tedarik süresi / donanım maliyet artışı | Orta/Orta | İP1'de erken satın alma; nicemleme ile 48GB sınıfına sığdırma hedefi; yük testleri için yurtiçi bulut GPU kiralama yedeği; müşteri kurulumlarında donanımı müşterinin tedarik etmesi seçeneği |
 | Bordro/ERP veri erişiminde gecikme | Orta/Orta | Veri erişim protokolleri İP1'de imzalanır; dosya-tabanlı yedek içe aktarım yolu |
-| KVKK / veri gizliliği | Düşük/Yüksek | Veri minimizasyonu, maskeleme, şifreleme, müşteri başına izolasyon, on-prem seçenek |
+| KVKK / veri gizliliği | Düşük/Yüksek | Tamamen yerel YZ mimarisi (veri kurum dışına çıkmaz — tasarım kısıtı); veri minimizasyonu, maskeleme, şifreleme, müşteri başına izolasyon |
 | Pilot takvim kayması | Orta/Düşük | İki bağımsız pilot; 2 ay tampon |
 | Hesap hatasının mali sonucu | Düşük/Yüksek | Kuruş mutabakatı kriteri; çift hesap doğrulama dönemi; sözleşmede "karar destek" konumu |
 

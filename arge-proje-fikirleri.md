@@ -293,7 +293,7 @@ Kale'den gelen görüş, #1 (Copilot), #5 (RegTech) ve #9 (IP Zekâsı) için bu
 
 **Pilot kurgusu önerisi (8-12 hafta, ücretli):** #5'ten başla — bir dönemlik bordro/teşvik verisiyle "tespit edilen risk / eksik teşvik: X TL" raporu (concierge, ürün yazmadan); üzerine #1'den bir faaliyet raporu bölümü + bir TEYDEB önerisi taslağı üretimi; #9'dan buluş bildirimi iş akışının kurulumu. Çıkış kriterleri: pilot ücretinin ödenmesi, yenileme niyeti ve referans olma onayı.
 
-> **#5 için teknopark proje başvuru dosyası taslağı hazırlandı:** bkz. [`teknopark-proje-basvurusu-regtech.md`](teknopark-proje-basvurusu-regtech.md) (ARGUS çalışma adıyla; 12 ay, 28 adam-ay, ~8,65 M TL, iki pilot dahil).
+> **#5 için teknopark proje başvurusu hazırlandı:** form-hazır güncel sürüm [`argus-teknopark-basvuru-formu.md`](argus-teknopark-basvuru-formu.md) (genişletilmiş taslak: [`teknopark-proje-basvurusu-regtech.md`](teknopark-proje-basvurusu-regtech.md)). **Mimari kararı: tamamen yerel LLM** — KVKK gereği bordro verisi kurum dışına çıkamaz, harici LLM API kullanılmaz; güncel plan 12 ay / 30 adam-ay / **11,0 M TL** (GPU yatırımı dahil). Bu kısıt #1 Copilot için de geçerli olacaktır (aynı veri hassasiyeti): #1'in "on-prem opsiyonu" v2'den ana gereksinime çekilmeli ve bütçesine GPU kalemi eklenmelidir.
 
 ### İkinci Sinyal: #5 İçin İkinci Görüş
 
