@@ -27,6 +27,8 @@
 
 ARGUS'un çekirdeği **deterministik hesap motorudur**: Argelog bünyesinde önceden geliştirilmiş, Bakanlık doğrulaması Nisan 2026 verisiyle kuruşuna kadar doğrulanmış (96/96 çapa testi), mevzuat maddesi izlenebilirliği taşıyan saf hesap fonksiyonları (5746 m.3/a-b-d, 5510 m.81/i, KVK m.10/1-a ve m.32, 7555 ücret teşvik tavanı, SGK 2016-26 genelge sıralaması) proje başlangıç varlığı olarak devralınır. Projenin Ar-Ge içeriği bu çekirdeğin üzerine üç katman ekler: (a) **bitemporal kural/parametre katmanı** — hangi dönemin hangi mevzuat sürümüyle hesaplanacağının versiyonlanması ve mevzuat değişikliği etki analizi; (b) **çapraz tutarlılık denetim motoru** — bordro × PDKS × proje kayıtları × faaliyet raporu zincirinde kural tabanlı çelişki tespiti; (c) **dar-görevli yerel LLM katmanı** — yalnızca mevzuat değişikliği özetleme/kural taslağı önerisi, serbest metinli belge-kanıt eşleştirme ve bulgu açıklamalarının rapor diline dökülmesi görevlerinde, tamamen yerel çalışan ve tüm çıktıları insan onaylı küçük dil modelleri.
 
+Projenin Ar-Ge ve market-fit kalbi **BAZ Hattı** alt sistemidir: yeni müşterinin geçmiş resmî beyanları (MUHSGK, e-Bildirge hizmet listeleri, tahakkuk fişleri) ile hesap girdileri (bordro, özlük, PDKS) yüklenir; her ay o ayın yürürlük-tarihli mevzuat parametreleriyle yeniden hesaplanır, beyan edilenle kademeli mutabakat kurulur, farklar kök nedene ve geri kazanım kanalına göre sınıflanır ve insan onaylı kapanışla her dönem güven skorlu, hash zincirli **immutable BAZ** snapshot'ına dondurulur. Ücretli pilotun teslimatı olan Retrospektif Mutabakat Raporu bu hattın çıktısıdır — onboarding, market-fit ölçümü ve ürünün kalıcı değeri (ileri dönem hesap referansı + denetim savunma dosyası) tek mekanizmada birleşir. (Ayrıntılı tasarım: `argus-baz-hatti-tasarimi.md`.)
+
 Çıktı, iki sanayi kuruluşunda (biri Kale grubu bünyesinde) ücretli sahada doğrulanacak SaaS + on-prem üründür.
 
 ## 3. Firma Tanıtımı
@@ -38,23 +40,27 @@ Argelog, 2013'ten bu yana Türkiye'nin önde gelen İSO 100 sanayi kuruluşları
 **Amaç:** Ar-Ge/Tasarım Merkezlerinin 5746 teşvik ve raporlama yükümlülüklerini, doğrulanmış deterministik hesap motorları ve kural tabanlı denetimle — yerel YZ'nin yalnızca dar destek görevlerinde kullanıldığı bir mimaride — denetlenebilir doğrulukta yöneten platformu geliştirmek.
 
 **Ölçülebilir hedefler:**
-1. Hesap motorunun pilot firmaların birer dönemlik gerçek verisinde YMM hesabıyla **kuruş mutabakatı** (tolerans 0) — çekirdek için mevcut 96/96 çapa testi setinin pilot verileriyle genişletilmesi.
-2. Çapraz tutarlılık denetiminin, hata enjekte edilmiş test setinde eksik/tutarsız kayıtların **≥%90'ını** yakalaması; yanlış alarm **≤%10**.
-3. Bir mevzuat değişikliğinin versiyonlu parametre/kural setine yansıtılma süresi **<1 iş günü**; geçmiş dönem hesapları etkilenmeden (bitemporal izolasyon) yeni dönem doğru sürümle hesaplanması.
-4. LLM katmanında **dayanaksız çıktı 0**: her LLM önerisi kaynak referansı taşır ve insan onayından geçmeden hiçbir kural/rapor içeriğine dönüşmez.
-5. En az **2 bordro/ERP konnektörünün** (pilot firmaların sistemleri) canlı veriyle çalışması.
-6. İki sanayi kuruluşunda ücretli pilot; en az birinden yenileme/abonelik taahhüdü.
+1. **Retrospektif doğruluk kapısı:** Yürürlük-tarihli parametre tablosu 2022/07'ye kadar Resmî Gazete referanslı ve YMM teyitli doldurulur; her retrospektif yıl için YMM-doğrulamalı çapa dönemi **kuruş farksız** geçmeden o yıl müşteriye raporlanmaz (mevcut 96/96 çapa deseninin geriye genişletilmesi, hedef ≥300 çapa; parametresiz koşumda 96/96 birebir korunur — regresyonsuzluk kanıtı).
+2. **Bazlama operasyonu:** Pilot firmada ≥12 dönem, veri odası açılışından itibaren ≤8 haftada (hedef 6) bazlanır; aynı girdi setinin yeniden yüklenmesi bit-özdeş kayıt ve özdeş hash üretir; herhangi bir baz versiyonu o günkü bilgi-durumuyla tek komutla ≤5 dakikada yeniden üretilir.
+3. **Mutabakat kalitesi:** Fark kalemlerinin **≥%85'i otomatik sınıflanır**; sınıflandırılamaz + belirsiz (S3+S5) tutar payı **≤%5**; YMM oturum etiketleriyle yanlış-neden oranı **≤%10**; mevzuat-referanslı ≥60 senaryoluk kütüphanede sınıf doğruluğu ≥%90.
+4. **Anomali tespiti:** Baz serisine enjekte edilen ≥20 mevzuat-referanslı sentetik hatanın ≥18'i yakalanır; temiz dönemlerde yanlış alarm ≤%5.
+5. **Kalibrasyon kanıtı:** Pilot kapanışında protokolü baştan yazılı YMM **kör örneklem incelemesi** (dönem başına ≥20 kalem) A-seviye dönemlerde açıklanmamış maddi fark 0 gösterir.
+6. LLM katmanında **dayanaksız çıktı 0**: her LLM önerisi kaynak referanslı ve insan onaylıdır.
+7. En az **2 bordro/ERP konnektörü** canlı veriyle çalışır; retrospektif belge içeri alma (MUHSGK XML ana yol) iç-toplam kabul kapısından geçer.
+8. İki sanayi kuruluşunda ücretli pilot; kapanıştan 30 gün içinde en az birinden yazılı yenileme/abonelik taahhüdü.
 
 ## 5. Ar-Ge Niteliği, Yenilikçi ve Özgün Yönleri
 
 **Proje başlangıç varlığı (background IP):** Argelog bünyesinde önceden geliştirilmiş teşvik hesap çekirdeği — 10 saf, deterministik, mevzuat-atıflı hesap fonksiyonu; parametrik mevzuat tablosu; 12 uyum kontrolü; çok kiracılı web platformu. Bu varlık projenin Ar-Ge konusu değildir; projenin THS başlangıcını yükselten kanıtlanmış temeldir ve tüm fikri hakları Argelog'a aittir.
 
-**Projenin Ar-Ge içeriği — teknik belirsizlikler:**
+**Projenin Ar-Ge içeriği — teknik belirsizlikler** (ayrıntı ve ölçüm protokolleri: `argus-baz-hatti-tasarimi.md` §8):
 
-1. **Bitemporal mevzuat versiyonlama ve etki analizi (AS1):** Mevcut çekirdek parametrik ancak tek-sürümlüdür. Geçerlilik dönemi × yayım tarihi eksenlerinde versiyonlanan kural/parametre modeli; bir düzenleme değiştiğinde etkilenen dönem, müşteri ve geçmiş hesapların otomatik tespiti; kapanmış dönem snapshot'larının değişmezlik garantisiyle birlikte yeniden hesap senaryoları. Mali mevzuat alanında özgün mühendislik problemidir.
-2. **Çapraz kaynak tutarlılık denetimi (AS2):** Mevcut 12 kontrolün; bordro × PDKS × proje/faaliyet kayıtları × personel nitelik verisi zincirinde çelişki tespit eden genişletilebilir bir denetim motoruna dönüştürülmesi (ör. tam zamanlı eşdeğer hesabına giren personelin izin/görevlendirme kayıtlarıyla çelişkisi; destek personeli %10 sınırının dönemsel simülasyonu). Kural DSL'i ile denetçi tarafından okunabilir kontrol tanımları.
-3. **Mevzuattan kural taslağına yarı-otomatik çeviri (AS3 — LLM, dar görev):** Resmî Gazete/tebliğ metinlerinden değişiklik özetinin ve parametre/kural değişiklik taslağının yerel LLM ile üretilmesi; taslak, mevzuat uzmanı onayından geçmeden hiçbir hesaba etki etmez. Araştırma sorusu: küçük (8–14B) yerel modellerin Türkçe mevzuat metninde, kısıtlı çözümleme (constrained decoding) ve şema zorlamasıyla güvenilir yapılandırılmış çıktı üretme sınırları.
-4. **Serbest metinli kanıt-kayıt eşleştirme (AS4 — LLM, dar görev):** Denetim dosyasındaki serbest metinli belgelerin (görevlendirme yazıları, proje raporları) yapılandırılmış kayıtlarla eşleştirilip eksik kanıtın işaretlenmesi — çıktı yalnızca "insan incelemesi için aday" statüsündedir.
+1. **AS-1 — Mevzuat değişikliklerinin parametre/girdi-semantiği katmanlaması ve bilgi-zamanlı retroaktif yeniden hesap:** Bitemporal tablolar tek başına ders kitabı malzemesidir; savunulan belirsizlik, Türk teşvik mevzuatındaki hangi değişikliğin salt parametre (KV oranı seyri, beş-puan imalat/diğer ayrışması), hangisinin **girdi semantiği** değişikliği olduğudur (2022 AGİ kaldırımı terkine konu matrah tanımını değiştirir; 7555 tavanının 01.08.2025 ay-ortası yürürlüğü dönem anahtarını yapısal kırar; 4691 rejiminde GV teşvikinin eğitim dereceli olmaması rejim dallanması ister). Şema + parametre + bilgi-zamanı birleşik sürümlemesinin, kuruşuna doğrulanmış çekirdeğin davranışını bozmadan temsil edilmesi ve düzeltme beyannamelerinin "hangi bilgi-tarihiyle hangi nüshaya karşı mutabakat" sorusunun biçimselleştirilmesi literatürde hazır cevabı olmayan kısımdır.
+2. **AS-2 — Beyan-hesap farklarının nedensel zincir üzerinde abdüktif kök-neden teşhisi:** Farkı bulmak deterministiktir; belirsizlik farkın nedenine güvenilir atıftadır. Farklar kalemler arasında nedensel zincirle yayılır (matrah → GV terkini → KVK), birden çok hipotez aynı fark imzasını üretebilir ve kanun türü hataları ancak beyan-edilen/olması-gereken **karşı-olgusal çift hesapla** ayrışır. Araştırma içeriği: hangi fark imzasının hangi nedene tekil bağlanabildiğinin karakterizasyonu (identifiability), zincirleme farkların topolojik sırayla kök nedene indirgenmesi, ayırt edilemeyen hipotezlerin kanıtla "belirsiz" raporlanması. Tamamen deterministik ve kanıt üreten yapı, KVKK ve denetim-savunulabilirlik kısıtlarının doğrudan sonucudur.
+3. **AS-3 — Güven-yayılımlı kısmi baz ve kalibre edilmiş doğrulanmışlık ölçüsü:** Eksik kaynakla kurulan kısmi bazda alan düzeyi güven etiketlerinin (TAM/KISMİ/YOK) hesap zinciri boyunca biçimsel yayılımı; dönem güven skorunun keyfî ağırlık değil **kalibre** bir ölçü olması (A ilan edilen dönemde sonradan maddi hata çıkma olasılığı gerçekten düşük olmalı); immutable hash zinciri ile "geçmişi değiştirmeden geçmişe düzeltme ekleme" çelişkisinin süpersedans versiyonlamayla çözümü.
+4. **AS-4 — Küçük-örneklem baz serisinden ileriye dönük anomali tespiti:** Tek firma × 12-24 dönemlik seride neyin anomali sayılacağı açık problemdir; veri tek seri değil kişi×dönem panelidir, asgari ücret/zam mevsimselliği yürürlük-tarihli parametreyle ayrıştırılır, kural başına kesinlik/duyarlılık dengesi ölçüme bağlanır ("dosya doğruyken çok tutarsızlık buldu" yanlış-alarm riskine karşı).
+
+*(Yerel LLM'in dar görevleri — belge alan-çıkarımı/başlık-eşleme önerisi, mevzuat değişikliği özeti, rapor dili — Ar-Ge iddiası olarak öne sürülmez; insan onaylı destek işlevleridir. Retrospektif belge içeri alma/format normalizasyonu da bilinçli olarak Ar-Ge değil, adlandırılmış geliştirme kalemi İP3a'dır.)*
 
 **Mevcut duruma göre farklar:** Yerli teşvik yazılımları (ArgeMemory, Ar-GeNet) hesaplama/puantaj odaklıdır; Bakanlık-doğrulamalı açık test çapası, bitemporal mevzuat versiyonlama, çapraz kaynak denetim motoru ve yerel-LLM destekli mevzuat izleme katmanı hiçbirinde yoktur. Global ürünler (Boast.ai, Neo.tax) Türk mevzuatını kapsamaz.
 
@@ -92,14 +98,15 @@ Konnektörler/içe aktarım → çok kiracılı platform → **deterministik hes
 
 | İP | Başlık | Aylar | Efor (AA) | Çıktı |
 |---|---|---|---|---|
-| İP1 | Çekirdek devralma ve mimari birleşim: mevcut hesap çekirdeğinin Argelog platform bağlamına taşınması; kural envanteri; yerel model değerlendirme havuzu + GPU kurulumu | 1–2 | 4 | Entegre çekirdek + model karşılaştırma raporu |
-| İP2 | Bitemporal mevzuat parametre/kural katmanı + etki analizi (AS1) | 2–5 | 5 | Versiyonlu hesap; <1 iş günü yansıtma testi |
-| İP3 | Bordro/ERP konnektörleri (2) ve veri normalizasyonu | 3–6 | 4 | Canlı veri akışı |
-| İP4 | Çapraz tutarlılık denetim motoru (AS2) + dar-görevli LLM katmanı (AS3/AS4) + denetim panosu | 4–7 | 6 | ≥%90/≤%10 raporu; şema-zorlamalı LLM değerlendirmesi |
-| İP5 | Saha doğrulama — Pilot 1 (Kale), on-prem kurulum | 6–8 | 3 | Pilot 1 kabul raporu, "risk/eksik teşvik" çıktısı |
-| İP6 | Saha doğrulama — Pilot 2, fiyat doğrulama, sürüm 1.0 | 8–10 | 3 | Pilot 2 raporu + ARGUS v1.0 |
+| İP1 | Çekirdek devralma + **aylık dönem anahtarı ve imza genişletmesi** (davranış varsayılanlarla birebir korunur; 96/96 çapa parametresiz koşumla regresyonsuz); kural envanteri; yerel model havuzu + GPU kurulumu | 1–2 | 5 | Entegre çekirdek; regresyonsuzluk kanıtı; model karşılaştırma raporu |
+| İP2 | **Yürürlük-tarihli parametre backfill'i** (2022/07'ye kadar, Resmî Gazete referanslı + YMM teyitli — pilot ön koşulu) + bilgi-zamanlı MevzuatSnapshot ve as-of yeniden üretim (AS-1); retrospektif yıl çapaları | 2–5 | 5 | Doğrulanmış parametre tablosu; ≥300 çapa; as-of kanıtı |
+| İP3a | **Retrospektif belge içeri alma:** MUHSGK BDP-XML parser (ana yol) + Ar-Ge ek bildirimi çıkarımı + hizmet listesi/tahakkuk PDF çıkarıcı (iç-toplam kabul kapılı) + nüsha zinciri + Veri Kalite Karnesi *(Ar-Ge iddiası değil, geliştirme kalemi)* | 3–6 | 4 | Bazlanabilir dönem envanteri üreten içeri alma hattı |
+| İP3b | Canlı bordro/ERP konnektörleri (2) | 4–7 | 2 | Canlı veri akışı |
+| İP4 | Kademeli mutabakat + **abdüktif kök-neden sınıflandırıcı ve karşı-olgusal çift hesap** (AS-2) + K1–K14 kural zinciri + ≥60 senaryoluk kütüphaneyle kesinlik ayarı (çıkış kriteri) + anomali tespiti (AS-4) + dar-görevli LLM + denetim panosu | 4–7 | 6 | Sınıflandırıcı doğruluk raporu; yanlış-alarm ayar kanıtı |
+| İP5 | Saha doğrulama deneyi — Pilot 1 (Kale): kapılı bazlama süreci, YMM mutabakat oturumları, kör değerlendirme protokolü (ön faz/sözleşme-KVKK ay 4–5'te, pilot dışında) | 6–8 | 2 | Pilot 1 kabul raporu; Retrospektif Mutabakat Raporu |
+| İP6 | Pilot 2 (ikinci bordro ekosistemi — genelleme testi) + süpersedans senaryosu canlı kanıtı + yükleme portalı/otomatik karne + v1.0 | 8–10 | 1 | Pilot 2 raporu + ARGUS v1.0 |
 
-Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık).
+Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık). Pilot eforu concierge→araç dönüşümünü ölçer: Pilot 1 ≤40 adam-gün, Pilot 2 ≤15 adam-gün.
 
 ## 9. Proje Ekibi ve Personel Planı
 
@@ -138,7 +145,12 @@ Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık).
 
 | Risk | O/E | Önlem |
 |---|---|---|
-| Mevzuat değişim hızının kural bakımını aşması | Orta/Yüksek | Bitemporal versiyonlama (AS1) tam da bunun için; YMM ile aylık gözden geçirme; LLM destekli Resmî Gazete izleme (insan onaylı) |
+| Doğrulanmamış geçmiş parametreyle retro hesap → sahte bulgu | Orta/Çok yüksek | "Doğrulanmamış parametreli ay hesaplanamaz" motor seviyesinde sert kural; parametre backfill'i Resmî Gazete referanslı + YMM madde madde teyitli (İP2 ilk teslimatı, pilot ön koşulu); yıl başına çapa dönemi kuruş farksız geçmeden o yıl raporlanmaz |
+| Yanlış alarm seli ("dosya doğruyken tutarsızlık buldu") | Orta/Yüksek | Kademeli mutabakat + firma muhasebe politikası profili + sürümlü tolerans bandı; S3/S5 sınıfları asla tutar iddiasına dönüşmez; kural kesinliği pilot öncesi ≥60 senaryoyla ayarlanır (İP4 çıkış kriteri); hiçbir rapor YMM oturumundan geçmeden müşteriye gitmez |
+| Veri temini kilidi (beyanname XML'leri ve şifreler dış SMMM'de; SMMM kendi geçmiş işini yanlışlayacak araca isteksiz) | Orta/Yüksek | İki muhataplı talep paketi; sözleşme ekinde SMMM/YMM yetkilendirme yazısı; mali müşavir "denetlenen" değil **"rapor ortağı"** (bulgular önce ona, dil "hata" değil "fırsat"); XML yoksa tahakkuk fişi + hizmet listesi istisna yolu; sözleşmede kapsam daraltma hakkı |
+| Tahsil edilebilirlik hayal kırıklığı (SGK'da geriye yararlanma ~6 ay — 5510 Ek m.17) | Orta/Orta | Rapor değer tanımı baştan üç kanallı: tahsil edilebilir (pencere içi) + önlenen yıllık koşan kayıp + risk azaltımı; aleyhte bulgular kendiliğinden düzeltme avantajlarıyla YMM eşliğinde sunulur; "bulgu ne olursa olsun rapor teslim edilir" sözleşmede |
+| Mevzuat değişim hızının kural bakımını aşması | Orta/Yüksek | Bitemporal versiyonlama (AS-1) tam da bunun için; YMM ile aylık gözden geçirme; LLM destekli Resmî Gazete izleme (insan onaylı) |
+| Çekirdek imza genişletmesinin 96/96 güvencesini eritmesi | Düşük/Yüksek | Opsiyonel parametre deseni; parametresiz koşumda birebir regresyon; migrasyon İP1'de adlandırılmış kalem ve İP5'in ön koşulu |
 | Çapraz denetim motorunun hedef doğruluğa ulaşamaması | Orta/Orta | Kural seti kademeli genişler; ilk sürüm mevcut 12 doğrulanmış kontrolle çıkar |
 | LLM dar görevlerinde düşük kalite | Düşük/Düşük | Mimari gereği LLM çıktısı hiçbir hesaba doğrudan etki etmez (insan onaylı öneri); en kötü durumda özellik kapatılır, ürün değeri korunur |
 | GPU tedarik/maliyet | Düşük/Orta | Tek sunucu ihtiyacı; erken satın alma; müşteri kurulumlarında donanımı müşterinin tedarik seçeneği |
