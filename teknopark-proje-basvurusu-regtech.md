@@ -6,7 +6,7 @@
 
 > Bu taslak, başvuru yapılacak teknoparkın kendi form şablonuna aktarılmak üzere hazırlanmıştır. Bölüm başlıkları yaygın TGB başvuru formatını izler; hakem heyeti değerlendirme kriterleri (Ar-Ge niteliği, teknolojik yenilik, ticarileşme) gözetilmiştir. "ARGUS" çalışma adıdır, değiştirilebilir.
 >
-> **GÜNCELLEME (karar):** YZ katmanı **tamamen yerel LLM** mimarisine çevrilmiştir (KVKK tasarım kısıtı — bordro verisi kurum dışına çıkamaz, harici LLM API kullanılmaz). Güncel efor 30 adam-ay, bütçe **11,0 M TL** (GPU sunucu yatırımı dahil). Form-hazır güncel sürüm: [`argus-teknopark-basvuru-formu.md`](argus-teknopark-basvuru-formu.md) — bu taslaktaki YZ/bütçe bölümleri yerine o dosya esas alınmalıdır.
+> **GÜNCELLEME (kararlar):** (1) YZ katmanı **tamamen yerel LLM** mimarisine çevrilmiştir (KVKK tasarım kısıtı — bordro verisi kurum dışına çıkamaz, harici LLM API kullanılmaz). (2) **Asıl katman deterministik hesap motorlarıdır:** teşvik hesabı, Berga/TeşvikOS çekirdeği (`murathaksal/berga` — Bakanlık doğrulamalı, 96/96 çapa testi) başlangıç varlığı olarak devralınarak yapılır; LLM yalnızca dar görevlerde ve insan onaylı çalışır. Güncel plan: 10 ay, 25 adam-ay, **~8,7 M TL**. Form-hazır güncel sürüm: [`argus-teknopark-basvuru-formu.md`](argus-teknopark-basvuru-formu.md) — bu taslaktaki Ar-Ge soruları, YZ ve bütçe bölümleri yerine o dosya esas alınmalıdır.
 
 ---
 

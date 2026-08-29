@@ -2,39 +2,61 @@
 
 *Teknoloji Geliştirme Bölgesi proje başvuru formu (standart portal formatı) — tüm başlıklar doldurulmuştur. Önceki Argelog.AI başvurusunun birebir başlık düzeni Drive erişimi açıldığında eşlenecektir.*
 
+**Mimari ilkeler (sabit):**
+1. **Asıl olan deterministik hesap motorlarıdır.** Teşvik hesabı ve uyum denetiminin çekirdeği, Bakanlık verisiyle kuruşuna kadar doğrulanmış saf hesap fonksiyonları ve kural tabanlı kontrollerdir (Berga/TeşvikOS çekirdeği devralınır).
+2. **LLM yalnızca dar ve sınırlı görevlerde çalışır** — hesap yapmaz, karar vermez; tüm çıktıları insan onaylıdır.
+3. **Tüm YZ işleme yereldir** — bordro verisi kurum dışına çıkmaz, harici LLM API kullanılmaz (KVKK tasarım kısıtı).
+
 ---
 
-## 1. Proje Adı
+## 1. Proje Kimliği
 
-**ARGUS — Ar-Ge Teşvik Uyumu için Yapay Zekâ Destekli Doğrulama ve Hesaplama Platformu**
+| Alan | Bilgi |
+|---|---|
+| Proje adı | ARGUS — Ar-Ge Teşvik Uyumu için Doğrulanmış Hesap Motoru ve Yerel YZ Destekli Uyum Platformu |
+| Başvuru sahibi | Argelog Ar-Ge Merkezi Yönetim Danışmanlığı ve Yazılım Hizmetleri A.Ş. |
+| Proje süresi | 10 ay (7 ay geliştirme + 3 ay saha doğrulama/sertleşme) |
+| Teknoloji alanı | Yazılım — Kurumsal Uyum/RegTech; Kural Tabanlı Sistemler; (sınırlı kapsamda) Yerel Doğal Dil İşleme (NACE 62.01) |
+| Tahmini bütçe | ~8,45 M TL |
+| THS (başlangıç → hedef) | Hesap çekirdeği THS 8 (sahada/Bakanlık verisiyle doğrulanmış); platform bütünü THS 5 → **THS 8** |
+| Hedef pazar | Türkiye'deki 1.363 Ar-Ge Merkezi + 342 Tasarım Merkezi (5746) ve kurumsal teknopark firmaları (4691) |
 
-## 2. Proje Süresi
+## 2. Proje Özeti
 
-12 ay (9 ay geliştirme + 3 ay saha doğrulama/sertleşme)
+5746 kapsamındaki Ar-Ge/Tasarım Merkezleri; aylık teşvik hesaplamaları (GV stopaj terkini, SGK işveren indirimleri, DV muafiyeti, KV indirimi), yıllık faaliyet raporu ve iki yılda bir denetim yükümlülüğü altındadır. Hata; teşvik geri ödemesi, durdurma ve belge iptali riski doğurur.
 
-## 3. Teknoloji Alanı
+ARGUS'un çekirdeği **deterministik hesap motorudur**: Berga/TeşvikOS projesinde geliştirilmiş, Bakanlık doğrulaması Nisan 2026 verisiyle kuruşuna kadar doğrulanmış (96/96 çapa testi), mevzuat maddesi izlenebilirliği taşıyan saf hesap fonksiyonları (5746 m.3/a-b-d, 5510 m.81/i, KVK m.10/1-a ve m.32, 7555 ücret teşvik tavanı, SGK 2016-26 genelge sıralaması) proje başlangıç varlığı olarak devralınır. Projenin Ar-Ge içeriği bu çekirdeğin üzerine üç katman ekler: (a) **bitemporal kural/parametre katmanı** — hangi dönemin hangi mevzuat sürümüyle hesaplanacağının versiyonlanması ve mevzuat değişikliği etki analizi; (b) **çapraz tutarlılık denetim motoru** — bordro × PDKS × proje kayıtları × faaliyet raporu zincirinde kural tabanlı çelişki tespiti; (c) **dar-görevli yerel LLM katmanı** — yalnızca mevzuat değişikliği özetleme/kural taslağı önerisi, serbest metinli belge-kanıt eşleştirme ve bulgu açıklamalarının rapor diline dökülmesi görevlerinde, tamamen yerel çalışan ve tüm çıktıları insan onaylı küçük dil modelleri.
 
-- Birincil: **Yazılım — Yapay Zekâ / Doğal Dil İşleme** (Türkçe mali-hukuki metin işleme)
-- İkincil: **Kurumsal Yazılım — Karar Destek ve İş Kuralları Sistemleri**
-- NACE: 62.01 — Bilgisayar programlama faaliyetleri
+Çıktı, iki sanayi kuruluşunda (biri Kale grubu bünyesinde) ücretli sahada doğrulanacak SaaS + on-prem üründür.
 
-## 4. Proje Konusu ve Amacı
+## 3. Firma Tanıtımı
 
-5746 sayılı kanun kapsamındaki 1.363 Ar-Ge Merkezi ve 342 Tasarım Merkezi; her ay bordroyla iç içe geçen teşvik hesaplamaları (gelir vergisi stopajı teşviki, SGK işveren desteği, kurumlar vergisi indirimi) yapmak, yıllık faaliyet raporunu Mayıs sonuna kadar sunmak ve en geç iki yılda bir denetlenmek yükümlülüğü altındadır. Hatalı hesap veya eksik/tutarsız kayıt; teşvik geri ödemesi, üç ay durdurma ve belge iptali riski doğurur. Bu süreçler bugün Excel, YMM danışmanlığı ve parçalı bordro yazılımlarıyla, hataya açık ve emek-yoğun biçimde yürütülmektedir.
+Argelog, 2013'ten bu yana Türkiye'nin önde gelen İSO 100 sanayi kuruluşlarına inovasyon, teknoloji ve Ar-Ge yönetimi yazılımları sunar (Ar-Ge Yönetimi, Teknoloji Yönetimi, İnovasyon Yönetimi modülleri); SAHA İstanbul üyesidir. Hesap çekirdeğinin kaynağı TeşvikOS, BERGA Danışmanlık (1995'ten beri Ar-Ge & Tasarım Merkezi danışmanlığı) iş birliğiyle geliştirilmiştir; kullanım/lisans çerçevesi başvuru ekinde beyan edilecektir.
 
-Projenin amacı; mevzuat metinlerinden çalıştırılabilir ve versiyonlanabilir kural setleri üreten, bordro/ERP verisiyle bütünleşerek kuruş mutabakatı hedefli teşvik hesaplaması yapan ve denetim öncesi eksik/tutarsız kayıtları büyük dil modeli (LLM) destekli hibrit bir mimariyle, her bulguyu mevzuat dayanağıyla birlikte raporlayarak tespit eden bir uyum platformu geliştirmektir.
+## 4. Projenin Amacı ve Hedefleri
 
-## 5. Projenin Ar-Ge Niteliği, Yenilikçi ve Özgün Yönleri
+**Amaç:** Ar-Ge/Tasarım Merkezlerinin 5746 teşvik ve raporlama yükümlülüklerini, doğrulanmış deterministik hesap motorları ve kural tabanlı denetimle — yerel YZ'nin yalnızca dar destek görevlerinde kullanıldığı bir mimaride — denetlenebilir doğrulukta yöneten platformu geliştirmek.
 
-Proje, rutin yazılım geliştirmenin ötesinde dört teknik belirsizlik/araştırma sorusu içerir:
+**Ölçülebilir hedefler:**
+1. Hesap motorunun pilot firmaların birer dönemlik gerçek verisinde YMM hesabıyla **kuruş mutabakatı** (tolerans 0) — çekirdek için mevcut 96/96 çapa testi setinin pilot verileriyle genişletilmesi.
+2. Çapraz tutarlılık denetiminin, hata enjekte edilmiş test setinde eksik/tutarsız kayıtların **≥%90'ını** yakalaması; yanlış alarm **≤%10**.
+3. Bir mevzuat değişikliğinin versiyonlu parametre/kural setine yansıtılma süresi **<1 iş günü**; geçmiş dönem hesapları etkilenmeden (bitemporal izolasyon) yeni dönem doğru sürümle hesaplanması.
+4. LLM katmanında **dayanaksız çıktı 0**: her LLM önerisi kaynak referansı taşır ve insan onayından geçmeden hiçbir kural/rapor içeriğine dönüşmez.
+5. En az **2 bordro/ERP konnektörünün** (pilot firmaların sistemleri) canlı veriyle çalışması.
+6. İki sanayi kuruluşunda ücretli pilot; en az birinden yenileme/abonelik taahhüdü.
 
-1. **Mevzuattan kurala çeviri (text-to-rule):** Türkçe mevzuat metinlerinden (kanun, yönetmelik, tebliğ) çalıştırılabilir hesaplama kurallarının yarı-otomatik çıkarımı ve her kuralın kaynak maddeyle izlenebilir bağının korunması. Türkçe mali-hukuki dil için yayımlanmış bir çözüm yoktur.
-2. **Halüsinasyonsuz doğrulama:** Kural tabanlı kesin kontroller ile LLM'in yalnızca dayanak gösterebildiği bulguları raporlayabildiği hibrit, açıklanabilir doğrulama mimarisi; "dayanaksız bulgu = 0" ölçülebilir kabul kriteridir.
-3. **Zamansal kural versiyonlama ve mevzuat değişikliği etki analizi:** Hangi dönemin hangi kural setiyle hesaplanacağının bitemporal modellenmesi; yeni düzenleme yayımlandığında etkilenen kural, müşteri ve geçmiş hesapların otomatik tespiti.
-4. **Heterojen bordro verisinde çapraz tutarlılık denetimi:** Farklı bordro/ERP şemalarının ortak modele normalize edilmesi ve proje-personel-zaman-teşvik zincirinde çelişki tespiti.
-5. **Yerel modellerle hedef doğruluk:** KVKK kısıtı gereği tüm YZ işleme yerel çalışacağından, sınırlı parametreli açık ağırlıklı modellerin Türkçe mali-mevzuat alanında — alan uyarlaması (LoRA), sentetik veri üretimi, bilgi damıtma ve RAG optimizasyonuyla — büyük bulut modellerinin referans doğruluğunun **≥%95'ine**, tek 48GB GPU'da çalışacak biçimde ulaştırılması. Doğruluk-donanım-maliyet üçgeninde ölçülü model kademelendirme, projenin özgün mühendislik katkılarındandır.
+## 5. Ar-Ge Niteliği, Yenilikçi ve Özgün Yönleri
 
-**Mevcut duruma göre farklar:** Yerli teşvik yazılımları (ArgeMemory, Ar-GeNet) hesaplama/puantaj odaklıdır; LLM destekli dayanak-gösterimli denetim öncesi doğrulama ve mevzuat değişikliği etki analizi katmanı hiçbirinde yoktur. Global R&D-tax otomasyon ürünleri (Boast.ai, Neo.tax) ABD/Kanada mevzuatına özeldir. Projenin doğrulama katmanı ulusal düzeyde ilktir.
+**Proje başlangıç varlığı (background IP):** Berga/TeşvikOS hesap çekirdeği — 10 saf, deterministik, mevzuat-atıflı hesap fonksiyonu; parametrik mevzuat tablosu; 12 uyum kontrolü; çok kiracılı web platformu. Bu varlık projenin Ar-Ge konusu değildir; projenin THS başlangıcını yükselten kanıtlanmış temeldir.
+
+**Projenin Ar-Ge içeriği — teknik belirsizlikler:**
+
+1. **Bitemporal mevzuat versiyonlama ve etki analizi (AS1):** Mevcut çekirdek parametrik ancak tek-sürümlüdür. Geçerlilik dönemi × yayım tarihi eksenlerinde versiyonlanan kural/parametre modeli; bir düzenleme değiştiğinde etkilenen dönem, müşteri ve geçmiş hesapların otomatik tespiti; kapanmış dönem snapshot'larının değişmezlik garantisiyle birlikte yeniden hesap senaryoları. Mali mevzuat alanında özgün mühendislik problemidir.
+2. **Çapraz kaynak tutarlılık denetimi (AS2):** Mevcut 12 kontrolün; bordro × PDKS × proje/faaliyet kayıtları × personel nitelik verisi zincirinde çelişki tespit eden genişletilebilir bir denetim motoruna dönüştürülmesi (ör. tam zamanlı eşdeğer hesabına giren personelin izin/görevlendirme kayıtlarıyla çelişkisi; destek personeli %10 sınırının dönemsel simülasyonu). Kural DSL'i ile denetçi tarafından okunabilir kontrol tanımları.
+3. **Mevzuattan kural taslağına yarı-otomatik çeviri (AS3 — LLM, dar görev):** Resmî Gazete/tebliğ metinlerinden değişiklik özetinin ve parametre/kural değişiklik taslağının yerel LLM ile üretilmesi; taslak, mevzuat uzmanı onayından geçmeden hiçbir hesaba etki etmez. Araştırma sorusu: küçük (8–14B) yerel modellerin Türkçe mevzuat metninde, kısıtlı çözümleme (constrained decoding) ve şema zorlamasıyla güvenilir yapılandırılmış çıktı üretme sınırları.
+4. **Serbest metinli kanıt-kayıt eşleştirme (AS4 — LLM, dar görev):** Denetim dosyasındaki serbest metinli belgelerin (görevlendirme yazıları, proje raporları) yapılandırılmış kayıtlarla eşleştirilip eksik kanıtın işaretlenmesi — çıktı yalnızca "insan incelemesi için aday" statüsündedir.
+
+**Mevcut duruma göre farklar:** Yerli teşvik yazılımları (ArgeMemory, Ar-GeNet) hesaplama/puantaj odaklıdır; Bakanlık-doğrulamalı açık test çapası, bitemporal mevzuat versiyonlama, çapraz kaynak denetim motoru ve yerel-LLM destekli mevzuat izleme katmanı hiçbirinde yoktur. Global ürünler (Boast.ai, Neo.tax) Türk mevzuatını kapsamaz.
 
 ## 6. Projede Kullanılacak Teknolojiler — Teknoloji Yığını
 
@@ -42,93 +64,95 @@ Proje, rutin yazılım geliştirmenin ötesinde dört teknik belirsizlik/araşt�
 
 | Katman | Teknoloji | Gerekçe |
 |---|---|---|
-| **Ön yüz** | React 18 + TypeScript, Vite, TailwindCSS; grafikler için Recharts | Kurumsal panolarda yaygın, bileşen ekosistemi olgun; mevcut Argelog platform ön yüzüyle ortak bileşen kütüphanesi kurulacak |
-| **API / uygulama katmanı** | .NET 8 (C#) Web API — mevcut Argelog platform yığınıyla hizalanır; REST + kısmi gRPC (konnektör iletişimi) | Kurumsal müşteri BT onaylarında güçlü; decimal hassasiyetli mali hesap için olgun tip sistemi |
-| **Kural motoru (özgün geliştirme)** | YAML/JSON tabanlı kural tanım dili (DSL) + özel yürütme motoru; bitemporal versiyonlama (geçerlilik dönemi × yayım tarihi); karşılaştırma değerlendirmesi için NRules | Projenin Ar-Ge çekirdeği; hazır kural motorları zamansal mevzuat versiyonlamayı desteklemediği için özgün geliştirilir |
-| **Hesaplama çekirdeği** | Deterministik decimal aritmetik; event-sourcing ile her hesabın denetim izi; property-based test (FsCheck) + altın set regresyonu | "Kuruş mutabakatı" kabul kriteri ve denetlenebilirlik zorunluluğu |
-| **YZ/NLP katmanı — tamamen yerel LLM** | Açık ağırlıklı modeller: birincil aday **Qwen3-32B sınıfı** (Türkçe yetkinliği yüksek); karşılaştırma havuzunda Llama 3.x, Gemma 3 ve Türkçe-uyarlanmış açık modeller; yüksek hacimli ön eleme için 8–14B küçük model kademesi. **Alan uyarlama:** mevzuat korpusuyla LoRA ince ayar + sentetik soru-cevap seti üretimi. **Yapılandırılmış çıktı:** kısıtlı çözümleme (constrained decoding — xgrammar/outlines) ile dayanak-atıf şeması model düzeyinde zorunlu kılınır. Embedding: BGE-M3 / multilingual-e5 (açık ağırlıklı) | **Tasarım kısıtı: bordro verisi kurum dışına çıkamaz (KVKK).** Tüm YZ işleme müşteri altyapısında veya yurtiçi özel ortamda çalışır; hiçbir harici LLM API'ye veri gönderilmez. Model seçimi İP1'de kurulacak değerlendirme havuzunda ölçümle yapılır |
-| **LLM sunum ve GPU altyapısı** | vLLM sunum katmanı + AWQ/FP8 nicemleme; geliştirme/test için 2× 48GB GPU'lu sunucu; müşteri kurulum hedefi: nicemlenmiş 24–32B model **tek 48GB GPU'lu sunucuda** (donanım maliyetini müşteri için taşınabilir tutmak ürün gereksinimi) | Nicemleme + model kademelendirme, doğruluk-donanım-maliyet dengesinin ayarlanabilir olmasını sağlar; bulut GPU kiralama yalnızca yük testlerinde (sentetik/anonim veriyle) kullanılır |
-| **Vektör arama / mevzuat deposu** | PostgreSQL 16 + pgvector (mevzuat maddeleri, embedding'ler, kural-madde bağları tek veri tabanında) | Ayrı vektör DB işletim yükü olmadan dayanak-izlenebilirliği; bitemporal şema ile aynı yerde |
-| **Veri katmanı** | PostgreSQL 16 (şema-bazlı çok kiracılı izolasyon), Redis (önbellek/kuyruk), MinIO (S3-uyumlu belge deposu — bordro dosyaları, kanıt belgeleri) | KVKK gereği müşteri başına izolasyon; on-prem'de aynı yığın değişmeden kurulur |
-| **Entegrasyon katmanı** | Konnektör çerçevesi: Logo/Netsis/Mikro/SAP bordro sistemleri için adaptörler (REST/DB görünümü/dosya); e-bildirge, muhtasar-prim XML/CSV içe aktarım; SFTP toplu aktarım; webhook'lar | İP3 kapsamı; pilot firmaların gerçek sistemleri konnektör önceliğini belirler |
-| **Raporlama** | Şablon tabanlı PDF/Excel üretimi (Bakanlık faaliyet raporu formatı, denetim hazırlık raporu, "risk / eksik teşvik" özeti) | Ç5/Ç6 pilot teslimatlarının çıktı formatı |
-| **Güvenlik / KVKK** | Alan bazlı şifreleme (kimlik/ücret verileri), maskeleme, RBAC + SSO (OIDC/SAML — kurumsal AD entegrasyonu), kapsamlı denetim logu, veri minimizasyonu | Bordro verisi hassas kişisel veri; kurumsal BT/KVKK onay süreçlerinin ön şartı |
-| **DevOps / dağıtım** | Docker; SaaS için Kubernetes, on-prem için K3s/Compose paketi + Helm; GitHub Actions CI/CD; Terraform (IaC); OpenTelemetry + Prometheus/Grafana izleme | Aynı imajın SaaS ve on-prem dağıtımı — iki pazarın tek kod tabanından beslenmesi |
-| **Kalite / değerlendirme altyapısı** | Hata-enjeksiyonlu sentetik bordro veri seti üreteci; mevzuat-kural eşleme altın seti; doğrulama katmanı için otomatik skorlama düzeneği (yakalama/yanlış alarm ölçümü) | Hedef 2-3'ün (≥%90 yakalama, ≤%10 yanlış alarm, dayanaksız bulgu=0) ölçülebilir kanıtı |
+| **Hesap çekirdeği (devralınan, ⭐ asıl katman)** | Berga/TeşvikOS saf hesap fonksiyonları (Python, `Decimal` ROUND_HALF_UP aritmetiği): 5746/5510 SGK indirimleri, GV terkini (eğitim derecesi oranlı), DV muafiyeti, KVK net-yorum zinciri, 7555 ücret tavanı oranlama mantığı; deterministik (`hesapla(g)==hesapla(g)`), framework-bağımsız, immutable dönem snapshot'ları | Bakanlık doğrulaması Nisan 2026 verisiyle 96/96 çapa testi; mevzuat referansı fonksiyon docstring'lerinde — denetlenebilirlik hazır |
+| **Mevzuat parametre katmanı → bitemporal genişletme (özgün geliştirme)** | Mevcut parametrik `mevzuat.py` tablosunun geçerlilik dönemi × yayım tarihi eksenli versiyonlu modele taşınması; kural DSL'i (YAML/JSON) + etki analizi motoru | AS1 — hiçbir oran/tutar koda gömülmez; dönem bazlı doğru sürümle hesap ve <1 iş günü mevzuat yansıtma hedefi |
+| **Uyum/denetim motoru** | Mevcut 12 kontrolün (7 mantıksal + 5 mevzuat) genişletilebilir kural tabanlı denetim motoruna evrimi; çapraz kaynak kuralları (bordro × PDKS × proje × personel) | AS2 — ≥%90 yakalama / ≤%10 yanlış alarm hedefinin taşıyıcısı; denetçi-okunabilir kural tanımları |
+| **Uygulama katmanı** | Python 3.12 + FastAPI + SQLAlchemy + Jinja2/HTMX (mevcut TeşvikOS mimarisi korunur); Pydantic girdi/çıktı modelleri; tek yönlü bağımlılık (web → store → io → core) | Kanıtlanmış lean mimari (~4,5K satır); Argelog platformuyla API düzeyinde entegrasyon |
+| **YZ/NLP katmanı — dar görevli, tamamen yerel** | Küçük açık ağırlıklı modeller birincil (8–14B sınıfı; Qwen3 ailesi aday, İP1'de ölçümle seçim); yalnız üç görev: (1) mevzuat değişikliği özet + kural taslağı önerisi, (2) serbest metin kanıt-kayıt eşleştirme, (3) bulgu açıklamalarının rapor diline dökülmesi. Kısıtlı çözümleme (xgrammar/outlines) ile şema-zorlamalı çıktı; her öneri kaynak-atıflı ve insan onaylı. Embedding: BGE-M3 sınıfı (açık) | **LLM hesap yapmaz, karar vermez.** KVKK kısıtı: tüm işleme yerel; harici LLM API'ye veri gönderilmez. Dar görev + küçük model = düşük donanım ve düşük risk |
+| **LLM sunum ve GPU altyapısı** | vLLM + AWQ/FP8 nicemleme; geliştirme ve müşteri kurulumu hedefi: **tek 48GB GPU'lu sunucu** (8–14B nicemlenmiş model için rahat sığar) | Dar-görevli tasarım GPU ihtiyacını tek sunucuya indirir; bulut GPU yalnızca yük testinde (sentetik/anonim veri) |
+| **Veri katmanı** | PostgreSQL 16 (üretim; şema bazlı çok kiracılı izolasyon — mevcut multi-tenant yapı taşınır), Redis (kuyruk/önbellek), MinIO (belge deposu); pgvector (mevzuat korpusu embedding'leri) | Mevcut SQLAlchemy repository katmanı korunur; KVKK izolasyonu |
+| **Entegrasyon katmanı** | Mevcut Excel/bordro şablon sihirbazı + PDKS içe aktarımı devralınır; üzerine 2 canlı bordro/ERP konnektörü (pilot firmaların sistemleri: Logo/Netsis/SAP adaptörleri), e-bildirge/muhtasar formatları, SFTP | İP3 — dosya tabanlı içe aktarım bugün çalışır durumda; konnektörler canlı akışa taşır |
+| **Raporlama** | Mevcut Excel export + çalışma raporu PDF üretimi genişletilir: denetim hazırlık raporu, "risk/eksik teşvik" özeti, Bakanlık faaliyet raporu veri seti | Pilot teslimat formatları |
+| **Güvenlik / KVKK** | Mevcut bcrypt auth + multi-tenant context üzerine: alan bazlı şifreleme, maskeleme, RBAC + SSO (OIDC), kapsamlı denetim izi (audit mevcut), veri minimizasyonu | Bordro verisi hassas kişisel veri; on-prem varsayılan seçenek |
+| **DevOps / dağıtım** | Docker + docker-compose (mevcut), AWS dağıtım betikleri (mevcut) + on-prem kurulum paketi; GitHub Actions CI/CD; mevcut çapa testi (`dogrulama.py` 96/96) ve izolasyon testleri (16/16) CI'a bağlanır | Aynı imajla SaaS ve on-prem; her değişiklikte kuruş-mutabakat regresyonu |
+| **Kalite / değerlendirme** | Çapa test setinin pilot verileriyle genişletilmesi; hata-enjeksiyonlu sentetik bordro üreteci; LLM görevleri için ayrı skorlama düzeneği (şema geçerliliği, kaynak-atıf zorunluluğu) | Hedef 1-4'ün ölçülebilir kanıtı |
 
 ### 6.2 Mimari özet
 
-Çok kiracılı web platformu → konnektörlerle bordro/ERP verisi normalize edilir → bitemporal kural motoru dönem bazlı teşvik hesabını üretir (deterministik, denetim izli) → hibrit doğrulama katmanı (kural kontrolleri + dayanak-kısıtlı **yerel** LLM) tutarsızlıkları mevzuat atıflarıyla raporlar → denetim hazırlık panosu ve resmi rapor çıktıları. **Tüm YZ bileşenleri müşteri altyapısında veya yurtiçi özel ortamda çalışır; kişisel veri hiçbir harici API'ye gönderilmez.** Tüm YZ çıktıları insan onaylı akışa bağlıdır; sistem "karar destek" konumundadır.
+Konnektörler/içe aktarım → çok kiracılı platform → **deterministik hesap çekirdeği** (Berga, bitemporal parametre katmanıyla) dönem hesabını üretir → **kural tabanlı denetim motoru** çapraz tutarlılık bulgularını mevzuat atıflarıyla raporlar → **dar-görevli yerel LLM** yalnızca mevzuat izleme özeti, kanıt eşleştirme adayları ve rapor dili üretir (tamamı insan onaylı) → denetim hazırlık panosu ve resmi çıktılar. Kişisel veri hiçbir harici API'ye gönderilmez.
 
 ## 7. Projenin Katma Değer Unsurları ve Uygulanabilirliği
 
-- **Ölçülebilir başarı kriterleri:** YMM hesabıyla kuruş mutabakatı (tolerans 0); hata-enjeksiyon setinde ≥%90 yakalama / ≤%10 yanlış alarm; dayanaksız bulgu 0; mevzuat değişikliğinin kural setine yansıması <1 iş günü; 2 canlı bordro konnektörü; yerel modelin referans doğruluğun ≥%95'ine tek 48GB GPU'da ulaşması.
-- **KVKK-tam-uyum ayrıştırıcısı:** Veri kurum dışına hiç çıkmadığından kurumsal BT/KVKK onay süreci kısalır — bulut LLM'e bağımlı olası rakiplere karşı yapısal satış avantajı ve savunma sanayii tedarik zincirine (SAHA ekosistemi) giriş ön şartı.
-- **Uygulanabilirlik kanıtı:** İki sanayi kuruluşundan (biri Kale grubu bünyesinde) yazılı ihtiyaç görüşü alınmıştır; her ikisiyle ücretli saha pilotu proje planına dahildir (İP5-İP6).
-- **Firma yetkinliği:** Argelog 2013'ten beri 5746/TEYDEB alanında İSO 100 firmalarına yazılım geliştirmektedir; alan bilgisi ve müşteri verisi erişimi mevcuttur.
+- **Uygulanabilirlik kanıtı güçlü:** Hesap çekirdeği bugün çalışır ve Bakanlık doğrulaması Nisan 2026 gerçek verisiyle kuruşuna kadar doğrulanmıştır (96/96 çapa testi) — projenin en riskli görünen kısmı fiilen tamamlanmış başlangıç varlığıdır. İki sanayi kuruluşundan yazılı ihtiyaç görüşü alınmıştır.
+- **Ölçülebilir başarı kriterleri:** kuruş mutabakatı (tolerans 0); ≥%90 yakalama / ≤%10 yanlış alarm; mevzuat yansıtma <1 iş günü; LLM'de dayanaksız çıktı 0; 2 canlı konnektör.
+- **KVKK-tam-uyum ayrıştırıcısı:** Veri kurum dışına çıkmaz; kurumsal BT/KVKK onayı hızlanır, savunma tedarik zincirine (SAHA) giriş ön şartı sağlanır.
+- **Doğru araç doğru yerde:** Hesap ve denetim deterministik motorlarda, YZ yalnızca dar destek görevlerinde — "YZ hatası mali sonuç doğurur" riski mimari düzeyde dışlanmıştır.
 
-## 8. İş Paketleri ve Zaman Planlaması
+## 8. İş-Zaman Planı
 
 | İP | Başlık | Aylar | Efor (AA) | Çıktı |
 |---|---|---|---|---|
-| İP1 | Mevzuat analizi, kural envanteri, text-to-rule deneyleri; **yerel model değerlendirme havuzu ve GPU altyapısının kurulumu** | 1–3 | 5 | Onaylı kural kataloğu + çıkarım hattı prototipi + model karşılaştırma raporu |
-| İP2 | Bitemporal kural motoru ve hesaplama çekirdeği | 2–6 | 8 | Kuruş-mutabakat testi geçen çekirdek |
-| İP3 | Bordro/ERP konnektörleri (2 adet) ve veri normalizasyonu | 4–7 | 5 | Canlı veri akışı |
-| İP4 | Hibrit doğrulama katmanı + denetim hazırlık panosu; **LoRA alan uyarlaması, nicemleme ve tek-GPU hedef optimizasyonu** | 5–8 | 6 | ≥%90 yakalama / ≤%10 yanlış alarm raporu + AS5 doğruluk raporu |
-| İP5 | Saha doğrulama — Pilot 1 (Kale), **müşteri ortamında on-prem kurulum** | 8–10 | 3 | Pilot 1 kabul raporu, "risk/eksik teşvik" çıktısı |
-| İP6 | Saha doğrulama — Pilot 2, fiyat doğrulama, sürüm 1.0 | 10–12 | 3 | Pilot 2 raporu + ARGUS v1.0 |
+| İP1 | Çekirdek devralma ve mimari birleşim: Berga çekirdeğinin Argelog platform bağlamına taşınması; kural envanteri; yerel model değerlendirme havuzu + GPU kurulumu | 1–2 | 4 | Entegre çekirdek + model karşılaştırma raporu |
+| İP2 | Bitemporal mevzuat parametre/kural katmanı + etki analizi (AS1) | 2–5 | 5 | Versiyonlu hesap; <1 iş günü yansıtma testi |
+| İP3 | Bordro/ERP konnektörleri (2) ve veri normalizasyonu | 3–6 | 4 | Canlı veri akışı |
+| İP4 | Çapraz tutarlılık denetim motoru (AS2) + dar-görevli LLM katmanı (AS3/AS4) + denetim panosu | 4–7 | 6 | ≥%90/≤%10 raporu; şema-zorlamalı LLM değerlendirmesi |
+| İP5 | Saha doğrulama — Pilot 1 (Kale), on-prem kurulum | 6–8 | 3 | Pilot 1 kabul raporu, "risk/eksik teşvik" çıktısı |
+| İP6 | Saha doğrulama — Pilot 2, fiyat doğrulama, sürüm 1.0 | 8–10 | 3 | Pilot 2 raporu + ARGUS v1.0 |
 
-Toplam: **30 adam-ay / 12 ay** (ort. ~2,5 FTE + danışmanlık).
+Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık).
 
-## 9. Proje Personeli
+## 9. Proje Ekibi ve Personel Planı
 
 | Rol | Kişi | Görev | Efor (AA) |
 |---|---|---|---|
-| Proje yöneticisi / ürün sahibi | 1 | Planlama, pilot koordinasyonu, kabul kriterleri | 3 |
-| Kıdemli arka uç geliştirici | 2 | Kural motoru, hesaplama çekirdeği, konnektörler | 14 |
-| YZ/NLP mühendisi | 1 | Text-to-rule, doğrulama katmanı, LoRA alan uyarlaması, model değerlendirme | 8 |
-| MLOps/altyapı mühendisi | 1 (kısmi) | GPU altyapısı, vLLM sunum katmanı, nicemleme, on-prem paketleme | 1 |
-| Ön yüz geliştirici | 1 (yarı zamanlı) | Pano ve iş akışı arayüzleri | 3 |
-| Test/kalite uzmanı | 1 (kısmi) | Altın setler, hata enjeksiyonu, regresyon | 1 |
+| Proje yöneticisi / ürün sahibi | 1 | Planlama, pilot koordinasyonu, kabul kriterleri | 2,5 |
+| Kıdemli arka uç geliştirici | 2 | Bitemporal katman, denetim motoru, konnektörler | 12 |
+| YZ/NLP mühendisi | 1 | Dar-görevli LLM katmanı, model değerlendirme, şema zorlama | 5 |
+| Ön yüz geliştirici | 1 (yarı zamanlı) | Pano ve iş akışı arayüzleri (HTMX üzerine) | 3 |
+| Test/kalite + MLOps | 1 (kısmi) | Çapa seti genişletme, hata enjeksiyonu, GPU/vLLM altyapısı | 2,5 |
 | Mevzuat/YMM uzmanı | Hizmet alımı | Kural doğrulama, mutabakat denetimi | — |
 
 ## 10. Proje Bütçesi
 
 | Kalem | Tutar (TL) |
 |---|---|
-| Personel (30 AA × 250.000 ort. tam maliyet) | 7.500.000 |
-| Danışmanlık — mevzuat/YMM (hizmet alımı) | 600.000 |
-| **GPU sunucu — geliştirme/test (2× 48GB GPU'lu sunucu)** | 2.000.000 |
-| Bulut GPU kiralama (yalnızca yük testleri, sentetik/anonim veriyle) | 150.000 |
+| Personel (25 AA × 250.000 ort. tam maliyet) | 6.250.000 |
+| Danışmanlık — mevzuat/YMM (hizmet alımı) | 500.000 |
+| GPU sunucu — geliştirme/test (1× 48GB GPU'lu sunucu) | 1.200.000 |
+| Bulut GPU kiralama (yalnızca yük testleri, sentetik/anonim veri) | 100.000 |
 | Entegrasyon test ortamları ve yazılım lisansları | 300.000 |
-| Beklenmedik giderler (~%4) | 450.000 |
-| **Toplam** | **11.000.000** |
+| Beklenmedik giderler (~%4) | 350.000 |
+| **Toplam** | **8.700.000** |
 
-*Not:* Harici LLM API kalemi yoktur — tüm YZ işleme yerel modellerle yapılır (KVKK tasarım kısıtı). GPU sunucu, proje sonrası ürünün sürekli geliştirme/test altyapısı olarak kullanılmaya devam eder; makine-teçhizat kalemi olarak amortismana tabidir.
+*Notlar:* (1) Harici LLM API kalemi yoktur — tüm YZ işleme yereldir. (2) Dar-görevli küçük model tasarımı GPU ihtiyacını tek sunucuya indirmiştir; sunucu proje sonrası sürekli geliştirme/test altyapısıdır (makine-teçhizat, amortismana tabi). (3) Hesap çekirdeğinin hazır devralınması, önceki plana göre süreyi 12→10 aya, eforu 30→25 AA'ya düşürmüştür.
 
 ## 11. Proje Çıktısının Ticarileştirilmesi ve Pazar Analizi
 
-- **Hedef pazar:** 1.363 Ar-Ge Merkezi + 342 Tasarım Merkezi (2025 sonu); teşvikler 31.12.2028'e kadar uzatılmış durumda; gerçekçi hedeflenebilir set orta-büyük ölçekli 400–600 merkez. İkincil pazar: kurumsal teknopark (4691) firmaları.
-- **Rakip analizi:** Yerli — ArgeMemory, Ar-GeNet (hesaplama odaklı; YZ doğrulama katmanı yok); bordro yazılımlarının teşvik modülleri; YMM/danışmanlık hizmetleri. Global — Boast.ai, Neo.tax (Türk mevzuatını kapsamaz). Konum: yerli mevzuat hendeği + YZ doğrulama farkı.
-- **Gelir modeli:** Personel sayısına kademeli yıllık abonelik + denetim öncesi "hazırlık taraması" paketi; pilotlarda abonelik ile başarı primi modeli A/B test edilecektir.
-- **Satış projeksiyonu (muhafazakâr):** Yıl 1 — 2 ücretli pilot + 3–5 abonelik; Yıl 2 — 12–18 müşteri; Yıl 3 — 30–40 müşteri. Kanallar: mevcut İSO 100 müşteri tabanı, YMM/danışmanlık firmalarıyla kanal ortaklığı.
-- **Talep kanıtı:** İki sanayi firmasından yazılı ihtiyaç görüşü; niyet mektupları başvuru ekinde sunulacaktır.
+- **Hedef pazar:** 1.363 Ar-Ge Merkezi + 342 Tasarım Merkezi; teşvikler 31.12.2028'e kadar uzatılmış; gerçekçi hedeflenebilir set orta-büyük 400–600 merkez; ikincil pazar kurumsal teknopark (4691) firmaları.
+- **Rakip analizi:** Yerli — ArgeMemory, Ar-GeNet (hesaplama odaklı; Bakanlık-doğrulamalı açık test çapası, bitemporal versiyonlama ve denetim motoru yok); bordro yazılımı teşvik modülleri; YMM hizmeti. Global — Boast.ai, Neo.tax (Türk mevzuatı yok). Konum: doğrulanmış hesap çekirdeği + yerel mevzuat hendeği + KVKK-tam-uyum.
+- **Gelir modeli:** Personel sayısına kademeli yıllık abonelik + denetim öncesi "hazırlık taraması" paketi; pilotlarda abonelik vs. başarı primi A/B testi.
+- **Satış projeksiyonu (muhafazakâr):** Yıl 1 — 2 ücretli pilot + 3–5 abonelik; Yıl 2 — 12–18; Yıl 3 — 30–40 müşteri. Kanallar: Argelog İSO 100 tabanı; BERGA danışmanlık müşteri ağı; YMM kanal ortaklıkları.
+- **Talep kanıtı:** İki sanayi firmasından yazılı ihtiyaç görüşü (LOI başvuru ekinde hedeflenir).
 
 ## 12. Riskler ve B Planı
 
 | Risk | O/E | Önlem |
 |---|---|---|
-| Mevzuat değişim hızının kural bakımını aşması | Orta/Yüksek | Bitemporal versiyonlama baştan mimaride; YMM ile aylık gözden geçirme; Resmî Gazete izleme yarı-otomasyonu |
-| Yerel LLM'in hedef doğruluğa ulaşamaması | Orta/Orta | Model kademelendirme (32B→70B nicemlenmiş) + LoRA yinelemeleri; hibrit mimari sayesinde kural tabanlı kontroller tek başına ürünleşebilir; LLM katmanı önce öneri modunda, insan onaylı devreye alınır |
-| GPU tedarik süresi / donanım maliyet artışı | Orta/Orta | İP1'de erken satın alma; nicemleme ile 48GB sınıfına sığdırma hedefi; yük testleri için yurtiçi bulut GPU kiralama yedeği; müşteri kurulumlarında donanımı müşterinin tedarik etmesi seçeneği |
-| Bordro/ERP veri erişiminde gecikme | Orta/Orta | Veri erişim protokolleri İP1'de imzalanır; dosya-tabanlı yedek içe aktarım yolu |
-| KVKK / veri gizliliği | Düşük/Yüksek | Tamamen yerel YZ mimarisi (veri kurum dışına çıkmaz — tasarım kısıtı); veri minimizasyonu, maskeleme, şifreleme, müşteri başına izolasyon |
-| Pilot takvim kayması | Orta/Düşük | İki bağımsız pilot; 2 ay tampon |
-| Hesap hatasının mali sonucu | Düşük/Yüksek | Kuruş mutabakatı kriteri; çift hesap doğrulama dönemi; sözleşmede "karar destek" konumu |
+| Mevzuat değişim hızının kural bakımını aşması | Orta/Yüksek | Bitemporal versiyonlama (AS1) tam da bunun için; YMM ile aylık gözden geçirme; LLM destekli Resmî Gazete izleme (insan onaylı) |
+| Berga çekirdeği kullanım/lisans çerçevesinin gecikmesi | Düşük/Yüksek | BERGA Danışmanlık ile lisans/ortak geliştirme sözleşmesi İP1 öncesi imzalanır; başvuru ekinde beyan |
+| Çapraz denetim motorunun hedef doğruluğa ulaşamaması | Orta/Orta | Kural seti kademeli genişler; ilk sürüm mevcut 12 doğrulanmış kontrolle çıkar |
+| LLM dar görevlerinde düşük kalite | Düşük/Düşük | Mimari gereği LLM çıktısı hiçbir hesaba doğrudan etki etmez (insan onaylı öneri); en kötü durumda özellik kapatılır, ürün değeri korunur |
+| GPU tedarik/maliyet | Düşük/Orta | Tek sunucu ihtiyacı; erken satın alma; müşteri kurulumlarında donanımı müşterinin tedarik seçeneği |
+| Bordro/ERP veri erişiminde gecikme | Orta/Orta | Mevcut Excel/şablon içe aktarımı yedek yol; veri protokolleri İP1'de imzalanır |
+| KVKK / veri gizliliği | Düşük/Yüksek | Tamamen yerel YZ; veri minimizasyonu, maskeleme, şifreleme, kiracı izolasyonu |
+| Hesap hatasının mali sonucu | Düşük/Yüksek | Çekirdek Bakanlık-doğrulamalı + her değişiklikte 96/96 çapa regresyonu; kuruş mutabakat kabulü; sözleşmede "karar destek" konumu |
 
 ## 13. Fikri Mülkiyet ve Proje Çıktıları
 
-Kaynak kod, veri modelleri ve kural derleme hattı Argelog mülkiyetinde; ARGUS marka başvurusu. AS1/AS2 mimarisi için ay 9'da patentlenebilirlik ön değerlendirmesi; uygun bulunursa TÜRKPATENT başvurusu. Anonimleştirilmiş değerlendirme setleri ve en az 1 akademik bildiri. Ticari çıktı: ARGUS v1.0 (SaaS + on-prem), 2 canlı konnektör, denetim hazırlık panosu.
+- **Başlangıç varlığı beyanı:** Berga/TeşvikOS hesap çekirdeği (BERGA Danışmanlık iş birliği) background IP olarak beyan edilir; kullanım/lisans sözleşmesi başvuru ekindedir. Proje kapsamında geliştirilen bitemporal katman, denetim motoru ve LLM katmanı Argelog mülkiyetindedir.
+- ARGUS marka başvurusu; AS1/AS2 mimarisi için ay 8'de patentlenebilirlik ön değerlendirmesi.
+- Anonimleştirilmiş değerlendirme setleri ve en az 1 akademik bildiri.
+- Ticari çıktı: ARGUS v1.0 (SaaS + on-prem), 2 canlı konnektör, denetim hazırlık panosu.
 
 ## 14. Diğer Kamu Destekleri
 
@@ -136,8 +160,8 @@ TÜBİTAK 1501/1507 başvurusu planlanmaktadır; kabul hâlinde 4691 muafiyetler
 
 ## 15. Firma Bilgileri
 
-Argelog Ar-Ge Merkezi Yönetim Danışmanlığı ve Yazılım Hizmetleri A.Ş. — 2013, İstanbul (Üsküdar). İnovasyon, teknoloji ve Ar-Ge yönetimi yazılımları; müşteri tabanı İSO 100 sanayi kuruluşları; SAHA İstanbul üyesi. Ürünler: Ar-Ge Yönetimi, Teknoloji Yönetimi, İnovasyon Yönetimi modülleri. (Ticari sicil, vergi ve iletişim bilgileri form aktarımında eklenecektir.)
+Argelog Ar-Ge Merkezi Yönetim Danışmanlığı ve Yazılım Hizmetleri A.Ş. — 2013, İstanbul (Üsküdar). İnovasyon, teknoloji ve Ar-Ge yönetimi yazılımları; müşteri tabanı İSO 100 sanayi kuruluşları; SAHA İstanbul üyesi. (Ticari sicil, vergi ve iletişim bilgileri form aktarımında eklenecektir.)
 
 ---
 
-*Kaynak analizler: `arge-proje-fikirleri.md` (#5 RegTech — market-fit, bütçe/zaman) ve `teknopark-proje-basvurusu-regtech.md` (genişletilmiş taslak).*
+*Kaynaklar: `arge-proje-fikirleri.md` (#5 RegTech analizleri), `teknopark-proje-basvurusu-regtech.md` (önceki taslak), `murathaksal/berga` deposu (TeşvikOS hesap çekirdeği — hesap.py, mevzuat.py, compliance.py).*
