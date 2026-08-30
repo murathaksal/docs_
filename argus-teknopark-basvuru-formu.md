@@ -84,7 +84,7 @@ Argelog, 2013'ten bu yana Türkiye'nin önde gelen İSO 100 sanayi kuruluşları
 | **Entegrasyon katmanı** | Mevcut Excel/bordro şablon sihirbazı + PDKS içe aktarımı devralınır; üzerine 2 canlı bordro/ERP konnektörü (pilot firmaların sistemleri: Logo/Netsis/SAP adaptörleri), e-bildirge/muhtasar formatları, SFTP | İP3 — dosya tabanlı içe aktarım bugün çalışır durumda; konnektörler canlı akışa taşır |
 | **Raporlama** | Mevcut Excel export + çalışma raporu PDF üretimi genişletilir: denetim hazırlık raporu, "risk/eksik teşvik" özeti, Bakanlık faaliyet raporu veri seti | Pilot teslimat formatları |
 | **Güvenlik / KVKK** | Mevcut bcrypt auth + multi-tenant context üzerine: alan bazlı şifreleme, maskeleme, RBAC + SSO (OIDC), kapsamlı denetim izi (audit mevcut), veri minimizasyonu | Bordro verisi hassas kişisel veri; on-prem varsayılan seçenek |
-| **DevOps / dağıtım** | Docker + docker-compose (mevcut), AWS dağıtım betikleri (mevcut) + on-prem kurulum paketi; GitHub Actions CI/CD; mevcut çapa testi (`dogrulama.py` 96/96) ve izolasyon testleri (16/16) CI'a bağlanır | Aynı imajla SaaS ve on-prem; her değişiklikte kuruş-mutabakat regresyonu |
+| **DevOps / dağıtım** | Birincil dağıtım: imzalı masaüstü installer + offline güncelleme paketleri; Kurum sürümü sunucu opsiyonu için Docker/compose (mevcut altyapı korunur); GitHub Actions CI/CD; mevcut çapa testi (`dogrulama.py` 96/96), izolasyon testleri (16/16) ve CPU donanım matrisi ölçümleri CI'a bağlanır | Aynı çekirdekten masaüstü + kurum sunucusu; her değişiklikte kuruş-mutabakat regresyonu |
 | **Kalite / değerlendirme** | Çapa test setinin pilot verileriyle genişletilmesi; hata-enjeksiyonlu sentetik bordro üreteci; LLM görevleri için ayrı skorlama düzeneği (şema geçerliliği, kaynak-atıf zorunluluğu) | Hedef 1-4'ün ölçülebilir kanıtı |
 
 ### 6.2 Özellik Seti ve Sürümler ("herkesin ihtiyacı" kademesi)
@@ -183,7 +183,7 @@ Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık). Pilot eforu con
 - **Başlangıç varlığı beyanı:** Firma bünyesinde önceden geliştirilmiş teşvik hesap çekirdeği background IP olarak beyan edilir; proje kapsamında geliştirilen bitemporal katman, denetim motoru ve LLM katmanı dahil tüm fikri haklar Argelog mülkiyetindedir.
 - ARGUS marka başvurusu; AS1/AS2 mimarisi için ay 8'de patentlenebilirlik ön değerlendirmesi.
 - Anonimleştirilmiş değerlendirme setleri ve en az 1 akademik bildiri.
-- Ticari çıktı: ARGUS v1.0 (SaaS + on-prem), 2 canlı konnektör, denetim hazırlık panosu.
+- Ticari çıktı: ARGUS v1.0 — kapalı devre CPU-yalnız masaüstü uygulama (Masaüstü/Pro sürümleri) + Kurum sunucu opsiyonu, 2 canlı konnektör, denetim hazırlık panosu, imzalı offline mevzuat güncelleme altyapısı.
 
 ## 14. Diğer Kamu Destekleri
 
