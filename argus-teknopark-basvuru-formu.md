@@ -120,7 +120,7 @@ Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık). Pilot eforu con
 | Kıdemli arka uç geliştirici | 2 | Bitemporal katman, denetim motoru, konnektörler | 12 |
 | YZ/NLP mühendisi | 1 | Dar-görevli LLM katmanı, model değerlendirme, şema zorlama | 5 |
 | Ön yüz geliştirici | 1 (yarı zamanlı) | Pano ve iş akışı arayüzleri (HTMX üzerine) | 3 |
-| Test/kalite + MLOps | 1 (kısmi) | Çapa seti genişletme, hata enjeksiyonu, GPU/vLLM altyapısı | 2,5 |
+| Test/kalite + MLOps | 1 (kısmi) | Çapa seti genişletme, hata enjeksiyonu, CPU çıkarım/paketleme altyapısı ve donanım matrisi ölçümleri | 2,5 |
 | Mevzuat/YMM uzmanı | Hizmet alımı | Kural doğrulama, mutabakat denetimi | — |
 
 ## 10. Proje Bütçesi
