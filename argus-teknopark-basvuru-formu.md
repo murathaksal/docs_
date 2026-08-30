@@ -158,6 +158,7 @@ Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık). Pilot eforu con
 - **Gelir modeli:** Personel sayısına kademeli yıllık abonelik + denetim öncesi "hazırlık taraması" paketi; pilotlarda abonelik vs. başarı primi A/B testi.
 - **Satış projeksiyonu (muhafazakâr):** Yıl 1 — 2 ücretli pilot + 3–5 abonelik; Yıl 2 — 12–18; Yıl 3 — 30–40 müşteri. Kanallar: Argelog İSO 100 müşteri tabanı ve danışmanlık ilişkileri; YMM kanal ortaklıkları.
 - **Talep kanıtı:** İki sanayi firmasından yazılı ihtiyaç görüşü (LOI başvuru ekinde hedeflenir).
+- **Büyüme vizyonu (ARGELOG.AI):** ARGUS, Argelog'un "kuruma özel Ar-Ge zekâ katmanı" (ARGELOG.AI) vizyonunun ilk üretim uygulamasıdır: kurumsal veri → analiz → uzman onayı → doğrulanmış sonuç → geri besleme döngüsünü uyum alanında kanıtlar. Aynı platform çekirdeği (olay/onay zinciri, sürümlü bilgi tabanı, model soyutlama, ajan manifesti) üzerinde sonraki aşamalarda deney/reçete döngüsü ve ek Ar-Ge ajanları (TRL, patent tarama, proje riski, teknoloji radarı) ticarileştirilecektir — bu vizyon projenin kapsamını değil, çıktısının pazar tavanını büyütür.
 
 ## 12. Riskler ve B Planı
 
