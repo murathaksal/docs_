@@ -5,7 +5,8 @@
 **Mimari ilkeler (sabit):**
 1. **Asıl olan deterministik hesap motorlarıdır.** Teşvik hesabı ve uyum denetiminin çekirdeği, Argelog bünyesinde geliştirilmiş ve Bakanlık verisiyle kuruşuna kadar doğrulanmış saf hesap fonksiyonları ile kural tabanlı kontrollerdir.
 2. **LLM yalnızca dar ve sınırlı görevlerde çalışır** — hesap yapmaz, karar vermez; tüm çıktıları insan onaylıdır.
-3. **Tüm YZ işleme yereldir** — bordro verisi kurum dışına çıkmaz, harici LLM API kullanılmaz (KVKK tasarım kısıtı).
+3. **Tüm YZ işleme yereldir ve CPU-yalnız çalışır** — ürün, kapalı devre (internetsiz/izole ağ) ortamdaki sıradan kişisel bilgisayarlarda, GPU gerektirmeden çalışır teslim edilir; bordro verisi kurum dışına çıkmaz, harici LLM API kullanılmaz (KVKK + kapalı devre tasarım kısıtı).
+4. **Kolay kullanım varsayılandır:** kurulum tek paketle, kullanım "dosyaları sürükle → sihirbazı izle → raporu al" akışıyla; BT projesi gerektirmez — hedef, ilk raporun kurulumdan sonraki ilk saat içinde alınmasıdır.
 
 ---
 
@@ -17,7 +18,7 @@
 | Başvuru sahibi | Argelog Ar-Ge Merkezi Yönetim Danışmanlığı ve Yazılım Hizmetleri A.Ş. |
 | Proje süresi | 10 ay (7 ay geliştirme + 3 ay saha doğrulama/sertleşme) |
 | Teknoloji alanı | Yazılım — Kurumsal Uyum/RegTech; Kural Tabanlı Sistemler; (sınırlı kapsamda) Yerel Doğal Dil İşleme (NACE 62.01) |
-| Tahmini bütçe | ~8,45 M TL |
+| Tahmini bütçe | ~7,95 M TL |
 | THS (başlangıç → hedef) | Hesap çekirdeği THS 8 (sahada/Bakanlık verisiyle doğrulanmış); platform bütünü THS 5 → **THS 8** |
 | Hedef pazar | Türkiye'deki 1.363 Ar-Ge Merkezi + 342 Tasarım Merkezi (5746) ve kurumsal teknopark firmaları (4691) |
 
@@ -29,7 +30,7 @@ ARGUS'un çekirdeği **deterministik hesap motorudur**: Argelog bünyesinde önc
 
 Projenin Ar-Ge ve market-fit kalbi **BAZ Hattı** alt sistemidir: yeni müşterinin geçmiş resmî beyanları (MUHSGK, e-Bildirge hizmet listeleri, tahakkuk fişleri) ile hesap girdileri (bordro, özlük, PDKS) yüklenir; her ay o ayın yürürlük-tarihli mevzuat parametreleriyle yeniden hesaplanır, beyan edilenle kademeli mutabakat kurulur, farklar kök nedene ve geri kazanım kanalına göre sınıflanır ve insan onaylı kapanışla her dönem güven skorlu, hash zincirli **immutable BAZ** snapshot'ına dondurulur. Ücretli pilotun teslimatı olan Retrospektif Mutabakat Raporu bu hattın çıktısıdır — onboarding, market-fit ölçümü ve ürünün kalıcı değeri (ileri dönem hesap referansı + denetim savunma dosyası) tek mekanizmada birleşir. (Ayrıntılı tasarım: `argus-baz-hatti-tasarimi.md`.)
 
-Çıktı, iki sanayi kuruluşunda (biri Kale grubu bünyesinde) ücretli sahada doğrulanacak SaaS + on-prem üründür.
+**Ürün biçimi:** Kapalı devre ortamda, sıradan kişisel bilgisayarda (GPU'suz, CPU-yalnız) çalışan **masaüstü uygulama** — kurulumdan ilk rapora bir saat hedefiyle, "dosyaları sürükle → sihirbazı izle → raporu al" kolaylığında; mevzuat güncellemeleri imzalı offline paketlerle taşınır. Bu biçim ürünü yalnız büyük Ar-Ge merkezlerinin değil; savunma sanayii kapalı ağlarının, KVKK-hassas her kurumun ve SMMM/mali müşavir ofislerinin kullanabileceği "herkesin kurabildiği" bir araca dönüştürür. Çok kullanıcılı kurum sunucusu opsiyonel üst pakettir. Çıktı, iki sanayi kuruluşunda (biri Kale grubu bünyesinde) ücretli sahada doğrulanacaktır.
 
 ## 3. Firma Tanıtımı
 
@@ -45,7 +46,8 @@ Argelog, 2013'ten bu yana Türkiye'nin önde gelen İSO 100 sanayi kuruluşları
 3. **Mutabakat kalitesi:** Fark kalemlerinin **≥%85'i otomatik sınıflanır**; sınıflandırılamaz + belirsiz (S3+S5) tutar payı **≤%5**; YMM oturum etiketleriyle yanlış-neden oranı **≤%10**; mevzuat-referanslı ≥60 senaryoluk kütüphanede sınıf doğruluğu ≥%90.
 4. **Anomali tespiti:** Baz serisine enjekte edilen ≥20 mevzuat-referanslı sentetik hatanın ≥18'i yakalanır; temiz dönemlerde yanlış alarm ≤%5.
 5. **Kalibrasyon kanıtı:** Pilot kapanışında protokolü baştan yazılı YMM **kör örneklem incelemesi** (dönem başına ≥20 kalem) A-seviye dönemlerde açıklanmamış maddi fark 0 gösterir.
-6. LLM katmanında **dayanaksız çıktı 0**: her LLM önerisi kaynak referanslı ve insan onaylıdır.
+6. LLM katmanında **dayanaksız çıktı 0**: her LLM önerisi kaynak referanslı ve insan onaylıdır. **CPU hedefi (AS-5):** damıtılmış öğrenci model, öğretmen doğruluğunun ≥%95'ine ulaşır; 16 GB RAM / 4 çekirdek GPU'suz referans makinede belge başına ≤30 sn; üç donanım sınıfında tekrarlanabilir.
+6a. **Kolay kullanım hedefi:** temsili kullanıcı (BT desteği olmadan) kurulumdan ilk Denetim Hazırlık Skoru raporuna ≤1 saatte ulaşır; pilotlarda görevi tamamlama oranı ≥%80 ölçülür.
 7. En az **2 bordro/ERP konnektörü** canlı veriyle çalışır; retrospektif belge içeri alma (MUHSGK XML ana yol) iç-toplam kabul kapısından geçer.
 8. İki sanayi kuruluşunda ücretli pilot; kapanıştan 30 gün içinde en az birinden yazılı yenileme/abonelik taahhüdü.
 
@@ -59,6 +61,7 @@ Argelog, 2013'ten bu yana Türkiye'nin önde gelen İSO 100 sanayi kuruluşları
 2. **AS-2 — Beyan-hesap farklarının nedensel zincir üzerinde abdüktif kök-neden teşhisi:** Farkı bulmak deterministiktir; belirsizlik farkın nedenine güvenilir atıftadır. Farklar kalemler arasında nedensel zincirle yayılır (matrah → GV terkini → KVK), birden çok hipotez aynı fark imzasını üretebilir ve kanun türü hataları ancak beyan-edilen/olması-gereken **karşı-olgusal çift hesapla** ayrışır. Araştırma içeriği: hangi fark imzasının hangi nedene tekil bağlanabildiğinin karakterizasyonu (identifiability), zincirleme farkların topolojik sırayla kök nedene indirgenmesi, ayırt edilemeyen hipotezlerin kanıtla "belirsiz" raporlanması. Tamamen deterministik ve kanıt üreten yapı, KVKK ve denetim-savunulabilirlik kısıtlarının doğrudan sonucudur.
 3. **AS-3 — Güven-yayılımlı kısmi baz ve kalibre edilmiş doğrulanmışlık ölçüsü:** Eksik kaynakla kurulan kısmi bazda alan düzeyi güven etiketlerinin (TAM/KISMİ/YOK) hesap zinciri boyunca biçimsel yayılımı; dönem güven skorunun keyfî ağırlık değil **kalibre** bir ölçü olması (A ilan edilen dönemde sonradan maddi hata çıkma olasılığı gerçekten düşük olmalı); immutable hash zinciri ile "geçmişi değiştirmeden geçmişe düzeltme ekleme" çelişkisinin süpersedans versiyonlamayla çözümü.
 4. **AS-4 — Küçük-örneklem baz serisinden ileriye dönük anomali tespiti:** Tek firma × 12-24 dönemlik seride neyin anomali sayılacağı açık problemdir; veri tek seri değil kişi×dönem panelidir, asgari ücret/zam mevsimselliği yürürlük-tarihli parametreyle ayrıştırılır, kural başına kesinlik/duyarlılık dengesi ölçüme bağlanır ("dosya doğruyken çok tutarsızlık buldu" yanlış-alarm riskine karşı).
+5. **AS-5 — Görev-özel damıtılmış küçük modellerin CPU-yalnız kişisel bilgisayarda hedef doğrulukla çalıştırılması:** Ürün kapalı devre ortamdaki sıradan bilgisayarlarda (GPU'suz, 16 GB RAM) çalışmak zorundadır. Teknik belirsizlik: büyük öğretmen modelin dar görevlerdeki (Türkçe mali belge alan-çıkarımı, başlık eşleme) davranışının 1–4B sınıfı öğrenci modele **damıtma + 4-bit nicemleme + dilbilgisi-kısıtlı çözümleme** bileşimiyle, doğruluk kaybı sınırlanarak aktarılması; belge başına işleme süresinin batch hattında kabul edilebilir tutulması (önbellekleme, alan-bazlı kısa bağlam tasarımı). Türkçe mali-hukuki dar görevler için bu bileşimin doğruluk-hız-bellek sınırlarının karakterizasyonu yayımlanmış çözümü olmayan mühendislik araştırmasıdır. *Ölçülebilir hedef:* seçilen dar görevlerde öğrenci model, öğretmen modelin doğruluğunun **≥%95'ine** ulaşır; 16 GB RAM / 4 çekirdek CPU referans makinede belge başına işleme **≤30 sn** (batch), şema-geçersiz çıktı oranı ≤%1; üç farklı donanım sınıfında tekrarlanabilir.
 
 *(Yerel LLM'in dar görevleri — belge alan-çıkarımı/başlık-eşleme önerisi, mevzuat değişikliği özeti, rapor dili — Ar-Ge iddiası olarak öne sürülmez; insan onaylı destek işlevleridir. Retrospektif belge içeri alma/format normalizasyonu da bilinçli olarak Ar-Ge değil, adlandırılmış geliştirme kalemi İP3a'dır.)*
 
@@ -74,8 +77,9 @@ Argelog, 2013'ten bu yana Türkiye'nin önde gelen İSO 100 sanayi kuruluşları
 | **Mevzuat parametre katmanı → bitemporal genişletme (özgün geliştirme)** | Mevcut parametrik `mevzuat.py` tablosunun geçerlilik dönemi × yayım tarihi eksenli versiyonlu modele taşınması; kural DSL'i (YAML/JSON) + etki analizi motoru | AS1 — hiçbir oran/tutar koda gömülmez; dönem bazlı doğru sürümle hesap ve <1 iş günü mevzuat yansıtma hedefi |
 | **Uyum/denetim motoru** | Mevcut 12 kontrolün (7 mantıksal + 5 mevzuat) genişletilebilir kural tabanlı denetim motoruna evrimi; çapraz kaynak kuralları (bordro × PDKS × proje × personel) | AS2 — ≥%90 yakalama / ≤%10 yanlış alarm hedefinin taşıyıcısı; denetçi-okunabilir kural tanımları |
 | **Uygulama katmanı** | Python 3.12 + FastAPI + SQLAlchemy + Jinja2/HTMX (çekirdeğin mevcut mimarisi korunur); Pydantic girdi/çıktı modelleri; tek yönlü bağımlılık (web → store → io → core) | Kanıtlanmış lean mimari (~4,5K satır); Argelog platformuyla API düzeyinde entegrasyon |
-| **YZ/NLP katmanı — dar görevli, tamamen yerel** | Küçük açık ağırlıklı modeller birincil (8–14B sınıfı; Qwen3 ailesi aday, İP1'de ölçümle seçim); yalnız üç görev: (1) mevzuat değişikliği özet + kural taslağı önerisi, (2) serbest metin kanıt-kayıt eşleştirme, (3) bulgu açıklamalarının rapor diline dökülmesi. Kısıtlı çözümleme (xgrammar/outlines) ile şema-zorlamalı çıktı; her öneri kaynak-atıflı ve insan onaylı. Embedding: BGE-M3 sınıfı (açık) | **LLM hesap yapmaz, karar vermez.** KVKK kısıtı: tüm işleme yerel; harici LLM API'ye veri gönderilmez. Dar görev + küçük model = düşük donanım ve düşük risk |
-| **LLM sunum ve GPU altyapısı** | vLLM + AWQ/FP8 nicemleme; geliştirme ve müşteri kurulumu hedefi: **tek 48GB GPU'lu sunucu** (8–14B nicemlenmiş model için rahat sığar) | Dar-görevli tasarım GPU ihtiyacını tek sunucuya indirir; bulut GPU yalnızca yük testinde (sentetik/anonim veri) |
+| **YZ/NLP katmanı — dar görevli, tamamen yerel, CPU-yalnız** | Küçük açık ağırlıklı modeller (1–4B sınıfı; izin verici lisanslı adaylar — Apache-2.0 öncelikli — İP1'de CPU ölçümüyle seçilir); **görev-özel damıtma:** büyük öğretmen modelden dar göreve damıtılmış öğrenci modeller (AS-5). Yalnız üç görev: (1) belge alan-çıkarımı ve başlık-eşleme önerisi, (2) mevzuat değişikliği özeti, (3) bulgu açıklamalarının rapor diline dökülmesi — hepsi **batch** nitelikli (interaktif sohbet değil), CPU hızı yeterli. GBNF/kısıtlı çözümleme ile şema-zorlamalı çıktı; her öneri kaynak-atıflı ve insan onaylı. Embedding: küçük çok dilli açık model (CPU'da milisaniyeler) | **LLM hesap yapmaz, karar vermez.** Kapalı devre kısıtı: ürün internetsiz ortamda, sıradan kişisel bilgisayarda çalışır; harici API yok. Dar görev + küçük model + batch işleme = GPU'suz fizibilite |
+| **LLM çalıştırma — CPU çıkarım altyapısı** | llama.cpp sınıfı CPU çıkarım motoru (AVX2/AVX-512, GGUF 4-bit nicemleme) veya ONNX Runtime; bellek eşlemeli model yükleme; görev kuyruklu batch işleme ve önbellekleme. **Asgari sistem hedefi: 4 çekirdek CPU + 16 GB RAM, GPU yok** — temsili donanım matrisinde (3-4 farklı sınıf kişisel bilgisayar) sürekli ölçüm | Müşteri donanım yatırımı sıfıra iner — "her bilgisayarda çalışır" hem satış hızlandırıcı hem kapalı devre (savunma/hassas veri) segmentlerinin ön şartı; damıtma/ince ayar eğitimleri geliştirme aşamasında kiralık bulut GPU'da yalnız sentetik+anonim veriyle yapılır |
+| **Masaüstü dağıtım ve offline güncelleme** | Tek paketli masaüstü kurulum (Windows öncelikli; imzalı installer); yerel şifreli veri deposu; **imzalı offline güncelleme paketi** — mevzuat parametre/kural güncellemeleri kapalı devre ortama dosya/USB ile taşınır, imza doğrulaması ve sürüm damgasıyla uygulanır (mevzuat sürümü her raporda görünür) | Kapalı devre ortamda güncellenebilirlik ürünün yaşamsal özelliğidir; imzalı parametre paketi aboneliğin teslim biçimidir |
 | **Veri katmanı** | PostgreSQL 16 (üretim; şema bazlı çok kiracılı izolasyon — mevcut multi-tenant yapı taşınır), Redis (kuyruk/önbellek), MinIO (belge deposu); pgvector (mevzuat korpusu embedding'leri) | Mevcut SQLAlchemy repository katmanı korunur; KVKK izolasyonu |
 | **Entegrasyon katmanı** | Mevcut Excel/bordro şablon sihirbazı + PDKS içe aktarımı devralınır; üzerine 2 canlı bordro/ERP konnektörü (pilot firmaların sistemleri: Logo/Netsis/SAP adaptörleri), e-bildirge/muhtasar formatları, SFTP | İP3 — dosya tabanlı içe aktarım bugün çalışır durumda; konnektörler canlı akışa taşır |
 | **Raporlama** | Mevcut Excel export + çalışma raporu PDF üretimi genişletilir: denetim hazırlık raporu, "risk/eksik teşvik" özeti, Bakanlık faaliyet raporu veri seti | Pilot teslimat formatları |
@@ -98,11 +102,11 @@ Konnektörler/içe aktarım → çok kiracılı platform → **deterministik hes
 
 | İP | Başlık | Aylar | Efor (AA) | Çıktı |
 |---|---|---|---|---|
-| İP1 | Çekirdek devralma + **aylık dönem anahtarı ve imza genişletmesi** (davranış varsayılanlarla birebir korunur; 96/96 çapa parametresiz koşumla regresyonsuz); kural envanteri; yerel model havuzu + GPU kurulumu | 1–2 | 5 | Entegre çekirdek; regresyonsuzluk kanıtı; model karşılaştırma raporu |
+| İP1 | Çekirdek devralma + **aylık dönem anahtarı ve imza genişletmesi** (davranış varsayılanlarla birebir korunur; 96/96 çapa parametresiz koşumla regresyonsuz); kural envanteri; küçük model aday havuzu (lisans denetimli) + CPU test donanım matrisi kurulumu ve ilk CPU ölçümleri | 1–2 | 5 | Entegre çekirdek; regresyonsuzluk kanıtı; CPU model karşılaştırma raporu |
 | İP2 | **Yürürlük-tarihli parametre backfill'i** (2022/07'ye kadar, Resmî Gazete referanslı + YMM teyitli — pilot ön koşulu) + bilgi-zamanlı MevzuatSnapshot ve as-of yeniden üretim (AS-1); retrospektif yıl çapaları | 2–5 | 5 | Doğrulanmış parametre tablosu; ≥300 çapa; as-of kanıtı |
 | İP3a | **Retrospektif belge içeri alma:** MUHSGK BDP-XML parser (ana yol) + Ar-Ge ek bildirimi çıkarımı + hizmet listesi/tahakkuk PDF çıkarıcı (iç-toplam kabul kapılı) + nüsha zinciri + Veri Kalite Karnesi *(Ar-Ge iddiası değil, geliştirme kalemi)* | 3–6 | 4 | Bazlanabilir dönem envanteri üreten içeri alma hattı |
 | İP3b | Canlı bordro/ERP konnektörleri (2) | 4–7 | 2 | Canlı veri akışı |
-| İP4 | Kademeli mutabakat + **abdüktif kök-neden sınıflandırıcı ve karşı-olgusal çift hesap** (AS-2) + K1–K14 kural zinciri + ≥60 senaryoluk kütüphaneyle kesinlik ayarı (çıkış kriteri) + anomali tespiti (AS-4) + dar-görevli LLM + denetim panosu | 4–7 | 6 | Sınıflandırıcı doğruluk raporu; yanlış-alarm ayar kanıtı |
+| İP4 | Kademeli mutabakat + **abdüktif kök-neden sınıflandırıcı ve karşı-olgusal çift hesap** (AS-2) + K1–K14 kural zinciri + ≥60 senaryoluk kütüphaneyle kesinlik ayarı (çıkış kriteri) + anomali tespiti (AS-4) + görev-özel damıtma ve CPU-yalnız çıkarım optimizasyonu (AS-5) + denetim panosu ve masaüstü sihirbaz akışı | 4–7 | 6 | Sınıflandırıcı doğruluk raporu; yanlış-alarm ayar kanıtı |
 | İP5 | Saha doğrulama deneyi — Pilot 1 (Kale): kapılı bazlama süreci, YMM mutabakat oturumları, kör değerlendirme protokolü (ön faz/sözleşme-KVKK ay 4–5'te, pilot dışında) | 6–8 | 2 | Pilot 1 kabul raporu; Retrospektif Mutabakat Raporu |
 | İP6 | Pilot 2 (ikinci bordro ekosistemi — genelleme testi) + süpersedans senaryosu canlı kanıtı + yükleme portalı/otomatik karne + v1.0 | 8–10 | 1 | Pilot 2 raporu + ARGUS v1.0 |
 
@@ -125,17 +129,18 @@ Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık). Pilot eforu con
 |---|---|
 | Personel (25 AA × 250.000 ort. tam maliyet) | 6.250.000 |
 | Danışmanlık — mevzuat/YMM (hizmet alımı) | 500.000 |
-| GPU sunucu — geliştirme/test (1× 48GB GPU'lu sunucu) | 1.200.000 |
-| Bulut GPU kiralama (yalnızca yük testleri, sentetik/anonim veri) | 100.000 |
+| Bulut GPU kiralama — damıtma/ince ayar eğitimleri (yalnızca sentetik + anonim veriyle, geliştirme aşamasında) | 400.000 |
+| CPU test donanım matrisi (3-4 temsili sınıf kişisel bilgisayar) | 150.000 |
 | Entegrasyon test ortamları ve yazılım lisansları | 300.000 |
-| Beklenmedik giderler (~%4) | 350.000 |
-| **Toplam** | **8.700.000** |
+| Beklenmedik giderler (~%4,5) | 350.000 |
+| **Toplam** | **7.950.000** |
 
-*Notlar:* (1) Harici LLM API kalemi yoktur — tüm YZ işleme yereldir. (2) Dar-görevli küçük model tasarımı GPU ihtiyacını tek sunucuya indirmiştir; sunucu proje sonrası sürekli geliştirme/test altyapısıdır (makine-teçhizat, amortismana tabi). (3) Hesap çekirdeğinin hazır devralınması, önceki plana göre süreyi 12→10 aya, eforu 30→25 AA'ya düşürmüştür.
+*Notlar:* (1) Harici LLM API kalemi yoktur — tüm YZ işleme yereldir ve **üründe CPU-yalnız** çalışır; GPU yalnız geliştirme aşamasındaki damıtma/ince ayar eğitimlerinde kiralık kullanılır, ürüne GPU gereksinimi taşınmaz. (2) CPU-yalnız pivot, önceki plandaki GPU sunucu yatırımını (1,2 M TL) kaldırmış, bütçeyi ~8,7 → ~7,95 M TL'ye düşürmüştür. (3) Hesap çekirdeğinin hazır devralınması, süreyi 12→10 aya, eforu 30→25 AA'ya düşürmüştür.
 
 ## 11. Proje Çıktısının Ticarileştirilmesi ve Pazar Analizi
 
-- **Hedef pazar:** 1.363 Ar-Ge Merkezi + 342 Tasarım Merkezi; teşvikler 31.12.2028'e kadar uzatılmış; gerçekçi hedeflenebilir set orta-büyük 400–600 merkez; ikincil pazar kurumsal teknopark (4691) firmaları.
+- **Hedef pazar (masaüstü biçimiyle genişletilmiş):** Çekirdek — 1.363 Ar-Ge Merkezi + 342 Tasarım Merkezi (teşvikler 31.12.2028'e uzatılmış; orta-büyük 400–600 merkez); ikinci halka — kurumsal teknopark (4691) firmaları ve **savunma sanayii kapalı ağları** (CPU-yalnız/kapalı devre biçimin doğrudan açtığı segment); üçüncü halka — **SMMM/YMM ofisleri** (binlerce ofis; müvekkilleri adına aynı masaüstü aracı kullanır — sunucu/BT projesi gerektirmeyen biçim bu segmenti ilk kez erişilebilir kılar).
+- **Kolay kullanım = pazar uyumu:** "Her bilgisayarda çalışır, bir saatte ilk rapor" konumu; alıcı BT departmanı değil, işi fiilen yapan mali işler/İK uzmanı ve mali müşavirdir — satın alma sürtünmesi (sunucu, bulut izni, BT projesi onayı) tasarımla sıfırlanmıştır.
 - **Rakip analizi:** Yerli — ArgeMemory, Ar-GeNet (hesaplama odaklı; Bakanlık-doğrulamalı açık test çapası, bitemporal versiyonlama ve denetim motoru yok); bordro yazılımı teşvik modülleri; YMM hizmeti. Global — Boast.ai, Neo.tax (Türk mevzuatı yok). Konum: doğrulanmış hesap çekirdeği + yerel mevzuat hendeği + KVKK-tam-uyum.
 - **Gelir modeli:** Personel sayısına kademeli yıllık abonelik + denetim öncesi "hazırlık taraması" paketi; pilotlarda abonelik vs. başarı primi A/B testi.
 - **Satış projeksiyonu (muhafazakâr):** Yıl 1 — 2 ücretli pilot + 3–5 abonelik; Yıl 2 — 12–18; Yıl 3 — 30–40 müşteri. Kanallar: Argelog İSO 100 müşteri tabanı ve danışmanlık ilişkileri; YMM kanal ortaklıkları.
@@ -153,7 +158,9 @@ Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık). Pilot eforu con
 | Çekirdek imza genişletmesinin 96/96 güvencesini eritmesi | Düşük/Yüksek | Opsiyonel parametre deseni; parametresiz koşumda birebir regresyon; migrasyon İP1'de adlandırılmış kalem ve İP5'in ön koşulu |
 | Çapraz denetim motorunun hedef doğruluğa ulaşamaması | Orta/Orta | Kural seti kademeli genişler; ilk sürüm mevcut 12 doğrulanmış kontrolle çıkar |
 | LLM dar görevlerinde düşük kalite | Düşük/Düşük | Mimari gereği LLM çıktısı hiçbir hesaba doğrudan etki etmez (insan onaylı öneri); en kötü durumda özellik kapatılır, ürün değeri korunur |
-| GPU tedarik/maliyet | Düşük/Orta | Tek sunucu ihtiyacı; erken satın alma; müşteri kurulumlarında donanımı müşterinin tedarik seçeneği |
+| Damıtılmış küçük modelin CPU'da hedef doğruluk/süreye ulaşamaması | Orta/Orta | Görev daha da daraltılır (alan-bazlı kısa bağlam); model kademesi 4B'ye çıkarılır (yine CPU'da); en kötü durumda ilgili LLM özelliği kapatılır — deterministik motor + kural katmanı ürün değerini tek başına taşır |
+| Açık model lisans uyumsuzluğu (ticari dağıtımda kısıt) | Düşük/Orta | Aday havuzu izin verici lisanslı (Apache-2.0 öncelikli) modellerle sınırlanır; lisans denetimi İP1 model seçim kriteridir |
+| Düşük donanımlı müşteri makinelerinde performans şikâyeti | Orta/Düşük | Asgari sistem gereksinimi açık yayımlanır; kurulumda donanım ön kontrolü; batch işler ilerleme göstergeli ve arka planda |
 | Bordro/ERP veri erişiminde gecikme | Orta/Orta | Mevcut Excel/şablon içe aktarımı yedek yol; veri protokolleri İP1'de imzalanır |
 | KVKK / veri gizliliği | Düşük/Yüksek | Tamamen yerel YZ; veri minimizasyonu, maskeleme, şifreleme, kiracı izolasyonu |
 | Hesap hatasının mali sonucu | Düşük/Yüksek | Çekirdek Bakanlık-doğrulamalı + her değişiklikte 96/96 çapa regresyonu; kuruş mutabakat kabulü; sözleşmede "karar destek" konumu |
