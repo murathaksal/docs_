@@ -87,7 +87,20 @@ Argelog, 2013'ten bu yana Türkiye'nin önde gelen İSO 100 sanayi kuruluşları
 | **DevOps / dağıtım** | Docker + docker-compose (mevcut), AWS dağıtım betikleri (mevcut) + on-prem kurulum paketi; GitHub Actions CI/CD; mevcut çapa testi (`dogrulama.py` 96/96) ve izolasyon testleri (16/16) CI'a bağlanır | Aynı imajla SaaS ve on-prem; her değişiklikte kuruş-mutabakat regresyonu |
 | **Kalite / değerlendirme** | Çapa test setinin pilot verileriyle genişletilmesi; hata-enjeksiyonlu sentetik bordro üreteci; LLM görevleri için ayrı skorlama düzeneği (şema geçerliliği, kaynak-atıf zorunluluğu) | Hedef 1-4'ün ölçülebilir kanıtı |
 
-### 6.2 Mimari özet
+### 6.2 Özellik Seti ve Sürümler ("herkesin ihtiyacı" kademesi)
+
+Özellik seti "işi fiilen yapan kişinin BT desteği olmadan kullanabildiği" ilkesine göre kademelenmiştir; her sürüm bir alt sürümün üstüne kurulur ve tek kod tabanından çıkar:
+
+| Sürüm | Kime | Çekirdek özellikler |
+|---|---|---|
+| **ARGUS Masaüstü (çekirdek)** | Tek tüzel kişilikli her Ar-Ge/Tasarım Merkezi; mali işler/İK uzmanı | Sürükle-bırak bordro/beyanname yükleme (sihirbaz akışı); **Denetim Hazırlık Skoru** ve 23+ kural taraması; ay sonu tek tık teşvik kontrolü (dönem gölge hesabı); 7555 tavan kontrolü; Excel içeri/dışarı rapor; imzalı offline mevzuat güncellemesi; tümü CPU-yalnız, kapalı devrede |
+| **ARGUS Pro** | Denetime hazırlanan / geçmişini doğrulamak isteyen merkezler | + BAZ Hattı retrospektif mutabakat (kişi×ay düzeyi), kök-neden sınıflandırmalı fark envanteri (S1–S5), düzeltme yol haritası çıktısı, güven skorlu baz sertifikası, tek komut denetim savunma dosyası, LLM belge yardımcıları (alan çıkarımı/başlık eşleme önerisi) |
+| **ARGUS Kurum** | Çok tüzel kişilikli gruplar, savunma tedarik zinciri | + Çok kullanıcı/rol, çok firma; merkezi sunucu opsiyonu (aynı çekirdek); bordro/ERP canlı konnektörleri; kapalı ağ dağıtım paketi ve toplu offline güncelleme |
+| **ARGUS SMMM/YMM** | Mali müşavir ve YMM ofisleri | Çok müvekkilli lisans: aynı masaüstü araç, müvekkil başına izole veri; ortak markalı rapor şablonu; meslek mensubunun kendi hizmetini güçlendiren "araç lisansı" modeli |
+
+Katma değer cümlesi her sürümde aynıdır: *"Teşvikinizin kuruş doğruluğunu ve denetim savunmasını, veriniz bilgisayarınızdan çıkmadan, kurulumdan sonraki ilk saat içinde görün."*
+
+### 6.3 Mimari özet
 
 Konnektörler/içe aktarım → çok kiracılı platform → **deterministik hesap çekirdeği** (bitemporal parametre katmanıyla) dönem hesabını üretir → **kural tabanlı denetim motoru** çapraz tutarlılık bulgularını mevzuat atıflarıyla raporlar → **dar-görevli yerel LLM** yalnızca mevzuat izleme özeti, kanıt eşleştirme adayları ve rapor dili üretir (tamamı insan onaylı) → denetim hazırlık panosu ve resmi çıktılar. Kişisel veri hiçbir harici API'ye gönderilmez.
 

@@ -160,3 +160,14 @@ SIRALAMA İLKESİ: Satın alma/KVKK darboğazını atlayan kanal önce; her kana
 ---
 
 *İlgili dosyalar: `argus-baz-hatti-tasarimi.md` (pilot süreci ve BAZ Hattı), `argus-teknopark-basvuru-formu.md` (proje planı), `arge-proje-fikirleri.md` (market-fit analizleri).*
+---
+
+## 11. Masaüstü Pivot Uyarlaması (CPU-yalnız / kapalı devre kararı sonrası)
+
+Ürünün kapalı devre kişisel bilgisayarda CPU-yalnız çalışan masaüstü uygulamaya dönüşmesi, bu plandaki hizmet merdivenini DEĞİŞTİRMEZ (basamak 1-3 hizmet ürünleri aynen geçerli) — değiştirdiği şey tekrarlayan gelirin teslim biçimi ve pazarın genişliğidir:
+
+- **Abonelik SKU'ları lisansa dönüşür:** "Gölge Hesap aboneliği" artık **ARGUS Masaüstü yıllık lisansı + imzalı offline mevzuat güncelleme aboneliği** olarak teslim edilir (sunucu/bulut maliyeti yok → marj yükselir; kapalı devre müşteride bile abonelik gerekçesi nettir: mevzuat paketi güncel kalmazsa ürün eskir). Fiyat çıpaları korunur: ≤75 kişi 30-40 bin / 76-200 kişi 50-70 bin / 200+ 90-150 bin TL/ay bandı; Pro ve Kurum sürümleri kademeli üstüne gelir.
+- **Satış sürtünmesi düşer:** "Her bilgisayarda çalışır, bir saatte ilk rapor" — BT projesi onayı, bulut izni ve sunucu tedariki satın alma zincirinden çıkar; tek imza eşiğinin altındaki masaüstü lisansla giriş kolaylaşır, hizmet ürünleri (tarama/pilot) üstüne satılır.
+- **Yeni segment — SMMM/YMM araç lisansı öne çekilebilir:** Sunucu gerektirmeyen biçim, ay 6+ olarak planlanan YMM kanalını teknik olarak erkene alabilir; hukuk görüşü ön koşulu değişmez. Çok müvekkilli masaüstü lisans (20-40 bin TL/ay/ofis çıpası) doğrudan bu biçimle test edilir.
+- **Savunma kapalı ağ segmenti premium pakete eklenir:** On-prem sunucu yerine "kapalı ağ masaüstü dağıtım + toplu offline güncelleme" paketi — kurulum kalemi düşer, lisans çarpanı (×1,5-2) korunur.
+- **Huni ürünü opsiyonu (kırmızı çizgilere tabi):** Sınırlı "7555 tavan hızlı kontrol" masaüstü demosu (tek dönem, örnek veriyle) satış görüşmesinde canlı gösterim aracı olarak kullanılabilir; ücretsiz sürüm dağıtımı ancak KVKK/DPA çerçevesi ve destek yükü değerlendirilerek ayrıca kararlaştırılır — bu planda gelir kalemi değildir.
