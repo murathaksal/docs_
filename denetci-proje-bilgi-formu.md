@@ -17,6 +17,7 @@
 | Ar-Ge İş Gücü | 28 Adam/Ay |
 | Destek İş Gücü | 2 Adam/Ay |
 | Toplam İş Gücü | 30 Adam/Ay |
+| Toplam Personel | 6 kişi (3 tam zamanlı + 3 kısmi zamanlı; 10 ayda ortalama 3 tam zaman eşdeğeri) *(portalda "2" görünüyor — güncellenmeli; kiralanan alan da personel sayısıyla uyumlulaştırılmalıdır)* |
 | Projenin Sektörü | Yazılım / Bilişim Teknolojileri *(portalda "Ambalaj" görünüyor — düzeltilmeli)* |
 | İlişkili Sektörler | Seramik, Demir-Çelik, Alüminyum, Metal Eşya (hedef kullanıcı sektörleri); Mali Müşavirlik ve Denetim Hizmetleri |
 | NACE Kodu | 62.01 — Bilgisayar Programlama Faaliyetleri |
@@ -48,6 +49,8 @@ Proje süresince ilk mevzuat rejimi (5746) için geçmiş beyanların sisteme y�
 - ☐ İthalat İhtiyacını Durdurma *(dolaylı: yabancı bulut tabanlı yazılımlara bağımlılığın önlenmesi)*
 
 ## Hedeflenen Kazanım ve Sonuçlar
+
+*Aşağıdaki hedeflerin tamamı sayısal kabul kriterine bağlanmıştır ve proje süresince kabul testleri, bağımsız örneklem incelemeleri (Yeminli Mali Müşavir eşliğinde) ve pilot kapanış raporlarıyla ölçülecektir.*
 
 1. Yürürlük tarihine göre sürümlenen, iki mevzuat rejimini (5746 ve SKDM) aynı çekirdekte çalıştıran hesap motoru; mevcut 96 çapa testinin geriye dönük yıllara genişletilmesi (hedef: 300'ün üzerinde doğrulama çapası, kuruş farksız).
 2. Geçmiş beyanların yüklenmesi, yeniden hesaplanması ve beyan edilenle mutabakatının kurulması; farkların kök nedenine göre sınıflandırılması (hedef: farkların en az %85'inin otomatik sınıflandırılması, yanlış neden atama oranının %10'un altında tutulması).
@@ -88,9 +91,11 @@ Proje, rutin yazılım geliştirmenin ötesinde beş teknik belirsizlik üzerind
 
 Yapay zekânın hesap ve karar süreçlerinden bilinçli olarak dışlanması (yalnızca insan onaylı destek görevleri) hem denetim güvenilirliği hem KVKK uyumu açısından projenin ayırt edici tasarım tercihidir; bu yaklaşım, uluslararası analist kuruluşların 2026 öngörülerinde öne çıkan alan-özgü küçük modeller, veri egemenliği ve kural tabanlı-üretken karma mimariler eğilimleriyle uyumludur.
 
+*İki mevzuat rejiminin tek projede yer alması kapsam genişlemesi değildir:* Beş araştırma sorusunun tamamı mevzuattan bağımsız formüle edilmiştir; ikinci rejim (SKDM), geliştirilen yöntemlerin genellenebilirliğinin **deneysel doğrulama düzeneğidir** ve toplam iş gücünün yaklaşık %10'unu (3 adam/ay) kapsar. Aynı çözümün iki bağımsız mevzuatta, ilk rejimin doğrulama testleri birebir korunarak çalıştığının gösterilmesi, sonuçların tek mevzuata özgü olmadığının kanıtı olarak proje çıkış kriterleri arasındadır.
+
 ## Proje Ortaklığı
 
-- ☑ Üniversite işbirliği ile yürütülen proje *(İstanbul Medeniyet Üniversitesi öğretim üyelerinden akademik danışmanlık talep edilecektir — Teknoloji Transfer Ofisi aracılığıyla)*
+- ☑ Üniversite işbirliği ile yürütülen proje *(İstanbul Medeniyet Üniversitesi öğretim üyelerinden Teknoloji Transfer Ofisi aracılığıyla iki alanda akademik danışmanlık talep edilecektir: yazılım mühendisliği/yapay zekâ — model damıtma ve nicemleme yöntemlerinin değerlendirilmesi; çevre/kimya mühendisliği — gömülü emisyon hesap metodolojisinin doğrulanması)*
 - ☑ Farklı ildeki firmaların işbirliği ile yürütülen proje *(saha pilotu yürütülecek sanayi kuruluşları)*
 
 ## Proje Kapsamında Teknoparktan Talep Edilen Hizmetler
@@ -124,6 +129,10 @@ Talep edilen süre: 480 saat. *Gerekçe:* Saha pilotları, kişisel verinin kuru
 
 **İş planı (özet):** İlk iki ayda mevcut çekirdek devralınır ve aylık dönem çözünürlüğüne genişletilir (mevcut doğrulama testleri birebir korunarak); 2-5. aylarda geçmişe dönük mevzuat parametre tablosu resmî kaynak referanslı ve Yeminli Mali Müşavir (YMM) teyitli olarak kurulur; 3-7. aylarda belge içeri alma, bordro entegrasyonları, mutabakat ve sınıflandırma motoru geliştirilir; 5-10. aylarda SKDM kural seti karbon/sürdürülebilirlik uzmanı teyidiyle kurulur ve seramik üretim verisiyle doğrulanır; 6-10. aylarda iki sanayi kuruluşunda ücretli saha pilotları yürütülür ve v1.0 yayımlanır.
 
+**Proje ekibi ve firma yetkinliği:** Proje; proje yöneticisi, iki kıdemli yazılım geliştirici, bir yapay zekâ/doğal dil işleme mühendisi, bir arayüz geliştirici ve bir test/altyapı uzmanından oluşan çekirdek ekiple yürütülecek; mevzuat doğrulaması YMM'den, emisyon metodolojisi doğrulaması karbon/sürdürülebilirlik uzmanından hizmet alımıyla sağlanacaktır. Firmamız 2013'ten bu yana 5746 süreçleri alanında Türkiye'nin önde gelen sanayi kuruluşlarına yazılım geliştirmekte olup, projenin çekirdek hesap motoru bu birikimle üretilmiş ve gerçek dönem verisiyle iç doğrulaması tamamlanmıştır — projenin en riskli görünen bileşeni fiilen çalışır durumdadır.
+
+**Başlıca riskler ve önlemleri:** (1) Mevzuat değişim hızı — yürürlük tarihli kural sürümleme mimarisi tam da bu riski yönetmek için tasarlanmıştır; her değişiklik yeni kural sürümü olarak, geçmiş hesaplar etkilenmeden uygulanır. (2) Yerel küçük modellerin hedef doğruluğa ulaşamaması — yapay zekâ bileşenleri destek işlevi olduğundan en kötü durumda ilgili özellik devre dışı bırakılır; deterministik motor ve kural katmanı ürün değerini tek başına taşır. (3) Pilot kuruluşlardan veri temininde gecikme — veri talepleri sözleşme ekinde iki muhataplı (firma ve mali müşaviri) protokole bağlanmıştır; dosya tabanlı yedek aktarım yolu mevcuttur. (4) Geçmiş dönem parametrelerinin hatalı kurulması — hiçbir dönem, resmî kaynak referanslı ve YMM teyitli parametre seti ile yıl bazında kuruş farksız örnek doğrulama tamamlanmadan hesaplanmaz ve raporlanmaz.
+
 ## Proje Çıktılarına Yönelik Bilgiler
 
 **Proje Çıktılarında Kullanılacak Sektör:** Birincil kullanıcılar imalat sanayii Ar-Ge/Tasarım Merkezleri (otomotiv, beyaz eşya, seramik, kimya, elektronik dahil) ile AB'ye ihracat yapan çelik/alüminyum/seramik/metal üreticileri; ayrıca mali müşavirlik ve denetim hizmetleri sektörü (çok müşterili sürüm).
@@ -134,7 +143,7 @@ Talep edilen süre: 480 saat. *Gerekçe:* Saha pilotları, kişisel verinin kuru
 
 **Sürdürülebilirlik:** Ürünün yaşam döngüsü mevzuata bağlıdır ve iki rejim birbirini dengeler: 5746 teşvik sistemi ile SKDM'nin kademeli genişleme takvimi, güncelleme aboneliği üzerinden sürekli gelir ve sürekli geliştirme döngüsü yaratır. Mevzuat güncellemelerinin imzalı paketlerle dağıtımı, ürünün kapalı devre ortamlarda dahi güncel kalmasını sağlar. Platform mimarisi üçüncü ve sonraki mevzuat rejimlerinin (örneğin ulusal emisyon ticaret sistemi) eklenmesine açıktır.
 
-**Ekonomik Değeri:** Orta ölçekli (150 Ar-Ge personelli) bir merkezin yönettiği yıllık teşvik tutarı yüz milyon TL mertebesindedir; düşük oranlı bir hata bile yıllık milyonlarca TL kayıp veya iade riski demektir. SKDM tarafında hatalı emisyon beyanı, sınırda doğrudan ek maliyet oluşturur. Ürün; önlenen kayıp, geri kazanılabilir tutarlar ve denetim riskinin azaltılması üzerinden, yıllık bedelinin birkaç katı ölçülebilir değer üretir. Firma açısından üç gelir kalemi öngörülmektedir: masaüstü lisans ve güncelleme aboneliği, geçmiş dönem mutabakat/denetim hazırlık hizmetleri ve kurum sürümü kurulumları.
+**Ekonomik Değeri:** Orta ölçekli (150 Ar-Ge personelli) bir merkezin yönettiği yıllık teşvik tutarı yüz milyon TL mertebesindedir; düşük oranlı bir hata bile yıllık milyonlarca TL kayıp veya iade riski demektir. SKDM tarafında hatalı emisyon beyanı, sınırda doğrudan ek maliyet oluşturur. Ürün; önlenen kayıp, geri kazanılabilir tutarlar ve denetim riskinin azaltılması üzerinden, yıllık bedelinin birkaç katı ölçülebilir değer üretir. Firma açısından üç gelir kalemi öngörülmektedir: masaüstü lisans ve güncelleme aboneliği, geçmiş dönem mutabakat/denetim hazırlık hizmetleri ve kurum sürümü kurulumları. Muhafazakâr satış öngörüsü: 1. yıl iki ücretli pilot ve 3-5 lisans; 2. yıl 12-18 müşteri; 3. yıl 30-40 müşteri ve SKDM modülüyle ihracatçı segmentine genişleme — 3. yıl sonunda yıllık yinelenen gelirin proje bütçesini aşması hedeflenmektedir.
 
 **Alınacak Dış Hizmetler:** Yeminli Mali Müşavirlik hizmeti (5746 kural setinin madde madde teyidi ve pilot mutabakat denetimi); karbon/sürdürülebilirlik danışmanlığı (SKDM metodolojisinin teyidi); kısa süreli bulut grafik işlemci kiralama (yalnızca model damıtma eğitimlerinde, sentetik ve anonim veriyle).
 
@@ -144,7 +153,7 @@ Talep edilen süre: 480 saat. *Gerekçe:* Saha pilotları, kişisel verinin kuru
 
 ## Rekabet Analizi
 
-Yurt içinde 5746 hesaplama alanında puantaj/bordro odaklı yazılımlar mevcuttur; ancak bunlarda geçmiş beyan mutabakatı, yürürlük tarihli kural sürümleme, denetim savunma dosyası üretimi ve yerel yapay zekâ destekli belge işleme yetenekleri bulunmamaktadır. SKDM tarafında yurt içi arz ağırlıkla danışmanlık raporu biçimindedir; denetlenebilir, deterministik yerli bir hesap yazılımı tespit edilmemiştir. Yurt dışındaki Ar-Ge vergi teşviki otomasyon ürünleri kendi ülke mevzuatlarına özgüdür ve Türk mevzuatını kapsamaz; kurumsal yapay zekâ ürünleri ise ağırlıkla bulut tabanlıdır ve kapalı devre/veri egemenliği gereksinimlerini karşılamaz. Projenin rekabet konumu üç dayanağa oturur: doğrulanmış deterministik hesap çekirdeği, iki mevzuat rejimini tek platformda birleştiren mimari ve verinin kurum dışına çıkmadığı kapalı devre çalışma modeli.
+Firmamızca yapılan pazar taramasında, yurt içinde 5746 hesaplama alanında puantaj/bordro odaklı yazılımların mevcut olduğu görülmüştür; ancak incelenen ürünlerde geçmiş beyan mutabakatı, yürürlük tarihli kural sürümleme, denetim savunma dosyası üretimi ve yerel yapay zekâ destekli belge işleme yeteneklerine rastlanmamıştır. SKDM tarafında yurt içi arz ağırlıkla danışmanlık raporu biçimindedir; taramamızda denetlenebilir, deterministik yerli bir hesap yazılımı tespit edilmemiştir. Yurt dışındaki Ar-Ge vergi teşviki otomasyon ürünleri kendi ülke mevzuatlarına özgüdür ve Türk mevzuatını kapsamaz; kurumsal yapay zekâ ürünleri ise ağırlıkla bulut tabanlıdır ve kapalı devre/veri egemenliği gereksinimlerini karşılamaz. Projenin rekabet konumu üç dayanağa oturur: doğrulanmış deterministik hesap çekirdeği, iki mevzuat rejimini tek platformda birleştiren mimari ve verinin kurum dışına çıkmadığı kapalı devre çalışma modeli.
 
 ## Fikri Sınai ve Mülkiyet Hakları
 
@@ -184,4 +193,4 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 
 ---
 
-*Not — portalda düzeltilmesi gerekenler: (1) "Projenin Sektörü" alanı "Ambalaj" görünmektedir; "Yazılım" olarak düzeltilmelidir. (2) Kimlik alanlarındaki süre/bütçe/iş gücü değerleri bu dokümandaki değerlerle güncellenmelidir. Kaynak analizler: `argus-teknopark-basvuru-formu.md` (teknik omurga), `argus-baz-hatti-tasarimi.md`, `argus-gelir-plani.md`.*
+*Not — portalda düzeltilmesi gerekenler: (1) "Projenin Sektörü" alanı "Ambalaj" görünmektedir; "Yazılım" olarak düzeltilmelidir. (2) Kimlik alanlarındaki süre/bütçe/iş gücü değerleri bu dokümandaki değerlerle güncellenmelidir. (3) "Toplam Personel: 2" ve "Kiralanan Alan: 10 m²" kayıtları proje ekibiyle (6 kişi, ort. 3 tam zaman eşdeğeri) çelişmektedir — hakem heyetinin ilk bakacağı tutarlılık noktalarındandır; personel kaydı ve gerekiyorsa alan kiralaması güncellenmeden başvuru sunulmamalıdır. Kaynak analizler: `argus-teknopark-basvuru-formu.md` (teknik omurga), `argus-baz-hatti-tasarimi.md`, `argus-gelir-plani.md`.*
