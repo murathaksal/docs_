@@ -1,4 +1,4 @@
-# Teknopark Proje Başvuru Formu — ARGUS
+# Teknopark Proje Başvuru Formu — ARGUS: Çok-Mevzuatlı Deterministik Uyum ve Hesap Platformu
 
 *Teknoloji Geliştirme Bölgesi proje başvuru formu (standart portal formatı) — tüm başlıklar doldurulmuştur. Önceki Argelog.AI başvurusunun birebir başlık düzeni Drive erişimi açıldığında eşlenecektir.*
 
@@ -14,11 +14,11 @@
 
 | Alan | Bilgi |
 |---|---|
-| Proje adı | ARGUS — Ar-Ge Teşvik Uyumu için Doğrulanmış Hesap Motoru ve Yerel YZ Destekli Uyum Platformu |
+| Proje adı | ARGUS — Kapalı Devre, Çok-Mevzuatlı Deterministik Uyum ve Hesap Platformu (ilk rejim: 5746 Ar-Ge teşvikleri; ikinci rejim: AB CBAM gömülü emisyon) |
 | Başvuru sahibi | Argelog Ar-Ge Merkezi Yönetim Danışmanlığı ve Yazılım Hizmetleri A.Ş. |
 | Proje süresi | 10 ay (7 ay geliştirme + 3 ay saha doğrulama/sertleşme) |
 | Teknoloji alanı | Yazılım — Kurumsal Uyum/RegTech; Kural Tabanlı Sistemler; (sınırlı kapsamda) Yerel Doğal Dil İşleme (NACE 62.01) |
-| Tahmini bütçe | ~7,95 M TL |
+| Tahmini bütçe | ~9,0 M TL |
 | THS (başlangıç → hedef) | Hesap çekirdeği THS 8 (sahada/Bakanlık verisiyle doğrulanmış); platform bütünü THS 5 → **THS 8** |
 | Hedef pazar | Türkiye'deki 1.363 Ar-Ge Merkezi + 342 Tasarım Merkezi (5746) ve kurumsal teknopark firmaları (4691) |
 
@@ -29,6 +29,8 @@
 ARGUS'un çekirdeği **deterministik hesap motorudur**: Argelog bünyesinde önceden geliştirilmiş, Bakanlık doğrulaması Nisan 2026 verisiyle kuruşuna kadar doğrulanmış (96/96 çapa testi), mevzuat maddesi izlenebilirliği taşıyan saf hesap fonksiyonları (5746 m.3/a-b-d, 5510 m.81/i, KVK m.10/1-a ve m.32, 7555 ücret teşvik tavanı, SGK 2016-26 genelge sıralaması) proje başlangıç varlığı olarak devralınır. Projenin Ar-Ge içeriği bu çekirdeğin üzerine üç katman ekler: (a) **bitemporal kural/parametre katmanı** — hangi dönemin hangi mevzuat sürümüyle hesaplanacağının versiyonlanması ve mevzuat değişikliği etki analizi; (b) **çapraz tutarlılık denetim motoru** — bordro × PDKS × proje kayıtları × faaliyet raporu zincirinde kural tabanlı çelişki tespiti; (c) **dar-görevli yerel LLM katmanı** — yalnızca mevzuat değişikliği özetleme/kural taslağı önerisi, serbest metinli belge-kanıt eşleştirme ve bulgu açıklamalarının rapor diline dökülmesi görevlerinde, tamamen yerel çalışan ve tüm çıktıları insan onaylı küçük dil modelleri.
 
 Projenin Ar-Ge ve market-fit kalbi **BAZ Hattı** alt sistemidir: yeni müşterinin geçmiş resmî beyanları (MUHSGK, e-Bildirge hizmet listeleri, tahakkuk fişleri) ile hesap girdileri (bordro, özlük, PDKS) yüklenir; her ay o ayın yürürlük-tarihli mevzuat parametreleriyle yeniden hesaplanır, beyan edilenle kademeli mutabakat kurulur, farklar kök nedene ve geri kazanım kanalına göre sınıflanır ve insan onaylı kapanışla her dönem güven skorlu, hash zincirli **immutable BAZ** snapshot'ına dondurulur. Ücretli pilotun teslimatı olan Retrospektif Mutabakat Raporu bu hattın çıktısıdır — onboarding, market-fit ölçümü ve ürünün kalıcı değeri (ileri dönem hesap referansı + denetim savunma dosyası) tek mekanizmada birleşir. (Ayrıntılı tasarım: `argus-baz-hatti-tasarimi.md`.)
+
+**Çok-mevzuatlı platform:** Projenin çekirdek tezi, "tarihli bir mevzuatı denetçi karşısında savunulabilir deterministik hesap motoruna çevirme" yeteneğinin **mevzuattan bağımsız bir platform** olarak inşasıdır. İlk rejim, iki sanayi kuruluşundan yazılı talep sinyali alınmış ve çekirdeği bugün çalışan **5746 Ar-Ge teşvik uyumu**dur; ikinci rejim, AB **CBAM (Sınırda Karbon Düzenleme Mekanizması)** gömülü emisyon hesabıdır — 2026'da ücretli döneme girmiş, 2028'de kapsamı ~180 aşağı akım ürüne genişleyecek, tarihli ve ertelenemez bir regülasyon. Aynı bitemporal kural katmanı, aynı mutabakat/baz mimarisi ve aynı dar-görevli yerel YZ hattı iki kural setiyle çalışır; bu hem Ar-Ge sorularına çok-rejimli genelleme boyutu katar hem de ticari riski tek mevzuatın takvimine bağlı olmaktan çıkarır (2026-27 geliri 5746 hattından, 2027-28 büyümesi CBAM'den).
 
 **Ürün biçimi:** Kapalı devre ortamda, sıradan kişisel bilgisayarda (GPU'suz, CPU-yalnız) çalışan **masaüstü uygulama** — kurulumdan ilk rapora bir saat hedefiyle, "dosyaları sürükle → sihirbazı izle → raporu al" kolaylığında; mevzuat güncellemeleri imzalı offline paketlerle taşınır. Bu biçim ürünü yalnız büyük Ar-Ge merkezlerinin değil; savunma sanayii kapalı ağlarının, KVKK-hassas her kurumun ve SMMM/mali müşavir ofislerinin kullanabileceği "herkesin kurabildiği" bir araca dönüştürür. Çok kullanıcılı kurum sunucusu opsiyonel üst pakettir. Çıktı, iki sanayi kuruluşunda (biri Kale grubu bünyesinde) ücretli sahada doğrulanacaktır.
 
@@ -50,6 +52,7 @@ Argelog, 2013'ten bu yana Türkiye'nin önde gelen İSO 100 sanayi kuruluşları
 6a. **Kolay kullanım hedefi:** temsili kullanıcı (BT desteği olmadan) kurulumdan ilk Denetim Hazırlık Skoru raporuna ≤1 saatte ulaşır; pilotlarda görevi tamamlama oranı ≥%80 ölçülür.
 7. En az **2 bordro/ERP konnektörü** canlı veriyle çalışır; retrospektif belge içeri alma (MUHSGK XML ana yol) iç-toplam kabul kapısından geçer.
 8. İki sanayi kuruluşunda ücretli pilot; kapanıştan 30 gün içinde en az birinden yazılı yenileme/abonelik taahhüdü.
+9. **Çok-rejimli genelleme (CBAM):** CBAM kural seti v0 (seramik sektörü) AB uygulama tüzüğü referanslı ve karbon uzmanı teyitli kurulur; Kale seramik verisiyle ürün-bazlı gömülü emisyon hesabının retrospektif doğrulaması yapılır; aynı motor iki rejimde, 5746 çapa testleri **birebir regresyonsuz** kalarak çalışır (platform iddiasının kanıtı).
 
 ## 5. Ar-Ge Niteliği, Yenilikçi ve Özgün Yönleri
 
@@ -62,6 +65,8 @@ Argelog, 2013'ten bu yana Türkiye'nin önde gelen İSO 100 sanayi kuruluşları
 3. **AS-3 — Güven-yayılımlı kısmi baz ve kalibre edilmiş doğrulanmışlık ölçüsü:** Eksik kaynakla kurulan kısmi bazda alan düzeyi güven etiketlerinin (TAM/KISMİ/YOK) hesap zinciri boyunca biçimsel yayılımı; dönem güven skorunun keyfî ağırlık değil **kalibre** bir ölçü olması (A ilan edilen dönemde sonradan maddi hata çıkma olasılığı gerçekten düşük olmalı); immutable hash zinciri ile "geçmişi değiştirmeden geçmişe düzeltme ekleme" çelişkisinin süpersedans versiyonlamayla çözümü.
 4. **AS-4 — Küçük-örneklem baz serisinden ileriye dönük anomali tespiti:** Tek firma × 12-24 dönemlik seride neyin anomali sayılacağı açık problemdir; veri tek seri değil kişi×dönem panelidir, asgari ücret/zam mevsimselliği yürürlük-tarihli parametreyle ayrıştırılır, kural başına kesinlik/duyarlılık dengesi ölçüme bağlanır ("dosya doğruyken çok tutarsızlık buldu" yanlış-alarm riskine karşı).
 5. **AS-5 — Görev-özel damıtılmış küçük modellerin CPU-yalnız kişisel bilgisayarda hedef doğrulukla çalıştırılması:** Ürün kapalı devre ortamdaki sıradan bilgisayarlarda (GPU'suz, 16 GB RAM) çalışmak zorundadır. Teknik belirsizlik: büyük öğretmen modelin dar görevlerdeki (Türkçe mali belge alan-çıkarımı, başlık eşleme) davranışının 1–4B sınıfı öğrenci modele **damıtma + 4-bit nicemleme + dilbilgisi-kısıtlı çözümleme** bileşimiyle, doğruluk kaybı sınırlanarak aktarılması; belge başına işleme süresinin batch hattında kabul edilebilir tutulması (önbellekleme, alan-bazlı kısa bağlam tasarımı). Türkçe mali-hukuki dar görevler için bu bileşimin doğruluk-hız-bellek sınırlarının karakterizasyonu yayımlanmış çözümü olmayan mühendislik araştırmasıdır. *Ölçülebilir hedef:* seçilen dar görevlerde öğrenci model, öğretmen modelin doğruluğunun **≥%95'ine** ulaşır; 16 GB RAM / 4 çekirdek CPU referans makinede belge başına işleme **≤30 sn** (batch), şema-geçersiz çıktı oranı ≤%1; üç farklı donanım sınıfında tekrarlanabilir.
+
+**Çok-rejimli genelleme boyutu:** Beş araştırma sorusunun tamamı mevzuat-bağımsız formüle edilmiştir ve projede **iki rejimde sınanır** — AS-1 bitemporal versiyonlama (5746: teşvik oranları/7555 tavanı ↔ CBAM: emisyon faktörleri/AB uygulama tüzükleri ve kapsam genişlemeleri), AS-2 kök-neden teşhisi (beyan vs yeniden hesap ↔ beyan edilen vs hesaplanan gömülü emisyon), AS-3 güven-yayılımlı kısmi baz (bordro eksikleri ↔ CBAM'in ölçülmüş-veri/varsayılan-değer hiyerarşisi), AS-4 küçük-örneklem anomali (dönem serisi ↔ üretim dönemi emisyon serisi), AS-5 CPU damıtılmış dar LLM (bordro/beyan belgeleri ↔ enerji faturası/proses kayıtları). Aynı çözümün iki bağımsız mevzuatta doğrulanması, sonuçların genellenebilirliğinin deneysel kanıtıdır ve projenin Ar-Ge iddiasını tek mevzuata özel araç itirazından korur.
 
 *(Yerel LLM'in dar görevleri — belge alan-çıkarımı/başlık-eşleme önerisi, mevzuat değişikliği özeti, rapor dili — Ar-Ge iddiası olarak öne sürülmez; insan onaylı destek işlevleridir. Retrospektif belge içeri alma/format normalizasyonu da bilinçli olarak Ar-Ge değil, adlandırılmış geliştirme kalemi İP3a'dır.)*
 
@@ -122,31 +127,34 @@ Konnektörler/içe aktarım → çok kiracılı platform → **deterministik hes
 | İP4 | Kademeli mutabakat + **abdüktif kök-neden sınıflandırıcı ve karşı-olgusal çift hesap** (AS-2) + K1–K14 kural zinciri + ≥60 senaryoluk kütüphaneyle kesinlik ayarı (çıkış kriteri) + anomali tespiti (AS-4) + görev-özel damıtma ve CPU-yalnız çıkarım optimizasyonu (AS-5) + denetim panosu ve masaüstü sihirbaz akışı | 4–7 | 6 | Sınıflandırıcı doğruluk raporu; yanlış-alarm ayar kanıtı |
 | İP5 | Saha doğrulama deneyi — Pilot 1 (Kale): kapılı bazlama süreci, YMM mutabakat oturumları, kör değerlendirme protokolü (ön faz/sözleşme-KVKK ay 4–5'te, pilot dışında) | 6–8 | 2 | Pilot 1 kabul raporu; Retrospektif Mutabakat Raporu |
 | İP6 | Pilot 2 (ikinci bordro ekosistemi — genelleme testi) + süpersedans senaryosu canlı kanıtı + yükleme portalı/otomatik karne + v1.0 | 8–10 | 1 | Pilot 2 raporu + ARGUS v1.0 |
+| İP7 | **CBAM kural seti ve çok-rejim doğrulaması:** AB CBAM metodolojisi kural envanteri (karbon uzmanıyla, uygulama tüzüğü referanslı); yürürlük-tarihli emisyon faktör tablosu (AS-1 deseni); ölçülmüş-veri/varsayılan-değer hiyerarşisinin güven etiketlemesine bağlanması (AS-3); Kale seramik verisiyle ürün-bazlı gömülü emisyon retrospektif doğrulaması; beyan dosyası çıktı formatı. **Go/no-go kapısı: İP7 tam kapsamı, keşif görüşmelerindeki CBAM saha doğrulaması olumluysa açılır (ay 5)** | 5–10 | 3 | CBAM kural seti v0 + seramik doğrulama raporu + 5746 regresyonsuzluk kanıtı |
 
-Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık). Pilot eforu concierge→araç dönüşümünü ölçer: Pilot 1 ≤40 adam-gün, Pilot 2 ≤15 adam-gün.
+Toplam: **28 adam-ay / 10 ay** (ort. ~2,8 FTE + danışmanlık). Pilot eforu concierge→araç dönüşümünü ölçer: Pilot 1 ≤40 adam-gün, Pilot 2 ≤15 adam-gün.
 
 ## 9. Proje Ekibi ve Personel Planı
 
 | Rol | Kişi | Görev | Efor (AA) |
 |---|---|---|---|
-| Proje yöneticisi / ürün sahibi | 1 | Planlama, pilot koordinasyonu, kabul kriterleri | 2,5 |
-| Kıdemli arka uç geliştirici | 2 | Bitemporal katman, denetim motoru, konnektörler | 12 |
+| Proje yöneticisi / ürün sahibi | 1 | Planlama, pilot koordinasyonu, kabul kriterleri, CBAM go/no-go kapısı | 3 |
+| Kıdemli arka uç geliştirici | 2 | Bitemporal katman, denetim motoru, konnektörler, CBAM kural seti (İP7) | 14 |
 | YZ/NLP mühendisi | 1 | Dar-görevli LLM katmanı, model değerlendirme, şema zorlama | 5 |
 | Ön yüz geliştirici | 1 (yarı zamanlı) | Pano ve iş akışı arayüzleri (HTMX üzerine) | 3 |
-| Test/kalite + MLOps | 1 (kısmi) | Çapa seti genişletme, hata enjeksiyonu, CPU çıkarım/paketleme altyapısı ve donanım matrisi ölçümleri | 2,5 |
-| Mevzuat/YMM uzmanı | Hizmet alımı | Kural doğrulama, mutabakat denetimi | — |
+| Test/kalite + MLOps | 1 (kısmi) | Çapa seti genişletme (5746 + CBAM), hata enjeksiyonu, CPU çıkarım/paketleme altyapısı ve donanım matrisi ölçümleri | 3 |
+| Mevzuat/YMM uzmanı | Hizmet alımı | 5746 kural doğrulama, mutabakat denetimi | — |
+| Karbon/sürdürülebilirlik uzmanı | Hizmet alımı | CBAM metodolojisi kural doğrulama (YMM deseninin CBAM karşılığı) | — |
 
 ## 10. Proje Bütçesi
 
 | Kalem | Tutar (TL) |
 |---|---|
-| Personel (25 AA × 250.000 ort. tam maliyet) | 6.250.000 |
+| Personel (28 AA × 250.000 ort. tam maliyet) | 7.000.000 |
 | Danışmanlık — mevzuat/YMM (hizmet alımı) | 500.000 |
+| Danışmanlık — karbon/sürdürülebilirlik uzmanı (CBAM kural doğrulama) | 300.000 |
 | Bulut GPU kiralama — damıtma/ince ayar eğitimleri (yalnızca sentetik + anonim veriyle, geliştirme aşamasında) | 400.000 |
 | CPU test donanım matrisi (3-4 temsili sınıf kişisel bilgisayar) | 150.000 |
 | Entegrasyon test ortamları ve yazılım lisansları | 300.000 |
-| Beklenmedik giderler (~%4,5) | 350.000 |
-| **Toplam** | **7.950.000** |
+| Beklenmedik giderler (~%4) | 350.000 |
+| **Toplam** | **9.000.000** |
 
 *Notlar:* (1) Harici LLM API kalemi yoktur — tüm YZ işleme yereldir ve **üründe CPU-yalnız** çalışır; GPU yalnız geliştirme aşamasındaki damıtma/ince ayar eğitimlerinde kiralık kullanılır, ürüne GPU gereksinimi taşınmaz. (2) CPU-yalnız pivot, önceki plandaki GPU sunucu yatırımını (1,2 M TL) kaldırmış, bütçeyi ~8,7 → ~7,95 M TL'ye düşürmüştür. (3) Hesap çekirdeğinin hazır devralınması, süreyi 12→10 aya, eforu 30→25 AA'ya düşürmüştür.
 
@@ -157,7 +165,8 @@ Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık). Pilot eforu con
 - **Rakip analizi:** Yerli — ArgeMemory, Ar-GeNet (hesaplama odaklı; Bakanlık-doğrulamalı açık test çapası, bitemporal versiyonlama ve denetim motoru yok); bordro yazılımı teşvik modülleri; YMM hizmeti. Global — Boast.ai, Neo.tax (Türk mevzuatı yok). Konum: doğrulanmış hesap çekirdeği + yerel mevzuat hendeği + KVKK-tam-uyum.
 - **Gelir modeli:** Personel sayısına kademeli yıllık abonelik + denetim öncesi "hazırlık taraması" paketi; pilotlarda abonelik vs. başarı primi A/B testi.
 - **Satış projeksiyonu (muhafazakâr):** Yıl 1 — 2 ücretli pilot + 3–5 abonelik; Yıl 2 — 12–18; Yıl 3 — 30–40 müşteri. Kanallar: Argelog İSO 100 müşteri tabanı ve danışmanlık ilişkileri; YMM kanal ortaklıkları.
-- **Talep kanıtı:** İki sanayi firmasından yazılı ihtiyaç görüşü (LOI başvuru ekinde hedeflenir).
+- **Talep kanıtı:** İki sanayi firmasından yazılı ihtiyaç görüşü (LOI başvuru ekinde hedeflenir); CBAM tarafında talep, keşif görüşmelerine eklenen soru blokuyla doğrulanacaktır (İP7 go/no-go girdisi).
+- **İkinci rejim pazarı (CBAM):** AB'ye ihracat yapan çelik/alüminyum/seramik/metal üreticileri — CBAM 2026'da ücretli döneme girdi; AB Konseyi kapsamı ~180 aşağı akım ürüne genişletme pozisyonunda (kritik hükümler 1.1.2028) ve taban 2028'de katlanır. Sanayi verisi büyük ölçüde Excel'de; mevcut oyuncular danışmanlık raporu satıyor — denetime hazır, deterministik yerli yazılım segmenti boş. Gelir zamanlaması platform riskini dengeler: **2026-27 nakit 5746 hattından, 2027-28 büyüme CBAM'den**; kanala YMM'lerin yanına gümrük müşavirleri ve karbon danışmanları eklenir.
 - **Büyüme vizyonu (ARGELOG.AI):** ARGUS, Argelog'un "kuruma özel Ar-Ge zekâ katmanı" (ARGELOG.AI) vizyonunun ilk üretim uygulamasıdır: kurumsal veri → analiz → uzman onayı → doğrulanmış sonuç → geri besleme döngüsünü uyum alanında kanıtlar. Aynı platform çekirdeği (olay/onay zinciri, sürümlü bilgi tabanı, model soyutlama, ajan manifesti) üzerinde sonraki aşamalarda deney/reçete döngüsü ve ek Ar-Ge ajanları (TRL, patent tarama, proje riski, teknoloji radarı) ticarileştirilecektir — bu vizyon projenin kapsamını değil, çıktısının pazar tavanını büyütür.
 
 ## 12. Riskler ve B Planı
@@ -171,6 +180,8 @@ Toplam: **25 adam-ay / 10 ay** (ort. ~2,5 FTE + danışmanlık). Pilot eforu con
 | Mevzuat değişim hızının kural bakımını aşması | Orta/Yüksek | Bitemporal versiyonlama (AS-1) tam da bunun için; YMM ile aylık gözden geçirme; LLM destekli Resmî Gazete izleme (insan onaylı) |
 | Çekirdek imza genişletmesinin 96/96 güvencesini eritmesi | Düşük/Yüksek | Opsiyonel parametre deseni; parametresiz koşumda birebir regresyon; migrasyon İP1'de adlandırılmış kalem ve İP5'in ön koşulu |
 | Çapraz denetim motorunun hedef doğruluğa ulaşamaması | Orta/Orta | Kural seti kademeli genişler; ilk sürüm mevcut 12 doğrulanmış kontrolle çıkar |
+| CBAM saha talebinin doğrulanmaması | Orta/Orta | İP7 go/no-go kapısına bağlı (ay 5): keşif görüşmelerindeki CBAM bloku olumsuzsa İP7 kapsamı "kural seti ön araştırması"na daraltılır, efor 5746 derinleşmesine kayar — platform tezi zarar görmez |
+| AB'nin CBAM takvimini/kapsamını değiştirmesi | Orta/Orta | Bitemporal kural katmanı (AS-1) tam da bunun için tasarlandı — değişiklik, yürürlük-tarihli yeni kural sürümü olarak yönetilir; 2028 genişlemesi yönü tabanı büyütür, riski küçültür |
 | LLM dar görevlerinde düşük kalite | Düşük/Düşük | Mimari gereği LLM çıktısı hiçbir hesaba doğrudan etki etmez (insan onaylı öneri); en kötü durumda özellik kapatılır, ürün değeri korunur |
 | Damıtılmış küçük modelin CPU'da hedef doğruluk/süreye ulaşamaması | Orta/Orta | Görev daha da daraltılır (alan-bazlı kısa bağlam); model kademesi 4B'ye çıkarılır (yine CPU'da); en kötü durumda ilgili LLM özelliği kapatılır — deterministik motor + kural katmanı ürün değerini tek başına taşır |
 | Açık model lisans uyumsuzluğu (ticari dağıtımda kısıt) | Düşük/Orta | Aday havuzu izin verici lisanslı (Apache-2.0 öncelikli) modellerle sınırlanır; lisans denetimi İP1 model seçim kriteridir |
