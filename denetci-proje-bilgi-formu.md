@@ -9,7 +9,7 @@
 | Alan | Değer |
 |---|---|
 | Firma Unvanı | ARGELOG ARGE MERKEZİ YÖNETİM DANIŞMANLIĞI VE YAZILIM HİZMETLERİ A.Ş. |
-| Proje Adı | **Denetci** — Kapalı Devre Ortamlar için Çok Mevzuatlı, Denetlenebilir Hesap ve Uyum Yazılımı |
+| Proje Adı | **Denetci** — Kapalı Devre Ortamlar için Çok Mevzuatlı, Denetlenebilir Hesap, Uyum ve Karar Destek Yazılımı |
 | Proje Kodu | ARGELOG-002 |
 | Proje Yöneticisi | Murat Haksal |
 | Proje Süresi | 10 Ay |
@@ -42,6 +42,8 @@ Denetci projesi, bu mevzuat rejimlerini tek bir **çok mevzuatlı, deterministik
 
 Proje süresince ilk mevzuat rejimi (5746) için geçmiş beyanların sisteme yüklenip yeniden hesaplanarak mutabakatının kurulduğu ve doğrulanmış sonuçların ileriye dönük hesaplara temel oluşturduğu bir altsistem geliştirilecek; ikinci rejim (SKDM) için seramik sektöründe ürün bazlı gömülü emisyon hesabı, sanayi ortağımızın gerçek üretim ve enerji verisiyle doğrulanacaktır. İki sanayi kuruluşundan projeye ilişkin yazılı ihtiyaç görüşü alınmıştır.
 
+Projenin değer önerisi mevzuata uyumla sınırlı değildir; uyum, dört katmanlı değerin tabanıdır: (1) **uyum güvencesi** — ceza, iade ve belge iptali riskinin önlenmesi; (2) **geri kazanım** — geçmiş dönem mutabakatıyla eksik yararlanılmış teşviklerin tespiti ve mevzuatın izin verdiği ölçüde geri alınması; (3) **karar desteği** — deterministik hesap motorunun ileriye dönük çalıştırılmasıyla senaryo analizi (istihdam planlamasının net maliyeti, ücret yapısının teşvik üst sınırlarına göre kurgulanması, sınırda karbon maliyetinin ürün fiyatına yansıtılması); (4) **kurumsal veri varlığı** — doğrulanmış personel-dönem-teşvik ve üretim-emisyon kayıt zincirinin, yönetim raporlaması ve gelecekteki analitik uygulamalar için güvenilir kurumsal hafızaya dönüşmesi. SKDM tarafında doğru emisyon verisi yalnızca beyan yükümlülüğü değil, AB alıcılarına ürün bazlı karbon verisi sunabilme yoluyla ihracatçıya rekabet avantajıdır.
+
 ## Projenin Hedefleri
 
 - ☑ Üretim Maliyetlerini ve Giderlerini Düşürme *(teşvik kayıplarının ve sınırda karbon maliyetinin azaltılması; uyum için harcanan nitelikli iş gücünün azaltılması)*
@@ -59,7 +61,8 @@ Proje süresince ilk mevzuat rejimi (5746) için geçmiş beyanların sisteme y�
 3. Yerel yapay zekâ bileşenlerinin, 16 GB bellekli ve 4 çekirdekli, grafik işlemcisiz referans bilgisayarda belge başına 30 saniyenin altında, referans büyük modelin doğruluğunun en az %95'ine ulaşarak çalışması.
 4. Seramik sektöründe ürün bazlı gömülü emisyon hesabının gerçek üretim verisiyle doğrulanması ve SKDM beyan dosyası çıktı formatının üretilmesi.
 5. Kurulumdan ilk rapora bir saat içinde ulaşılabilen, bilgi işlem desteği gerektirmeyen kullanım kolaylığı (pilotlarda görev tamamlama oranı en az %80).
-6. İki sanayi kuruluşunda ücretli saha pilotu ve en az birinden yenileme/abonelik taahhüdü.
+6. **Senaryo analizi yeteneği:** Aynı deterministik motorun ileriye dönük parametrelerle çalıştırılmasıyla; istihdam planı net maliyet simülasyonu, ücret/üst sınır yapılandırma analizi ve sınırda karbon maliyet projeksiyonu ekranlarının ilk sürümde sunulması (pilotlarda en az bir gerçek planlama kararında kullanım kanıtı).
+7. İki sanayi kuruluşunda ücretli saha pilotu ve en az birinden yenileme/abonelik taahhüdü.
 
 ## Hedef Kitle
 
@@ -145,7 +148,7 @@ Talep edilen süre: 480 saat. *Gerekçe:* Saha pilotları, kişisel verinin kuru
 
 **Sürdürülebilirlik:** Ürünün yaşam döngüsü mevzuata bağlıdır ve iki rejim birbirini dengeler: 5746 teşvik sistemi ile SKDM'nin kademeli genişleme takvimi, güncelleme aboneliği üzerinden sürekli gelir ve sürekli geliştirme döngüsü yaratır. Mevzuat güncellemelerinin imzalı paketlerle dağıtımı, ürünün kapalı devre ortamlarda dahi güncel kalmasını sağlar. Platform mimarisi üçüncü ve sonraki mevzuat rejimlerinin (örneğin ulusal emisyon ticaret sistemi) eklenmesine açıktır.
 
-**Ekonomik Değeri:** Orta ölçekli (150 Ar-Ge personelli) bir merkezin yönettiği yıllık teşvik tutarı yüz milyon TL mertebesindedir; düşük oranlı bir hata bile yıllık milyonlarca TL kayıp veya iade riski demektir. SKDM tarafında hatalı emisyon beyanı, sınırda doğrudan ek maliyet oluşturur. Ürün; önlenen kayıp, geri kazanılabilir tutarlar ve denetim riskinin azaltılması üzerinden, yıllık bedelinin birkaç katı ölçülebilir değer üretir. Firma açısından üç gelir kalemi öngörülmektedir: masaüstü lisans ve güncelleme aboneliği, geçmiş dönem mutabakat/denetim hazırlık hizmetleri ve kurum sürümü kurulumları. Muhafazakâr satış öngörüsü: 1. yıl iki ücretli pilot ve 3-5 lisans; 2. yıl 12-18 müşteri; 3. yıl 30-40 müşteri ve SKDM modülüyle ihracatçı segmentine genişleme — 3. yıl sonunda yıllık yinelenen gelirin proje bütçesini aşması hedeflenmektedir.
+**Ekonomik Değeri:** Orta ölçekli (150 Ar-Ge personelli) bir merkezin yönettiği yıllık teşvik tutarı yüz milyon TL mertebesindedir; düşük oranlı bir hata bile yıllık milyonlarca TL kayıp veya iade riski demektir. SKDM tarafında hatalı emisyon beyanı, sınırda doğrudan ek maliyet oluşturur. Ürünün ekonomik değeri dört kanaldan ölçülür: önlenen kayıp ve denetim riski (uyum güvencesi), geçmiş dönemlerden geri kazanılabilir tutarlar (nakit etkisi), senaryo analiziyle alınan istihdam/ücret/fiyatlama kararlarının iyileştirilmesi (planlama değeri — ürünü maliyet merkezi aracı olmaktan çıkarıp finansal planlama aracına dönüştüren kanal) ve uyum için harcanan nitelikli iş gücünün Ar-Ge'nin kendisine kayması. Toplamda ürün, yıllık bedelinin birkaç katı ölçülebilir değer üretir. Firma açısından üç gelir kalemi öngörülmektedir: masaüstü lisans ve güncelleme aboneliği, geçmiş dönem mutabakat/denetim hazırlık hizmetleri ve kurum sürümü kurulumları. Muhafazakâr satış öngörüsü: 1. yıl iki ücretli pilot ve 3-5 lisans; 2. yıl 12-18 müşteri; 3. yıl 30-40 müşteri ve SKDM modülüyle ihracatçı segmentine genişleme — 3. yıl sonunda yıllık yinelenen gelirin proje bütçesini aşması hedeflenmektedir.
 
 **Alınacak Dış Hizmetler:** Yeminli Mali Müşavirlik hizmeti (5746 kural setinin madde madde teyidi ve pilot mutabakat denetimi); karbon/sürdürülebilirlik danışmanlığı (SKDM metodolojisinin teyidi); kısa süreli bulut grafik işlemci kiralama (yalnızca model damıtma eğitimlerinde, sentetik ve anonim veriyle).
 
@@ -181,6 +184,7 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 | Denetci Masaüstü (5746 uyum ve hesap) | Yazılım — masaüstü uygulama |
 | Denetci Pro (geçmiş dönem mutabakatı ve denetim savunma dosyası) | Yazılım — modül |
 | Denetci SKDM (gömülü emisyon hesabı ve beyan dosyası) | Yazılım — modül |
+| Denetci Karar (senaryo ve simülasyon: istihdam planı net maliyeti, ücret/üst sınır yapılandırması, karbon maliyet projeksiyonu) | Yazılım — modül |
 | Denetci Kurum (çok kullanıcılı/çok firmalı sürüm, kapalı ağ dağıtımı) | Yazılım — sunucu sürümü |
 | Mevzuat güncelleme aboneliği (imzalı çevrimdışı paket) | Hizmet — abonelik |
 
