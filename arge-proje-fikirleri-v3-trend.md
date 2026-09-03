@@ -4,6 +4,10 @@
 
 ---
 
+> **⚠️ DÜZELTME (Eylül 2026, doğrulama sonrası):** Bu dokümandaki CBAM/SKDM önerisi iki olgu hatası içeriyordu ve **geçersizdir**: (1) CBAM Tüzüğü (AB) 2023/956 Ek-I listesi çimento, elektrik, gübre, demir-çelik, alüminyum ve hidrojeni kapsar — **seramik kapsamda değildir**, dolayısıyla önerilen Kale/seramik pilotu bu mevzuat için geçersizdi; (2) beyan yükümlüsü AB'deki yetkili bildirimcidir (ithalatçı), Türk üretici değildir — üretici yalnızca alıcısına veri sağlar, ki bu daha zayıf ve türev bir ticari ihtiyaçtır. CBAM ayağı bu nedenle Denetci projesinden **tamamen çıkarılmıştır**; platform tezi 4691 kardeş kural setiyle sınanmaktadır. Güncel ve geçerli kapsam için `denetci-proje-bilgi-formu.md` esas alınmalıdır.
+
+
+
 ## 1. Ana Sonuç
 
 2026 analist konsensüsü (Gartner'ın DSLM ve geopatriation trendleri, IDC'nin kompozit YZ öngörüsü, Forrester'ın değer-kanıtı baskısı) Argelog'un "deterministik çekirdek + dar-görevli yerel YZ + kapalı devre" felsefesini niş olmaktan çıkarıp ana akım ilan ediyor; ancak en güvenli ticari pencere bir YZ trendinden değil, tarihli bir regülasyondan açılıyor. Dört merceğin sentezinde açık lider, tüm merceklerde 4+ alan tek fikir olan KarbonKanıt (F2, 19/20): CBAM'in 2026 ücretli dönemi ve 2028 kapsam genişlemesi, Bakanlık-doğrulamalı 5746 hesap çekirdeği DNA'sının birebir taşınacağı, ödeme iradesi regülasyonla garantili bir pazar yaratıyor. Öneri: KarbonKanıt amiral ürün; AjanDenetim (F8) sıfıra yakın geliştirme maliyetli nakit köprüsü ve pazar istihbarat kanalı; KapalıRaf (F6) SAHA kanalında platform olarak değil tek görev bloğuyla başlatılacak ikinci dalga ürün. SeramLM/DöngüLab/ReçeteİKİZ hattı ise ARGELOG.AI vizyonunun Ar-Ge programı olarak 18 Eylül 2026'da kapanan TÜBİTAK 1711 penceresine bağlanmalı (bugün itibarıyla 3 hafta var) — 10 kişilik ekip iki amiral taşıyamaz, bu plan 1 amiral + 1 hizmet + 1 pilot dengesini kurar.

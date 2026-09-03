@@ -4,6 +4,10 @@
 
 ---
 
+> **⚠️ DÜZELTME (Eylül 2026, doğrulama sonrası):** Bu dokümandaki CBAM/SKDM önerisi iki olgu hatası içeriyordu ve **geçersizdir**: (1) CBAM Tüzüğü (AB) 2023/956 Ek-I listesi çimento, elektrik, gübre, demir-çelik, alüminyum ve hidrojeni kapsar — **seramik kapsamda değildir**, dolayısıyla önerilen Kale/seramik pilotu bu mevzuat için geçersizdi; (2) beyan yükümlüsü AB'deki yetkili bildirimcidir (ithalatçı), Türk üretici değildir — üretici yalnızca alıcısına veri sağlar, ki bu daha zayıf ve türev bir ticari ihtiyaçtır. CBAM ayağı bu nedenle Denetci projesinden **tamamen çıkarılmıştır**; platform tezi 4691 kardeş kural setiyle sınanmaktadır. Güncel ve geçerli kapsam için `denetci-proje-bilgi-formu.md` esas alınmalıdır.
+
+
+
 ## 1. ARGUS'u v3'ün Dört Merceğinden Geçirince
 
 ### Mercek 1 — Trend zamanlaması: 4/5 (mimari rüzgâr güçlü, büyüme yönü yerel)
