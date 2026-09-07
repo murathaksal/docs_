@@ -12,6 +12,20 @@
 | 4 | Analiz ve test-altyapı uzmanı | [Ad Soyad] | 9 adam/ay (0,75 TZE) | Belge yapıları ve mutabakat vakalarının analizi, senaryo/enjeksiyon setlerinin kurulması, çapa/regresyon test altyapısı, imzalı güncelleme, kapalı devre kurulum doğrulaması, pilot destek (İP7) |
 | | **Toplam** | **4 kişi** | **36 adam/ay** | ortalama 3,0 tam zaman eşdeğeri (12 ay) |
 
+## Efor matrisi (kişi × iş paketi, adam/ay)
+
+*Satır toplamları ekip özetindeki kişi eforlarına, sütun toplamları Proje Bilgi Formu'ndaki iş paketi adam/aylarına birebir eşittir; hakem heyeti bu iki tabloyu çapraz okur.*
+
+| Kişi | İP1 | İP2 | İP3 | İP4 | İP5 | İP6 | İP7 | **Toplam** |
+|---|---|---|---|---|---|---|---|---|
+| Proje yöneticisi | 1 | 1 | – | 1 | – | 1 | 2 | **6** |
+| Kıdemli yazılım geliştirici | 2 | 4 | 2 | 2 | – | 2 | – | **12** |
+| YZ / DDİ mühendisi (İP5 yöneticisi) | – | 1 | – | 2 | 6 | – | – | **9** |
+| Analiz ve test-altyapı uzmanı | – | 1 | 2 | 3 | – | 2 | 1 | **9** |
+| **Toplam** | **3** | **7** | **4** | **8** | **6** | **5** | **3** | **36** |
+
+Okuma notları: Kıdemli geliştirici 12 ay boyunca tam zamanlı olarak projede kalır ve hesap çekirdeğinden masaüstü ürüne uzanan omurgayı taşır. YZ/DDİ mühendisinin İP2 ve İP4'teki payı, denetim verisi üretim hattının (EK-6) motor çıktısına bağlanması içindir; İP5 dışındaki bu efor olmadan hat kurulamaz. Analiz ve test-altyapı uzmanının İP4'teki ağırlığı, senaryo kütüphanesi ve hata enjeksiyon setinin kurulmasından gelir.
+
 **Dış hizmet (ekip dışı):** Yeminli Mali Müşavir — 5746 ve 4691 kural setlerinin madde madde teyidi, geçmiş parametre tablosunun doğrulanması, pilot mutabakat denetimi. *(Sözleşme veya niyet yazısı bu eke iliştirilir.)*
 
 ## Özgeçmiş şablonu *(her ekip üyesi için doldurulacak — 1 sayfa)*
