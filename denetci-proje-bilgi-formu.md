@@ -89,7 +89,7 @@ Proje kapsamı bilinçli olarak **tek mevzuat ailesiyle** — 5746 (Ar-Ge ve Tas
 - ☑ Ülke bazında teknolojik olarak yeni ürün üretim süreci
 - ☑ Yeni teknolojinin ülke koşullarına uyarlanması
 
-## Ar-Ge Yönü, Yenilikçi ve Teknolojik Yön
+## Ar-Ge Yönü
 
 Proje, rutin yazılım geliştirmenin ötesinde **üç** teknik belirsizlik üzerinde çalışacaktır. Üçünün de düşebilir (yanlışlanabilir) bir ölçütü vardır; ölçütü sağlanamayan soru, proje sonunda başarısız olarak raporlanacaktır.
 
@@ -106,6 +106,22 @@ Sorunun ikinci ve daha zor katmanı, iki rejimin **aynı kuruluşta bir arada bu
 
 **Ar-Ge iddiası olmayan, geliştirme kalemi olarak beyan edilenler:** Belge içeri alma ve format normalizasyonu; masaüstü ürünleştirme, kurulum sihirbazı ve arayüzler; imzalı çevrimdışı güncelleme mekanizması; belge alan çıkarımında hazır bir küçük dil modelinin şema-zorlamalı çözümleme ve deterministik doğrulama kapısıyla olduğu gibi kullanılması. Bu bileşenler proje için gereklidir ancak teknik belirsizlik içermedikleri için araştırma sorusu olarak öne sürülmemektedir.
 
+## Yenilikçi ve Teknolojik Yön
+
+**1. Hesabın kendisi değil, hesabın yeniden kurulabilirliği ürünleştirilmektedir.** Mevcut çözümler teşvik tutarını üretmeye odaklanır. Bu proje, üretilmiş bir beyanın bağımsız olarak yeniden hesaplanmasını, farkının kök nedenine bağlanmasını ve sonucun mühürlenerek denetimde savunulabilir hâle getirilmesini bir ürün işlevi olarak kurar. Ürünün çıktısı bir tutar değil, **tutarın gerekçesidir**.
+
+**2. Zaman-farkındalıklı kural mimarisi.** Yaygın uygulamada mevzuat parametreleri yazılıma tek sürüm hâlinde gömülür; değişiklik geldiğinde eski değerlerin üzerine yazılır ve geçmiş dönem yeniden üretilemez hâle gelir. Bu projede parametre, hesap şeması ve bilgi tarihi ayrı eksenlerde sürümlenir; her hesap, ilgili dönemde yürürlükte olan kural sürümüne ve kaynağı olan mevzuat maddesine bağlı kalır. Bu, ürünün teknolojik ayrımının çekirdeğidir.
+
+**3. Rejim sınırı denetimi.** İki teşvik rejimini bir arada yürüten kuruluşlarda personel, ücret ve kazancın rejimler arasında paylaştırılması ile mükerrer yararlanma kontrolü, ayrı ayrı hesaplama yapan çözümlerin kapsamadığı bir yetenektir; bu proje söz konusu sınırı denetlenebilir bir kural katmanı olarak modellemektedir.
+
+**4. Yapay zekânın bilinçli olarak sınırlandırılması.** Yaygın eğilim, mali ve hukuki hesaplamalarda üretken yapay zekânın karar üretici konumda kullanılmasıdır. Bu projede yapay zekâ **hesap yapmaz, karar vermez**; yalnızca belge alan çıkarımında öneri üretir ve her önerisi deterministik doğrulama kapısından ve insan onayından geçer. Bu tercih, denetim savunulabilirliğinin ve 6698 sayılı Kanun uyumunun ön koşuludur; ürünün çıktısının denetim karşısında tekrarlanabilir olmasını sağlar.
+
+**5. Kapalı devre ve donanım bağımsız çalışma.** Ürün, internet bağlantısı olmayan ortamlardaki sıradan kişisel bilgisayarlarda, grafik işlemci gerektirmeden çalışacak biçimde tasarlanmıştır. Bordro ve personel verisi kurum dışına hiçbir koşulda çıkmaz; mevzuat güncellemeleri elektronik imzalı çevrimdışı paketlerle taşınır. Bu, veri egemenliği ve kapalı ağ gereksinimi olan kuruluşlar (savunma tedarik zinciri, bilgi güvenliği kısıtlı kurumlar) için ürünü erişilebilir kılan teknolojik tercihtir ve ek donanım yatırımı gerektirmez.
+
+**6. Kullanım kolaylığının teknolojik gereklilik olarak ele alınması.** Hedef kullanıcı bilgi işlem personeli değil, mali işler ve insan kaynakları uzmanıdır. Kurulumdan ilk rapora bir saat içinde ulaşılması ölçülebilir bir kabul kriteri olarak tanımlanmıştır; bu, sunucu kurulumu ve bilgi işlem projesi gerektiren kurumsal yazılım yaklaşımından ayrılan bir tasarım tercihidir.
+
+Bu unsurların ayrı ayrı değil **bir arada** bulunması, kamuya açık ürün materyalleri üzerinden yürütülen taramada (EK-1) rastlanmayan bileşimi oluşturmaktadır.
+
 ## Proje Ortaklığı
 
 - ☑ Üniversite işbirliği ile yürütülen proje *(İstanbul Medeniyet Üniversitesi öğretim üyelerinden Teknoloji Transfer Ofisi aracılığıyla yazılım mühendisliği alanında akademik danışmanlık talep edilecektir: zaman-farkındalıklı kural sürümleme ve teşhis çerçevesinin değerlendirilmesi)*
@@ -113,9 +129,23 @@ Sorunun ikinci ve daha zor katmanı, iki rejimin **aynı kuruluşta bir arada bu
 
 ## Proje Kapsamında Teknoparktan Talep Edilen Hizmetler
 
-- Danışmanlık: MUAFİYET UYGULAMALARI; AR-GE PROJE TEKLİF DOSYASININ HAZIRLANMASI; PATENT; MARKA TESCİL
-- Teknik Hizmetler: EĞİTİM; İNTERNET SERVİSLERİ
-- TTO: AKADEMİSYEN DANIŞMANLIĞI; PROJE DEĞERLENDİRME
+- **Danışmanlık Hizmetleri:** MUAFİYET UYGULAMALARI; AR-GE PROJE TEKLİF DOSYASININ HAZIRLANMASI; PATENT; MARKA TESCİL
+- **Teknik Hizmetler:** EĞİTİM; İNTERNET SERVİSLERİ
+
+## Proje Kapsamında TTO'dan Talep Edilen Hizmetler
+
+- **AKADEMİSYEN DANIŞMANLIĞI** — Yazılım mühendisliği alanında; zaman-farkındalıklı kural sürümleme ve fark kök-neden teşhis çerçevesinin yöntemsel değerlendirilmesi.
+- **PROJE DEĞERLENDİRME** — Ara dönem çıktılarının (ay 7 ve ay 10 ölçüm noktaları) bağımsız gözden geçirilmesi.
+
+## Teknoparkta Etkileşimde Bulunulan/Bulunulabilecek Firmalar
+
+Proje, bölge firmalarıyla üç biçimde etkileşim öngörmektedir:
+
+1. **Kullanıcı ve erken geri bildirim kaynağı olarak:** Bölgede faaliyet gösteren firmalar 4691 kapsamında istisna ve muafiyet hesabı yükümlülüğü taşıdığından, ürünün doğrudan hedef kullanıcısıdır. 4691 kural setinin geliştirildiği İP3 aşamasında, gönüllü bölge firmalarından kullanılabilirlik geri bildirimi ve — gizlilik sözleşmesi çerçevesinde — anonimleştirilmiş örnek hesap senaryoları talep edilmesi planlanmaktadır.
+2. **Mali müşavirlik/denetim hizmeti veren bölge firmalarıyla:** Varsa, kural setlerinin teyidi ve raporlama çıktılarının uygulamadaki karşılığının değerlendirilmesi konusunda iş birliği.
+3. **Yazılım geliştiren bölge firmalarıyla:** Veri içe aktarım formatları ve bordro sistemleri entegrasyonu konusunda deneyim paylaşımı.
+
+*(Etkileşim kurulacak firma adları, bölge yönetiminin yönlendirmesi ve ilgili firmaların onayı ile başvuru sürecinde netleştirilecektir.)*
 
 ## Finansman Kaynakları
 
