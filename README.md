@@ -19,6 +19,8 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 | [`ek-1-rekabet-analizi-urun-listesi.md`](ek-1-rekabet-analizi-urun-listesi.md) | İncelenen ürün listesi, tarama yöntemi ve üç ölçütlü karşılaştırma tablosu |
 | [`ek-2-niyet-mektubu-sablonu.md`](ek-2-niyet-mektubu-sablonu.md) | Pilot kuruluşlar için niyet mektubu (LOI) şablonu ve toplama kontrol listesi |
 | [`ek-3-personel-maliyet-dayanagi.md`](ek-3-personel-maliyet-dayanagi.md) | Personel birim maliyeti kırılımı ve dayanağı *(tutarlar firma verisiyle doldurulacak)* |
+| [`ek-4-proje-ekibi-ozgecmisleri.md`](ek-4-proje-ekibi-ozgecmisleri.md) | Ekip kompozisyonu, efor dağılımı ve özgeçmiş şablonu *(kişi bilgileri doldurulacak)* |
+| [`ek-5-firma-tanitim-dosyasi.md`](ek-5-firma-tanitim-dosyasi.md) | Kurumsal kimlik, referanslar, mali tablolar ve finansman beyanı *(mali veriler doldurulacak)* |
 
 ## 📚 Analiz arşivi (karar gerekçeleri)
 
@@ -48,5 +50,5 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 4. **EK-3'teki tutarları** firmanın güncel bordro ve genel gider verileriyle doldur (yer tutucular boş bırakılamaz).
 5. **EK-2 şablonunu** iki pilot kuruluşa gönder ve imzalı niyet mektuplarını topla — kurumsal imza süreci 2-4 hafta sürdüğü için başvurudan en az bir ay önce başlat.
 6. **EK-1'i** sunum öncesi bir kez daha gözden geçir (ürün siteleri değişmiş olabilir).
-7. EK-4 (ekip özgeçmişleri) ve EK-5 (firma tanıtım dosyası, mali tablolar) hazırla.
+7. **EK-4 ve EK-5'teki** kişi ve mali bilgileri doldur; EK-5'in ekler listesindeki resmî belgeleri (sicil gazetesi, imza sirküleri, borcu yoktur yazıları, mali tablolar) topla.
 8. Sunum öncesi CBAM'e ilişkin kesme kararının dayanağını (Ek-I kapsamı, yükümlü taraf) hukuk/gümrük müşaviriyle bir kez teyit ettir — karar değişmeyecek olsa da beyan güvenliği için.

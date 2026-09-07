@@ -38,13 +38,18 @@ Mevzuat uyum yazılımı; deterministik hesaplama motoru; 5746 sayılı Kanun Ar
 
 5746 sayılı Araştırma, Geliştirme ve Tasarım Faaliyetlerinin Desteklenmesi Hakkında Kanun kapsamındaki 1.300'ü aşkın Ar-Ge ve Tasarım Merkezi ile 4691 sayılı Teknoloji Geliştirme Bölgeleri Kanunu kapsamındaki firmalar; her ay bordroyla iç içe geçen teşvik ve istisna hesaplamaları yapmak, yıllık raporlama sunmak ve düzenli aralıklarla denetlenmek yükümlülüğündedir. Bu hesaplar bugün ağırlıkla elektronik tablolar ve dönemsel mali müşavirlik hizmetiyle yürütülmektedir. Yapı gereği, elektronik tablo bugünün oranlarıyla üzerine yazıldığı için, denetimde üç yıl önceki bir rakamın hangi mevzuat sürümüyle nasıl kurulduğunu gösteren bir kayıt bulunmamaktadır.
 
-Projenin çözdüğü sorun, ileriye dönük hesaplama değil — bu işi bordro yazılımları hâlihazırda yapmaktadır — **geriye dönük yeniden kurulabilirliktir**: geçmiş 12-24 dönemin her birini kendi yürürlük tarihli kural sürümüyle yeniden hesaplamak, farkı kuruş bazında ve kök nedeniyle göstermek, ayırt edilemeyen durumları dürüstçe "belirsiz" olarak raporlamak ve mutabık kalınan dönemi denetimde savunulabilir biçimde mühürlemek. Bordro ve kurumsal kaynak planlama paketlerinin teşvik modülleri bunu yapısal olarak yapamaz; tek sürümlü kural tablosuyla çalışırlar.
+Projenin çözdüğü sorun, bordronun ürettiği hesabın yerine geçmek değil — **aynı hesabın bağımsız olarak yeniden kurulabilmesidir.** Bu yetenek iki yönde birden çalışır:
+
+- **Geriye dönük (geçmiş dönemler):** Geçmiş 12-24 dönemin her biri, kendi yürürlük tarihli kural sürümüyle yeniden hesaplanır; beyan ile hesap arasındaki fark kuruş bazında ve kök nedeniyle gösterilir, ayırt edilemeyen durumlar dürüstçe "belirsiz" olarak raporlanır ve mutabık kalınan dönem denetimde savunulabilir biçimde mühürlenir.
+- **Cari dönemde (gelinen aylar):** Kapanan her ay için, tahakkuk kesinleşmeden bağımsız bir kontrol hesabı yapılır; bordro çıktısıyla karşılaştırılarak sapmalar beyandan **önce** görülür. Böylece ürün yılda bir kez kullanılan bir denetim aracı değil, her bordro döneminde çalışan sürekli bir kontrol katmanı hâline gelir; hata denetimde değil oluştuğu ay yakalanır ve düzeltme maliyeti asgariye iner.
+
+Bordro ve kurumsal kaynak planlama paketlerinin teşvik modülleri bu iki işlevi yapısal olarak yerine getiremez: tek sürümlü kural tablosuyla çalışırlar (geçmişi kendi kural sürümüyle kuramazlar) ve hesabı üreten sistemin kendisi olduklarından bağımsız bir kontrol hesabı sunmazlar. Denetci, bordro yazılımının yerini almaz; onun çıktısını bağımsız olarak doğrular.
 
 Platformun çekirdeği, her hesabın mevzuat maddesine izlenebilir bağını koruyan, yürürlük tarihine göre sürümlenen kural setleriyle çalışan deterministik hesap motorudur. Yapay zekâ yalnızca tek bir dar görevde (belge alan çıkarımı önerisi) kullanılır; **hesap yapmaz, karar vermez ve tüm önerileri insan onayından geçer.** Ürün, internet bağlantısı olmayan (kapalı devre) ortamlardaki sıradan kişisel bilgisayarlarda, grafik işlemci gerektirmeden, yalnızca merkezi işlemciyle çalışır; bordro verisi kurum dışına hiçbir koşulda çıkmaz ve 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) yükümlülükleri tasarım düzeyinde karşılanır. Mevzuat güncellemeleri, elektronik imzalı çevrimdışı paketlerle dağıtılır.
 
 Proje kapsamı bilinçli olarak **tek mevzuat ailesiyle** (5746 ve kardeş rejimi 4691) sınırlanmıştır. İki sanayi kuruluşundan projeye ilişkin yazılı ihtiyaç görüşü alınmış olup, her ikisiyle ücretli saha pilotu planlanmaktadır.
 
-**Katma değer — iki cümlelik sıralama:** *Geri kazanım toplantıyı açar, denetim savunulabilirliği sözleşmeyi kapatır.* Geçmiş dönem mutabakatı, eksik yararlanılmış teşvikleri tutar ve kök nedeniyle ortaya çıkarır (tahsil edilebilirlik, ilgili zamanaşımı pencerelerine ve yazılı mali müşavirlik/hukuk teyidine tabidir; farklar iki yönlüdür — fazla yararlanma bulgusu geri ödeme riski olarak raporlanır). Denetim savunma dosyası ise, düzenli denetimlerde her rakamın hangi mevzuat maddesi ve hangi kural sürümüyle kurulduğunu belgeler. İkincil ticari kaldıraç mühendislik değil satın alma sürtünmesidir: veri kurum dışına çıkmadığı için bulut onayı, bilgi güvenliği anketi, harici veri işleyici sözleşmesi ve bilgi işlem proje onayı satın alma zincirinden düşer.
+**Katma değer — iki cümlelik sıralama:** *Geri kazanım toplantıyı açar, denetim savunulabilirliği sözleşmeyi kapatır.* Geçmiş dönem mutabakatı, eksik yararlanılmış teşvikleri tutar ve kök nedeniyle ortaya çıkarır (tahsil edilebilirlik, ilgili zamanaşımı pencerelerine ve yazılı mali müşavirlik/hukuk teyidine tabidir; farklar iki yönlüdür — fazla yararlanma bulgusu geri ödeme riski olarak raporlanır). Denetim savunma dosyası ise, düzenli denetimlerde her rakamın hangi mevzuat maddesi ve hangi kural sürümüyle kurulduğunu belgeler. Üçüncü ve süreklilik sağlayan kanal, cari dönem kontrolüdür: ürün her bordro döneminde çalıştığı için hata denetimde değil oluştuğu ay yakalanır; bu, hem yıllık abonelik gerekçesinin hem de ürünün günlük kullanımının dayanağıdır. İkincil ticari kaldıraç mühendislik değil satın alma sürtünmesidir: veri kurum dışına çıkmadığı için bulut onayı, bilgi güvenliği anketi, harici veri işleyici sözleşmesi ve bilgi işlem proje onayı satın alma zincirinden düşer.
 
 ## Projenin Hedefleri
 
@@ -61,7 +66,8 @@ Proje kapsamı bilinçli olarak **tek mevzuat ailesiyle** (5746 ve kardeş rejim
 2. **Doğrulama çapası genişletmesi (ay 6):** Gerçek beyan kaynaklı, YMM teyitli regresyon çapası mevcut 96'dan **≥140'a** çıkarılır (dönem × rejim). *Ayrıca* sentetik kural kapsama vakası ≥400 üretilir. Bu iki sayaç ayrı raporlanır, hiçbir koşulda toplanmaz.
 3. **Fark kök-neden teşhisi (ay 7 laboratuvar, ay 9 saha):** *Metrik:* fark **kalemlerinin** ≥%85'i doğru kök-neden sınıfına otomatik atanır; sınıflandırılamayan ve "belirsiz" etiketli **tutar** payı ≤%5. *Test seti:* hata enjeksiyonlu, YMM etiketli, bilinen tek ve çoklu kök neden içeren ≥400 vakalık kalibrasyon seti + mevzuat referanslı ≥60 senaryoluk kütüphane + iki pilotun gerçek fark envanteri.
 4. **Rejimden bağımsızlık ölçümü (ay 6):** 4691 kural seti, çekirdek hesap motorunun kaynak koduna dokunulmadan yalnızca bildirimsel kural dosyalarıyla yazılır. *Metrik:* bildirimsel kapsama oranı ≥%90; çekirdek kodda rejime özgü kaçış kancası ≤3 (her biri mevzuat maddesiyle gerekçelendirilir); 5746 tarafında regresyon 0; 4691 tarafında ≥24 gerçek çapa.
-5. **Saha doğrulaması (ay 9):** İki sanayi kuruluşunda ücretli, dört kapılı saha pilotunun tamamlanması; kurulumdan ilk rapora bir saat içinde ulaşılması (bilgi işlem desteği olmadan, pilotlarda görev tamamlama oranı ≥%80); en az bir kuruluştan yazılı yenileme/abonelik taahhüdü.
+5. **Cari dönem kontrol hesabı (ay 8):** Pilot kuruluşlarda, kapanan aylar için tahakkuk kesinleşmeden bağımsız kontrol hesabının çalıştırılması. *Metrik:* pilot başına en az 3 cari dönemde kontrol hesabı üretilir; bordro çıktısıyla karşılaştırma raporu tahakkuk tarihinden önce teslim edilir; tespit edilen sapmaların mali müşavir/YMM tarafından değerlendirilme oranı raporlanır. *Test seti:* pilot kuruluşların canlı bordro dönemleri.
+6. **Saha doğrulaması (ay 9):** İki sanayi kuruluşunda ücretli, dört kapılı saha pilotunun tamamlanması; kurulumdan ilk rapora bir saat içinde ulaşılması (bilgi işlem desteği olmadan, pilotlarda görev tamamlama oranı ≥%80); en az bir kuruluştan yazılı yenileme/abonelik taahhüdü.
 
 ## Hedef Kitle
 
@@ -198,7 +204,7 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 
 | Ürün Adı | Ürün Tipi |
 |---|---|
-| Denetci Masaüstü — 5746 ve 4691 kural setleriyle aylık teşvik/istisna hesabı, mevzuat maddesi atıflı raporlama, 12 aylık teşvik projeksiyonu; geçmiş beyan mutabakatı, kök-neden teşhisi, mühürlü baz ve denetim savunma dosyası yetenekleri personel kademesine göre açılır | Yazılım — masaüstü uygulama |
+| Denetci Masaüstü — 5746 ve 4691 kural setleriyle **cari dönem bağımsız kontrol hesabı** (her bordro döneminde, tahakkuk kesinleşmeden fark raporu), mevzuat maddesi atıflı raporlama, 12 aylık teşvik projeksiyonu; geçmiş beyan mutabakatı, kök-neden teşhisi, mühürlü baz ve denetim savunma dosyası yetenekleri personel kademesine göre açılır | Yazılım — masaüstü uygulama |
 | Mevzuat güncelleme aboneliği — elektronik imzalı çevrimdışı kural paketleriyle dağıtım | Hizmet — abonelik |
 | Geçmiş dönem mutabakat hizmeti — 12-24 dönemlik retroaktif yeniden hesap ve YMM eşliğinde kapanış raporu | Hizmet — proje bazlı |
 
@@ -218,8 +224,8 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 | **EK-1** | Rekabet analizi — incelenen ürün listesi, tarama yöntemi ve karşılaştırma ölçütleri |
 | **EK-2** | Pilot kuruluşlardan alınacak niyet mektupları (iki adet; şablon ve toplama süreci) |
 | **EK-3** | Personel birim maliyeti dayanağı — ekip kıdem dağılımı ve maliyet kırılımı |
-| EK-4 | Proje ekibi özgeçmişleri |
-| EK-5 | Firma tanıtım dosyası ve mali tablolar |
+| **EK-4** | Proje ekibi ve özgeçmişler — roller, efor dağılımı ve nitelik beyanı |
+| **EK-5** | Firma tanıtım dosyası, referanslar, mali tablolar ve proje finansman beyanı |
 
 ---
 
