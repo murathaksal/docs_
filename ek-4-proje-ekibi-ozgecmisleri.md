@@ -8,9 +8,9 @@
 |---|---|---|---|---|
 | 1 | Proje yöneticisi / ürün sahibi | [Murat Haksal] | 6 adam/ay (0,5 TZE) | 5746/4691 alan bilgisi, pilot koordinasyonu, YMM arayüzü, kabul kriterlerinin yönetimi |
 | 2 | Kıdemli yazılım geliştirici | [Ad Soyad] | 12 adam/ay (1,0 TZE) | Hesap çekirdeği ve kural katmanı (İP1-İP3), mutabakat motoru ve kök-neden sınıflandırıcı (İP4), masaüstü ürünleştirme ve arayüz (İP6) |
-| 3 | Yapay zekâ / doğal dil işleme mühendisi (**İP5 iş paketi yöneticisi**) | [Ad Soyad] | 9 adam/ay (0,75 TZE) | Denetim verisi üretim hattı (EK-6), denetçi rolündeki dar kapsamlı modelin ince ayarı (SFT), sembolik doğrulama kapısı, kör test ve değerlendirme düzeneği, grafik işlemcisiz çıkarım optimizasyonu |
+| 3 | Yapay zekâ / doğal dil işleme mühendisi (**İP5 iş paketi yöneticisi**) | [Ad Soyad] | 12 adam/ay (1,0 TZE) | Denetim verisi üretim hattı (EK-6), denetçi rolündeki dar kapsamlı modelin ince ayarı (SFT), sembolik doğrulama kapısı, kör test ve değerlendirme düzeneği, grafik işlemcisiz çıkarım optimizasyonu |
 | 4 | Analiz ve test-altyapı uzmanı | [Ad Soyad] | 9 adam/ay (0,75 TZE) | Belge yapıları ve mutabakat vakalarının analizi, senaryo/enjeksiyon setlerinin kurulması, çapa/regresyon test altyapısı, imzalı güncelleme, kapalı devre kurulum doğrulaması, pilot destek (İP7) |
-| | **Toplam** | **4 kişi** | **36 adam/ay** | ortalama 3,0 tam zaman eşdeğeri (12 ay) |
+| | **Toplam** | **4 kişi** | **39 adam/ay** | ortalama 3,25 tam zaman eşdeğeri (12 ay) |
 
 ## Efor matrisi (kişi × iş paketi, adam/ay)
 
@@ -20,11 +20,11 @@
 |---|---|---|---|---|---|---|---|---|
 | Proje yöneticisi | 1 | 1 | – | 1 | 1 | 1 | 1 | **6** |
 | Kıdemli yazılım geliştirici | 2 | 4 | 2 | 2 | – | 2 | – | **12** |
-| YZ / DDİ mühendisi (İP5 yöneticisi) | – | – | – | 2 | 6 | – | 1 | **9** |
+| YZ / DDİ mühendisi (İP5 yöneticisi) | – | – | – | 3 | 8 | – | 1 | **12** |
 | Analiz ve test-altyapı uzmanı | – | 1 | 1 | 3 | 1 | 2 | 1 | **9** |
-| **Toplam** | **3** | **6** | **3** | **8** | **8** | **5** | **3** | **36** |
+| **Toplam** | **3** | **6** | **3** | **9** | **10** | **5** | **3** | **39** |
 
-Okuma notları: Kıdemli geliştirici 12 ay boyunca tam zamanlı olarak projede kalır ve hesap çekirdeğinden masaüstü ürüne uzanan omurgayı taşır. YZ/DDİ mühendisinin İP4'teki payı, denetim verisi üretim hattının (EK-6) sembolik teşhis çıktısına bağlanması; İP7'deki payı ise pilotlarda uzman-model kör karşılaştırmasının yürütülmesi içindir. Analiz ve test-altyapı uzmanının İP4'teki ağırlığı senaryo kütüphanesi ve hata enjeksiyon setinin kurulmasından, İP5'teki payı kör test setinin ve doğrulama kapısı testlerinin hazırlanmasından gelir. Projenin Ar-Ge eforunun 16 adam-ayı (İP4 + İP5) doğrudan yapay zekâ bileşenine ve onun teşhis altyapısına, 12 adam-ayı (İP1-İP3) bu bileşenin dayandığı sembolik kural tabanına ayrılmıştır.
+Okuma notları: Kıdemli geliştirici 12 ay boyunca tam zamanlı olarak projede kalır ve hesap çekirdeğinden masaüstü ürüne uzanan omurgayı taşır; yapay zekâ mühendisi de 12 ay tam zamanlıdır ve projenin yapay zekâ bileşenini uçtan uca sahiplenir. YZ/DDİ mühendisinin İP4'teki payı, denetim verisi üretim hattının (EK-6) sembolik teşhis çıktısına bağlanması; İP7'deki payı ise pilotlarda uzman-model kör karşılaştırmasının yürütülmesi içindir. Analiz ve test-altyapı uzmanının İP4'teki ağırlığı senaryo kütüphanesi ve hata enjeksiyon setinin kurulmasından, İP5'teki payı kör test setinin ve doğrulama kapısı testlerinin hazırlanmasından gelir. Projenin Ar-Ge eforunun 19 adam-ayı (İP4 + İP5) doğrudan yapay zekâ bileşenine ve onun teşhis altyapısına, 12 adam-ayı (İP1-İP3) bu bileşenin dayandığı sembolik kural tabanına ayrılmıştır.
 
 **Dış hizmet (ekip dışı):** Yeminli Mali Müşavir: 5746 ve 4691 kural setlerinin madde madde teyidi, geçmiş parametre tablosunun doğrulanması, pilot mutabakat denetimi. *(Sözleşme veya niyet yazısı bu eke iliştirilir.)*
 
@@ -57,6 +57,6 @@ Okuma notları: Kıdemli geliştirici 12 ay boyunca tam zamanlı olarak projede 
 ## Doldurma notları
 
 1. **Abartmayın, ölçün.** "10+ yıl deneyim" gibi ifadeler yerine, projedeki iş paketiyle eşleşen somut çıktı yazın (hangi sistemi, hangi ölçekte geliştirdi).
-2. **Yük beyanı kritiktir.** 4 kişinin 12 ayda 3,0 tam zaman eşdeğeri vermesi, kıdemli geliştiricinin tamamen, diğer üç üyenin ağırlıkla bu projede çalışacağı anlamına gelir. Her özgeçmişte kişinin firmadaki diğer yükü (özellikle proje yöneticisinin hizmet kolundaki sorumlulukları) belirtilmezse, hakem "bu ekip aynı anda danışmanlık işlerini de yürütüyor mu" sorusunu sorar ve cevapsız kalırsa efor tahmini güvenilirliğini yitirir.
+2. **Yük beyanı kritiktir.** 4 kişinin 12 ayda 3,25 tam zaman eşdeğeri vermesi, kıdemli geliştirici ile yapay zekâ mühendisinin tamamen, diğer iki üyenin ağırlıkla bu projede çalışacağı anlamına gelir. Her özgeçmişte kişinin firmadaki diğer yükü (özellikle proje yöneticisinin hizmet kolundaki sorumlulukları) belirtilmezse, hakem "bu ekip aynı anda danışmanlık işlerini de yürütüyor mu" sorusunu sorar ve cevapsız kalırsa efor tahmini güvenilirliğini yitirir.
 3. **Mevzuat yetkinliği ekip içinde olmayabilir.** Bu bir eksiklik değildir, çünkü YMM dış hizmeti bu boşluğu doldurmak üzere bütçelenmiştir. Ancak proje yöneticisinin 5746 alan bilgisi açıkça gösterilmelidir; aksi hâlde "mevzuatı kim biliyor" sorusu boşta kalır.
 4. **İmza ve tarih:** Özgeçmişler firma yetkilisince imzalanır; kişisel veri içerdiğinden yalnızca başvuru amacıyla paylaşıldığı not edilir.

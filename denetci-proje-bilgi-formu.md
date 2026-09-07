@@ -13,11 +13,11 @@
 | Proje Kodu | ARGELOG-002 |
 | Proje Yöneticisi | Murat Haksal |
 | Proje Süresi | 12 Ay |
-| Tahmini Proje Bütçesi | 6.600.000,00 ₺ |
-| Ar-Ge İş Gücü | 28 Adam/Ay |
+| Tahmini Proje Bütçesi | 7.000.000,00 ₺ |
+| Ar-Ge İş Gücü | 31 Adam/Ay |
 | Destek/Geliştirme İş Gücü | 8 Adam/Ay |
-| Toplam İş Gücü | 36 Adam/Ay |
-| Toplam Personel | 4 kişi (ortalama 3 tam zaman eşdeğeri; 36 ÷ 12 = 3,0) |
+| Toplam İş Gücü | 39 Adam/Ay |
+| Toplam Personel | 4 kişi (ortalama 3,25 tam zaman eşdeğeri; 39 ÷ 12 = 3,25) |
 | Projenin Sektörü | Yazılım / Bilişim Teknolojileri (yapay zekâ uygulamaları) |
 | İlişkili Sektörler | İmalat sanayii Ar-Ge/Tasarım Merkezleri; teknoloji geliştirme bölgesi firmaları; mali müşavirlik ve denetim hizmetleri |
 | NACE Kodu | 62.01, Bilgisayar Programlama Faaliyetleri |
@@ -191,25 +191,25 @@ Talep edilen süre: **240 saat.** *Gerekçe:* Kişisel veri kurum dışına çı
 | İP1 | Çekirdek devralma; yarıyıl → aylık dönem çözünürlüğü; opsiyonel parametre imzası deseniyle "davranış varsayılanlarla birebir korunur" ilkesi; YMM imzalı regresyon protokolü | 1-2 | 3 | Ar-Ge (AS-4 ön koşulu) | Parametresiz koşumda 96/96 kuruş farksız, sıfır regresyon *(İP7 pilotlarının ön koşuludur)* |
 | İP2 | Üç eksenli yürürlük tarihli kural tabanı; Resmî Gazete referanslı ve YMM madde madde teyitli geçmişe dönük parametre tablosu; as-of yeniden üretim; kural tabanının model tarafından sorgulanabilir arayüzü | 1-7 | 6 | Ar-Ge (AS-4) | Gerçek çapa 96 → ≥140; "doğrulanmamış parametreli ay hesaplanamaz ve raporlanamaz" motor seviyesinde sert kural |
 | İP3 | 4691 kardeş kural seti (çekirdek koda dokunulmadan, bildirimsel kural dosyalarıyla); rejim sınırı kuralları | 5-8 | 3 | Ar-Ge (AS-4) | Bildirimsel kapsama ≥%90; kaçış kancası ≤3; 5746'da sıfır regresyon; 4691'de ≥24 gerçek çapa; ≥20 çifte istisna vakasının tamamı yakalanır |
-| İP4 | Retrospektif belge içeri alma *(alt kalem: geliştirme)*; kademeli mutabakat; çapraz tutarlılık kural zinciri; sembolik hipotez üretimi ve karşı-olgusal çift hesap; ≥60 senaryoluk mevzuat referanslı kütüphane; ≥400 vakalık hata enjeksiyonlu kalibrasyon seti; insan onaylı mühürlü baz | 4-10 | 8 | Ar-Ge (AS-3) | Kalem bazında ≥%85 doğru sınıflandırma; belirsiz tutar payı ≤%5; senaryo ve enjeksiyon setleri İP5'e teslim |
-| İP5 | Denetçi rolündeki dar kapsamlı model: motor çıktısından denetim verisi üretim hattı (EK-6); bulgu yorumlama, denetçi sorusu üretme, hipotez sıralama, araştırma yönlendirme ve belge alan çıkarımı görevlerinde denetimli ince ayar (SFT); şema-zorlamalı çıktı ve sembolik doğrulama kapısı; eleme kayıtlarıyla ikinci ince ayar turu; ince ayarsız ve alan-dışı modellere karşı kör karşılaştırma; grafik işlemcisiz çıkarım optimizasyonu | 6-12 | 8 | Ar-Ge (AS-1, AS-2) | Yönlendirme isabeti ≥%70; temel modele karşı ≥15 puan; atıf doğruluğu ≥%98; desteksiz iddia ≤%1; ilk üç hipotezde doğru neden ≥%90; bulgu başına ≤30 sn |
+| İP4 | Retrospektif belge içeri alma *(alt kalem: geliştirme)*; kademeli mutabakat; çapraz tutarlılık kural zinciri; sembolik hipotez üretimi ve karşı-olgusal çift hesap; ≥60 senaryoluk mevzuat referanslı kütüphane; ≥400 vakalık hata enjeksiyonlu kalibrasyon seti; insan onaylı mühürlü baz | 4-10 | 9 | Ar-Ge (AS-3) | Kalem bazında ≥%85 doğru sınıflandırma; belirsiz tutar payı ≤%5; senaryo ve enjeksiyon setleri İP5'e teslim |
+| İP5 | Denetçi rolündeki dar kapsamlı model: motor çıktısından denetim verisi üretim hattı (EK-6); bulgu yorumlama, denetçi sorusu üretme, hipotez sıralama, araştırma yönlendirme ve belge alan çıkarımı görevlerinde denetimli ince ayar (SFT); şema-zorlamalı çıktı ve sembolik doğrulama kapısı; eleme kayıtlarıyla ikinci ince ayar turu; ince ayarsız ve alan-dışı modellere karşı kör karşılaştırma; grafik işlemcisiz çıkarım optimizasyonu | 6-12 | 10 | Ar-Ge (AS-1, AS-2) | Yönlendirme isabeti ≥%70; temel modele karşı ≥15 puan; atıf doğruluğu ≥%98; desteksiz iddia ≤%1; ilk üç hipotezde doğru neden ≥%90; bulgu başına ≤30 sn |
 | İP6 | Masaüstü ürünleştirme; imzalı çevrimdışı mevzuat ve model güncellemesi; denetim savunma dosyası çıktısı; kurulum sihirbazı; dosya tabanlı içe aktarım; 12 aylık teşvik projeksiyonu raporu | 8-12 | 5 | **Ar-Ge iddiası değil; geliştirme** | Kurulumdan ilk rapora ≤1 saat; görev tamamlama ≥%80 |
 | İP7 | İki ücretli, dört kapılı saha pilotu (veri odası → veri kalite karnesi → retroaktif mutabakat ve denetçi model kör karşılaştırması → yönetim sunumu ve baz sertifikası); sertleştirme; v1.0 | 9-12 | 3 | Destek | Pilot kapanış raporları; uzman-model kör karşılaştırma raporu; en az bir yenileme taahhüdü |
-| | **Toplam** | **12 ay** | **36** | *(28 Ar-Ge + 8 geliştirme/destek)* | |
+| | **Toplam** | **12 ay** | **39** | *(31 Ar-Ge + 8 geliştirme/destek)* | |
 
-**Proje ekibi:** Proje yöneticisi; bir kıdemli yazılım geliştirici (hesap çekirdeği, kural tabanı ve mutabakat motoru); bir yapay zekâ/doğal dil işleme mühendisi (İP5 iş paketinin yöneticisi; denetim verisi üretim hattı, denetçi rolündeki modelin ince ayarı, doğrulama kapısı ve değerlendirme düzeneği); bir analiz ve test-altyapı uzmanı (belge yapılarının ve mutabakat vakalarının analizi, senaryo ve enjeksiyon setlerinin kurulması, çapa/regresyon test altyapısı, imzalı güncelleme ve kapalı devre kurulum doğrulaması). Arayüz geliştirme kıdemli geliştirici tarafından üstlenilecektir (4 kişi, ortalama 3 tam zaman eşdeğeri; efor dağılımı **EK-4**). Yapay zekâ tarafında akademik danışmanlık Teknoloji Transfer Ofisi aracılığıyla, mevzuat doğrulaması YMM'den hizmet alımıyla sağlanacaktır. Firmamız 2013'ten bu yana 5746 süreçleri alanında sanayi kuruluşlarına yazılım geliştirmekte olup projenin sembolik çekirdeği bu birikimle üretilmiş ve gerçek dönem verisiyle iç doğrulaması tamamlanmıştır; bu sayede projenin Ar-Ge eforu, çalışan bir motorun üzerine yapay zekâ bileşenini kurmaya ayrılabilmektedir.
+**Proje ekibi:** Proje yöneticisi; bir kıdemli yazılım geliştirici (hesap çekirdeği, kural tabanı ve mutabakat motoru); bir tam zamanlı yapay zekâ/doğal dil işleme mühendisi (İP5 iş paketinin yöneticisi; denetim verisi üretim hattı, denetçi rolündeki modelin ince ayarı, doğrulama kapısı ve değerlendirme düzeneği); bir analiz ve test-altyapı uzmanı (belge yapılarının ve mutabakat vakalarının analizi, senaryo ve enjeksiyon setlerinin kurulması, çapa/regresyon test altyapısı, imzalı güncelleme ve kapalı devre kurulum doğrulaması). Arayüz geliştirme kıdemli geliştirici tarafından üstlenilecektir (4 kişi, ortalama 3,25 tam zaman eşdeğeri; kıdemli geliştirici ve yapay zekâ mühendisi tam zamanlı; efor dağılımı **EK-4**). Yapay zekâ tarafında akademik danışmanlık Teknoloji Transfer Ofisi aracılığıyla, mevzuat doğrulaması YMM'den hizmet alımıyla sağlanacaktır. Firmamız 2013'ten bu yana 5746 süreçleri alanında sanayi kuruluşlarına yazılım geliştirmekte olup projenin sembolik çekirdeği bu birikimle üretilmiş ve gerçek dönem verisiyle iç doğrulaması tamamlanmıştır; bu sayede projenin Ar-Ge eforu, çalışan bir motorun üzerine yapay zekâ bileşenini kurmaya ayrılabilmektedir.
 
-**Bütçe kırılımı (6.600.000 ₺):**
+**Bütçe kırılımı (7.000.000 ₺):**
 
 | Kalem | Tutar (₺) |
 |---|---|
-| Personel: 36 adam/ay × 130.000 ₺ (brüt + işveren maliyeti + genel gider payı; kırılım ve dayanak: **EK-3**) | 4.680.000 |
+| Personel: 39 adam/ay × 130.000 ₺ (brüt + işveren maliyeti + genel gider payı; kırılım ve dayanak: **EK-3**) | 5.070.000 |
 | Dış hizmet: YMM (5746 ve 4691 kural setlerinin madde madde teyidi, geçmiş parametre tablosu teyidi, iki pilotta mutabakat denetimi) ve geriye dönük düzeltme pencerelerine ilişkin yazılı hukuk görüşü | 550.000 |
 | Donanım: 3 geliştirici iş istasyonu + 2 referans test bilgisayarı | 300.000 |
 | Yazılım lisansları, kod imzalama sertifikası ve çevrimdışı güncelleme imza altyapısı, test araçları | 200.000 |
 | Patent ön değerlendirmesi ve başvurusu, marka tescili, akademik danışmanlık | 250.000 |
 | Denetimli ince ayar eğitimleri için kısa süreli bulut grafik işlemci kiralama *(yalnızca sentetik ve anonimleştirilmiş veriyle; kişisel veri hiçbir koşulda dışarı çıkmaz)* | 200.000 |
-| Pilot saha seyahati, dış eğitim/etkinlik ve öngörülemeyen giderler *(firma genel gideri personel birim maliyetine dâhildir; bu kalemde tekrarlanmaz)* | 420.000 |
+| Pilot saha seyahati, dış eğitim/etkinlik ve öngörülemeyen giderler *(firma genel gideri personel birim maliyetine dâhildir; bu kalemde tekrarlanmaz)* | 430.000 |
 
 **Başlıca riskler ve önlemleri:** (1) *Denetçi modelin hedef başarıma ulaşamaması*: model hiçbir aşamada hesap yapmadığı için başarısızlığı hatalı tutar üretmez; yalnızca ön incelemenin insan tarafından yapılmaya devam etmesi anlamına gelir. Bu durumda AS-1 olumsuz sonuçlu araştırma sorusu olarak, veri kaynağı ve hacim etkisi ölçümleriyle birlikte raporlanır; ürün sembolik katman üzerinden eksiksiz çalışmayı sürdürür. (2) *Modelin dayanaksız iddia üretmesi*: sembolik doğrulama kapısı, kural tabanında karşılığı olmayan atıf içeren her bulguyu kullanıcıya ulaşmadan eler; kapı başarımı ayrı ölçülür (Kazanım 2) ve eleme kayıtları eğitime geri döner. (3) *Denetim verisinin yetersiz kalması veya sentetik veriden gerçek veriye aktarımın zayıf olması*: veri üretim hattı (EK-6) dört kaynaktan beslenir; kaynak bazlı başarım ölçümü hangi kaynağın eksik olduğunu gösterir; pilot verisi eğitim ve kör test olarak kuruluş ve dönem bazında ayrılır. (4) *Geçmiş dönem parametrelerinin hatalı kurulması*: hiçbir dönem, Resmî Gazete referanslı ve YMM teyitli parametre seti ile yıl bazında kuruş farksız örnek doğrulama tamamlanmadan hesaplanmaz ve raporlanmaz (motor seviyesinde sert kural). (5) *Kök-neden teşhisinde yanlış alarm*: kesinlik ayarı pilot öncesinde ≥60 senaryoluk mevzuat referanslı kütüphaneyle yapılır ve İP4'ün çıkış kriteridir; ayırt edilemeyen kalemler tek nedene zorlanmaz, "belirsiz" raporlanır. (6) *Çekirdek imza genişletmesinin mevcut doğrulamayı bozması*: opsiyonel parametre deseni kullanılır; parametresiz koşumda 96/96 birebir korunur ve bu, pilotların ön koşuludur. (7) *Pilot kuruluşlardan veri temininde gecikme*: veri talepleri firma ve mali müşaviri olmak üzere iki muhataplı protokole bağlanır; dosya tabanlı yedek aktarım yolu mevcuttur. (8) *Grafik işlemcisiz çıkarım süresinin hedefi aşması*: model boyutu ve nicemleme düzeyi referans bilgisayarda ölçülerek seçilir; süre hedefi tutmazsa bulgu üretimi arka planda toplu işlem olarak çalıştırılır ve kullanıcı akışı etkilenmez.
 
@@ -284,6 +284,6 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 ### Portala Aktarım Öncesi Düzeltilecek Kayıtlar *(bu bölüm forma aktarılmaz)*
 
 1. "Projenin Sektörü" alanı portalda **"Ambalaj"** görünmektedir → **"Yazılım"** olarak düzeltilmelidir.
-2. Kimlik alanlarındaki süre/bütçe/iş gücü değerleri sıfır görünmektedir → 12 ay, 6.600.000 ₺, 28 + 8 = 36 adam/ay olarak girilmelidir.
+2. Kimlik alanlarındaki süre/bütçe/iş gücü değerleri sıfır görünmektedir → 12 ay, 7.000.000 ₺, 31 + 8 = 39 adam/ay olarak girilmelidir.
 3. "Toplam Personel: 2" ve "Kiralanan Alan: 10 m²" kayıtları proje ekibiyle (4 kişi) çelişmektedir → personel kaydı güncellenmeli, alan ihtiyacı gözden geçirilmelidir. Hakem heyetinin ilk bakacağı tutarlılık noktalarındandır.
 4. Rekabet analizinde atıf yapılan "incelenen ürün listesi" eki hazırlanmalıdır (ürün adları, inceleme tarihi, kaynak bağlantıları).
