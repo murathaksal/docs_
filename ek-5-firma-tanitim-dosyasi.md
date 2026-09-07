@@ -14,7 +14,7 @@
 | NACE kodu | 62.01 — Bilgisayar Programlama Faaliyetleri |
 | Ortaklık yapısı | [ortak adları ve payları] |
 | Yetkili / imza sirküleri | [ ] |
-| Toplam çalışan sayısı | [ ] *(proje ekibi: 5 kişi)* |
+| Toplam çalışan sayısı | [ ] *(proje ekibi: 4 kişi)* |
 | Web sitesi / iletişim | [ ] |
 
 ## 2. Faaliyet alanı ve ürünler
@@ -56,9 +56,9 @@ Argelog, 2013'ten bu yana sanayi kuruluşlarına inovasyon, teknoloji ve Ar-Ge y
 
 ### Proje finansman beyanı
 
-Projenin 8.600.000 ₺ tutarındaki bütçesi **öz sermaye** ile finanse edilecektir. [Firma, 12 aylık proje süresince aylık ortalama [ ] ₺ nakit çıkışını mevcut faaliyet gelirleri ve özkaynaklarıyla karşılayacak kapasitededir.] Kamu desteği başvurusu yapılması hâlinde, mükerrer destek kurallarına göre kalem ayrıştırması yapılacaktır.
+Projenin 10.200.000 ₺ tutarındaki bütçesi **öz sermaye** ile finanse edilecektir. [Firma, 12 aylık proje süresince aylık ortalama [ ] ₺ nakit çıkışını mevcut faaliyet gelirleri ve özkaynaklarıyla karşılayacak kapasitededir.] Kamu desteği başvurusu yapılması hâlinde, mükerrer destek kurallarına göre kalem ayrıştırması yapılacaktır.
 
-*Doldurma notu — kritik: Bu bölüm boş veya belirsiz bırakılırsa, hakem "12 ay boyunca 5 kişiyi taşıyacak nakit var mı" sorusunu cevapsız bırakır ve bu, teknik değerlendirmeden bağımsız olarak ret gerekçesi olabilir. Rakam veremiyorsanız bile, finansman kaynağının somut olarak nasıl sağlanacağı (özkaynak, mevcut hizmet geliri, kredi limiti) yazılmalıdır.*
+*Doldurma notu — kritik: Bu bölüm boş veya belirsiz bırakılırsa, hakem "12 ay boyunca 4 kişiyi taşıyacak nakit var mı" sorusunu cevapsız bırakır ve bu, teknik değerlendirmeden bağımsız olarak ret gerekçesi olabilir. Rakam veremiyorsanız bile, finansman kaynağının somut olarak nasıl sağlanacağı (özkaynak, mevcut hizmet geliri, kredi limiti) yazılmalıdır.*
 
 ## 5. Ekler listesi
 

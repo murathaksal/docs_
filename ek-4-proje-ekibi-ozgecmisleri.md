@@ -1,17 +1,16 @@
 # EK-4 — Proje Ekibi ve Özgeçmişler
 
-*Proje Bilgi Formu'nda beyan edilen 5 kişilik çekirdek ekibin nitelikleri. Her rol için özgeçmiş yapısı aşağıda verilmiştir; **kişi bilgileri firma tarafından doldurulacaktır.** Hakem heyeti bu ekte üç şeye bakar: (a) beyan edilen adam-ayı taşıyacak nitelik var mı, (b) alan bilgisi (mevzuat + yazılım) ekipte mevcut mu, (c) kişiler gerçekten ayrılabilir mi yoksa aynı kişiler firmanın diğer işlerinde de tam kapasite mi çalışıyor.*
+*Proje Bilgi Formu'nda beyan edilen 4 kişilik çekirdek ekibin nitelikleri. Her rol için özgeçmiş yapısı aşağıda verilmiştir; **kişi bilgileri firma tarafından doldurulacaktır.** Hakem heyeti bu ekte üç şeye bakar: (a) beyan edilen adam-ayı taşıyacak nitelik var mı, (b) alan bilgisi (mevzuat + yazılım) ekipte mevcut mu, (c) kişiler gerçekten ayrılabilir mi yoksa aynı kişiler firmanın diğer işlerinde de tam kapasite mi çalışıyor.*
 
 ## Ekip özeti
 
 | # | Rol | Kişi | Projedeki efor | Kritik nitelik |
 |---|---|---|---|---|
-| 1 | Proje yöneticisi / ürün sahibi | [Murat Haksal] | 3 adam/ay | 5746 alan bilgisi, pilot koordinasyonu, kabul kriterlerinin yönetimi |
-| 2 | Kıdemli yazılım geliştirici | [Ad Soyad] | 7 adam/ay | Kural motoru ve hesap çekirdeği; deterministik hesap disiplini |
-| 3 | Kıdemli yazılım geliştirici | [Ad Soyad] | 7 adam/ay | Belge içeri alma, mutabakat motoru, kök-neden sınıflandırıcı |
-| 4 | Yapay zekâ / doğal dil işleme mühendisi | [Ad Soyad] | 7 adam/ay | Denetim verisi üretim hattı, dar kapsamlı model ince ayarı (SFT), değerlendirme düzeneği (İP5) |
-| 5 | Test ve altyapı uzmanı | [Ad Soyad] | 5 adam/ay | Çapa/regresyon test altyapısı, imzalı güncelleme mekanizması, kapalı devre kurulum doğrulaması |
-| | **Toplam** | **5 kişi** | **29 adam/ay** | ortalama 2,42 tam zaman eşdeğeri (12 ay) |
+| 1 | Proje yöneticisi / ürün sahibi | [Murat Haksal] | 6 adam/ay (0,5 TZE) | 5746/4691 alan bilgisi, pilot koordinasyonu, YMM arayüzü, kabul kriterlerinin yönetimi |
+| 2 | Kıdemli yazılım geliştirici | [Ad Soyad] | 12 adam/ay (1,0 TZE) | Hesap çekirdeği ve kural katmanı (İP1-İP3), mutabakat motoru ve kök-neden sınıflandırıcı (İP4), masaüstü ürünleştirme ve arayüz (İP6) |
+| 3 | Yapay zekâ / doğal dil işleme mühendisi — **İP5 iş paketi yöneticisi** | [Ad Soyad] | 9 adam/ay (0,75 TZE) | Denetim verisi üretim hattı (EK-6), denetçi rolündeki dar kapsamlı modelin ince ayarı (SFT), kör test ve değerlendirme düzeneği |
+| 4 | Analiz ve test-altyapı uzmanı | [Ad Soyad] | 9 adam/ay (0,75 TZE) | Belge yapıları ve mutabakat vakalarının analizi, senaryo/enjeksiyon setlerinin kurulması, çapa/regresyon test altyapısı, imzalı güncelleme, kapalı devre kurulum doğrulaması, pilot destek (İP7) |
+| | **Toplam** | **4 kişi** | **36 adam/ay** | ortalama 3,0 tam zaman eşdeğeri (12 ay) |
 
 **Dış hizmet (ekip dışı):** Yeminli Mali Müşavir — 5746 ve 4691 kural setlerinin madde madde teyidi, geçmiş parametre tablosunun doğrulanması, pilot mutabakat denetimi. *(Sözleşme veya niyet yazısı bu eke iliştirilir.)*
 
@@ -44,6 +43,6 @@
 ## Doldurma notları
 
 1. **Abartmayın, ölçün.** "10+ yıl deneyim" gibi ifadeler yerine, projedeki iş paketiyle eşleşen somut çıktı yazın (hangi sistemi, hangi ölçekte geliştirdi).
-2. **Yük beyanı kritiktir.** 5 kişinin 12 ayda 2,42 tam zaman eşdeğeri vermesi, kişilerin belirgin biçimde kısmi zamanlı çalışacağı anlamına gelir. Her özgeçmişte kişinin firmadaki diğer yükü belirtilmezse, hakem "bu ekip aynı anda danışmanlık işlerini de yürütüyor mu" sorusunu sorar ve cevapsız kalırsa efor tahmini güvenilirliğini yitirir.
+2. **Yük beyanı kritiktir.** 4 kişinin 12 ayda 3,0 tam zaman eşdeğeri vermesi, kıdemli geliştiricinin tamamen, diğer üç üyenin ağırlıkla bu projede çalışacağı anlamına gelir. Her özgeçmişte kişinin firmadaki diğer yükü (özellikle proje yöneticisinin hizmet kolundaki sorumlulukları) belirtilmezse, hakem "bu ekip aynı anda danışmanlık işlerini de yürütüyor mu" sorusunu sorar ve cevapsız kalırsa efor tahmini güvenilirliğini yitirir.
 3. **Mevzuat yetkinliği ekip içinde olmayabilir** — bu bir eksiklik değildir, çünkü YMM dış hizmeti bu boşluğu doldurmak üzere bütçelenmiştir. Ancak proje yöneticisinin 5746 alan bilgisi açıkça gösterilmelidir; aksi hâlde "mevzuatı kim biliyor" sorusu boşta kalır.
 4. **İmza ve tarih:** Özgeçmişler firma yetkilisince imzalanır; kişisel veri içerdiğinden yalnızca başvuru amacıyla paylaşıldığı not edilir.

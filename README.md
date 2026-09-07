@@ -6,7 +6,7 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 
 | Belge | İçerik |
 |---|---|
-| **[`denetci-proje-bilgi-formu.md`](denetci-proje-bilgi-formu.md)** | **ANA BELGE.** İstanbul Medeniyet Üniversitesi Teknopark Proje Bilgi Formu (A-R-01224) başlıklarına göre doldurulmuş, portala aktarıma hazır başvuru içeriği. Proje: **Denetci** — 12 ay / 29 adam-ay / 8,6 M TL; kapsam 5746 + 4691; dört araştırma sorusu; yapay zekâ denetçi rolünde dar kapsamlı model olarak konumlanır (hesabı motor yapar, bulguyu model inceler, kararı insan verir). |
+| **[`denetci-proje-bilgi-formu.md`](denetci-proje-bilgi-formu.md)** | **ANA BELGE.** İstanbul Medeniyet Üniversitesi Teknopark Proje Bilgi Formu (A-R-01224) başlıklarına göre doldurulmuş, portala aktarıma hazır başvuru içeriği. Proje: **Denetci** — 12 ay / 36 adam-ay / 10,2 M TL; kapsam 5746 + 4691; dört araştırma sorusu; yapay zekâ denetçi rolünde dar kapsamlı model olarak konumlanır (hesabı motor yapar, bulguyu model inceler, kararı insan verir). |
 | [`argus-baz-hatti-tasarimi.md`](argus-baz-hatti-tasarimi.md) | Geçmiş beyan yükleme → mutabakat → mühürlü baz alt sisteminin ayrıntılı teknik tasarımı (formdaki AS-2'nin arka planı). Geçerli. |
 | [`argus-gelir-plani.md`](argus-gelir-plani.md) | Hizmet-önce gelir planı: gelir merdiveni, paketler, 30/60/90 gün, nakit projeksiyonu, yasal sınırlar. Ürün paketleme kısmı yalın karara göre sadeleşmiştir (bkz. ana belge). |
 | [`argelog-ai-strateji.md`](argelog-ai-strateji.md) | ARGELOG.AI vizyonu: ekosistem döngüsü, veri moat'ı, ajan mimarisi. Uzun vadeli çerçeve. |
@@ -46,8 +46,8 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 ## Başvuru öncesi yapılacaklar
 
 1. Portalda "Projenin Sektörü" alanını **"Ambalaj" → "Yazılım"** olarak düzelt.
-2. Kimlik alanlarını gir: **12 ay**, 8.600.000 ₺, 23 + 6 = 29 adam/ay.
-3. "Toplam Personel: 2" kaydını proje ekibiyle (5 kişi) uyumlu hâle getir; alan ihtiyacını gözden geçir.
+2. Kimlik alanlarını gir: **12 ay**, 10.200.000 ₺, 28 + 8 = 36 adam/ay.
+3. "Toplam Personel: 2" kaydını proje ekibiyle (4 kişi) uyumlu hâle getir; alan ihtiyacını gözden geçir.
 4. **EK-3'teki tutarları** firmanın güncel bordro ve genel gider verileriyle doldur (yer tutucular boş bırakılamaz).
 5. **EK-2 şablonunu** iki pilot kuruluşa gönder ve imzalı niyet mektuplarını topla — kurumsal imza süreci 2-4 hafta sürdüğü için başvurudan en az bir ay önce başlat.
 6. **EK-1'i** sunum öncesi bir kez daha gözden geçir (ürün siteleri değişmiş olabilir).

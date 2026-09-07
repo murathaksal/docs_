@@ -1,6 +1,6 @@
 # EK-3 — Personel Birim Maliyeti Dayanağı
 
-*Proje Bilgi Formu'nun bütçe bölümünde yer alan "29 adam/ay × 230.000 ₺" kaleminin dayanağıdır. Hakem heyetinin sorusu tipik olarak "oran neden bu düzeyde" değil "dayanağı nerede" olduğundan, kırılım aşağıda beyan edilmektedir.*
+*Proje Bilgi Formu'nun bütçe bölümünde yer alan "36 adam/ay × 230.000 ₺" kaleminin dayanağıdır. Hakem heyetinin sorusu tipik olarak "oran neden bu düzeyde" değil "dayanağı nerede" olduğundan, kırılım aşağıda beyan edilmektedir.*
 
 > **Doldurma notu:** Aşağıdaki tablo yapı olarak hazırdır; **tutarlar firmanın güncel bordro ve genel gider verileriyle doldurulmalıdır.** Yer tutucu değerler örnek niteliğindedir ve başvuru öncesi gerçek verilerle değiştirilmelidir.
 
@@ -8,13 +8,13 @@
 
 | Rol | Kişi | Kıdem | Projedeki efor (adam/ay) |
 |---|---|---|---|
-| Proje yöneticisi / ürün sahibi | 1 | [ ] yıl | 3 |
-| Kıdemli yazılım geliştirici | 2 | [ ] yıl | 14 |
-| Yapay zekâ / doğal dil işleme mühendisi | 1 | [ ] yıl | 7 |
-| Test ve altyapı uzmanı | 1 | [ ] yıl | 5 |
-| | **5 kişi** | | **29 adam/ay** |
+| Proje yöneticisi / ürün sahibi | 1 | [ ] yıl | 6 |
+| Kıdemli yazılım geliştirici | 1 | [ ] yıl | 12 |
+| Yapay zekâ / doğal dil işleme mühendisi (İP5 iş paketi yöneticisi) | 1 | [ ] yıl | 9 |
+| Analiz ve test-altyapı uzmanı | 1 | [ ] yıl | 9 |
+| | **4 kişi** | | **36 adam/ay** |
 
-*Ortalama tam zaman eşdeğeri: 29 ÷ 12 ay = 2,42.*
+*Ortalama tam zaman eşdeğeri: 36 ÷ 12 ay = 3,0 (proje yöneticisi yarı zamanlı, kıdemli geliştirici tam zamanlı, diğer iki üye dörtte üç zamanlı).*
 
 ## Birim maliyet kırılımı (adam/ay başına)
 
@@ -24,7 +24,7 @@
 | İşveren SGK primi ve işsizlik sigortası payı | [ ] | Yürürlükteki oranlar üzerinden |
 | İşveren maliyeti ara toplam | [ ] | |
 | Genel gider payı (yönetim, ofis, donanım amortismanı, yazılım lisansları) | [ ] | Firma genel gider oranı: **%[ ]** |
-| **Adam/ay tam yüklü maliyet** | **230.000** | Bütçede kullanılan değer (29 adam/ay × 230.000 = 6.670.000 ₺) |
+| **Adam/ay tam yüklü maliyet** | **230.000** | Bütçede kullanılan değer (36 adam/ay × 230.000 = 8.280.000 ₺) |
 
 **Çapraz kontrol:** Firmanın hizmet kolunda kullanılan tam yüklü gün maliyeti [ ]–[ ] ₺/adam-gün bandındadır; aylık 20 iş günü üzerinden bu, [ ]–[ ] ₺/adam-ay aralığına karşılık gelir. Bütçede kullanılan 230.000 ₺ bu bandın içindedir.
 
