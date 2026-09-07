@@ -14,7 +14,7 @@
 | Test ve altyapı uzmanı | 1 | [ ] yıl | 5 |
 | | **5 kişi** | | **25 adam/ay** |
 
-*Ortalama tam zaman eşdeğeri: 25 ÷ 9 ay = 2,78.*
+*Ortalama tam zaman eşdeğeri: 25 ÷ 12 ay = 2,08.*
 
 ## Birim maliyet kırılımı (adam/ay başına)
 

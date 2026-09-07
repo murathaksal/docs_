@@ -12,12 +12,12 @@
 | Proje Adı | **Denetci** — Ar-Ge Teşvik Beyanlarının Bağımsız Yeniden Hesaplanması ve Denetim Savunma Dosyası Yazılımı |
 | Proje Kodu | ARGELOG-002 |
 | Proje Yöneticisi | Murat Haksal |
-| Proje Süresi | 9 Ay |
+| Proje Süresi | 12 Ay |
 | Tahmini Proje Bütçesi | 7.500.000,00 ₺ |
 | Ar-Ge İş Gücü | 19 Adam/Ay |
 | Destek/Geliştirme İş Gücü | 6 Adam/Ay |
 | Toplam İş Gücü | 25 Adam/Ay |
-| Toplam Personel | 5 kişi (ortalama 2,8 tam zaman eşdeğeri; 25 ÷ 9 = 2,78) |
+| Toplam Personel | 5 kişi (ortalama 2,1 tam zaman eşdeğeri; 25 ÷ 12 = 2,08) |
 | Projenin Sektörü | Yazılım / Bilişim Teknolojileri |
 | İlişkili Sektörler | İmalat sanayii Ar-Ge/Tasarım Merkezleri; teknoloji geliştirme bölgesi firmaları; mali müşavirlik ve denetim hizmetleri |
 | NACE Kodu | 62.01 — Bilgisayar Programlama Faaliyetleri |
@@ -26,7 +26,7 @@
 
 **Mevcut Teknoloji Hazırlık Seviyesi: THS 5** — *Açıklama:* Projenin çekirdeğini oluşturan deterministik teşvik hesaplama motoru firmamız bünyesinde daha önce geliştirilmiş; T.C. Sanayi ve Teknoloji Bakanlığı'nın yayımladığı gerçek dönem verisi üzerinde iç doğrulamadan (96 adet çapa testinin tamamı kuruş farksız) geçirilmiştir. Bileşen düzeyinde ilgili ortam doğrulaması tamamlanmıştır; zaman-farkındalıklı kural katmanı ve geçmiş beyan mutabakat altsistemi henüz bütünleşik sistem olarak doğrulanmamıştır.
 
-**Hedef Teknoloji Hazırlık Seviyesi: THS 7** — *Açıklama:* Proje sonunda sistem, iki sanayi kuruluşunda gerçek bordro ve beyan verisiyle, kendi işletme ortamlarında çalıştırılmış prototip düzeyinde (operasyonel ortamda gösterilmiş sistem) olacaktır. THS 8 (tamamlanmış ve kalifiye edilmiş sistem) proje sonrası ilk 12 aylık ticarileşme fazının hedefidir; iki pilotla 9 ayda THS 8 iddia edilmesi gerçekçi bulunmamıştır.
+**Hedef Teknoloji Hazırlık Seviyesi: THS 7** — *Açıklama:* Proje sonunda sistem, iki sanayi kuruluşunda gerçek bordro ve beyan verisiyle, kendi işletme ortamlarında çalıştırılmış prototip düzeyinde (operasyonel ortamda gösterilmiş sistem) olacaktır. THS 8 (tamamlanmış ve kalifiye edilmiş sistem) proje sonrası ilk 12 aylık ticarileşme fazının hedefidir; iki pilotla proje süresi içinde THS 8 iddia edilmesi gerçekçi bulunmamıştır.
 
 ## Anahtar Kelimeler
 
@@ -64,12 +64,12 @@ Proje kapsamı bilinçli olarak **tek mevzuat ailesiyle** — 5746 (Ar-Ge ve Tas
 
 *Her hedef; metrik tanımı, test seti ve ölçüm ayı ile birlikte verilmiştir. Ölçümler kabul testleri ve Yeminli Mali Müşavir (YMM) eşliğinde yapılacak bağımsız örneklem incelemeleriyle doğrulanacaktır.*
 
-1. **Zaman-farkındalıklı yeniden hesap (ay 6):** 2019-2026 arası her ay için, ilgili dönemde yürürlükte olan parametre ve hesap şeması ile yeniden hesap yapılabilmesi. *Metrik:* parametresiz koşumda mevcut 96 gerçek çapada regresyon sayısı 0; şema kıran en az 6 tarihli mevzuat olayının (2022 asgari geçim indirimi kaldırımı, 01.08.2025 ay-ortası ücret tavanı yürürlüğü dâhil) doğru dönem sınırıyla uygulanması. *Test seti:* YMM teyitli gerçek beyan dönemleri.
-2. **Doğrulama çapası genişletmesi (ay 6):** Gerçek beyan kaynaklı, YMM teyitli regresyon çapası mevcut 96'dan **≥140'a** çıkarılır (dönem × rejim). *Ayrıca* sentetik kural kapsama vakası ≥400 üretilir. Bu iki sayaç ayrı raporlanır, hiçbir koşulda toplanmaz.
-3. **Fark kök-neden teşhisi (ay 7 laboratuvar, ay 9 saha):** *Metrik:* fark **kalemlerinin** ≥%85'i doğru kök-neden sınıfına otomatik atanır; sınıflandırılamayan ve "belirsiz" etiketli **tutar** payı ≤%5. *Test seti:* hata enjeksiyonlu, YMM etiketli, bilinen tek ve çoklu kök neden içeren ≥400 vakalık kalibrasyon seti + mevzuat referanslı ≥60 senaryoluk kütüphane + iki pilotun gerçek fark envanteri.
-4. **Rejimden bağımsızlık ölçümü (ay 6):** 4691 kural seti, çekirdek hesap motorunun kaynak koduna dokunulmadan yalnızca bildirimsel kural dosyalarıyla yazılır. *Metrik:* bildirimsel kapsama oranı ≥%90; çekirdek kodda rejime özgü kaçış kancası ≤3 (her biri mevzuat maddesiyle gerekçelendirilir); 5746 tarafında regresyon 0; 4691 tarafında ≥24 gerçek çapa. *Ek metrik (rejimler arası):* iki rejimi bir arada işleten bir kuruluş senaryosunda, aynı kazanç/ücret üzerinden çifte istisna talebi içeren enjekte edilmiş vakaların tamamı (≥20 vaka) tespit edilir ve mevzuat maddesi atfıyla raporlanır.
-5. **Cari dönem kontrol hesabı (ay 8):** Pilot kuruluşlarda, kapanan aylar için tahakkuk kesinleşmeden bağımsız kontrol hesabının çalıştırılması. *Metrik:* pilot başına en az 3 cari dönemde kontrol hesabı üretilir; bordro çıktısıyla karşılaştırma raporu tahakkuk tarihinden önce teslim edilir; tespit edilen sapmaların mali müşavir/YMM tarafından değerlendirilme oranı raporlanır. *Test seti:* pilot kuruluşların canlı bordro dönemleri.
-6. **Saha doğrulaması (ay 9):** İki sanayi kuruluşunda ücretli, dört kapılı saha pilotunun tamamlanması; kurulumdan ilk rapora bir saat içinde ulaşılması (bilgi işlem desteği olmadan, pilotlarda görev tamamlama oranı ≥%80); en az bir kuruluştan yazılı yenileme/abonelik taahhüdü.
+1. **Zaman-farkındalıklı yeniden hesap (ay 7):** 2019-2026 arası her ay için, ilgili dönemde yürürlükte olan parametre ve hesap şeması ile yeniden hesap yapılabilmesi. *Metrik:* parametresiz koşumda mevcut 96 gerçek çapada regresyon sayısı 0; şema kıran en az 6 tarihli mevzuat olayının (2022 asgari geçim indirimi kaldırımı, 01.08.2025 ay-ortası ücret tavanı yürürlüğü dâhil) doğru dönem sınırıyla uygulanması. *Test seti:* YMM teyitli gerçek beyan dönemleri.
+2. **Doğrulama çapası genişletmesi (ay 7):** Gerçek beyan kaynaklı, YMM teyitli regresyon çapası mevcut 96'dan **≥140'a** çıkarılır (dönem × rejim). *Ayrıca* sentetik kural kapsama vakası ≥400 üretilir. Bu iki sayaç ayrı raporlanır, hiçbir koşulda toplanmaz.
+3. **Fark kök-neden teşhisi (ay 10 laboratuvar, ay 12 saha):** *Metrik:* fark **kalemlerinin** ≥%85'i doğru kök-neden sınıfına otomatik atanır; sınıflandırılamayan ve "belirsiz" etiketli **tutar** payı ≤%5. *Test seti:* hata enjeksiyonlu, YMM etiketli, bilinen tek ve çoklu kök neden içeren ≥400 vakalık kalibrasyon seti + mevzuat referanslı ≥60 senaryoluk kütüphane + iki pilotun gerçek fark envanteri.
+4. **Rejimden bağımsızlık ölçümü (ay 8):** 4691 kural seti, çekirdek hesap motorunun kaynak koduna dokunulmadan yalnızca bildirimsel kural dosyalarıyla yazılır. *Metrik:* bildirimsel kapsama oranı ≥%90; çekirdek kodda rejime özgü kaçış kancası ≤3 (her biri mevzuat maddesiyle gerekçelendirilir); 5746 tarafında regresyon 0; 4691 tarafında ≥24 gerçek çapa. *Ek metrik (rejimler arası):* iki rejimi bir arada işleten bir kuruluş senaryosunda, aynı kazanç/ücret üzerinden çifte istisna talebi içeren enjekte edilmiş vakaların tamamı (≥20 vaka) tespit edilir ve mevzuat maddesi atfıyla raporlanır.
+5. **Cari dönem kontrol hesabı (ay 11):** Pilot kuruluşlarda, kapanan aylar için tahakkuk kesinleşmeden bağımsız kontrol hesabının çalıştırılması. *Metrik:* pilot başına en az 3 cari dönemde kontrol hesabı üretilir; bordro çıktısıyla karşılaştırma raporu tahakkuk tarihinden önce teslim edilir; tespit edilen sapmaların mali müşavir/YMM tarafından değerlendirilme oranı raporlanır. *Test seti:* pilot kuruluşların canlı bordro dönemleri.
+6. **Saha doğrulaması (ay 12):** İki sanayi kuruluşunda ücretli, dört kapılı saha pilotunun tamamlanması; kurulumdan ilk rapora bir saat içinde ulaşılması (bilgi işlem desteği olmadan, pilotlarda görev tamamlama oranı ≥%80); en az bir kuruluştan yazılı yenileme/abonelik taahhüdü.
 
 ## Hedef Kitle
 
@@ -94,15 +94,15 @@ Proje kapsamı bilinçli olarak **tek mevzuat ailesiyle** — 5746 (Ar-Ge ve Tas
 Proje, rutin yazılım geliştirmenin ötesinde **üç** teknik belirsizlik üzerinde çalışacaktır. Üçünün de düşebilir (yanlışlanabilir) bir ölçütü vardır; ölçütü sağlanamayan soru, proje sonunda başarısız olarak raporlanacaktır.
 
 **AS-1 — Üç eksenli yürürlük tarihli sürümleme ve kapanmış dönemlerin as-of yeniden üretilebilirliği.** Mevzuat değişikliklerinin bir kısmı yalnızca bir oranı veya tutarı değiştirir; bir kısmı ise hesaba giren büyüklüğün *tanımını* değiştirir. 2022'de asgari geçim indiriminin kaldırılması ücret istisnası matrahının tanımını değiştirmiştir (parametre değil, şema kırılması); 7555 sayılı düzenlemenin bağlayıcı ücret tavanı 01.08.2025'te ay ortasında yürürlüğe girerek dönem anahtarının kendisini kırmıştır ve mevcut çekirdek bunu yarıyıl anahtarıyla temsil edememektedir. Buna üçüncü eksen eklenir: aynı döneme ait düzeltme beyannameleri, farklı *bilgi tarihleriyle* birden çok geçerli sürüm yaratır. Parametre, hesap şeması ve bilgi tarihi eksenlerinin birlikte sürümlenmesi ve kapanmış bir dönemin, o günkü bilgi durumuyla yeniden üretilebilmesi, yayımlanmış hazır çözümü bulunmayan bir tasarım problemidir.
-*Ölçüt (ay 6):* Yukarıdaki Kazanım 1 ve 2'de tanımlanan metrikler.
+*Ölçüt (ay 7):* Yukarıdaki Kazanım 1 ve 2'de tanımlanan metrikler.
 
 **AS-2 — Beyan ile yeniden hesap arasındaki farkların abdüktif kök-neden teşhisi ve ayırt edilemezliğin dürüst raporlanması.** Farkı *bulmak* deterministiktir ve rutin yazılımdır; belirsizlik farkın *nedenine* güvenilir biçimde atanmasındadır. Problem klasik bir tanımlanabilirlik (identifiability) problemidir: yuvarlama, kapsam-personel farkı, gün/kısmi çalışma, üst sınır bağlaması, oran farkı, veri eksiği ve gerçek hata gibi birden çok kök neden matematiksel olarak *aynı* fark görüntüsünü üretebilir; üstelik farklar hesap kalemleri arasında zincirleme yayılır. Karşılaştırmalı çift hesap, hipotez taraması, zincirin topolojik sırayla kök nedene indirgenmesi ve ayırt edilemeyen hipotez kümelerinin kanıtla birlikte "belirsiz" raporlanması üzerine kurulu bir teşhis çerçevesi geliştirilecektir. Çerçevenin tamamen deterministik ve kanıt üretir olması, denetim savunulabilirliğinin ve KVKK kısıtının doğrudan sonucudur.
-*Ölçüt (ay 7 laboratuvar, ay 9 saha):* Yukarıdaki Kazanım 3'te tanımlanan metrikler.
+*Ölçüt (ay 10 laboratuvar, ay 12 saha):* Yukarıdaki Kazanım 3'te tanımlanan metrikler.
 
 **AS-3 — Bir teşvik rejiminin ne kadarı bildirimsel kural olarak ifade edilebilir: hesap motorunun rejimden bağımsızlık sınırının 5746 ↔ 4691 üzerinde ölçülmesi.** Tek rejime göre yazılmış bir hesap motoruna ikinci rejim eklemek, kural katmanının hangi soyutlama düzeyinde kesildiğine bağlı olarak ya birinci rejimin doğrulamasını kırar ya da kod çoğaltmasına döner; bu sınırın nerede olduğu tasarım öncesinde bilinemez, ölçülerek bulunur. Soru "ikinci kural setini yazabilir miyiz" değildir — o rutindir; soru, rejime özgü mantığın ne kadarının koddan çıkarılıp bildirimsel kural dosyalarına taşınabildiğidir. 4691 bu ölçüm için uygun bir sınama alanıdır: ücret gelir vergisi istisnası eğitim derecesinden bağımsız işler, kazanç istisnası matrahı farklı kurulur; yani rejim yalnız parametrede değil mantıkta ayrışır.
 
 Sorunun ikinci ve daha zor katmanı, iki rejimin **aynı kuruluşta bir arada bulunmasıdır.** Bir firma hem Ar-Ge Merkezi işletip hem teknoloji geliştirme bölgesinde şirket bulundurduğunda, kural katmanının yalnız "hangi rejim" değil "hangi kalem hangi rejime ait" sorusunu da çözmesi gerekir: personelin ve ücretin rejimler arasında paylaştırılması, aynı kazanç üzerinden çifte istisna talebinin engellenmesi (5746 md. 4 mükerrer yararlanma yasağı) ve bu ayrımın denetimde belgelenebilmesi. Bu, bağımsız iki kural setinin toplamı değil, aralarındaki **sınır koşullarının** modellenmesidir; kural katmanının soyutlama düzeyi bu koşulları ifade edemiyorsa ya çifte yararlanma sessizce geçer ya da kural mantığı yeniden koda sızar.
-*Ölçüt (ay 6):* Yukarıdaki Kazanım 4'te tanımlanan metrikler.
+*Ölçüt (ay 8):* Yukarıdaki Kazanım 4'te tanımlanan metrikler.
 
 **Ar-Ge iddiası olmayan, geliştirme kalemi olarak beyan edilenler:** Belge içeri alma ve format normalizasyonu; masaüstü ürünleştirme, kurulum sihirbazı ve arayüzler; imzalı çevrimdışı güncelleme mekanizması; belge alan çıkarımında hazır bir küçük dil modelinin şema-zorlamalı çözümleme ve deterministik doğrulama kapısıyla olduğu gibi kullanılması. Bu bileşenler proje için gereklidir ancak teknik belirsizlik içermedikleri için araştırma sorusu olarak öne sürülmemektedir.
 
@@ -145,14 +145,14 @@ Talep edilen süre: **240 saat.** *Gerekçe:* Kişisel veri kurum dışına çı
 | İP | Kapsam | Ay | Adam/Ay | Nitelik | Çıkış kriteri |
 |---|---|---|---|---|---|
 | İP1 | Çekirdek devralma; yarıyıl → aylık dönem çözünürlüğü; opsiyonel parametre imzası deseniyle "davranış varsayılanlarla birebir korunur" ilkesi; YMM imzalı regresyon protokolü | 1-2 | 3 | Ar-Ge | Parametresiz koşumda 96/96 kuruş farksız, sıfır regresyon *(İP6 pilotlarının ön koşuludur)* |
-| İP2 | Üç eksenli yürürlük tarihli kural katmanı; Resmî Gazete referanslı ve YMM madde madde teyitli geçmişe dönük parametre tablosu; as-of yeniden üretim; etki analizi | 1-6 | 6 | Ar-Ge (AS-1) | Gerçek çapa 96 → ≥140; "doğrulanmamış parametreli ay hesaplanamaz ve raporlanamaz" motor seviyesinde sert kural |
-| İP3 | 4691 kardeş kural seti — çekirdek koda dokunulmadan, bildirimsel kural dosyalarıyla | 4-6 | 3 | Ar-Ge (AS-3) | Bildirimsel kapsama ≥%90; kaçış kancası ≤3; 5746'da sıfır regresyon; 4691'de ≥24 gerçek çapa |
-| İP4 | Retrospektif belge içeri alma *(alt kalem: geliştirme)*; kademeli mutabakat; çapraz tutarlılık kural zinciri; abdüktif kök-neden sınıflandırıcı; karşı-olgusal çift hesap; ≥60 senaryoluk kütüphane; ≥400 vakalık YMM etiketli kalibrasyon seti; insan onaylı mühürlü baz | 3-8 | 7 | Ar-Ge (AS-2) | Kalem bazında ≥%85 doğru sınıflandırma; belirsiz tutar payı ≤%5 |
-| İP5 | Masaüstü ürünleştirme; imzalı çevrimdışı güncelleme; denetim savunma dosyası çıktısı; kurulum sihirbazı; dosya tabanlı içe aktarım; hazır küçük modelle şema-zorlamalı belge alan çıkarımı ve deterministik doğrulama kapısı (~1 AA); 12 aylık teşvik projeksiyonu raporu (~0,5 AA) | 5-9 | 4 | **Ar-Ge iddiası değil — geliştirme** | Kurulumdan ilk rapora ≤1 saat; görev tamamlama ≥%80 |
-| İP6 | İki ücretli, dört kapılı saha pilotu (veri odası → veri kalite karnesi → retroaktif mutabakat → yönetim sunumu ve baz sertifikası); sertleştirme; v1.0 | 5-9 | 2 | Destek | Pilot kapanış raporları; en az bir yenileme taahhüdü |
-| | **Toplam** | **9 ay** | **25** | *(19 Ar-Ge + 6 geliştirme/destek)* | |
+| İP2 | Üç eksenli yürürlük tarihli kural katmanı; Resmî Gazete referanslı ve YMM madde madde teyitli geçmişe dönük parametre tablosu; as-of yeniden üretim; etki analizi | 1-7 | 6 | Ar-Ge (AS-1) | Gerçek çapa 96 → ≥140; "doğrulanmamış parametreli ay hesaplanamaz ve raporlanamaz" motor seviyesinde sert kural |
+| İP3 | 4691 kardeş kural seti — çekirdek koda dokunulmadan, bildirimsel kural dosyalarıyla | 5-8 | 3 | Ar-Ge (AS-3) | Bildirimsel kapsama ≥%90; kaçış kancası ≤3; 5746'da sıfır regresyon; 4691'de ≥24 gerçek çapa |
+| İP4 | Retrospektif belge içeri alma *(alt kalem: geliştirme)*; kademeli mutabakat; çapraz tutarlılık kural zinciri; abdüktif kök-neden sınıflandırıcı; karşı-olgusal çift hesap; ≥60 senaryoluk kütüphane; ≥400 vakalık YMM etiketli kalibrasyon seti; insan onaylı mühürlü baz | 4-10 | 7 | Ar-Ge (AS-2) | Kalem bazında ≥%85 doğru sınıflandırma; belirsiz tutar payı ≤%5 |
+| İP5 | Masaüstü ürünleştirme; imzalı çevrimdışı güncelleme; denetim savunma dosyası çıktısı; kurulum sihirbazı; dosya tabanlı içe aktarım; hazır küçük modelle şema-zorlamalı belge alan çıkarımı ve deterministik doğrulama kapısı (~1 AA); 12 aylık teşvik projeksiyonu raporu (~0,5 AA) | 7-11 | 4 | **Ar-Ge iddiası değil — geliştirme** | Kurulumdan ilk rapora ≤1 saat; görev tamamlama ≥%80 |
+| İP6 | İki ücretli, dört kapılı saha pilotu (veri odası → veri kalite karnesi → retroaktif mutabakat → yönetim sunumu ve baz sertifikası); sertleştirme; v1.0 | 8-12 | 2 | Destek | Pilot kapanış raporları; en az bir yenileme taahhüdü |
+| | **Toplam** | **12 ay** | **25** | *(19 Ar-Ge + 6 geliştirme/destek)* | |
 
-**Proje ekibi:** Proje yöneticisi, iki kıdemli yazılım geliştirici, bir arayüz/ürün geliştirici ve bir test-altyapı uzmanı (5 kişi, ortalama 2,8 tam zaman eşdeğeri). Mevzuat doğrulaması YMM'den hizmet alımıyla sağlanacaktır. Firmamız 2013'ten bu yana 5746 süreçleri alanında sanayi kuruluşlarına yazılım geliştirmekte olup projenin çekirdek hesap motoru bu birikimle üretilmiş ve gerçek dönem verisiyle iç doğrulaması tamamlanmıştır — projenin en riskli görünen bileşeni fiilen çalışır durumdadır. Riskli olan kısım motorun kendisi değil, etrafına kurulacak zaman-farkındalıklı kural katmanı ve kök-neden teşhis çerçevesidir.
+**Proje ekibi:** Proje yöneticisi, iki kıdemli yazılım geliştirici, bir arayüz/ürün geliştirici ve bir test-altyapı uzmanı (5 kişi, ortalama 2,1 tam zaman eşdeğeri). Mevzuat doğrulaması YMM'den hizmet alımıyla sağlanacaktır. Firmamız 2013'ten bu yana 5746 süreçleri alanında sanayi kuruluşlarına yazılım geliştirmekte olup projenin çekirdek hesap motoru bu birikimle üretilmiş ve gerçek dönem verisiyle iç doğrulaması tamamlanmıştır — projenin en riskli görünen bileşeni fiilen çalışır durumdadır. Riskli olan kısım motorun kendisi değil, etrafına kurulacak zaman-farkındalıklı kural katmanı ve kök-neden teşhis çerçevesidir.
 
 **Bütçe kırılımı (7.500.000 ₺):**
 
@@ -171,7 +171,7 @@ Talep edilen süre: **240 saat.** *Gerekçe:* Kişisel veri kurum dışına çı
 
 **Proje Çıktılarında Kullanılacak Sektör:** İmalat sanayii Ar-Ge/Tasarım Merkezleri (otomotiv, beyaz eşya, seramik, kimya, elektronik dâhil); teknoloji geliştirme bölgesi firmaları; mali müşavirlik ve denetim hizmetleri.
 
-**Patent Çıktısı Var Mı:** Var *(hedeflenmektedir)*. Üç eksenli yürürlük tarihli kural sürümleme ve fark kök-neden teşhis yöntemleri için proje ortasında patentlenebilirlik ön değerlendirmesi yapılacak; uygun bulunması hâlinde Türk Patent ve Marka Kurumu'na başvurulacaktır. "Denetci" markası için tescil başvurusu planlanmaktadır.
+**Patent Çıktısı Var Mı:** Var *(hedeflenmektedir)*. Üç eksenli yürürlük tarihli kural sürümleme ve fark kök-neden teşhis yöntemleri için projenin 9. ayında patentlenebilirlik ön değerlendirmesi yapılacak; uygun bulunması hâlinde Türk Patent ve Marka Kurumu'na başvurulacaktır. "Denetci" markası için tescil başvurusu planlanmaktadır.
 
 **Çevreye Etkileri:** Ürünün grafik işlemci gerektirmeyen, mevcut kişisel bilgisayarlarda çalışan mimarisi, yapay zekâ kullanımının enerji ayak izini bulut tabanlı alternatiflere kıyasla önemli ölçüde düşürür ve ek donanım yatırımı ile elektronik atık oluşturmaz.
 
@@ -194,7 +194,7 @@ Ağustos-Eylül 2026'da, kamuya açık ürün web siteleri ve tanıtım materyal
 | Başvuru/Yayın Numarası | Belge Adı | Koruma Tipi |
 |---|---|---|
 | *(planlanan)* | "Denetci" marka tescil başvurusu | Marka |
-| *(değerlendirilecek)* | Üç eksenli yürürlük tarihli kural sürümleme ve fark kök-neden teşhis yöntemi | Patent (ön değerlendirme ay 7) |
+| *(değerlendirilecek)* | Üç eksenli yürürlük tarihli kural sürümleme ve fark kök-neden teşhis yöntemi | Patent (ön değerlendirme ay 9) |
 
 Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakları firmamıza aittir; proje öncesinde firma bünyesinde geliştirilen hesap çekirdeği başlangıç varlığı olarak beyan edilir.
 
