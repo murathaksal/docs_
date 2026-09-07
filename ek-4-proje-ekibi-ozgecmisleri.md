@@ -9,9 +9,9 @@
 | 1 | Proje yöneticisi / ürün sahibi | [Murat Haksal] | 3 adam/ay | 5746 alan bilgisi, pilot koordinasyonu, kabul kriterlerinin yönetimi |
 | 2 | Kıdemli yazılım geliştirici | [Ad Soyad] | 7 adam/ay | Kural motoru ve hesap çekirdeği; deterministik hesap disiplini |
 | 3 | Kıdemli yazılım geliştirici | [Ad Soyad] | 7 adam/ay | Belge içeri alma, mutabakat motoru, kök-neden sınıflandırıcı |
-| 4 | Arayüz / ürün geliştirici | [Ad Soyad] | 3 adam/ay | Masaüstü ürünleştirme, kurulum sihirbazı, rapor çıktıları |
+| 4 | Yapay zekâ / doğal dil işleme mühendisi | [Ad Soyad] | 7 adam/ay | Denetim verisi üretim hattı, dar kapsamlı model ince ayarı (SFT), değerlendirme düzeneği (İP5) |
 | 5 | Test ve altyapı uzmanı | [Ad Soyad] | 5 adam/ay | Çapa/regresyon test altyapısı, imzalı güncelleme mekanizması, kapalı devre kurulum doğrulaması |
-| | **Toplam** | **5 kişi** | **25 adam/ay** | ortalama 2,08 tam zaman eşdeğeri (12 ay) |
+| | **Toplam** | **5 kişi** | **29 adam/ay** | ortalama 2,42 tam zaman eşdeğeri (12 ay) |
 
 **Dış hizmet (ekip dışı):** Yeminli Mali Müşavir — 5746 ve 4691 kural setlerinin madde madde teyidi, geçmiş parametre tablosunun doğrulanması, pilot mutabakat denetimi. *(Sözleşme veya niyet yazısı bu eke iliştirilir.)*
 
@@ -44,6 +44,6 @@
 ## Doldurma notları
 
 1. **Abartmayın, ölçün.** "10+ yıl deneyim" gibi ifadeler yerine, projedeki iş paketiyle eşleşen somut çıktı yazın (hangi sistemi, hangi ölçekte geliştirdi).
-2. **Yük beyanı kritiktir.** 5 kişinin 12 ayda 2,08 tam zaman eşdeğeri vermesi, kişilerin belirgin biçimde kısmi zamanlı çalışacağı anlamına gelir. Her özgeçmişte kişinin firmadaki diğer yükü belirtilmezse, hakem "bu ekip aynı anda danışmanlık işlerini de yürütüyor mu" sorusunu sorar ve cevapsız kalırsa efor tahmini güvenilirliğini yitirir.
+2. **Yük beyanı kritiktir.** 5 kişinin 12 ayda 2,42 tam zaman eşdeğeri vermesi, kişilerin belirgin biçimde kısmi zamanlı çalışacağı anlamına gelir. Her özgeçmişte kişinin firmadaki diğer yükü belirtilmezse, hakem "bu ekip aynı anda danışmanlık işlerini de yürütüyor mu" sorusunu sorar ve cevapsız kalırsa efor tahmini güvenilirliğini yitirir.
 3. **Mevzuat yetkinliği ekip içinde olmayabilir** — bu bir eksiklik değildir, çünkü YMM dış hizmeti bu boşluğu doldurmak üzere bütçelenmiştir. Ancak proje yöneticisinin 5746 alan bilgisi açıkça gösterilmelidir; aksi hâlde "mevzuatı kim biliyor" sorusu boşta kalır.
 4. **İmza ve tarih:** Özgeçmişler firma yetkilisince imzalanır; kişisel veri içerdiğinden yalnızca başvuru amacıyla paylaşıldığı not edilir.

@@ -56,7 +56,7 @@ Argelog, 2013'ten bu yana sanayi kuruluşlarına inovasyon, teknoloji ve Ar-Ge y
 
 ### Proje finansman beyanı
 
-Projenin 7.500.000 ₺ tutarındaki bütçesi **öz sermaye** ile finanse edilecektir. [Firma, 12 aylık proje süresince aylık ortalama [ ] ₺ nakit çıkışını mevcut faaliyet gelirleri ve özkaynaklarıyla karşılayacak kapasitededir.] Kamu desteği başvurusu yapılması hâlinde, mükerrer destek kurallarına göre kalem ayrıştırması yapılacaktır.
+Projenin 8.600.000 ₺ tutarındaki bütçesi **öz sermaye** ile finanse edilecektir. [Firma, 12 aylık proje süresince aylık ortalama [ ] ₺ nakit çıkışını mevcut faaliyet gelirleri ve özkaynaklarıyla karşılayacak kapasitededir.] Kamu desteği başvurusu yapılması hâlinde, mükerrer destek kurallarına göre kalem ayrıştırması yapılacaktır.
 
 *Doldurma notu — kritik: Bu bölüm boş veya belirsiz bırakılırsa, hakem "12 ay boyunca 5 kişiyi taşıyacak nakit var mı" sorusunu cevapsız bırakır ve bu, teknik değerlendirmeden bağımsız olarak ret gerekçesi olabilir. Rakam veremiyorsanız bile, finansman kaynağının somut olarak nasıl sağlanacağı (özkaynak, mevcut hizmet geliri, kredi limiti) yazılmalıdır.*
 

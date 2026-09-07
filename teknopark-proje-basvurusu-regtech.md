@@ -10,7 +10,7 @@
 
 ---
 
-> **⚠️ TARİHSEL TASLAK — GEÇERSİZDİR.** Bu belge projenin erken taslağıdır. Güncel ve geçerli kapsam için `denetci-proje-bilgi-formu.md` esas alınmalıdır (12 ay / 25 adam-ay / 7,5 M TL; 5746 + 4691; üç araştırma sorusu).
+> **⚠️ TARİHSEL TASLAK — GEÇERSİZDİR.** Bu belge projenin erken taslağıdır. Güncel ve geçerli kapsam için `denetci-proje-bilgi-formu.md` esas alınmalıdır (12 ay / 29 adam-ay / 8,6 M TL; 5746 + 4691; dört araştırma sorusu).
 
 
 
