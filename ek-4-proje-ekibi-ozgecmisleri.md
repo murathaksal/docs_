@@ -8,7 +8,7 @@
 |---|---|---|---|---|
 | 1 | Proje yöneticisi / ürün sahibi | [Murat Haksal] | 6 adam/ay (0,5 TZE) | 5746/4691 alan bilgisi, pilot koordinasyonu, YMM arayüzü, kabul kriterlerinin yönetimi |
 | 2 | Kıdemli yazılım geliştirici | [Ad Soyad] | 12 adam/ay (1,0 TZE) | Hesap çekirdeği ve kural katmanı (İP1-İP3), mutabakat motoru ve kök-neden sınıflandırıcı (İP4), masaüstü ürünleştirme ve arayüz (İP6) |
-| 3 | Yapay zekâ / doğal dil işleme mühendisi (**İP5 iş paketi yöneticisi**) | [Ad Soyad] | 9 adam/ay (0,75 TZE) | Denetim verisi üretim hattı (EK-6), denetçi rolündeki dar kapsamlı modelin ince ayarı (SFT), kör test ve değerlendirme düzeneği |
+| 3 | Yapay zekâ / doğal dil işleme mühendisi (**İP5 iş paketi yöneticisi**) | [Ad Soyad] | 9 adam/ay (0,75 TZE) | Denetim verisi üretim hattı (EK-6), denetçi rolündeki dar kapsamlı modelin ince ayarı (SFT), sembolik doğrulama kapısı, kör test ve değerlendirme düzeneği, grafik işlemcisiz çıkarım optimizasyonu |
 | 4 | Analiz ve test-altyapı uzmanı | [Ad Soyad] | 9 adam/ay (0,75 TZE) | Belge yapıları ve mutabakat vakalarının analizi, senaryo/enjeksiyon setlerinin kurulması, çapa/regresyon test altyapısı, imzalı güncelleme, kapalı devre kurulum doğrulaması, pilot destek (İP7) |
 | | **Toplam** | **4 kişi** | **36 adam/ay** | ortalama 3,0 tam zaman eşdeğeri (12 ay) |
 
@@ -18,13 +18,13 @@
 
 | Kişi | İP1 | İP2 | İP3 | İP4 | İP5 | İP6 | İP7 | **Toplam** |
 |---|---|---|---|---|---|---|---|---|
-| Proje yöneticisi | 1 | 1 | – | 1 | – | 1 | 2 | **6** |
+| Proje yöneticisi | 1 | 1 | – | 1 | 1 | 1 | 1 | **6** |
 | Kıdemli yazılım geliştirici | 2 | 4 | 2 | 2 | – | 2 | – | **12** |
-| YZ / DDİ mühendisi (İP5 yöneticisi) | – | 1 | – | 2 | 6 | – | – | **9** |
-| Analiz ve test-altyapı uzmanı | – | 1 | 2 | 3 | – | 2 | 1 | **9** |
-| **Toplam** | **3** | **7** | **4** | **8** | **6** | **5** | **3** | **36** |
+| YZ / DDİ mühendisi (İP5 yöneticisi) | – | – | – | 2 | 6 | – | 1 | **9** |
+| Analiz ve test-altyapı uzmanı | – | 1 | 1 | 3 | 1 | 2 | 1 | **9** |
+| **Toplam** | **3** | **6** | **3** | **8** | **8** | **5** | **3** | **36** |
 
-Okuma notları: Kıdemli geliştirici 12 ay boyunca tam zamanlı olarak projede kalır ve hesap çekirdeğinden masaüstü ürüne uzanan omurgayı taşır. YZ/DDİ mühendisinin İP2 ve İP4'teki payı, denetim verisi üretim hattının (EK-6) motor çıktısına bağlanması içindir; İP5 dışındaki bu efor olmadan hat kurulamaz. Analiz ve test-altyapı uzmanının İP4'teki ağırlığı, senaryo kütüphanesi ve hata enjeksiyon setinin kurulmasından gelir.
+Okuma notları: Kıdemli geliştirici 12 ay boyunca tam zamanlı olarak projede kalır ve hesap çekirdeğinden masaüstü ürüne uzanan omurgayı taşır. YZ/DDİ mühendisinin İP4'teki payı, denetim verisi üretim hattının (EK-6) sembolik teşhis çıktısına bağlanması; İP7'deki payı ise pilotlarda uzman-model kör karşılaştırmasının yürütülmesi içindir. Analiz ve test-altyapı uzmanının İP4'teki ağırlığı senaryo kütüphanesi ve hata enjeksiyon setinin kurulmasından, İP5'teki payı kör test setinin ve doğrulama kapısı testlerinin hazırlanmasından gelir. Projenin Ar-Ge eforunun 16 adam-ayı (İP4 + İP5) doğrudan yapay zekâ bileşenine ve onun teşhis altyapısına, 12 adam-ayı (İP1-İP3) bu bileşenin dayandığı sembolik kural tabanına ayrılmıştır.
 
 **Dış hizmet (ekip dışı):** Yeminli Mali Müşavir: 5746 ve 4691 kural setlerinin madde madde teyidi, geçmiş parametre tablosunun doğrulanması, pilot mutabakat denetimi. *(Sözleşme veya niyet yazısı bu eke iliştirilir.)*
 

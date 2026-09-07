@@ -1,6 +1,6 @@
 # EK-6: Dar Kapsamlı Denetçi Modelinin Eğitim Verisi: Üretim Yöntemi
 
-*Proje Bilgi Formu'ndaki AS-4 araştırma sorusunun ve İP5 iş paketinin dayanağıdır. Hakem heyetinin "bu model neyle eğitilecek, veri nereden gelecek, etiketi kim koyacak" sorularına cevap verir.*
+*Proje Bilgi Formu'ndaki AS-1 ve AS-2 araştırma sorularının ve İP5 iş paketinin dayanağıdır. Hakem heyetinin "bu model neyle eğitilecek, veri nereden gelecek, etiketi kim koyacak" sorularına cevap verir.*
 
 ---
 
