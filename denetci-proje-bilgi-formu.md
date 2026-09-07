@@ -148,7 +148,7 @@ Talep edilen süre: **240 saat.** *Gerekçe:* Kişisel veri kurum dışına çı
 
 | Kalem | Tutar (₺) |
 |---|---|
-| Personel — 25 adam/ay × 230.000 ₺ (brüt + işveren maliyeti; kıdem dağılımı ekte) | 5.750.000 |
+| Personel — 25 adam/ay × 230.000 ₺ (brüt + işveren maliyeti + genel gider payı; kırılım ve dayanak: **EK-3**) | 5.750.000 |
 | Dış hizmet — YMM (5746 ve 4691 kural setlerinin madde madde teyidi, geçmiş parametre tablosu teyidi, iki pilotta mutabakat denetimi) ve geriye dönük düzeltme pencerelerine ilişkin yazılı hukuk görüşü | 550.000 |
 | Donanım — 3 geliştirici iş istasyonu + 2 referans test bilgisayarı | 300.000 |
 | Yazılım lisansları, kod imzalama sertifikası ve çevrimdışı güncelleme imza altyapısı, test araçları | 200.000 |
@@ -177,7 +177,7 @@ Talep edilen süre: **240 saat.** *Gerekçe:* Kişisel veri kurum dışına çı
 
 ## Rekabet Analizi
 
-Ağustos 2026'da, kamuya açık ürün dokümanları ve tanıtım materyalleri üzerinden yürüttüğümüz taramada, yurt içinde 5746 hesaplama alanında puantaj ve bordro odaklı yazılımların bulunduğu görülmüştür. İncelenen ürünlerde; geçmiş beyan mutabakatı, yürürlük tarihli kural sürümleme ve kapalı devre çalışma yeteneklerinin **bir arada** bulunduğu bir çözüme rastlanmamıştır (incelenen ürün listesi başvuru ekindedir). Bordro ve kurumsal kaynak planlama paketlerinin teşvik modülleri ileriye dönük aylık hesabı yapmakta, ancak tek sürümlü kural tablosuyla çalıştıkları için geçmiş bir dönemi kendi kural sürümüyle yeniden kuramamaktadır. Yurt dışındaki Ar-Ge vergi teşviki otomasyon ürünleri kendi ülke mevzuatlarına özgüdür. Projenin rekabet konumu üç dayanağa oturur: gerçek dönem verisiyle doğrulanmış deterministik hesap çekirdeği, zaman-farkındalıklı kural katmanı ve verinin kurum dışına çıkmadığı kapalı devre çalışma modeli.
+Ağustos-Eylül 2026'da, kamuya açık ürün web siteleri ve tanıtım materyalleri üzerinden yedi ürün/hizmet kategorisi taranmıştır (ayrıntılı liste ve yöntem: **EK-1**). Yurt içinde 5746 kapsamında hesaplama yapan yerli yazılımlar mevcuttur; bunlardan en az biri 4691 kapsamını da ilan etmektedir. Dolayısıyla projenin iddiası kategori boşluğu değil, **özellik bileşimi**dir: incelenen ürünlerin kamuya açık materyallerinde; geçmiş beyan mutabakatı, yürürlük tarihli kural sürümleme ve kapalı devre çalışma yeteneklerinin **bir arada** ilan edildiği bir çözüme rastlanmamıştır. Ürünlerin ilan edilmemiş yetenekleri bulunabileceğinden, bu tespit kamuya açık materyalle sınırlıdır ve mutlak üstünlük iddiası içermez. Bordro ve kurumsal kaynak planlama paketlerinin teşvik modülleri ileriye dönük aylık hesabı yapmakta, ancak tek sürümlü kural tablosuyla çalıştıkları için geçmiş bir dönemi kendi kural sürümüyle yeniden kuramamaktadır. Yurt dışındaki Ar-Ge vergi teşviki otomasyon ürünleri kendi ülke mevzuatlarına özgüdür. Projenin rekabet konumu üç dayanağa oturur: gerçek dönem verisiyle doğrulanmış deterministik hesap çekirdeği, zaman-farkındalıklı kural katmanı ve verinin kurum dışına çıkmadığı kapalı devre çalışma modeli.
 
 ## Fikri Sınai ve Mülkiyet Hakları
 
@@ -210,6 +210,16 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 |---|---|---|
 | Geliştirici iş istasyonu | 3 | Yazılım geliştirme |
 | Referans test bilgisayarı (asgari sistem: 4 çekirdek, 16 GB bellek, grafik işlemcisiz) | 2 | Ürünün hedef donanımda doğrulanması ve kapalı devre kurulum senaryolarının sınanması (ağdan yalıtılmış ortam sanal makineyle karşılanır) |
+
+## Başvuru Ekleri
+
+| Ek | İçerik |
+|---|---|
+| **EK-1** | Rekabet analizi — incelenen ürün listesi, tarama yöntemi ve karşılaştırma ölçütleri |
+| **EK-2** | Pilot kuruluşlardan alınacak niyet mektupları (iki adet; şablon ve toplama süreci) |
+| **EK-3** | Personel birim maliyeti dayanağı — ekip kıdem dağılımı ve maliyet kırılımı |
+| EK-4 | Proje ekibi özgeçmişleri |
+| EK-5 | Firma tanıtım dosyası ve mali tablolar |
 
 ---
 

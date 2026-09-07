@@ -11,6 +11,15 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 | [`argus-gelir-plani.md`](argus-gelir-plani.md) | Hizmet-önce gelir planı: gelir merdiveni, paketler, 30/60/90 gün, nakit projeksiyonu, yasal sınırlar. Ürün paketleme kısmı yalın karara göre sadeleşmiştir (bkz. ana belge). |
 | [`argelog-ai-strateji.md`](argelog-ai-strateji.md) | ARGELOG.AI vizyonu: ekosistem döngüsü, veri moat'ı, ajan mimarisi. Uzun vadeli çerçeve. |
 
+
+## 📎 Başvuru ekleri
+
+| Ek | İçerik |
+|---|---|
+| [`ek-1-rekabet-analizi-urun-listesi.md`](ek-1-rekabet-analizi-urun-listesi.md) | İncelenen ürün listesi, tarama yöntemi ve üç ölçütlü karşılaştırma tablosu |
+| [`ek-2-niyet-mektubu-sablonu.md`](ek-2-niyet-mektubu-sablonu.md) | Pilot kuruluşlar için niyet mektubu (LOI) şablonu ve toplama kontrol listesi |
+| [`ek-3-personel-maliyet-dayanagi.md`](ek-3-personel-maliyet-dayanagi.md) | Personel birim maliyeti kırılımı ve dayanağı *(tutarlar firma verisiyle doldurulacak)* |
+
 ## 📚 Analiz arşivi (karar gerekçeleri)
 
 | Belge | İçerik |
@@ -36,5 +45,8 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 1. Portalda "Projenin Sektörü" alanını **"Ambalaj" → "Yazılım"** olarak düzelt.
 2. Kimlik alanlarını gir: 9 ay, 7.500.000 ₺, 19 + 6 = 25 adam/ay.
 3. "Toplam Personel: 2" kaydını proje ekibiyle (5 kişi) uyumlu hâle getir; alan ihtiyacını gözden geçir.
-4. Rekabet analizinde atıf yapılan "incelenen ürün listesi" ekini hazırla (ürün adları, inceleme tarihi, kaynaklar).
-5. İki sanayi kuruluşundan niyet mektuplarını (LOI) başvuru ekine ekle.
+4. **EK-3'teki tutarları** firmanın güncel bordro ve genel gider verileriyle doldur (yer tutucular boş bırakılamaz).
+5. **EK-2 şablonunu** iki pilot kuruluşa gönder ve imzalı niyet mektuplarını topla — kurumsal imza süreci 2-4 hafta sürdüğü için başvurudan en az bir ay önce başlat.
+6. **EK-1'i** sunum öncesi bir kez daha gözden geçir (ürün siteleri değişmiş olabilir).
+7. EK-4 (ekip özgeçmişleri) ve EK-5 (firma tanıtım dosyası, mali tablolar) hazırla.
+8. Sunum öncesi CBAM'e ilişkin kesme kararının dayanağını (Ek-I kapsamı, yükümlü taraf) hukuk/gümrük müşaviriyle bir kez teyit ettir — karar değişmeyecek olsa da beyan güvenliği için.
