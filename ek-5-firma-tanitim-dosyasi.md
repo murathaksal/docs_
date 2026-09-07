@@ -1,4 +1,4 @@
-# EK-5 — Firma Tanıtım Dosyası ve Mali Bilgiler
+# EK-5: Firma Tanıtım Dosyası ve Mali Bilgiler
 
 *Başvuru ekine konulacak firma dosyasının yapısı. **Kurumsal ve mali veriler firma tarafından doldurulacaktır**; aşağıdaki bilinen bilgiler doğrulanmalı, yer tutucular gerçek verilerle değiştirilmelidir. Hakem heyeti ve teknopark yönetimi bu ekte tek bir soruya cevap arar: bu firma, beyan ettiği projeyi 12 ay boyunca finanse edip yürütecek kapasitede mi?*
 
@@ -8,10 +8,10 @@
 |---|---|
 | Ticaret unvanı | ARGELOG ARGE MERKEZİ YÖNETİM DANIŞMANLIĞI VE YAZILIM HİZMETLERİ A.Ş. |
 | Kuruluş yılı | 2013 |
-| Merkez adresi | [İstanbul — tam adres] |
+| Merkez adresi | [İstanbul, tam adres] |
 | Ticaret sicil no / MERSİS | [ ] |
 | Vergi dairesi / no | [ ] |
-| NACE kodu | 62.01 — Bilgisayar Programlama Faaliyetleri |
+| NACE kodu | 62.01, Bilgisayar Programlama Faaliyetleri |
 | Ortaklık yapısı | [ortak adları ve payları] |
 | Yetkili / imza sirküleri | [ ] |
 | Toplam çalışan sayısı | [ ] *(proje ekibi: 4 kişi)* |
@@ -35,7 +35,7 @@ Argelog, 2013'ten bu yana sanayi kuruluşlarına inovasyon, teknoloji ve Ar-Ge y
 |---|---|
 | Kurumsal müşteriler | Türkiye'nin önde gelen sanayi kuruluşları *(müşteri adları gizlilik yükümlülüğü çerçevesinde; izin alınabilenler ekte listelenir)* |
 | Üyelikler | SAHA İstanbul |
-| Bu projenin pilot kuruluşları | İki sanayi kuruluşu — niyet mektupları **EK-2** kapsamında |
+| Bu projenin pilot kuruluşları | İki sanayi kuruluşu (niyet mektupları **EK-2** kapsamında) |
 
 *Doldurma notu: Adı paylaşılabilecek 3-5 referans müşteri, hakem heyetinde "bu firma gerçekten bu pazarda çalışıyor mu" sorusunu en hızlı kapatan unsurdur. Gizlilik nedeniyle ad verilemiyorsa sektör ve ölçek belirtin (ör. "beyaz eşya sektöründe, 200+ Ar-Ge personelli merkez").*
 
@@ -58,7 +58,7 @@ Argelog, 2013'ten bu yana sanayi kuruluşlarına inovasyon, teknoloji ve Ar-Ge y
 
 Projenin 6.600.000 ₺ tutarındaki bütçesi **öz sermaye** ile finanse edilecektir. [Firma, 12 aylık proje süresince aylık ortalama [ ] ₺ nakit çıkışını mevcut faaliyet gelirleri ve özkaynaklarıyla karşılayacak kapasitededir.] Kamu desteği başvurusu yapılması hâlinde, mükerrer destek kurallarına göre kalem ayrıştırması yapılacaktır.
 
-*Doldurma notu — kritik: Bu bölüm boş veya belirsiz bırakılırsa, hakem "12 ay boyunca 4 kişiyi taşıyacak nakit var mı" sorusunu cevapsız bırakır ve bu, teknik değerlendirmeden bağımsız olarak ret gerekçesi olabilir. Rakam veremiyorsanız bile, finansman kaynağının somut olarak nasıl sağlanacağı (özkaynak, mevcut hizmet geliri, kredi limiti) yazılmalıdır.*
+*Doldurma notu (kritik): Bu bölüm boş veya belirsiz bırakılırsa, hakem "12 ay boyunca 4 kişiyi taşıyacak nakit var mı" sorusunu cevapsız bırakır ve bu, teknik değerlendirmeden bağımsız olarak ret gerekçesi olabilir. Rakam veremiyorsanız bile, finansman kaynağının somut olarak nasıl sağlanacağı (özkaynak, mevcut hizmet geliri, kredi limiti) yazılmalıdır.*
 
 ## 5. Ekler listesi
 

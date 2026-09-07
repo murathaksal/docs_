@@ -1,4 +1,4 @@
-# EK-3 — Personel Birim Maliyeti Dayanağı
+# EK-3: Personel Birim Maliyeti Dayanağı
 
 *Proje Bilgi Formu'nun bütçe bölümünde yer alan "36 adam/ay × 130.000 ₺" kaleminin dayanağıdır. Hakem heyetinin sorusu tipik olarak "oran neden bu düzeyde" değil "dayanağı nerede" olduğundan, kırılım aşağıda beyan edilmektedir.*
 
@@ -36,4 +36,4 @@ Proje personeli, firmanın danışmanlık/hizmet kolunda çalışan personelden 
 
 Yukarıdaki kırılım, [tarih] itibarıyla firmanın bordro ve muhasebe kayıtlarına dayanmaktadır. Talep hâlinde, kişi adları maskelenmiş biçimde bordro özeti ve genel gider dağıtım anahtarı sunulabilir.
 
-**[Ad Soyad]** — [Unvan], ARGELOG A.Ş.
+**[Ad Soyad]**, [Unvan], ARGELOG A.Ş.

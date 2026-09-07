@@ -1,8 +1,8 @@
-# EK-2 — Niyet Mektubu (LOI) Şablonu
+# EK-2: Niyet Mektubu (LOI) Şablonu
 
 *Başvuru ekine konulacak, pilot kuruluşlar tarafından kendi antetli kâğıtlarına aktarılıp imzalanacak metin. İki nüsha hazırlanır (Kale ve ikinci sanayi kuruluşu). Köşeli parantezli alanlar kuruluş tarafından doldurulur.*
 
-> **Not — hukuki nitelik:** Bu mektup bağlayıcı bir satın alma taahhüdü değildir; teknopark başvurusuna talep kanıtı olarak sunulacak niyet beyanıdır. Bağlayıcı olmadığının metinde açıkça yer alması, hem kuruluşun imza sürecini kolaylaştırır hem de başvuruda gerçeğe uygun beyan ilkesine uyar.
+> **Not (hukuki nitelik):** Bu mektup bağlayıcı bir satın alma taahhüdü değildir; teknopark başvurusuna talep kanıtı olarak sunulacak niyet beyanıdır. Bağlayıcı olmadığının metinde açıkça yer alması, hem kuruluşun imza sürecini kolaylaştırır hem de başvuruda gerçeğe uygun beyan ilkesine uyar.
 
 ---
 
@@ -18,7 +18,7 @@
 
 Kuruluşumuz [KURULUŞ TAM UNVANI], 5746 sayılı Kanun kapsamında [Ar-Ge Merkezi / Tasarım Merkezi] belgesine sahip olup, [personel sayısı] Ar-Ge personeliyle faaliyet göstermektedir.
 
-Ar-Ge teşvik hesaplamalarımız ve bu hesapların denetim süreçlerinde belgelendirilmesi, kuruluşumuzda hâlihazırda [elektronik tablo / mali müşavirlik hizmeti / mevcut yazılım — uygun olan yazılır] ile yürütülmektedir. Bu süreçte özellikle şu ihtiyaçları tespit etmiş bulunuyoruz:
+Ar-Ge teşvik hesaplamalarımız ve bu hesapların denetim süreçlerinde belgelendirilmesi, kuruluşumuzda hâlihazırda [elektronik tablo / mali müşavirlik hizmeti / mevcut yazılım; uygun olan yazılır] ile yürütülmektedir. Bu süreçte özellikle şu ihtiyaçları tespit etmiş bulunuyoruz:
 
 - Geçmiş dönem beyanlarımızın, o dönemde yürürlükte olan mevzuat hükümleriyle bağımsız olarak yeniden hesaplanabilmesi ve beyan ile hesap arasındaki farkların gerekçeleriyle görülebilmesi,
 - Denetim süreçlerinde, beyan edilen her tutarın hangi mevzuat maddesine ve hangi hesap yöntemine dayandığının belgelenebilmesi,
@@ -33,13 +33,13 @@ Bilgilerinize sunarız.
 Saygılarımızla,
 
 **[Ad Soyad]**
-[Unvan — ör. Ar-Ge Merkezi Müdürü / Mali İşler Direktörü]
+[Unvan; ör. Ar-Ge Merkezi Müdürü / Mali İşler Direktörü]
 [KURULUŞ TAM UNVANI]
 [İmza / kaşe]
 
 ---
 
-## Toplama süreci — kontrol listesi
+## Toplama süreci: kontrol listesi
 
 | # | Adım | Sorumlu | Durum |
 |---|---|---|---|

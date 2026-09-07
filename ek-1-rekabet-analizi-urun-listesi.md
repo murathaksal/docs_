@@ -1,4 +1,4 @@
-# EK-1 — Rekabet Analizi: İncelenen Ürün Listesi
+# EK-1: Rekabet Analizi: İncelenen Ürün Listesi
 
 *Proje Bilgi Formu'nun "Rekabet Analizi" bölümüne dayanak oluşturan tarama kaydıdır. Tarama, kamuya açık ürün web siteleri, tanıtım materyalleri ve erişilebilir doküman/demolar üzerinden yapılmıştır; ürünlerin lisanslı sürümleri satın alınarak test edilmemiştir. Bu sınır, aşağıdaki değerlendirmelerin kapsamını belirler.*
 
@@ -9,22 +9,22 @@
 
 | Kısaltma | Ölçüt |
 |---|---|
-| **Ö1** | Geçmiş beyan mutabakatı — beyan edilen tutarların, aynı dönemin verisiyle bağımsız yeniden hesaplanıp farkların kök nedene göre sınıflandırılması |
-| **Ö2** | Yürürlük tarihli kural sürümleme — geçmiş bir dönemin, o dönemde yürürlükte olan parametre *ve hesap şemasıyla* yeniden üretilebilmesi |
-| **Ö3** | Kapalı devre çalışma — verinin kurum dışına hiç çıkmadığı, internet bağlantısı gerektirmeyen kurulum |
-| **Ö4** | Rejim sınırı denetimi — 5746 ve 4691'i bir arada yürüten kuruluşta personel/ücret/kazanç paylaştırması ve mükerrer yararlanma (5746 md. 4) kontrolü |
+| **Ö1** | Geçmiş beyan mutabakatı: beyan edilen tutarların, aynı dönemin verisiyle bağımsız yeniden hesaplanıp farkların kök nedene göre sınıflandırılması |
+| **Ö2** | Yürürlük tarihli kural sürümleme: geçmiş bir dönemin, o dönemde yürürlükte olan parametre *ve hesap şemasıyla* yeniden üretilebilmesi |
+| **Ö3** | Kapalı devre çalışma: verinin kurum dışına hiç çıkmadığı, internet bağlantısı gerektirmeyen kurulum |
+| **Ö4** | Rejim sınırı denetimi: 5746 ve 4691'i bir arada yürüten kuruluşta personel/ücret/kazanç paylaştırması ve mükerrer yararlanma (5746 md. 4) kontrolü |
 
 ## İncelenen ürünler
 
 | # | Ürün / Sağlayıcı | Kaynak | Kapsam (ilan edilen) | Ö1 | Ö2 | Ö3 | Ö4 |
 |---|---|---|---|:--:|:--:|:--:|:--:|
-| 1 | **ArgeMemory** — Vertex Group | vertexgroupdsk.com.tr | 5746 ve 4691 hesaplama süreçlerinin otomasyonu; Ar-Ge merkezi yönetimi ve teşvik takibi | gözlenmedi | gözlenmedi | gözlenmedi | gözlenmedi |
-| 2 | **Ar-GeNet** — Ar-Ge Merkezi Yazılımı | argemerkeziyazilimi.com | Ar-Ge/Tasarım Merkezi personeli için bordro teşvik hesabı, beyan işlemleri, teşvik bordrosu üretimi; **bulut tabanlı SaaS** | gözlenmedi | gözlenmedi | **hayır** (bulut) | gözlenmedi |
+| 1 | **ArgeMemory** (Vertex Group) | vertexgroupdsk.com.tr | 5746 ve 4691 hesaplama süreçlerinin otomasyonu; Ar-Ge merkezi yönetimi ve teşvik takibi | gözlenmedi | gözlenmedi | gözlenmedi | gözlenmedi |
+| 2 | **Ar-GeNet** (Ar-Ge Merkezi Yazılımı) | argemerkeziyazilimi.com | Ar-Ge/Tasarım Merkezi personeli için bordro teşvik hesabı, beyan işlemleri, teşvik bordrosu üretimi; **bulut tabanlı SaaS** | gözlenmedi | gözlenmedi | **hayır** (bulut) | gözlenmedi |
 | 3 | **Kolay Teşvik** | kolaytesvik.com | 5746 Ar-Ge teşviki hesaplama | gözlenmedi | gözlenmedi | gözlenmedi | gözlenmedi |
-| 4 | **SMMM Teşvik** — Ar-Ge/Tasarım teşviki (05746 / 15746) hesaplama programı | smmmtesvik.com | SGK teşvik kanun numarası bazlı hesaplama | gözlenmedi | gözlenmedi | gözlenmedi | gözlenmedi |
+| 4 | **SMMM Teşvik** (Ar-Ge/Tasarım teşviki, 05746 / 15746, hesaplama programı) | smmmtesvik.com | SGK teşvik kanun numarası bazlı hesaplama | gözlenmedi | gözlenmedi | gözlenmedi | gözlenmedi |
 | 5 | Bordro/ERP paketlerinin teşvik modülleri (Logo, Mikro, Netsis, Luca vb.) | ürün siteleri | Bordro içinde ileriye dönük aylık teşvik hesabı | gözlenmedi | gözlenmedi | değişken | gözlenmedi |
-| 6 | Yeminli Mali Müşavirlik ve Ar-Ge teşvik danışmanlığı hizmetleri (PwC, Albert Solino, NMS vb.) | firma siteleri | Dönemsel danışmanlık, tasdik ve rapor hizmeti — yazılım ürünü değildir | manuel | manuel | — | gözlenmedi |
-| 7 | Yurt dışı Ar-Ge vergi teşviki otomasyonu (Boast.ai, Neo.tax, Clarus R+D vb.) | ürün siteleri | ABD/Kanada Ar-Ge vergi kredisi otomasyonu | — | — | hayır (bulut) | gözlenmedi |
+| 6 | Yeminli Mali Müşavirlik ve Ar-Ge teşvik danışmanlığı hizmetleri (PwC, Albert Solino, NMS vb.) | firma siteleri | Dönemsel danışmanlık, tasdik ve rapor hizmeti; yazılım ürünü değildir | manuel | manuel | - | gözlenmedi |
+| 7 | Yurt dışı Ar-Ge vergi teşviki otomasyonu (Boast.ai, Neo.tax, Clarus R+D vb.) | ürün siteleri | ABD/Kanada Ar-Ge vergi kredisi otomasyonu | - | - | hayır (bulut) | gözlenmedi |
 
 ## Değerlendirme
 
