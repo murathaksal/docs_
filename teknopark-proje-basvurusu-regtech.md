@@ -10,6 +10,10 @@
 
 ---
 
+> **⚠️ TARİHSEL TASLAK — GEÇERSİZDİR.** Bu belge projenin erken taslağıdır. Güncel ve geçerli kapsam için `denetci-proje-bilgi-formu.md` esas alınmalıdır (9 ay / 25 adam-ay / 7,5 M TL; 5746 + 4691; üç araştırma sorusu).
+
+
+
 ## 1. Proje Kimliği
 
 | Alan | Bilgi |
