@@ -1,6 +1,6 @@
 # EK-3 — Personel Birim Maliyeti Dayanağı
 
-*Proje Bilgi Formu'nun bütçe bölümünde yer alan "36 adam/ay × 230.000 ₺" kaleminin dayanağıdır. Hakem heyetinin sorusu tipik olarak "oran neden bu düzeyde" değil "dayanağı nerede" olduğundan, kırılım aşağıda beyan edilmektedir.*
+*Proje Bilgi Formu'nun bütçe bölümünde yer alan "36 adam/ay × 130.000 ₺" kaleminin dayanağıdır. Hakem heyetinin sorusu tipik olarak "oran neden bu düzeyde" değil "dayanağı nerede" olduğundan, kırılım aşağıda beyan edilmektedir.*
 
 > **Doldurma notu:** Aşağıdaki tablo yapı olarak hazırdır; **tutarlar firmanın güncel bordro ve genel gider verileriyle doldurulmalıdır.** Yer tutucu değerler örnek niteliğindedir ve başvuru öncesi gerçek verilerle değiştirilmelidir.
 
@@ -14,7 +14,7 @@
 | Analiz ve test-altyapı uzmanı | 1 | [ ] yıl | 9 |
 | | **4 kişi** | | **36 adam/ay** |
 
-*Ortalama tam zaman eşdeğeri: 36 ÷ 12 ay = 3,0 (proje yöneticisi yarı zamanlı, kıdemli geliştirici tam zamanlı, diğer iki üye dörtte üç zamanlı).*
+*Ortalama tam zaman eşdeğeri: 36 ÷ 12 ay = 3,0 (proje yöneticisi yarı zamanlı, kıdemli geliştirici tam zamanlı, diğer iki üye dörtte üç zamanlı). Aylık ortalama personel maliyeti: 4.680.000 ÷ 12 = 390.000 ₺.*
 
 ## Birim maliyet kırılımı (adam/ay başına)
 
@@ -24,9 +24,9 @@
 | İşveren SGK primi ve işsizlik sigortası payı | [ ] | Yürürlükteki oranlar üzerinden |
 | İşveren maliyeti ara toplam | [ ] | |
 | Genel gider payı (yönetim, ofis, donanım amortismanı, yazılım lisansları) | [ ] | Firma genel gider oranı: **%[ ]** |
-| **Adam/ay tam yüklü maliyet** | **230.000** | Bütçede kullanılan değer (36 adam/ay × 230.000 = 8.280.000 ₺) |
+| **Adam/ay tam yüklü maliyet** | **130.000** | Bütçede kullanılan değer (36 adam/ay × 130.000 = 4.680.000 ₺) |
 
-**Çapraz kontrol:** Firmanın hizmet kolunda kullanılan tam yüklü gün maliyeti [ ]–[ ] ₺/adam-gün bandındadır; aylık 20 iş günü üzerinden bu, [ ]–[ ] ₺/adam-ay aralığına karşılık gelir. Bütçede kullanılan 230.000 ₺ bu bandın içindedir.
+**Çapraz kontrol:** Firmanın hizmet kolunda kullanılan tam yüklü gün maliyeti [ ]–[ ] ₺/adam-gün bandındadır; aylık 20 iş günü üzerinden bu, [ ]–[ ] ₺/adam-ay aralığına karşılık gelir. Bütçede kullanılan 130.000 ₺ bu bandın içindedir.
 
 ## Proje personelinin ayrıştırılması
 

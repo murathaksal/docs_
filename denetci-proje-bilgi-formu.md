@@ -13,7 +13,7 @@
 | Proje Kodu | ARGELOG-002 |
 | Proje Yöneticisi | Murat Haksal |
 | Proje Süresi | 12 Ay |
-| Tahmini Proje Bütçesi | 10.200.000,00 ₺ |
+| Tahmini Proje Bütçesi | 6.600.000,00 ₺ |
 | Ar-Ge İş Gücü | 28 Adam/Ay |
 | Destek/Geliştirme İş Gücü | 8 Adam/Ay |
 | Toplam İş Gücü | 36 Adam/Ay |
@@ -198,11 +198,11 @@ Talep edilen süre: **240 saat.** *Gerekçe:* Kişisel veri kurum dışına çı
 
 **Proje ekibi:** Proje yöneticisi; bir kıdemli yazılım geliştirici (hesap çekirdeği, kural katmanı ve mutabakat motoru); bir yapay zekâ/doğal dil işleme mühendisi (İP5 iş paketinin yöneticisi; denetim verisi üretim hattı, denetçi rolündeki modelin ince ayarı ve değerlendirme düzeneği); bir analiz ve test-altyapı uzmanı (belge yapılarının ve mutabakat vakalarının analizi, çapa/regresyon test altyapısı, imzalı güncelleme ve kapalı devre kurulum doğrulaması). Arayüz geliştirme kıdemli geliştirici tarafından üstlenilecektir (4 kişi, ortalama 3 tam zaman eşdeğeri; efor dağılımı **EK-4**). Mevzuat doğrulaması YMM'den hizmet alımıyla sağlanacaktır. Firmamız 2013'ten bu yana 5746 süreçleri alanında sanayi kuruluşlarına yazılım geliştirmekte olup projenin çekirdek hesap motoru bu birikimle üretilmiş ve gerçek dönem verisiyle iç doğrulaması tamamlanmıştır — projenin en riskli görünen bileşeni fiilen çalışır durumdadır. Riskli olan kısım motorun kendisi değil, etrafına kurulacak zaman-farkındalıklı kural katmanı ve kök-neden teşhis çerçevesidir.
 
-**Bütçe kırılımı (10.200.000 ₺):**
+**Bütçe kırılımı (6.600.000 ₺):**
 
 | Kalem | Tutar (₺) |
 |---|---|
-| Personel — 36 adam/ay × 230.000 ₺ (brüt + işveren maliyeti + genel gider payı; kırılım ve dayanak: **EK-3**) | 8.280.000 |
+| Personel — 36 adam/ay × 130.000 ₺ (brüt + işveren maliyeti + genel gider payı; kırılım ve dayanak: **EK-3**) | 4.680.000 |
 | Dış hizmet — YMM (5746 ve 4691 kural setlerinin madde madde teyidi, geçmiş parametre tablosu teyidi, iki pilotta mutabakat denetimi) ve geriye dönük düzeltme pencerelerine ilişkin yazılı hukuk görüşü | 550.000 |
 | Donanım — 3 geliştirici iş istasyonu + 2 referans test bilgisayarı | 300.000 |
 | Yazılım lisansları, kod imzalama sertifikası ve çevrimdışı güncelleme imza altyapısı, test araçları | 200.000 |
@@ -282,6 +282,6 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 ### Portala Aktarım Öncesi Düzeltilecek Kayıtlar *(bu bölüm forma aktarılmaz)*
 
 1. "Projenin Sektörü" alanı portalda **"Ambalaj"** görünmektedir → **"Yazılım"** olarak düzeltilmelidir.
-2. Kimlik alanlarındaki süre/bütçe/iş gücü değerleri sıfır görünmektedir → 12 ay, 10.200.000 ₺, 28 + 8 = 36 adam/ay olarak girilmelidir.
+2. Kimlik alanlarındaki süre/bütçe/iş gücü değerleri sıfır görünmektedir → 12 ay, 6.600.000 ₺, 28 + 8 = 36 adam/ay olarak girilmelidir.
 3. "Toplam Personel: 2" ve "Kiralanan Alan: 10 m²" kayıtları proje ekibiyle (4 kişi) çelişmektedir → personel kaydı güncellenmeli, alan ihtiyacı gözden geçirilmelidir. Hakem heyetinin ilk bakacağı tutarlılık noktalarındandır.
 4. Rekabet analizinde atıf yapılan "incelenen ürün listesi" eki hazırlanmalıdır (ürün adları, inceleme tarihi, kaynak bağlantıları).
