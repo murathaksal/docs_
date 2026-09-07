@@ -13,6 +13,7 @@
 | Proje Kodu | ARGELOG-002 |
 | Proje Yöneticisi | Murat Haksal |
 | Proje Süresi | 12 Ay |
+| Proje Başlangıç / Tahmini Bitiş Tarihi | 26.10.2026 / 25.10.2027 *(portal kaydına göre; ay numaraları bu başlangıca göredir: ay 7 = Nisan 2027, ay 10 = Temmuz 2027, ay 12 = Ekim 2027)* |
 | Tahmini Proje Bütçesi | 7.000.000,00 ₺ |
 | Ar-Ge İş Gücü | 31 Adam/Ay |
 | Destek/Geliştirme İş Gücü | 8 Adam/Ay |
@@ -90,6 +91,7 @@ Proje kapsamı bilinçli olarak **tek mevzuat ailesiyle**, yani 5746 (Ar-Ge ve T
 - ☑ Yeni Bir Ürün veya Hizmet Üretilmesi
 - ☑ Verimliliği Artıran Yeni Ürün / Süreç Geliştirmesi
 - ☑ Ülke bazında teknolojik olarak yeni ürün üretim süreci
+- ☑ Yeni teknoloji geliştirme *(denetçi rolündeki nöro-sembolik model ve deterministik referansla veri üretim yöntemi)*
 - ☑ Yeni teknolojinin ülke koşullarına uyarlanması
 
 ## Ar-Ge Yönü
@@ -139,11 +141,13 @@ Bu unsurların ayrı ayrı değil **bir arada** bulunması, kamuya açık ürün
 ## Proje Ortaklığı
 
 - ☑ Üniversite işbirliği ile yürütülen proje *(İstanbul Medeniyet Üniversitesi öğretim üyelerinden Teknoloji Transfer Ofisi aracılığıyla yapay zekâ, makine öğrenmesi ve doğal dil işleme alanında akademik danışmanlık talep edilecektir: nöro-sembolik denetçi mimarisinin, deterministik referansla veri üretim hattının ve değerlendirme düzeneğinin yöntemsel değerlendirilmesi)*
-- ☑ Farklı ildeki firmaların işbirliği ile yürütülen proje *(saha pilotu yürütülecek sanayi kuruluşları)*
+- ☑ Aynı ildeki firmaların işbirliği ile yürütülen proje *(Tüpraş; saha pilotu)*
+- ☑ Farklı ildeki firmaların işbirliği ile yürütülen proje *(Kale Seramik; saha pilotu)*
+- ☑ TTO işbirliği ile yürütülen proje *(akademisyen danışmanlığı ve proje değerlendirme)*
 
 ## Proje Kapsamında Teknoparktan Talep Edilen Hizmetler
 
-- **Danışmanlık Hizmetleri:** MUAFİYET UYGULAMALARI; AR-GE PROJE TEKLİF DOSYASININ HAZIRLANMASI; PATENT; MARKA TESCİL
+- **Danışmanlık Hizmetleri:** TEKNOLOJİ TRANSFERİ; PAZARLAMA; PATENT; MARKA TESCİL; MUAFİYET UYGULAMALARI *(KDV istisnası ve 4691 muafiyetleri)*
 - **Teknik Hizmetler:** EĞİTİM; İNTERNET SERVİSLERİ
 
 ## Proje Kapsamında TTO'dan Talep Edilen Hizmetler
@@ -164,7 +168,7 @@ Proje, bölge firmalarıyla üç biçimde etkileşim öngörmektedir:
 ## Finansman Kaynakları
 
 - ☑ Öz Sermaye *(birincil)*
-- ☑ Kamu Destekleri *(TÜBİTAK-TEYDEB başvurusu değerlendirilmektedir; başvuru yapılması hâlinde 4691 muafiyetleriyle mükerrer destek kurallarına göre kalem ayrıştırması yapılacaktır)*
+- ☐ Kamu Destekleri *(bu başvuruda işaretlenmemiştir; ileride TÜBİTAK-TEYDEB başvurusu yapılması hâlinde 4691 muafiyetleriyle mükerrer destek kurallarına göre kalem ayrıştırması yapılacaktır)*
 
 ## Proje Ar-Ge Aşamaları
 
@@ -281,9 +285,6 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 
 ---
 
-### Portala Aktarım Öncesi Düzeltilecek Kayıtlar *(bu bölüm forma aktarılmaz)*
+### Portala Aktarım Durumu *(bu bölüm forma aktarılmaz)*
 
-1. "Projenin Sektörü" alanı portalda **"Ambalaj"** görünmektedir → **"Yazılım"** olarak düzeltilmelidir.
-2. Kimlik alanlarındaki süre/bütçe/iş gücü değerleri sıfır görünmektedir → 12 ay, 7.000.000 ₺, 31 + 8 = 39 adam/ay olarak girilmelidir.
-3. "Toplam Personel: 2" ve "Kiralanan Alan: 10 m²" kayıtları proje ekibiyle (4 kişi) çelişmektedir → personel kaydı güncellenmeli, alan ihtiyacı gözden geçirilmelidir. Hakem heyetinin ilk bakacağı tutarlılık noktalarındandır.
-4. Rekabet analizinde atıf yapılan "incelenen ürün listesi" eki hazırlanmalıdır (ürün adları, inceleme tarihi, kaynak bağlantıları).
+Portal çıktısı (07.09.2026 16:32) ile bu belge karşılaştırılmıştır. Metin alanlarının çoğu (Proje Özeti, Kazanımlar, Ar-Ge Yönü, Yenilikçi Yön, Proje Detayı) portala aktarılmış ve bu belgeyle birebir uyumludur. Boş kalan alanlar ve girilecek değerler `portal-doldurma-kontrol-listesi.md` dosyasında alan alan verilmiştir. Kalan tutarsızlıklar: "Toplam Personel: 2" ve "Kiralanan Alan: 10 m²" kayıtları 4 kişilik ekiple çelişmektedir; personel kaydı 4 olarak güncellenmeli, alan ihtiyacı (kişi başına 2,5 m²'ye düşer) gözden geçirilmelidir.

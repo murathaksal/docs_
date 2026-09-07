@@ -16,6 +16,7 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 
 | Ek | İçerik |
 |---|---|
+| [`portal-doldurma-kontrol-listesi.md`](portal-doldurma-kontrol-listesi.md) | Portal çıktısı (07.09.2026) ile form karşılaştırması: boş alanlar ve girilecek değerler, portal/form farkları ve kararlar, tutarlılık kontrolleri |
 | [`ek-1-rekabet-analizi-urun-listesi.md`](ek-1-rekabet-analizi-urun-listesi.md) | İncelenen ürün listesi, tarama yöntemi ve üç ölçütlü karşılaştırma tablosu |
 | [`ek-2-niyet-mektubu-sablonu.md`](ek-2-niyet-mektubu-sablonu.md) | Pilot kuruluşlar için niyet mektubu (LOI) şablonu ve toplama kontrol listesi |
 | [`ek-3-personel-maliyet-dayanagi.md`](ek-3-personel-maliyet-dayanagi.md) | Personel birim maliyeti kırılımı ve dayanağı *(tutarlar firma verisiyle doldurulacak)* |
@@ -45,9 +46,9 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 
 ## Başvuru öncesi yapılacaklar
 
-1. Portalda "Projenin Sektörü" alanını **"Ambalaj" → "Yazılım"** olarak düzelt.
-2. Kimlik alanlarını gir: **12 ay**, 7.000.000 ₺, 31 + 8 = 39 adam/ay.
-3. "Toplam Personel: 2" kaydını proje ekibiyle (4 kişi) uyumlu hâle getir; alan ihtiyacını gözden geçir.
+1. ~~Portalda "Projenin Sektörü" alanını düzelt~~ (yapıldı: Yazılım).
+2. Portaldaki boş alanları `portal-doldurma-kontrol-listesi.md` bölüm A'ya göre doldur: proje yöneticisi, bütçe 7.000.000 ₺, 31 + 8 = 39 adam/ay, bitiş tarihi, anahtar kelimeler, THS açıklamaları, etkileşim firmaları, bölge dışı 240 saat, Proje Çıktıları'nın tamamı, FSMH/ürün/ekipman tabloları.
+3. Portal/form farklarını bölüm B'ye göre kapat: Kendi Firmamız, Yeni teknoloji geliştirme, Prototip Geliştirme, Patent "Var", ek danışmanlık hizmetleri; Tüpraş'ın "aynı il" kaydını pilot sahasına göre teyit et. "Toplam Personel: 2" kaydını 4 yap; alan ihtiyacını gözden geçir.
 4. **EK-3'teki tutarları** firmanın güncel bordro ve genel gider verileriyle doldur (yer tutucular boş bırakılamaz).
 5. **EK-2 şablonunu** iki pilot kuruluşa gönder ve imzalı niyet mektuplarını topla; kurumsal imza süreci 2-4 hafta sürdüğü için başvurudan en az bir ay önce başlat.
 6. **EK-1'i** sunum öncesi bir kez daha gözden geçir (ürün siteleri değişmiş olabilir).
