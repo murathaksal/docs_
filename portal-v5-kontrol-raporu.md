@@ -50,6 +50,18 @@ Portaldaki İş Paketleri tablosu, ekip paragrafı ve bütçe kırılımı **bir
 
 Güncel metin `denetci-proje-bilgi-formu.md` dosyasının **"Proje Detayı"** başlığı altındadır ve şunları içerir: İP toplamı 39 (31 Ar-Ge + 8), İP4 9, İP5 10 adam/ay; ekip paragrafında "tam zamanlı yapay zekâ/doğal dil işleme mühendisi" ve "ortalama 3,25 tam zaman eşdeğeri"; bütçe kırılımı 7.000.000 ₺ ve portal kategorileriyle eşleşen dokuz satır. **Bu bölümün tamamı silinip güncel metin yeniden yapıştırılmalıdır.**
 
+### A3b. Proje Adı: uzun ad yazılmalı
+
+Kimlik alanındaki ad yalnızca "Denetci.AI"dır. Proje adının, projenin ne yaptığını ve yapay zekâ niteliğini tek satırda gösteren uzun biçimiyle yazılması kararlaştırılmıştır:
+
+> **Denetci.AI: Ar-Ge Teşvik Beyanlarının Bağımsız Denetimi İçin Denetçi Rolünde Yerel Yapay Zekâ Sistemi**
+
+Portal bu alanda karakter sınırı uygularsa kısa biçim kullanılır:
+
+> **Denetci.AI: Denetçi Rolünde Yerel Yapay Zekâ ile Ar-Ge Teşvik Beyanı Denetimi**
+
+Ad değiştiğinde başvuru üst yazısı ("... isimli projemizi 4691 sayılı kanun kapsamında...") ve Fikri Sınai Haklar tablosundaki marka satırı da aynı yazımı gösterir. Marka tescil başvurusu kısa ad olan "Denetci.AI" için yapılır; uzun ad tanımlayıcı bir alt başlıktır, marka değildir.
+
 ### A4. Anahtar Kelimeler: fazla kısa
 
 Girilen: "5746, 4691, Mevzuata Uyum, Yapay Zeka Denetim". Bu dört kelime projenin yapay zekâ yönünü hakeme göstermez. Önerilen tam liste (formdaki "Anahtar Kelimeler" başlığı):

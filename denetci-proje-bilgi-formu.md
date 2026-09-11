@@ -280,7 +280,7 @@ Projenin iddiası kategori boşluğu değil, özellik bileşimidir: incelenen ü
 
 | Başvuru/Yayın Numarası | Belge Adı | Koruma Tipi |
 |---|---|---|
-| *(planlanan)* | "Denetci.AI" marka tescil başvurusu | Marka |
+| *(planlanan)* | "Denetci.AI" marka tescil başvurusu *(uzun proje adındaki tanımlayıcı alt başlık marka kapsamında değildir)* | Marka |
 | *(değerlendirilecek)* | Deterministik motor çıktısından denetim verisi üretimi ve sembolik doğrulama kapısıyla kapatılan denetçi model döngüsü yöntemi | Patent (ön değerlendirme ay 9) |
 | *(değerlendirilecek)* | Üç eksenli yürürlük tarihli kural sürümleme yöntemi | Patent (ön değerlendirme ay 9) |
 

@@ -10,6 +10,7 @@
 
 | Portal alanı | Mevcut | Girilecek değer |
 |---|---|---|
+| Proje Adı | Denetci.AI | **Denetci.AI: Ar-Ge Teşvik Beyanlarının Bağımsız Denetimi İçin Denetçi Rolünde Yerel Yapay Zekâ Sistemi** (kısıt varsa: Denetci.AI: Denetçi Rolünde Yerel Yapay Zekâ ile Ar-Ge Teşvik Beyanı Denetimi) |
 | Proje Yöneticisi | boş | Murat Haksal |
 | Tahmini Proje Bütçesi | 0,00 ₺ | 7.000.000,00 ₺ |
 | Ar-Ge İş Gücü | 0 | 31 Adam/Ay |
@@ -120,7 +121,7 @@ Daha önce alınmış destek varsa (TÜBİTAK, KOSGEB vb.) kurum adı, destek ti
 | Ar-Ge Aşamaları: Prototip Geliştirme | işaretsiz | işaretli | Portalda **işaretlenmeli**; hedef THS 7 prototipin gerçek ortamda denenmesidir. |
 | Ar-Ge Aşamaları: Prototip ile ilişkili Sınai Mühendislik | işaretli | yoktu | Yazılım projesinde sınai mühendislik kalemi hakem için açıklama gerektirir; **işaretin kaldırılması** önerilir. |
 | Patent Çıktısı | Yok | Var | Portalda **Var** seçilmeli (bkz. A4). |
-| Proje adı | "Denetci.AI" | "Denetci.AI: … Yerel Yapay Zekâ Sistemi" | Portalda kısa ad yeterlidir; uzun ad Proje Özeti'nin ilk cümlesinde zaten geçmektedir. Değişiklik gerekmez. |
+| Proje adı | "Denetci.AI" | Uzun ad | Portalda **uzun ad** yazılacaktır: "Denetci.AI: Ar-Ge Teşvik Beyanlarının Bağımsız Denetimi İçin Denetçi Rolünde Yerel Yapay Zekâ Sistemi". Alan karakter sınırı nedeniyle kabul etmezse kısa biçim kullanılır: "Denetci.AI: Denetçi Rolünde Yerel Yapay Zekâ ile Ar-Ge Teşvik Beyanı Denetimi". |
 
 ---
 
