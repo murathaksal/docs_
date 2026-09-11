@@ -9,7 +9,7 @@
 | Alan | Değer |
 |---|---|
 | Firma Unvanı | ARGELOG ARGE MERKEZİ YÖNETİM DANIŞMANLIĞI VE YAZILIM HİZMETLERİ A.Ş. |
-| Proje Adı | **Denetci.AI**: Ar-Ge Teşvik Beyanlarının Bağımsız Denetimi İçin Denetçi Rolünde Yerel Yapay Zekâ Sistemi |
+| Proje Adı | **Denetci.AI**: Denetçi Rolünde Nöro-Sembolik Yerel Yapay Zekâ |
 | Proje Kodu | ARGELOG-002 |
 | Proje Yöneticisi | Murat Haksal |
 | Proje Süresi | 12 Ay |
