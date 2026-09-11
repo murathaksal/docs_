@@ -40,6 +40,8 @@ Formdaki **"Teknoparkta Etkileşimde Bulunulan/Bulunulabilecek Firmalar"** başl
 
 ### A4. Proje Çıktılarına Yönelik Bilgiler (sayfa 10-11, tamamı boş)
 
+*Ekonomik Değeri, Alınacak Dış Hizmetler, Projenin Müşterisi, Hedef Pazar ve Rekabet Analizi alanları için, portalın yönlendirme metinlerine göre genişletilmiş ve karakter sınırı denetlenmiş metinler `portal-ekonomik-deger-metinleri.md` dosyasındadır; oradan yapıştırılır.*
+
 | Portal alanı | Girilecek değer |
 |---|---|
 | Proje Çıktılarında Kullanılacak Sektör | İmalat sanayii Ar-Ge/Tasarım Merkezleri (otomotiv, beyaz eşya, seramik, kimya, enerji, elektronik dâhil); teknoloji geliştirme bölgesi firmaları; mali müşavirlik ve denetim hizmetleri |
