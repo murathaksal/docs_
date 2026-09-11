@@ -16,6 +16,7 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 
 | Ek | İçerik |
 |---|---|
+| [`portal-v5-kontrol-raporu.md`](portal-v5-kontrol-raporu.md) | 11.09.2026 portal çıktısının kontrolü: hatalı girilen alanlar, boş kalanlar ve belge içi çelişkiler |
 | [`portal-doldurma-kontrol-listesi.md`](portal-doldurma-kontrol-listesi.md) | Portal çıktısı (07.09.2026) ile form karşılaştırması: boş alanlar ve girilecek değerler, portal/form farkları ve kararlar, tutarlılık kontrolleri |
 | [`portal-ekonomik-deger-metinleri.md`](portal-ekonomik-deger-metinleri.md) | Portalın "Ekonomik Değer Bilgileri" bölümündeki beş alan için yapıştırmaya hazır, karakter sınırı denetlenmiş metinler (pazar büyüklüğü Bakanlık istatistiklerine referanslı) |
 | [`ek-1-rekabet-analizi-urun-listesi.md`](ek-1-rekabet-analizi-urun-listesi.md) | İncelenen ürün listesi, tarama yöntemi ve üç ölçütlü karşılaştırma tablosu |
