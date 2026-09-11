@@ -14,7 +14,7 @@
 
 **İSTANBUL MEDENİYET ÜNİVERSİTESİ TEKNOPARK A.Ş. GENEL MÜDÜRLÜĞÜ'NE**
 
-**Konu:** ARGELOG A.Ş. tarafından yürütülecek "Denetci" projesine ilişkin niyet beyanımız
+**Konu:** ARGELOG A.Ş. tarafından yürütülecek "Denetci.AI" projesine ilişkin niyet beyanımız
 
 Kuruluşumuz [KURULUŞ TAM UNVANI], 5746 sayılı Kanun kapsamında [Ar-Ge Merkezi / Tasarım Merkezi] belgesine sahip olup, [personel sayısı] Ar-Ge personeliyle faaliyet göstermektedir.
 
@@ -24,7 +24,7 @@ Ar-Ge teşvik hesaplamalarımız ve bu hesapların denetim süreçlerinde belgel
 - Denetim süreçlerinde, beyan edilen her tutarın hangi mevzuat maddesine ve hangi hesap yöntemine dayandığının belgelenebilmesi,
 - Bordro ve personel verilerimizin kuruluşumuz dışına aktarılmadan işlenebilmesi.
 
-ARGELOG A.Ş. tarafından geliştirilmekte olan **Denetci** projesinin bu ihtiyaçlara yönelik olduğunu değerlendiriyor ve projenin saha doğrulama aşamasında **ücretli pilot uygulamaya katılmaya niyetli olduğumuzu** beyan ederiz. Pilot kapsamında, ilgili gizlilik ve kişisel verilerin korunmasına ilişkin sözleşmelerin imzalanması koşuluyla, [12 / 24] dönemlik geçmiş verimizin kuruluşumuz bünyesinde işlenmesine ve sonuçların mali müşavirimiz eşliğinde değerlendirilmesine açığız.
+ARGELOG A.Ş. tarafından geliştirilmekte olan **Denetci.AI** projesinin bu ihtiyaçlara yönelik olduğunu değerlendiriyor ve projenin saha doğrulama aşamasında **ücretli pilot uygulamaya katılmaya niyetli olduğumuzu** beyan ederiz. Pilot kapsamında, ilgili gizlilik ve kişisel verilerin korunmasına ilişkin sözleşmelerin imzalanması koşuluyla, [12 / 24] dönemlik geçmiş verimizin kuruluşumuz bünyesinde işlenmesine ve sonuçların mali müşavirimiz eşliğinde değerlendirilmesine açığız.
 
 İşbu niyet mektubu bağlayıcı bir satın alma taahhüdü niteliğinde olmayıp, projeye duyduğumuz ilgiyi ve pilot uygulamaya katılım niyetimizi ifade etmektedir.
 

@@ -83,7 +83,7 @@ Notlar:
 
 | Başvuru/Yayın Numarası | Belge Adı | Koruma Tipi |
 |---|---|---|
-| (planlanan) | "Denetci" marka tescil başvurusu | Marka |
+| (planlanan) | "Denetci.AI" marka tescil başvurusu | Marka |
 | (değerlendirilecek) | Deterministik motor çıktısından denetim verisi üretimi ve sembolik doğrulama kapısıyla kapatılan denetçi model döngüsü yöntemi | Patent (ön değerlendirme ay 9) |
 | (değerlendirilecek) | Üç eksenli yürürlük tarihli kural sürümleme yöntemi | Patent (ön değerlendirme ay 9) |
 
@@ -95,7 +95,7 @@ Daha önce alınmış destek varsa (TÜBİTAK, KOSGEB vb.) kurum adı, destek ti
 
 | Ürün Adı | Ürün Tipi |
 |---|---|
-| Denetci Masaüstü: 5746 ve 4691 kural setleriyle cari dönem bağımsız kontrol hesabı, mevzuat maddesi atıflı raporlama, 12 aylık teşvik projeksiyonu; geçmiş beyan mutabakatı, kök-neden teşhisi, denetçi rolündeki yerel yapay zekâ bileşeni, mühürlü baz ve denetim savunma dosyası | Yazılım (masaüstü uygulama, yerel yapay zekâ bileşenli) |
+| Denetci.AI Masaüstü: 5746 ve 4691 kural setleriyle cari dönem bağımsız kontrol hesabı, mevzuat maddesi atıflı raporlama, 12 aylık teşvik projeksiyonu; geçmiş beyan mutabakatı, kök-neden teşhisi, denetçi rolündeki yerel yapay zekâ bileşeni, mühürlü baz ve denetim savunma dosyası | Yazılım (masaüstü uygulama, yerel yapay zekâ bileşenli) |
 | Mevzuat güncelleme aboneliği: elektronik imzalı çevrimdışı kural ve model paketleriyle dağıtım | Hizmet (abonelik) |
 | Geçmiş dönem mutabakat hizmeti: 12-24 dönemlik retroaktif yeniden hesap ve YMM eşliğinde kapanış raporu | Hizmet (proje bazlı) |
 
@@ -120,13 +120,13 @@ Daha önce alınmış destek varsa (TÜBİTAK, KOSGEB vb.) kurum adı, destek ti
 | Ar-Ge Aşamaları: Prototip Geliştirme | işaretsiz | işaretli | Portalda **işaretlenmeli**; hedef THS 7 prototipin gerçek ortamda denenmesidir. |
 | Ar-Ge Aşamaları: Prototip ile ilişkili Sınai Mühendislik | işaretli | yoktu | Yazılım projesinde sınai mühendislik kalemi hakem için açıklama gerektirir; **işaretin kaldırılması** önerilir. |
 | Patent Çıktısı | Yok | Var | Portalda **Var** seçilmeli (bkz. A4). |
-| Proje adı | "Denetci" | "Denetci: … Yerel Yapay Zekâ Sistemi" | Portalda kısa ad yeterlidir; uzun ad Proje Özeti'nin ilk cümlesinde zaten geçmektedir. Değişiklik gerekmez. |
+| Proje adı | "Denetci.AI" | "Denetci.AI: … Yerel Yapay Zekâ Sistemi" | Portalda kısa ad yeterlidir; uzun ad Proje Özeti'nin ilk cümlesinde zaten geçmektedir. Değişiklik gerekmez. |
 
 ---
 
 ## C. Hakem heyetinin ilk bakacağı tutarlılık noktaları
 
-1. **Proje adı:** Portalın bütçe ekranında proje adı **"Denetci.AI"** görünmektedir; Proje Bilgi Formu çıktısında ve hazırladığımız belgelerde ad **"Denetci"**dir. İki kayıt aynı olmalıdır. "Denetci.AI" tercih edilirse marka tescil başvurusu da bu adla yapılmalı ve belgelerdeki ad güncellenmelidir.
+1. **Proje adı:** Portalın bütçe ekranında proje adı **"Denetci.AI"** görünmektedir; Proje Bilgi Formu çıktısında ve hazırladığımız belgelerde ad **"Denetci.AI"**dir. İki kayıt aynı olmalıdır. "Denetci.AI" tercih edilirse marka tescil başvurusu da bu adla yapılmalı ve belgelerdeki ad güncellenmelidir.
 2. **Bütçe deneme satırları:** Bütçe ekranındaki iki `test` satırı silinmeden başvuru gönderilmemelidir.
 3. **Personel ve iş gücü:** Toplam Personel 4, iş gücü 39 adam/ay (ortalama 3,25 TZE). Portaldaki "2 personel" kaydı bu beyanla çelişir; mutlaka güncellenmelidir.
 4. **Kiralanan alan:** 10 m² ile 4 kişi, kişi başına 2,5 m² demektir. Ekip aynı anda bölgede bulunmayacaksa (proje yöneticisi yarı zamanlı, saha pilotları bölge dışında) bu durum "Bölge Dışı Görevlendirme" gerekçesinde ve gerekirse bölge yönetimine yazılı olarak açıklanmalı; aksi hâlde alan büyütülmelidir.

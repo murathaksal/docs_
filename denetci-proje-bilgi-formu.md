@@ -1,4 +1,4 @@
-# PROJE BİLGİ FORMU: Denetci
+# PROJE BİLGİ FORMU: Denetci.AI
 
 *İstanbul Medeniyet Üniversitesi Teknopark A.Ş. Proje Bilgi Formu (Döküman No: A-R-01224) başlıklarına göre doldurulmuştur. Hakem heyeti ve teknopark yönetimi diline uygun yazılmış; kısaltmalar ilk kullanımda açılmış, mutlak nitelikli rekabet iddialarından kaçınılmış, her sayısal hedef metrik tanımı, test seti ve ölçüm ayı üçlüsüne bağlanmıştır.*
 
@@ -9,7 +9,7 @@
 | Alan | Değer |
 |---|---|
 | Firma Unvanı | ARGELOG ARGE MERKEZİ YÖNETİM DANIŞMANLIĞI VE YAZILIM HİZMETLERİ A.Ş. |
-| Proje Adı | **Denetci**: Ar-Ge Teşvik Beyanlarının Bağımsız Denetimi İçin Denetçi Rolünde Yerel Yapay Zekâ Sistemi |
+| Proje Adı | **Denetci.AI**: Ar-Ge Teşvik Beyanlarının Bağımsız Denetimi İçin Denetçi Rolünde Yerel Yapay Zekâ Sistemi |
 | Proje Kodu | ARGELOG-002 |
 | Proje Yöneticisi | Murat Haksal |
 | Proje Süresi | 12 Ay |
@@ -35,9 +35,9 @@ Nöro-sembolik yapay zekâ; denetçi rolünde dar kapsamlı dil modeli; determin
 
 ## Proje Özeti
 
-**Denetci, bir Ar-Ge/Tasarım Merkezinin veya teknoloji geliştirme bölgesi firmasının geçmiş ve cari dönem teşvik/istisna beyanlarını, mevzuatın o tarihte yürürlükte olan hâliyle bağımsız olarak yeniden hesaplayan deterministik bir motor ile bu motorun bulgularını bir denetçi gibi inceleyen, sorgulayan ve kanıt isteyen yerel bir dil modelini tek sistemde birleştiren nöro-sembolik yapay zekâ sistemidir. Sistem, beyan ile hesap arasındaki her farkı tutar ve kök nedeniyle raporlar; mutabık kalınan dönemleri insan onayıyla mühürler; her rakamı mevzuat maddesine bağlı denetim savunma dosyasına dönüştürür ve bordro verisi kurum dışına hiç çıkmadan, grafik işlemcisiz sıradan bir bilgisayarda çalışır.**
+**Denetci.AI, bir Ar-Ge/Tasarım Merkezinin veya teknoloji geliştirme bölgesi firmasının geçmiş ve cari dönem teşvik/istisna beyanlarını, mevzuatın o tarihte yürürlükte olan hâliyle bağımsız olarak yeniden hesaplayan deterministik bir motor ile bu motorun bulgularını bir denetçi gibi inceleyen, sorgulayan ve kanıt isteyen yerel bir dil modelini tek sistemde birleştiren nöro-sembolik yapay zekâ sistemidir. Sistem, beyan ile hesap arasındaki her farkı tutar ve kök nedeniyle raporlar; mutabık kalınan dönemleri insan onayıyla mühürler; her rakamı mevzuat maddesine bağlı denetim savunma dosyasına dönüştürür ve bordro verisi kurum dışına hiç çıkmadan, grafik işlemcisiz sıradan bir bilgisayarda çalışır.**
 
-5746 sayılı Araştırma, Geliştirme ve Tasarım Faaliyetlerinin Desteklenmesi Hakkında Kanun kapsamındaki 1.300'ü aşkın Ar-Ge ve Tasarım Merkezi ile 4691 sayılı Teknoloji Geliştirme Bölgeleri Kanunu kapsamındaki firmalar; her ay bordroyla iç içe geçen teşvik ve istisna hesaplamaları yapmak, yıllık raporlama sunmak ve düzenli aralıklarla denetlenmek yükümlülüğündedir. Bu hesaplar bugün ağırlıkla elektronik tablolar ve dönemsel mali müşavirlik hizmetiyle yürütülmektedir. Elektronik tablo bugünün oranlarıyla üzerine yazıldığı için, denetimde üç yıl önceki bir rakamın hangi mevzuat sürümüyle nasıl kurulduğunu gösteren bir kayıt bulunmamaktadır. Daha önemlisi, bir fark bulunduğunda onun ne anlama geldiğini yorumlamak, doğru soruyu sormak ve hangi belgeye bakılacağını belirlemek tamamen uzman emeğine bağlıdır; bu emek kıt, pahalı ve ölçeklenemezdir.
+5746 sayılı Araştırma, Geliştirme ve Tasarım Faaliyetlerinin Desteklenmesi Hakkında Kanun kapsamındaki 1.700'ü aşkın Ar-Ge ve Tasarım Merkezi ile 4691 sayılı Teknoloji Geliştirme Bölgeleri Kanunu kapsamındaki firmalar; her ay bordroyla iç içe geçen teşvik ve istisna hesaplamaları yapmak, yıllık raporlama sunmak ve düzenli aralıklarla denetlenmek yükümlülüğündedir. Bu hesaplar bugün ağırlıkla elektronik tablolar ve dönemsel mali müşavirlik hizmetiyle yürütülmektedir. Elektronik tablo bugünün oranlarıyla üzerine yazıldığı için, denetimde üç yıl önceki bir rakamın hangi mevzuat sürümüyle nasıl kurulduğunu gösteren bir kayıt bulunmamaktadır. Daha önemlisi, bir fark bulunduğunda onun ne anlama geldiğini yorumlamak, doğru soruyu sormak ve hangi belgeye bakılacağını belirlemek tamamen uzman emeğine bağlıdır; bu emek kıt, pahalı ve ölçeklenemezdir.
 
 Projenin çözdüğü sorun iki katmanlıdır. Birinci katman, bordronun ürettiği hesabın yerine geçmek değil, **aynı hesabın bağımsız olarak yeniden kurulabilmesidir.** Bu yetenek iki yönde birden çalışır:
 
@@ -226,7 +226,7 @@ Talep edilen süre: **240 saat.** *Gerekçe:* Kişisel veri kurum dışına çı
 
 **Proje Çıktılarında Kullanılacak Sektör:** İmalat sanayii Ar-Ge/Tasarım Merkezleri (otomotiv, beyaz eşya, seramik, kimya, elektronik dâhil); teknoloji geliştirme bölgesi firmaları; mali müşavirlik ve denetim hizmetleri.
 
-**Patent Çıktısı Var Mı:** Var *(hedeflenmektedir)*. Deterministik bir motorun çıktısından denetim verisi üretilerek denetçi rolündeki bir modelin eğitilmesi ve sembolik doğrulama kapısıyla kapatılan inceleme döngüsü yöntemi ile üç eksenli yürürlük tarihli kural sürümleme yöntemi için projenin 9. ayında patentlenebilirlik ön değerlendirmesi yapılacak; uygun bulunması hâlinde Türk Patent ve Marka Kurumu'na başvurulacaktır. "Denetci" markası için tescil başvurusu planlanmaktadır.
+**Patent Çıktısı Var Mı:** Var *(hedeflenmektedir)*. Deterministik bir motorun çıktısından denetim verisi üretilerek denetçi rolündeki bir modelin eğitilmesi ve sembolik doğrulama kapısıyla kapatılan inceleme döngüsü yöntemi ile üç eksenli yürürlük tarihli kural sürümleme yöntemi için projenin 9. ayında patentlenebilirlik ön değerlendirmesi yapılacak; uygun bulunması hâlinde Türk Patent ve Marka Kurumu'na başvurulacaktır. "Denetci.AI" markası için tescil başvurusu planlanmaktadır.
 
 **Çevreye Etkileri:** Ürünün grafik işlemci gerektirmeyen, mevcut kişisel bilgisayarlarda çalışan mimarisi, yapay zekâ kullanımının enerji ayak izini bulut tabanlı alternatiflere kıyasla önemli ölçüde düşürür ve ek donanım yatırımı ile elektronik atık oluşturmaz.
 
@@ -280,7 +280,7 @@ Projenin iddiası kategori boşluğu değil, özellik bileşimidir: incelenen ü
 
 | Başvuru/Yayın Numarası | Belge Adı | Koruma Tipi |
 |---|---|---|
-| *(planlanan)* | "Denetci" marka tescil başvurusu | Marka |
+| *(planlanan)* | "Denetci.AI" marka tescil başvurusu | Marka |
 | *(değerlendirilecek)* | Deterministik motor çıktısından denetim verisi üretimi ve sembolik doğrulama kapısıyla kapatılan denetçi model döngüsü yöntemi | Patent (ön değerlendirme ay 9) |
 | *(değerlendirilecek)* | Üç eksenli yürürlük tarihli kural sürümleme yöntemi | Patent (ön değerlendirme ay 9) |
 
@@ -296,7 +296,7 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 
 | Ürün Adı | Ürün Tipi |
 |---|---|
-| Denetci Masaüstü: 5746 ve 4691 kural setleriyle **cari dönem bağımsız kontrol hesabı** (her bordro döneminde, tahakkuk kesinleşmeden fark raporu), mevzuat maddesi atıflı raporlama, 12 aylık teşvik projeksiyonu; geçmiş beyan mutabakatı, kök-neden teşhisi, **denetçi rolündeki yerel yapay zekâ bileşeni** (bulgu yorumu, denetçi soruları, kanıt talebi), mühürlü baz ve denetim savunma dosyası yetenekleri personel kademesine göre açılır | Yazılım (masaüstü uygulama, yerel yapay zekâ bileşenli) |
+| Denetci.AI Masaüstü: 5746 ve 4691 kural setleriyle **cari dönem bağımsız kontrol hesabı** (her bordro döneminde, tahakkuk kesinleşmeden fark raporu), mevzuat maddesi atıflı raporlama, 12 aylık teşvik projeksiyonu; geçmiş beyan mutabakatı, kök-neden teşhisi, **denetçi rolündeki yerel yapay zekâ bileşeni** (bulgu yorumu, denetçi soruları, kanıt talebi), mühürlü baz ve denetim savunma dosyası yetenekleri personel kademesine göre açılır | Yazılım (masaüstü uygulama, yerel yapay zekâ bileşenli) |
 | Mevzuat güncelleme aboneliği: elektronik imzalı çevrimdışı kural paketleriyle dağıtım | Hizmet (abonelik) |
 | Geçmiş dönem mutabakat hizmeti: 12-24 dönemlik retroaktif yeniden hesap ve YMM eşliğinde kapanış raporu | Hizmet (proje bazlı) |
 

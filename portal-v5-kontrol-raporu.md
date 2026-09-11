@@ -1,6 +1,10 @@
-# Portal Form v5 Kontrol Raporu
+# Portal Form Kontrol Raporu (v5 ve v6)
 
-*11.09.2026 11:33 tarihli portal çıktısı (14 sayfa), `denetci-proje-bilgi-formu.md` ve eklerle karşılaştırılmıştır. Bulgular üç grupta verilmiştir: (A) hatalı girilmiş alanlar, (B) hâlâ boş alanlar, (C) belge içi çelişkiler. Her madde başlık ve içerik olarak yazılmıştır.*
+*11.09.2026 tarihli portal çıktılarının (v5 saat 11:33, v6 saat 11:46) `denetci-proje-bilgi-formu.md` ve eklerle karşılaştırılmasıdır. Bulgular üç grupta verilmiştir: (A) hatalı girilmiş alanlar, (B) hâlâ boş alanlar, (C) belge içi çelişkiler.*
+
+## v6'da kapatılan maddeler
+
+Proje adı Özet metninde "Denetci.AI" olarak düzeltildi. Hedef Kitle "Kendi Firmamız", Nitelikler "Yeni teknoloji geliştirme" ve Teknoparktan Talep "Muafiyet Uygulamaları" işaretlendi; "Sınai Mühendislik" işareti kaldırıldı. Proje Çıktılarında Kullanılacak Sektör, Çevreye Etkileri ve Sürdürülebilirlik alanları dolduruldu. Aşağıdaki maddeler v6 itibarıyla **hâlâ açıktır**.
 
 ---
 
@@ -58,13 +62,9 @@ Alan karakter sınırlıysa ilk sekiz kavram önceliklidir.
 
 | Başlık | Durum | Yapılacak |
 |---|---|---|
-| Hedef Kitle: Kendi Firmamız | işaretsiz | **İşaretlenmeli** (firmanın danışmanlık kolu ürünü kullanacak; "Projenin Müşterisi" metninde de yazılı) |
-| Projenin Nitelikleri: Yeni teknoloji geliştirme | işaretsiz | **İşaretlenmeli** (projenin Ar-Ge yönü yapay zekâ ağırlıklıdır) |
 | Ar-Ge Aşamaları: Prototip Geliştirme | işaretsiz | **İşaretlenmeli** (hedef THS 7 prototipin gerçek ortamda denenmesidir) |
-| Ar-Ge Aşamaları: Prototip ile İlişkili Sınai Mühendislik | işaretli | **Kaldırılmalı** (yazılım projesinde sınai mühendislik kalemi hakemden açıklama sorusu getirir) |
 | Teknoparktan Talep: PATENT | işaretsiz | **İşaretlenmeli** (patent ön değerlendirmesi bütçede ve FSMH tablosunda var) |
 | Teknoparktan Talep: MARKA TESCİL | işaretsiz | **İşaretlenmeli** ("Denetci.AI" marka başvurusu planlanıyor) |
-| Teknoparktan Talep: MUAFİYET UYGULAMALARI | işaretsiz | **İşaretlenmeli** (KDV istisnası değerlendirme talebi işaretli) |
 | Patent Çıktısı Var Mı | "Yok" | **"Var"** seçilmeli; açıklama metni formdaki "Patent Çıktısı Var Mı" paragrafıdır |
 
 ---
@@ -76,9 +76,6 @@ Alan karakter sınırlıysa ilk sekiz kavram önceliklidir.
 | B1 | İlişkili Sektörler (kimlik) | İmalat sanayii Ar-Ge/Tasarım Merkezleri; teknoloji geliştirme bölgesi firmaları; mali müşavirlik ve denetim hizmetleri |
 | B2 | Proje Tahmini Bitiş Tarihi | 25.10.2027 (başlangıç 26.10.2026 + 12 ay) |
 | B3 | Proje TGB Başlangıç Tarihi | Bölge yönetiminin onay tarihi; 26.10.2026 önerilir |
-| B4 | Proje Çıktılarında Kullanılacak Sektör | İmalat sanayii Ar-Ge/Tasarım Merkezleri (otomotiv, beyaz eşya, seramik, kimya, enerji, elektronik dâhil); teknoloji geliştirme bölgesi firmaları; mali müşavirlik ve denetim hizmetleri |
-| B5 | Çevreye Etkileri | Formdaki "Çevreye Etkileri" paragrafı |
-| B6 | Sürdürülebilirlik | Formdaki "Sürdürülebilirlik" paragrafı |
 | B7 | Fikri Sınai ve Mülkiyet Hakları tablosu | Üç satır: "Denetci.AI" marka başvurusu (Marka); denetim verisi üretimi ve doğrulama kapısı yöntemi (Patent, ön değerlendirme ay 9); üç eksenli kural sürümleme yöntemi (Patent, ön değerlendirme ay 9) |
 | B8 | Projeye Ait Ürünler tablosu | Üç satır: Denetci.AI Masaüstü (Yazılım); mevzuat ve model güncelleme aboneliği (Hizmet); geçmiş dönem mutabakat hizmeti (Hizmet). Tam metinler `portal-doldurma-kontrol-listesi.md` A7'de |
 | B9 | Proje Ekipman Listesi (sayfa 14) | İki satır: 3 adet geliştirici iş istasyonu; 2 adet referans test bilgisayarı (4 çekirdek, 16 GB bellek, grafik işlemcisiz). Bütçedeki Makina ve Teçhizat satırıyla tutarlı olmalıdır |
@@ -97,9 +94,9 @@ Alan karakter sınırlıysa ilk sekiz kavram önceliklidir.
 
 Üçü aynı olmalıdır. Teknik olarak 1-4 milyar sınıfı, 16 GB bellekli ve grafik işlemcisiz bir bilgisayarda bulgu başına 30 saniye hedefiyle tutarlıdır. 16 milyar parametreli bir model nicemlenmiş hâlde yaklaşık 9-10 GB bellek kaplar ve aynı donanımda bulgu başına birkaç dakikaya çıkar; bu durumda hem 16 GB bellek hem 30 saniye hedefi savunulamaz hâle gelir. **Öneri: her üç yerde 1-4 milyar kalsın.** Daha büyük model ısrar ediliyorsa üç metin, bellek hedefi (32 GB) ve süre hedefi (bulgu başına 2-3 dakika) birlikte değiştirilmelidir; bu, "sıradan bilgisayarda çalışır" iddiasını zayıflatır.
 
-### C2. Proje adı Özet metniyle uyumsuz
+### C2. Proje adı (v6'da kapatıldı, belgelerimizde güncellendi)
 
-Kimlik alanında ad **"Denetci.AI"**, Proje Özeti metni ise "**Denetci**, bir Ar-Ge/Tasarım Merkezinin..." diye başlıyor. Özet metnindeki ad "Denetci.AI" olarak düzeltilmeli; marka tescil satırı ve ürün adı da aynı yazımı kullanmalıdır. *(Bizim belgelerimizde de aynı güncellemeyi yapabiliriz; onay verirseniz tüm dosyalarda "Denetci.AI" yaparım.)*
+Kimlik alanı ve Proje Özeti artık "Denetci.AI" kullanıyor. Belgelerimizde de ad "Denetci.AI" olarak güncellenmiştir; FSMH tablosundaki marka satırı ve ürün adı aynı yazımı kullanır.
 
 ### C3. Proje Ekibi ile EK-3/EK-4 uyuşmuyor
 
@@ -111,7 +108,7 @@ Eklerdeki ekip: proje yöneticisi (6 adam/ay), kıdemli yazılım geliştirici (
 
 ### C4. Ar-Ge Merkezi sayısı iki yerde farklı
 
-Proje Özeti "1.300'ü aşkın Ar-Ge ve Tasarım Merkezi" diyor; Hedef Pazar metni Bakanlık istatistiğine dayanarak "1.373 Ar-Ge Merkezi ve 347 Tasarım Merkezi (toplam 1.720)" diyor. Özet metnindeki ifade **"1.700'ü aşkın Ar-Ge ve Tasarım Merkezi"** olarak düzeltilmelidir.
+Portaldaki Proje Özeti "1.300'ü aşkın Ar-Ge ve Tasarım Merkezi" diyor; Hedef Pazar metni Bakanlık istatistiğine dayanarak "1.373 Ar-Ge Merkezi ve 347 Tasarım Merkezi (toplam 1.720)" diyor. Belgemizde ifade **"1.700'ü aşkın Ar-Ge ve Tasarım Merkezi"** olarak düzeltilmiştir; Proje Özeti portalda yeniden yapıştırılırken bu düzeltme de gelecektir.
 
 ### C5. Niyet mektupları henüz ekli değil
 

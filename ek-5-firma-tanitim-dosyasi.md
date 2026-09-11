@@ -27,7 +27,7 @@ Argelog, 2013'ten bu yana sanayi kuruluşlarına inovasyon, teknoloji ve Ar-Ge y
 | Teknoloji Yönetimi | Teknolojik yetkinlik ve olgunluk analizi, teknoloji yol haritası |
 | İnovasyon Yönetimi | Fikir havuzu, iç girişimcilik, açık inovasyon süreçleri |
 
-**Bu projeyle ilişkisi:** Denetci projesinin başlangıç varlığı olan deterministik teşvik hesap çekirdeği, firmanın bu alandaki 13 yıllık birikimiyle geliştirilmiş ve gerçek dönem verisiyle iç doğrulaması tamamlanmıştır.
+**Bu projeyle ilişkisi:** Denetci.AI projesinin başlangıç varlığı olan deterministik teşvik hesap çekirdeği, firmanın bu alandaki 13 yıllık birikimiyle geliştirilmiş ve gerçek dönem verisiyle iç doğrulaması tamamlanmıştır.
 
 ## 3. Referanslar ve müşteri tabanı
 
