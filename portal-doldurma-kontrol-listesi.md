@@ -54,6 +54,31 @@ Formdaki **"Teknoparkta Etkileşimde Bulunulan/Bulunulabilecek Firmalar"** başl
 | Hedef Pazar, Lokal/Global | Formdaki aynı adlı paragraf |
 | Rekabet Analizi | Formdaki **"Rekabet Analizi"** başlığındaki paragraf |
 
+### A4b. Proje Bütçesi ekranı (Proje Bütçe Kalemi penceresi)
+
+**Önce:** Ekranda duran iki deneme satırı (`test` / Personel Giderleri / 100,00 ve `test` / Hizmet Alımları / 1,00) **silinmelidir**; "Planlanan Tahmini Bütçe" alanı şu an 101,00 ₺ görünmektedir ve doğru toplam girildiğinde 7.000.000,00 ₺ olacaktır.
+
+**Sonra:** "Ekle" ile aşağıdaki dokuz satır girilir. Her satırda önce Harcama Kategorisi seçilir, sonra Harcama açıklaması ve Tutar yazılır. Açıklamalar kısa tutulmuştur; alan uzun metni kabul etmezse parantez içleri çıkarılabilir.
+
+| # | Harcama Kategorisi | Harcama (açıklama) | Tutarı (TL) |
+|---|---|---|---|
+| 1 | Personel Giderleri | Proje personeli: 39 adam/ay x 130.000 TL (brüt ücret, işveren maliyeti ve genel gider payı dâhil; dayanak EK-3) | 5.070.000,00 |
+| 2 | Hizmet Alımları | Yeminli Mali Müşavirlik hizmeti ve yazılı hukuk görüşü: kural setlerinin madde madde teyidi, geçmiş parametre tablosunun doğrulanması, pilot mutabakat denetimi, uzman etiketleme | 550.000,00 |
+| 3 | Hizmet Alımları | Denetimli ince ayar eğitimleri için kısa süreli bulut grafik işlemci kiralama (yalnızca sentetik ve anonimleştirilmiş veriyle) | 200.000,00 |
+| 4 | Hizmet Alımları | Patent ön değerlendirmesi ve başvurusu, marka tescili, yapay zekâ alanında akademik danışmanlık | 250.000,00 |
+| 5 | Hizmet Alımları | Yazılım lisansları, kod imzalama sertifikası, çevrimdışı güncelleme imza altyapısı, test ve model değerlendirme araçları | 200.000,00 |
+| 6 | Makina ve Teçhizat Giderleri | 3 geliştirici iş istasyonu ve 2 referans test bilgisayarı (4 çekirdek, 16 GB bellek, grafik işlemcisiz) | 300.000,00 |
+| 7 | Seyahat Giderleri | Pilot saha ziyaretleri (iki sanayi kuruluşunun tesisleri) ve yapay zekâ alanında dış eğitim/konferans seyahatleri | 230.000,00 |
+| 8 | Sarf Giderleri | Test ve veri ortamı sarf malzemeleri, harici depolama ortamı, çevrimdışı güncelleme paketi taşıyıcı ortamları, ofis sarf giderleri | 50.000,00 |
+| 9 | Genel Giderler | Öngörülemeyen giderler payı (firma genel gideri personel birim maliyetine dâhil olduğundan bu kalemde tekrarlanmaz) | 150.000,00 |
+| | | **Toplam** | **7.000.000,00** |
+
+Notlar:
+
+- **Bursiyer Giderleri** ve **Temsil ve Tanıtma Giderleri** kategorilerinde harcama öngörülmemiştir. Bursiyer kalemi, Teknoloji Transfer Ofisi aracılığıyla bir lisansüstü öğrenci projeye dâhil edilirse üniversite iş birliği beyanını güçlendirir; bu tercih edilirse personel kaleminden aktarım yapılarak bütçe toplamı korunur.
+- Yazılım lisansları portalda **Hizmet Alımları** altına yazılmıştır; bölge yönetimi süreli lisansları Sarf Giderleri altında istiyorsa 5. satır o kategoriye alınabilir, toplam değişmez.
+- Bu dokuz satır, `denetci-proje-bilgi-formu.md` içindeki bütçe kırılımı tablosuyla birebir aynıdır; kimlik alanındaki "Tahmini Proje Bütçesi" değeri de 7.000.000,00 ₺ olmalıdır.
+
 ### A5. Fikri Sınai ve Mülkiyet Hakları tablosu (sayfa 11, boş)
 
 | Başvuru/Yayın Numarası | Belge Adı | Koruma Tipi |
@@ -101,9 +126,11 @@ Daha önce alınmış destek varsa (TÜBİTAK, KOSGEB vb.) kurum adı, destek ti
 
 ## C. Hakem heyetinin ilk bakacağı tutarlılık noktaları
 
-1. **Personel ve iş gücü:** Toplam Personel 4, iş gücü 39 adam/ay (ortalama 3,25 TZE). Portaldaki "2 personel" kaydı bu beyanla çelişir; mutlaka güncellenmelidir.
-2. **Kiralanan alan:** 10 m² ile 4 kişi, kişi başına 2,5 m² demektir. Ekip aynı anda bölgede bulunmayacaksa (proje yöneticisi yarı zamanlı, saha pilotları bölge dışında) bu durum "Bölge Dışı Görevlendirme" gerekçesinde ve gerekirse bölge yönetimine yazılı olarak açıklanmalı; aksi hâlde alan büyütülmelidir.
-3. **Takvim:** Başlangıç 26.10.2026 ise ay 7 Nisan 2027, ay 10 Temmuz 2027, ay 12 Ekim 2027'dir. Kazanımlardaki "2019-2026 arası her ay" ifadesi başlangıç tarihiyle uyumludur.
-4. **Bütçe:** Kimlik alanındaki 7.000.000 ₺, Proje Detayı'ndaki bütçe kırılımı toplamıyla (7.000.000 ₺) birebir aynı olmalıdır; kırılım portalda zaten girilidir.
-5. **KDV istisnası talebi (3065 sayılı Kanun geçici 20. madde):** İşaretlidir. Ürün "yazılım" teslimi olduğundan uygundur; ancak "geçmiş dönem mutabakat hizmeti" bir hizmet teslimidir ve istisna kapsamı yönünden mali müşavirle ayrıca teyit edilmelidir.
-6. **Ekler:** Portalda ek yükleme alanı varsa EK-1'den EK-6'ya kadar tüm ekler PDF olarak yüklenmeli; yoksa başvuru dosyasına basılı eklenmelidir. EK-2 niyet mektupları Tüpraş ve Kale Seramik'ten imzalı alınmış olmalıdır.
+1. **Proje adı:** Portalın bütçe ekranında proje adı **"Denetci.AI"** görünmektedir; Proje Bilgi Formu çıktısında ve hazırladığımız belgelerde ad **"Denetci"**dir. İki kayıt aynı olmalıdır. "Denetci.AI" tercih edilirse marka tescil başvurusu da bu adla yapılmalı ve belgelerdeki ad güncellenmelidir.
+2. **Bütçe deneme satırları:** Bütçe ekranındaki iki `test` satırı silinmeden başvuru gönderilmemelidir.
+3. **Personel ve iş gücü:** Toplam Personel 4, iş gücü 39 adam/ay (ortalama 3,25 TZE). Portaldaki "2 personel" kaydı bu beyanla çelişir; mutlaka güncellenmelidir.
+4. **Kiralanan alan:** 10 m² ile 4 kişi, kişi başına 2,5 m² demektir. Ekip aynı anda bölgede bulunmayacaksa (proje yöneticisi yarı zamanlı, saha pilotları bölge dışında) bu durum "Bölge Dışı Görevlendirme" gerekçesinde ve gerekirse bölge yönetimine yazılı olarak açıklanmalı; aksi hâlde alan büyütülmelidir.
+5. **Takvim:** Başlangıç 26.10.2026 ise ay 7 Nisan 2027, ay 10 Temmuz 2027, ay 12 Ekim 2027'dir. Kazanımlardaki "2019-2026 arası her ay" ifadesi başlangıç tarihiyle uyumludur.
+6. **Bütçe:** Üç yerde aynı olmalıdır: kimlik alanındaki "Tahmini Proje Bütçesi", Proje Bütçesi ekranındaki dokuz satırın toplamı ("Planlanan Tahmini Bütçe") ve Proje Detayı metnindeki bütçe kırılımı tablosu. Üçü de 7.000.000,00 ₺'dir.
+7. **KDV istisnası talebi (3065 sayılı Kanun geçici 20. madde):** İşaretlidir. Ürün "yazılım" teslimi olduğundan uygundur; ancak "geçmiş dönem mutabakat hizmeti" bir hizmet teslimidir ve istisna kapsamı yönünden mali müşavirle ayrıca teyit edilmelidir.
+8. **Ekler:** Portalda ek yükleme alanı varsa EK-1'den EK-6'ya kadar tüm ekler PDF olarak yüklenmeli; yoksa başvuru dosyasına basılı eklenmelidir. EK-2 niyet mektupları Tüpraş ve Kale Seramik'ten imzalı alınmış olmalıdır.
