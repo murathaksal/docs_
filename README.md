@@ -12,6 +12,14 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 | [`argelog-ai-strateji.md`](argelog-ai-strateji.md) | ARGELOG.AI vizyonu: ekosistem döngüsü, veri moat'ı, ajan mimarisi. Uzun vadeli çerçeve. |
 
 
+## 🎤 Hakem sunumu
+
+| Belge | İçerik |
+|---|---|
+| **[`hakem-sunumu.md`](hakem-sunumu.md)** | **Hakem heyetine sunulacak 21 slayt:** başlık, en fazla 5 madde, konuşma metni ve görsel notu. Her araştırma sorusu yanlışlanabilir bir başarısızlık eşiğine bağlanmıştır. Sonunda sunum öncesi karar bekleyen maddeler ve düzeltilecek portal kayıtları listelenir. |
+| [`hakem-sunumu-soru-cevap.md`](hakem-sunumu-soru-cevap.md) | Hakem heyetinin soracağı 43 zor soru ve 30-60 saniyelik savunma cevapları: dokuz başlıkta, her soruda dayanak ve yapılmaması gereken savunma hatası. |
+| [`ek-7-akademik-kaynakca.md`](ek-7-akademik-kaynakca.md) | **EK-7.** Sunumdaki her sayısal iddianın dayanağı: 98 doğrulanmış akademik ve kurumsal künye, 10 bölümde. Künyesi birincil kaynaktan teyit edilemeyen 26 kayıt gerekçesiyle birlikte elenmiş ve ayrı bölümde listelenmiştir. |
+
 ## 📎 Başvuru ekleri
 
 | Ek | İçerik |
@@ -25,6 +33,7 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 | [`ek-4-proje-ekibi-ozgecmisleri.md`](ek-4-proje-ekibi-ozgecmisleri.md) | Ekip kompozisyonu, efor dağılımı ve özgeçmiş şablonu *(kişi bilgileri doldurulacak)* |
 | [`ek-5-firma-tanitim-dosyasi.md`](ek-5-firma-tanitim-dosyasi.md) | Kurumsal kimlik, referanslar, mali tablolar ve finansman beyanı *(mali veriler doldurulacak)* |
 | [`ek-6-sft-denetim-verisi-uretim-yontemi.md`](ek-6-sft-denetim-verisi-uretim-yontemi.md) | Denetçi rolündeki dar kapsamlı modelin eğitim verisi (SFT) üretim yöntemi: oracle ilkesi, G1–G4 görevleri, kaynak hatları, hacim ve sızıntı denetimleri |
+| [`ek-7-akademik-kaynakca.md`](ek-7-akademik-kaynakca.md) | Sunum ve formdaki iddiaların akademik/kurumsal dayanak kaydı: 98 doğrulanmış künye ve elenen 26 kaydın gerekçesi |
 
 ## 📚 Analiz arşivi (karar gerekçeleri)
 
