@@ -87,7 +87,7 @@
 
 **[Magesh2025]** Magesh, V., Surani, F., Dahl, M., Suzgun, M., Manning, C. D., & Ho, D. E. (2025). Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools. Journal of Empirical Legal Studies, 22(2), 216–242.
   https://doi.org/10.1111/jels.12413
-  *Bulgu:* Hukuk alanının en pahalı ticari erişim destekli (RAG) araçları bile hâlâ %17–33 oranında dayanaksız iddia üretiyor: LexisNexis Lexis+ AI sorguların yalnızca %65'ini, Westlaw AI-Assisted Research %41'ini, Ask Practical Law AI ise %19'unu doğru yanıtlıyor; makalenin sonuç cümlesi net: "hukuki araştırma için yapay zekâ araçları halüsinasyonları ortadan kaldırmadı".
+  *Bulgu:* Hukuk alanının en pahalı ticari erişim destekli (RAG) araçları bile hâlâ %17–33 oranında dayanaksız iddia üretiyor: LexisNexis Lexis+ AI sorguların yalnızca %65'ini, Westlaw AI-Assisted Research %42'sini (makalenin Şekil 4 dökümünde %41), Ask Practical Law AI ise %19'unu doğru yanıtlıyor; makalenin sonuç cümlesi net: "hukuki araştırma için yapay zekâ araçları halüsinasyonları ortadan kaldırmadı".
   *Projede:* AS-2 (sembolik doğrulama kapısı) + "atıf doğruluğu >=%98, desteksiz iddia <=%1" metriklerinin gerekçesi. En kritik kaynak: RAG (erişim destekli üretim) halüsinasyonu AZALTIYOR ama ORTADAN KALDIRMIYOR; bu yüzden Denetci.AI erişimin üstüne ayrıca sembolik kural tabanına karşı doğrulama koyuyor.
 
 **[Charlotin2026]** Charlotin, D. (2026). AI Hallucination Cases Database. https://www.damiencharlotin.com/hallucinations/ (Erişim: 14 Eylül 2026). CC BY 4.0.

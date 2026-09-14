@@ -275,7 +275,7 @@
 - **Beş karşılaştırma kolu:** ince ayarlı model | ince ayarsız aynı model | ince ayarsız model + kural tabanı erişimi | alan dışı genel model | uzman denetçi
 - AS-3 için ayrıca sembolik taban çizgisi: nöral sıralamanın kazancı buna karşı ölçülür
 - Yönlendirmede etiketi motor koyar; bulgu yorumu ve denetçi sorusunda YMM etiketli kör örneklem
-- **Sızıntı kontrolü dört adım:** kuruluş+dönem bazlı bölme; kaynak dönem kesişim taraması; karıştırılmış etiket kontrol koşumu; en az bir pilot tamamen kör tutulur
+- **Sızıntı ve kalite kontrolü dört adım (EK-6 §4):** kuruluş ve dönem bazlı bölme (aynı kuruluşun aynı dönemi hem eğitimde hem testte bulunamaz); şema geçerliliği denetimi; kök neden sınıflarının ve "belirsiz" sınıfının dengelenmesi; eğitim öncesi anonimleştirme
 - Eşikler ve kör test seti **ay 7'de mühürlenir**; ölçümden sonra eşik de payda da değişmez
 
 **Görsel:** Beş kollu karşılaştırma şeması ve altında bir kilit ikonu: "Ay 7: eşikler mühürlenir, TTO ve YMM nezdinde saklanır."
@@ -287,11 +287,11 @@
 >
 > AS-3 için bir kol daha ekliyoruz: hipotezleri önceki dönem sıklığına göre sıralayan kural tabanlı basit bir sezgisel. Nöral katmanın kazancını buna karşı ölçüyoruz. Kazanç yoksa üründe ucuz olanı kullanırız ve bunu olumsuz sonuç olarak raporlarız.
 >
-> Sızıntıya karşı dört kontrolümüz var ve bunlar taahhüt değil, çalıştırılabilir adımlar. En güçlüsü şu: yönlendirme metriği ezberlenemez, çünkü ölçüm bir etiket dizesini eşleştirmek değil, motoru fiilen yeniden koşturmaktır.
+> Sızıntıya karşı dört kontrolümüz var ve dördü de EK-6'da yazılı. En güçlü koruma ise metriğin kendisinde: yönlendirme metriği ezberlenemez, çünkü ölçüm bir etiket dizesini eşleştirmek değil, motoru fiilen yeniden koşturmaktır.
 >
 > Ve en önemli taahhüdümüz: bütün eşikler ve kör test seti ay 7'de mühürlenip Teknoloji Transfer Ofisi ile YMM nezdinde yazılı olarak saklanacak. Ölçümden sonra ne eşiği ne paydayı değiştiririz.
 
-*Not: iki bağımsız etiketleyici ve uyum katsayısı ölçümü, EK-6 §6'nın genişletilmesini gerektirir (bkz. sunum sonu, "Karar bekleyen maddeler").*
+*Not: kör test setinin bir kısmının iki bağımsız YMM tarafından etiketlenmesi ve uyum katsayısının raporlanması önerilir; bu, EK-6 §6'nın genişletilmesini gerektirir. Kaynak dönem kesişim taraması ve tamamen kör tutulan pilot da EK-6'da yoktur. Bkz. sunum sonu, "Karar bekleyen maddeler" A1 ve A7.*
 
 ---
 
@@ -312,7 +312,7 @@
 **Konuşma metni:**
 > Bu tablo sunumun omurgası. Dört sorunun her biri düşebilir, yani yanlışlanabilir bir eşiğe bağlı.
 >
-> Eşiklerin nereden geldiğini soracaksınız. Örnek vereyim: yüzde 70 yönlendirme isabeti literatürden alınmış bir sabit değil, iki referansa göre kondu. Birincisi rastgele taban: sembolik katman bir fark için ortalama üç ila beş hipotez üretiyor, rastgele seçim yüzde 20-33 eder. Yüzde 70 bunun iki-üç katı. İkincisi işin ekonomisi: bir belge talebinin on kalemin yedisinde farkı çözmesi, uzmanın inceleme turunu üçten ikiye indirir; bu, ürünün verim iddiasının kırılma noktası.
+> Eşiklerin nereden geldiğini soracaksınız. Örnek vereyim: yüzde 70 yönlendirme isabeti literatürden alınmış bir sabit değil, iki referansa göre kondu. Birincisi rastgele taban: sembolik katmanın bir fark için ürettiği hipotez sayısı İP4 senaryo kütüphanesinde ölçülecek; ön gözlemimiz fark başına üç ila beş hipotez, yani rastgele seçim yüzde 20 ile 33 arası. Yüzde 70 bunun yaklaşık iki ila üç buçuk katı. İkincisi işin ekonomisi: bir belge talebinin kalemlerin yaklaşık yüzde 70'inde farkı çözmesi, uzmanın inceleme turunu üçten ikiye indirir. Bu ikinci gerekçe saha deneyimimize dayalı bir varsayımdır ve pilotlarda ölçülecektir.
 >
 > Teknoloji hazırlık seviyesine gelince. Bugün 5 diyoruz ama bu en olgun bileşenimize göre değil. Hesap çekirdeğimiz doğrulanmış durumda; denetçi model ise henüz laboratuvar düzeyinde, yani seviye 3. Bütünleşik sistem için beyan ettiğimiz seviye, bileşenlerin bütünleşme durumuna göre verildi.
 >
@@ -345,7 +345,7 @@
 >
 > Altıncı paketi Ar-Ge iddiası olarak öne sürmüyoruz ve bunu forma da böyle yazdık. Masaüstü ürünleştirme, kurulum sihirbazı, imzalı güncelleme; bunlar gerekli ama tek başlarına teknik belirsizlik içermiyor. İnce ayar, nicemleme ve şema zorlamalı çözümleme araçlarının kendisi de olgun araçlardır ve onları da Ar-Ge iddiası olarak sunmuyoruz.
 >
-> Takvim riskine karşı iki önlemimiz var. Ay 2-3'te İP5 kapsamında kısa bir fizibilite ölçümü yapıyoruz: açık ağırlıklı bir model, elli sentetik bulgu, referans bilgisayarda süre ve ham isabet. Ay 4'te karar kapısı. İkincisi, kapsam kısma sırası önceden yazılı: gecikme hâlinde önce ikinci ince ayar turu, sonra alan dışı karşılaştırma kolu çıkar. İP1'den İP3'e kadar olan sembolik omurga ve pilot mutabakatı hiçbir koşulda kısılmaz.
+> Takvim riskine karşı iki önlemimiz var. Ay 2-3'te, yani İP5 başlamadan önce, kısa bir fizibilite ölçümü yapıyoruz: açık ağırlıklı bir model, sentetik bir bulgu örneklemi, referans bilgisayarda süre ve ham isabet ölçümü. Ay 4'te karar kapısı. İkincisi, kapsam kısma sırası önceden yazılı: gecikme hâlinde önce ikinci ince ayar turu, sonra alan dışı karşılaştırma kolu çıkar. İP1'den İP3'e kadar olan sembolik omurga ve pilot mutabakatı hiçbir koşulda kısılmaz.
 
 ---
 
@@ -457,9 +457,10 @@
 
 ## Slayt 18 — Rekabet: kategori boşluğu değil, özellik bileşimi
 
-- Ağustos-Eylül 2026'da yedi ürün ve hizmet kamuya açık materyalle tarandı, beş rakip sınıfında toplandı (EK-1)
+- Ağustos-Eylül 2026'da yedi ürün ve hizmet kategorisi kamuya açık materyalle tarandı (EK-1); bunlar dört rakip sınıfında toplanır. Beşinci sınıf olan genel amaçlı bulut yapay zekâ araçları taramaya değil mimari gerekçeye dayanır
 - Yerli 5746/4691 yazılımları ve bordro/ERP modülleri ileriye dönük aylık hesaba odaklı
-- Tek sürümlü kural tablosuyla çalıştıkları için geçmiş dönem kendi kural sürümüyle kurulamıyor
+- Bordro/ERP modülleri tek sürümlü kural tablosuyla çalışır; geçmiş dönem kendi kural sürümüyle kurulamaz
+- Yerli 5746/4691 yazılımlarında sürümleme ve geçmiş beyan mutabakatı, kamuya açık materyalde **ilan edilmiş bir yetenek olarak görülmemiştir** (EK-1, Ö1-Ö2)
 - YMM hizmeti rakip değil dağıtım ortağı: tasdik yetkisini almıyoruz, tasdik dosyasını belgeli hâle getiriyoruz
 - **İddia özellik bileşimidir:** mutabakat + sürümleme + kapalı devre + rejim sınırı + denetçi model. Tespit kamuya açık materyalle sınırlıdır; mutlak üstünlük iddiası içermez
 
@@ -529,7 +530,7 @@
 
 1. **Doğrulanmış zaman-farkındalıklı kural tabanı:** YMM teyitli gerçek çapa 96'dan en az 140'a; 5746 ve 4691 bildirimsel kural setleri
 2. **Denetçi rolündeki yerel model ve ölçüm düzeneği:** yönlendirme isabeti en az %70, atıf doğruluğu en az %98, grafik işlemcisiz çalışır
-3. **THS 7 prototip ve iki referans vaka:** Tüpraş ve Kale Seramik'te ücretli saha pilotları; yazılı ihtiyaç görüşleri alındı, niyet mektupları EK-2'de
+3. **THS 7 prototip ve iki referans vaka:** Tüpraş ve Kale Seramik'te ücretli saha pilotları; **yazılı ihtiyaç görüşleri alındı**, niyet mektuplarının kurumsal imza süreci devam ediyor (şablon ve toplama süreci EK-2'de)
 4. **Fikri mülkiyet:** "Denetci.AI" marka başvurusu; iki yöntem için ay 9'da patentlenebilirlik ön değerlendirmesi
 
 > **Araştırma sorusu düşerse bile ürün sembolik katman üzerinden eksiksiz çalışır.**
@@ -582,12 +583,13 @@ Soru-cevap sırasında açılmak üzere hazırlanır, ana akışta gösterilmez.
 
 | # | Sunumdaki ifade | Durum | Yapılacak |
 |---|---|---|---|
-| A1 | Kör setin bir kısmının **iki bağımsız YMM** tarafından etiketlenmesi ve uyum katsayısının (Cohen kappa) raporlanması | EK-6 §6 tek etiketleyici varsayıyor; 550.000 ₺'lik YMM kalemi buna göre kurulmuş | Ya EK-6'ya ikinci etiketleyici eklenip YMM kalemi gözden geçirilir, ya da iddia sunumdan çıkarılır |
+| A1 | Slayt 11 dipnotu: kör setin bir kısmının **iki bağımsız YMM** tarafından etiketlenmesi ve uyum katsayısının (Cohen kappa) raporlanması *önerilmektedir*; slaytlarda taahhüt olarak yer almaz | EK-6 §6 tek etiketleyici varsayıyor; 550.000 ₺'lik YMM kalemi buna göre kurulmuş | Taahhüt edilecekse EK-6 §6'ya ikinci etiketleyici eklenir ve YMM kalemi gözden geçirilir; edilmeyecekse slayt 11 dipnotu kaldırılır |
 | A2 | **Beş karşılaştırma kolu** (erişim destekli kol ve sembolik taban çizgisi dâhil) | Formda üç kol var: ince ayarlı, ince ayarsız, alan dışı | Formdaki Kazanım 1'e iki kol eklenmeli ya da sunum üç kola indirilmeli |
 | A3 | **Ay 2-4 fizibilite ölçümü ve karar kapısı** | Formda yok | İP5 tanımına eklenebilir; eklenmezse sunumda "planlıyoruz" olarak söylenir |
 | A4 | **Eşiklerin ay 7'de mühürlenmesi** ve TTO/YMM nezdinde saklanması | Formda yok | TTO'dan talep edilen hizmetlere eklenebilir |
 | A5 | **Ezberleme sınaması** ve dağıtılan model ağırlıklarının kuruluştan arındırılması | Formda ve EK-6'da yok | EK-6 §4'e eklenmesi önerilir; pilot kuruluşun hukuk birimi bunu soracaktır |
 | A6 | **Bölgeye taahhütler** (6 kişi istihdam, 5 bölge firması, 2 seminer) | Formda yok | Taahhüt edilecekse forma işlenmeli; edilmeyecekse sunumdan çıkarılmalı |
+| A7 | **Kaynak dönem kesişim taraması, karıştırılmış etiket kontrol koşumu ve tamamen kör tutulan bir pilot** | EK-6 §4 bu üç kontrolü içermiyor; "tamamen kör pilot" ise EK-6 §5 takvimiyle çelişiyor (ay 11'de her iki pilotun eğitim kısmı kullanılıyor) | Taahhüt edilecekse EK-6 §4 ve §5 buna göre güncellenmeli. Sunumdan çıkarıldı; soru-cevap bankasında S10 da EK-6'ya indirildi |
 
 ## B. Düzeltilmesi gereken kayıtlar
 
@@ -603,8 +605,9 @@ Soru-cevap sırasında açılmak üzere hazırlanır, ana akışta gösterilmez.
 ## C. Sunum öncesi son kontroller
 
 1. **EK-1'i yeniden tara.** Rakip ürün siteleri Ağustos-Eylül 2026'dan bu yana değişmiş olabilir.
-2. **Niyet mektuplarını topla.** Kurumsal imza süreci 2-4 hafta sürüyor.
-3. **EK-3'teki tutarları doldur.** Yer tutucu bırakılmış bir maliyet dayanağı, bütçe sorusunda savunulamaz.
-4. **EK-4'teki özgeçmişleri doldur;** özellikle "diğer projelerdeki yük" alanını. Bu alan boşsa 39 adam-ay beyanı sorgulanır.
-5. **Yapay zekâ mühendisinin istihdam durumunu netleştir.** Slayt 14'te bu satır boş kalmamalı.
-6. **Taban model lisansını kayda geçir.** Ticari kullanıma ve türev ağırlık dağıtımına izin veren bir aile seçilmeli; bu, ürünleştirmenin hukuki ön koşuludur.
+2. **EK-1'deki ölçüt sayısını düzelt.** Tabloda dört ölçüt (Ö1-Ö4) var ama metin iki yerde "üç ölçüt" diyor: Yöntem paragrafı ve Değerlendirme maddesi 1. Yedek slayt Y5 bu tabloyu ekrana getirdiği için heyet çelişkiyi görür.
+3. **Niyet mektuplarını topla.** Kurumsal imza süreci 2-4 hafta sürüyor.
+4. **EK-3'teki tutarları doldur.** Yer tutucu bırakılmış bir maliyet dayanağı, bütçe sorusunda savunulamaz.
+5. **EK-4'teki özgeçmişleri doldur;** özellikle "diğer projelerdeki yük" alanını. Bu alan boşsa 39 adam-ay beyanı sorgulanır.
+6. **Yapay zekâ mühendisinin istihdam durumunu netleştir.** Slayt 14'te bu satır boş kalmamalı.
+7. **Taban model lisansını kayda geçir.** Ticari kullanıma ve türev ağırlık dağıtımına izin veren bir aile seçilmeli; bu, ürünleştirmenin hukuki ön koşuludur.
