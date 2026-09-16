@@ -10,6 +10,7 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 | [`argus-baz-hatti-tasarimi.md`](argus-baz-hatti-tasarimi.md) | Geçmiş beyan yükleme → mutabakat → mühürlü baz alt sisteminin ayrıntılı teknik tasarımı (formdaki AS-2'nin arka planı). Geçerli. |
 | [`argus-gelir-plani.md`](argus-gelir-plani.md) | Hizmet-önce gelir planı: gelir merdiveni, paketler, 30/60/90 gün, nakit projeksiyonu, yasal sınırlar. Ürün paketleme kısmı yalın karara göre sadeleşmiştir (bkz. ana belge). |
 | [`argelog-ai-strateji.md`](argelog-ai-strateji.md) | ARGELOG.AI vizyonu: ekosistem döngüsü, veri moat'ı, ajan mimarisi. Uzun vadeli çerçeve. |
+| [`denetci-ai-kalite-surecleri-uyarlama-degerlendirmesi.md`](denetci-ai-kalite-surecleri-uyarlama-degerlendirmesi.md) | Denetci.AI mimarisinin kalite yönetim sistemi denetimine uyarlanabilirliği: katman katman aktarım analizi, oracle sorunu, iş modeli ve pazar değerlendirmesi. Sonuç: ardıl proje (ARGELOG-003) olarak ele alınmalı; **mevcut başvurunun kapsamı değişmez.** Karar, 120-150 geçmiş bulgu üzerinde yapılacak kapsama ölçümüne bağlanmıştır. |
 
 
 ## 📎 Başvuru ekleri
