@@ -2,6 +2,8 @@
 
 *Proje Bilgi Formu'ndaki AS-1 ve AS-2 araştırma sorularının ve İP5 iş paketinin dayanağıdır. Hakem heyetinin "bu model neyle eğitilecek, veri nereden gelecek, etiketi kim koyacak" sorularına cevap verir.*
 
+*Bu ekin mühendislik karşılığı — kayıt şeması, çeşitlilik aritmetiği, bölme ve sızıntı protokolü, istatistiksel güç, veri ölçekleme merdiveni ve LoRA tarifi — [`denetci-sft-veri-hazirligi-tasarimi.md`](denetci-sft-veri-hazirligi-tasarimi.md) dosyasındadır. Model seçimi için bkz. [`ek-7-denetci-model-secimi.md`](ek-7-denetci-model-secimi.md).*
+
 ---
 
 ## 1. Temel ilke: etiketi insan değil, deterministik motor üretir
