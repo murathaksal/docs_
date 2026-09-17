@@ -2,7 +2,7 @@
 
 *EK-6 "veri nereden gelir, etiketi kim koyar" sorusunu cevaplar ve forma esas özettir. Bu belge onun mühendislik karşılığıdır: kayıt şeması, örnek bütçesi ve çeşitlilik aritmetiği, bölme ve sızıntı protokolü, istatistiksel güç, veri ölçekleme merdiveni, LoRA tarifi ve etiketleme eforu. Model seçimi EK-7'dedir; bu belge o seçimi veri tarafından besler.*
 
-*Belgenin en önemli iki bulgusu §4 ve §5'tedir ve forma yansıtılması gereken değişiklik önerileri doğurur (§13).*
+*Belgenin en önemli iki bulgusu §4 ve §5'tedir. §13'teki R1-R3 maddeleri Proje Bilgi Formu'na ve EK-6'ya **uygulanmıştır** (17.09.2026); aşağıdaki §3, §4 ve §5 bölümleri bu değişikliklerin gerekçesini taşır.*
 
 ---
 
@@ -13,8 +13,8 @@
 | Etiketin motordan geldiği ilkesi | Kayıt şeması, istem/tamamlama ayrımı, kayıp maskeleme (§2) |
 | G1-G4 görev tanımları | Her görevin token bütçesi, örnek sayısı ve ağırlığı (§2, §3) |
 | Kaynak A-D ve hedef hacimler | **Çeşitlilik aritmetiği:** 2.500 örnek 60 senaryodan türetilirse etkin örneklem 60'tır (§3) |
-| "Bölme kuruluş ve dönem bazındadır" | **Üç seviyeli sızıntı anahtarı;** senaryo düzeyinde bölme; 60 senaryonun kör teste 9 senaryo bıraktığı bulgusu (§4) |
-| Kazanım 1'deki eşikler | **Her eşiğin kaç örnekle kanıtlanabileceği** (§5) |
+| Bölme kuralı *(EK-6'ya R3 ile eklendi)* | **Üç seviyeli sızıntı anahtarının türetimi;** senaryo düzeyinde bölme; 60 senaryonun kör teste 9 senaryo bıraktığı bulgusu (§4) |
+| Kazanım 1'deki eşikler *(asgari örneklem R2 ile eklendi)* | **Her eşiğin kaç örnekle kanıtlanabileceğinin hesabı** (§5) |
 | "Hangi eşikten sonra ek veri kazanç getirmez" sorusu (AS-1b) | Sorunun cevabını üretecek **veri ölçekleme merdiveni** ve kaynak ablasyonu (§6) |
 | "İnce ayar olgun bir araçtır" | Somut LoRA tarifi, iki kademe, eğitim bütçesi (§7) |
 | "Eleme kayıtları eğitime döner" | İkinci turun yöntemi: düzeltilmiş SFT mi, tercih öğrenmesi mi (§8) |
@@ -67,7 +67,7 @@ G2'nin en büyük paya sahip olması bilinçlidir: **etiketi insan koymaz, motor
 
 ## 3. Örnek bütçesi ve çeşitlilik aritmetiği
 
-**EK-6'nın gizli varsayımı:** 60 senaryo × parametrik türetme ≈ 2.000-3.000 örnek. Bu, **senaryo başına 42-50 türetme** demektir.
+**Özgün planın gizli varsayımı:** 60 senaryo × parametrik türetme ≈ 2.000-3.000 örnek. Bu, **senaryo başına 42-50 türetme** demektir. *(Bu bölümün sonucu R1 olarak forma ve EK-6'ya uygulanmıştır; aşağıdaki tablo değişikliğin gerekçesidir.)*
 
 **Sorun:** Aynı senaryonun tutarı, kişi sayısı ve dönemi değiştirilerek üretilen 42 örnek, birbirinden bağımsız 42 örnek değildir. Çıktı metni büyük ölçüde aynı kalır; model kök nedeni *çıkarmayı* değil, fark imzasından şablonu *eşlemeyi* öğrenir. Bunun adı şablon çöküşüdür (template collapse) ve sentetik veriyle eğitilen küçük modellerin bilinen başarısızlık biçimidir. Laboratuvarda yüksek skor üretir, gerçek pilot verisinde çöker — yani tam olarak AS-1'in ölçtüğü aktarım başarısızlığı.
 
@@ -90,7 +90,7 @@ Toplam eğitim havuzu ≈ **3.500-4.500 örnek**, etkin çeşitlilik ≈ **150 s
 
 ## 4. Bölme ve sızıntı protokolü
 
-EK-6 "bölme kuruluş ve dönem bazındadır" der. **Bu yeterli değildir.** Sentetik veride kuruluş ve dönem zaten uydurmadır; aynı senaryodan türetilen iki örnek farklı kuruluş ve döneme atanabilir ve bölmenin iki yakasına düşebilir. O zaman kör test, eğitimde görülmüş bir şablonu ölçer.
+Özgün plan "bölme kuruluş ve dönem bazındadır" diyordu. **Bu yeterli değildir** *(R3 ile düzeltildi)*. Sentetik veride kuruluş ve dönem zaten uydurmadır; aynı senaryodan türetilen iki örnek farklı kuruluş ve döneme atanabilir ve bölmenin iki yakasına düşebilir. O zaman kör test, eğitimde görülmüş bir şablonu ölçer.
 
 **Sızıntı anahtarı üç bileşenlidir ve bölme en kaba bileşenden yapılır:**
 
@@ -281,9 +281,9 @@ Bu, İP4'ün (9 adam-ay, ay 4-10) senaryo/enjeksiyon kalemleriyle ve İP5'in (10
 
 | # | Risk | Önlem | Forma etkisi |
 |---|---|---|---|
-| R1 | **Şablon çöküşü** — 60 senaryodan 2.500 örnek türetilir, laboratuvarda yüksek skor, pilotta çöküş | Türetme tavanı 12, senaryo sayısı ≥150, yakınlık denetimi (§3) | **İP4 çıkış kriteri "≥60 senaryo" → "≥150 senaryo"** olarak güncellenmeli |
-| R2 | **Kör test setinin istatistiksel olarak yetersiz olması** — n=200 ile ≥%70 iddiası kurulamaz | Kör set n≥400; G2 kalemleri ≥250; atıf denetimi ≥300 atıf (§5) | Kazanım 1'deki test seti tanımına **asgari örneklem sayısı** eklenmeli |
-| R3 | **Kaynak A ile B arasında gizli sızıntı** — enjeksiyon hataları senaryo kütüphanesinden üretilirse aktarım ölçümü kendini doğrular | Ortak `fault_type` anahtarı; enjeksiyonun ≥%30'u kütüphane dışı tipten (§4) | EK-6 §4'e sızıntı anahtarı tanımı eklenmeli |
+| R1 | **Şablon çöküşü** — 60 senaryodan 2.500 örnek türetilir, laboratuvarda yüksek skor, pilotta çöküş | Türetme tavanı 12, senaryo sayısı ≥150, yakınlık denetimi (§3) | ✅ **Uygulandı:** İP4, Kazanım 3 ve risk (5) maddesinde ≥60 → **≥150 senaryo**; türetme tavanı 12; enjeksiyonda ≥40 hata tipi |
+| R2 | **Kör test setinin istatistiksel olarak yetersiz olması** — n=200 ile ≥%70 iddiası kurulamaz | Kör set n≥400; G2 kalemleri ≥250; atıf denetimi ≥300 atıf (§5) | ✅ **Uygulandı:** Kazanım 1'e kör set ≥400 kalem (≥250 yönlendirme) + YMM örneklemi ≥150; Kazanım 2'ye ≥300 atıf / ≥400 bulgu; İP5 çıkış kriterine kör set şartı |
+| R3 | **Kaynak A ile B arasında gizli sızıntı** — enjeksiyon hataları senaryo kütüphanesinden üretilirse aktarım ölçümü kendini doğrular | Ortak `fault_type` anahtarı; enjeksiyonun ≥%30'u kütüphane dışı tipten (§4) | ✅ **Uygulandı:** EK-6 §4'e `(hata_tipi, kuruluş, dönem)` anahtarı, L1-L3 seviyeleri, Kaynak A-B ortak anahtarı ve %30 kuralı, kör setin B+C üzerine kurulması |
 | R4 | **Oracle yanlılığı** — model motorun kendine has davranışlarını öğrenir, denetçi mantığını değil | G3 etiketleri motordan değil YMM oturumlarından gelir; pilot kör seti nihai hakem | Değişiklik gerekmez; EK-6 zaten bu ayrımı kuruyor |
 | R5 | **Eğitim/çıkarım biçim ayrışması** — sohbet şablonu, düşünme bloğu veya gramer sırası farkı kazancı siler | Faz 0'da tokenize edilmiş örnek karşılaştırması; eğitim = çıkarım biçimi kuralı (§2.1, §9) | Değişiklik gerekmez |
 | R6 | **Türkçe genel yeteneğin unutulması** — dar SFT sonrası model akıcılığını kaybeder | LoRA (tam ince ayar değil); doğrulama setinde alan-dışı Türkçe kontrol örnekleri | Değişiklik gerekmez |

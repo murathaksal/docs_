@@ -23,8 +23,8 @@ G1–G3 birlikte modelin **denetçi rolünü** oluşturur: sonucu inceler, ne an
 
 ## 3. Veri kaynakları ve üretim hattı
 
-### Kaynak A: Mevzuat referanslı sentetik senaryo kütüphanesi (İP4 çıktısı, ≥60 senaryo)
-Her senaryo gerçek bir tebliğ/genelge maddesine bağlı, bilinen tek bir kök nedenli bozulmadır (örnek: yüksek lisans diploması Mart ayında alınmışken Ocak–Şubat terkin oranının %90 uygulanması; 7555 tavanının ay ortası yürürlüğünün göz ardı edilmesi; 5746 ile 4691 arasında aynı ücret üzerinden çifte istisna). Senaryo, sentetik bir personel × dönem verisine uygulanır → motor koşulur → fark imzası, doğru kök neden, çözen belge ve beklenen denetçi soruları **inşa gereği bilinir**. Her senaryo parametrik olduğundan (tutar, kişi sayısı, dönem, rejim değiştirilebilir) tek senaryodan onlarca eğitim örneği türetilir.
+### Kaynak A: Mevzuat referanslı sentetik senaryo kütüphanesi (İP4 çıktısı, ≥150 senaryo)
+Her senaryo gerçek bir tebliğ/genelge maddesine bağlı, bilinen tek bir kök nedenli bozulmadır (örnek: yüksek lisans diploması Mart ayında alınmışken Ocak–Şubat terkin oranının %90 uygulanması; 7555 tavanının ay ortası yürürlüğünün göz ardı edilmesi; 5746 ile 4691 arasında aynı ücret üzerinden çifte istisna). Senaryo, sentetik bir personel × dönem verisine uygulanır → motor koşulur → fark imzası, doğru kök neden, çözen belge ve beklenen denetçi soruları **inşa gereği bilinir**. Her senaryo parametrik olduğundan tek senaryodan birden çok eğitim örneği türetilir; ancak **türetme senaryo başına en fazla 12 ile sınırlıdır**. Türetme yalnızca tutar ve kişi sayısı oynatarak değil, çıktıyı da değiştiren eksenlerde yapılır: belge envanteri eksikliği, çoklu kök neden birleşimi, rejim (5746/4691) ve rejim sınırı, fark yönü ve büyüklük bandı, "belirsiz" doğru cevabı olan ayırt-edilemez vakalar. Gerekçe: aynı senaryodan üretilen çok sayıda örnek bağımsız örnek değildir; çeşitliliği türetme sayısı değil **senaryo sayısı** taşır. Bu nedenle kütüphane hedefi senaryo sayısı üzerinden verilmiştir.
 
 ### Kaynak B: Hata enjeksiyonlu kalibrasyon seti (İP4 çıktısı, ≥400 vaka)
 Doğrulanmış gerçek dönem verisi (çapa testlerindeki 96 → ≥140 dönem) anonimleştirilir; üzerine tek veya çoklu bilinen bozulmalar enjekte edilir; motor koşulur. Etiket enjekte edilen bozulmadır. Çoklu-neden vakaları, modelin "ayırt edilemez → belirsiz" davranışını öğrenmesi için özellikle üretilir.
@@ -44,7 +44,10 @@ senaryo/enjeksiyon/pilot verisi → deterministik motor koşumu → fark imzası
 
 ## 4. Sızıntı ve kalite kontrolleri
 
-- **Bölme kuruluş ve dönem bazındadır:** aynı kuruluşun aynı dönemi hem eğitimde hem testte bulunamaz. Pilotlardan ayrılan kör test seti eğitimde hiçbir biçimde kullanılmaz.
+- **Bölme, üç bileşenli sızıntı anahtarıyla yapılır:** `(hata_tipi, kuruluş, dönem)`. Bölme en kaba bileşenden başlar. *(L1) Hata tipi / senaryo:* bir senaryodan türeyen hiçbir örnek bölmenin iki yakasında bulunamaz — aksi hâlde kör test, eğitimde görülmüş bir şablonu ölçer. *(L2) Kuruluş:* aynı kuruluşun hiçbir dönemi hem eğitimde hem testte olamaz. *(L3) Dönem:* aynı kuruluş-dönem çifti tek yakada kalır. Yalnızca kuruluş ve dönem bazında bölmek yeterli değildir; sentetik veride kuruluş ve dönem üretilmiş alanlardır ve aynı senaryodan türeyen iki örnek farklı kuruluşa atanarak bölmenin iki yakasına düşebilir.
+- **Kaynak A ile Kaynak B ortak anahtar üzerinden ayrılır:** enjeksiyon vakaları senaryo kütüphanesinden üretildiğinde iki kaynak bağımsız değildir; `hata_tipi` her iki kaynakta ortak anahtar olarak kullanılır. Enjeksiyon setinin **en az %30'u**, senaryo kütüphanesinde karşılığı olmayan hata tiplerinden üretilir — aksi hâlde "sentetikten gerçeğe aktarım" ölçümü kendi kendini doğrular.
+- **Kör test seti Kaynak B ve C üzerine kurulur:** Kaynak A senaryo düzeyinde bölündüğünde kör tarafta kalan senaryo sayısı istatistiksel olarak yetersizdir; Kaynak A eğitim ve doğrulamada kullanılır. Pilotlardan ayrılan kör dönemler eğitimde hiçbir biçimde kullanılmaz — ay 10 ölçümünden sonra da kullanılmaz, böylece ay 10 ve ay 12 skorları karşılaştırılabilir kalır.
+- **Kapı elemeleri kör setten eğitime dönmez:** sembolik doğrulama kapısı kör test üzerinde de çalışır, ancak oradaki eleme kayıtları ikinci ince ayar turuna girmez; girdiği anda kör test kirlenir.
 - **Şema geçerliliği:** çıktısı şemaya uymayan örnek eğitime alınmaz; modelin çıktısı da dilbilgisi kısıtlı çözümlemeyle şemaya zorlanır.
 - **Dengeleme:** kök neden sınıfları ve "belirsiz" sınıfı dengeli temsil edilir; model tek nedene zorlama eğilimi kazanmasın diye çoklu-neden vakaları bilinçli olarak fazla örneklenir.
 - **Anonimleştirme eğitimden önce:** hiçbir kişisel veri ham hâliyle eğitim hattına girmez; bulut grafik işlemci kiralaması yalnızca sentetik ve anonimleştirilmiş veriyle yapılır.
@@ -53,8 +56,8 @@ senaryo/enjeksiyon/pilot verisi → deterministik motor koşumu → fark imzası
 
 | Kaynak | Hedef hacim | Hazır olma |
 |---|---|---|
-| A: Sentetik senaryo kütüphanesi | ≥60 senaryo × parametrik türetme ≈ 2.000–3.000 örnek | Ay 7 |
-| B: Hata enjeksiyonlu set | ≥400 vaka ≈ 1.500–2.500 örnek (çoklu görev) | Ay 8 |
+| A: Sentetik senaryo kütüphanesi | ≥150 senaryo × en fazla 12 türetme ≈ 1.500–1.800 örnek | Ay 7 |
+| B: Hata enjeksiyonlu set | ≥400 vaka / ≥40 hata tipi ≈ 1.500–2.500 örnek (çoklu görev) | Ay 8 |
 | C: Pilot kayıtları | Pilot başına ≥200 fark kalemi; ağırlıklı test/kalibrasyon | Ay 10–12 |
 | D: Denetçi dili korpusu | Mevzuat metinleri + anonim oturum notları | Ay 7–10 |
 
