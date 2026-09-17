@@ -319,6 +319,7 @@ Projede geliştirilen tüm yazılım, veri modelleri ve yöntemlerin fikri hakla
 | **EK-4** | Proje ekibi ve özgeçmişler: roller, efor dağılımı ve nitelik beyanı |
 | **EK-5** | Firma tanıtım dosyası, referanslar, mali tablolar ve proje finansman beyanı |
 | **EK-6** | Denetçi rolündeki dar kapsamlı modelin eğitim verisi üretim yöntemi: kaynaklar, görev tanımları, hacim ve kalite denetimleri (AS-1, AS-2 ve İP5 dayanağı) |
+| **EK-7** | Denetçi rolündeki modelin seçimi: zorunlu ölçütler (lisans, dönüşüm hattı, Türkçe, parametre sınıfı), aday kısa listesi ve elenen adaylar, hız bütçesi aritmetiği, ölçüm protokolü ve lisans yükümlülükleri (AS-1, Kazanım 1 ve İP5 dayanağı) |
 
 ---
 
