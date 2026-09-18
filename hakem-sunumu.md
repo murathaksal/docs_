@@ -1,33 +1,44 @@
 # HAKEM SUNUMU: Denetci.AI
 
-*İstanbul Medeniyet Üniversitesi Teknopark A.Ş. proje değerlendirme sunumu. Kaynak belge: `denetci-proje-bilgi-formu.md`. Akademik künyeler: `ek-7-akademik-kaynakca.md`. Hakem sorularına hazırlık: `hakem-sunumu-soru-cevap.md`.*
+*İstanbul Medeniyet Üniversitesi Teknopark A.Ş. proje değerlendirme sunumu.*
+
+| Belge | İçerik |
+|---|---|
+| Bu dosya | 12 slaytın içeriği, şema tarifleri ve konuşma metinleri |
+| [`hakem-sunumu-konusma-notlari.md`](hakem-sunumu-konusma-notlari.md) | **Sunum günü elde tutulacak teslim metni:** slayt başına süre, şemada neyi göstereceğiniz, çıpa cümle ve geçiş |
+| [`hakem-sunumu-soru-cevap.md`](hakem-sunumu-soru-cevap.md) | Hakem heyetinin soracağı 43 zor soru ve savunma cevapları |
+| [`ek-7-akademik-kaynakca.md`](ek-7-akademik-kaynakca.md) | Sunumdaki her literatür rakamının doğrulanmış künyesi |
+| [`denetci-proje-bilgi-formu.md`](denetci-proje-bilgi-formu.md) | Kaynak belge |
 
 ---
 
 ## Sunum hakkında
 
-**12 slayt, hedef süre 12-15 dakika + soru-cevap.** Onunda gerçek bir şema vardır; şemalar süsleme değil, sözle anlatılması uzun süren mekanizmaları gösterir.
+**12 slayt, hedef süre 14 dakika 45 saniye + soru-cevap.** Onunda gerçek bir şema vardır; şemalar süsleme değil, sözle anlatılması uzun süren mekanizmaları gösterir.
 
-**Slayt metni bilerek azdır.** Her slaytta bir iddia, bir şema ve en fazla iki satır bulunur. Ayrıntının tamamı konuşma metnindedir. Hakem heyeti slaytı okurken konuşmacıyı dinleyemez; ikisinden birini seçer.
+**Slayt metni bilerek azdır.** Her slaytta bir iddia, bir giriş cümlesi, bir şema ve gerekiyorsa bir eşik şeridi bulunur. Madde listesi yoktur. Ayrıntının tamamı konuşma metnindedir; hakem heyeti slaytı okurken konuşmacıyı dinleyemez, ikisinden birini seçer.
 
-**Dört araştırma sorusu dört slayttadır** (5-8) ve her birinin altında aynı yerde duran bir *başarısızlık eşiği* şeridi vardır: eşik tutmazsa soru olumsuz sonuçlandı diye raporlanır, eşik değiştirilmez.
+**Dört araştırma sorusu dört slayttadır** (5-8). Her birinin altında aynı yerde duran bir *başarısızlık eşiği* şeridi vardır: eşik tutmazsa soru olumsuz sonuçlandı diye raporlanır, eşik değiştirilmez.
 
-**Kesilen içerik silinmedi.** Önceki 21 slaytlık sürümdeki ekip matrisi, bütçe kırılımı, rekabet analizi, veri yönetimi ve teknopark katkısı ya bu 12 slayda sıkıştırıldı ya da aşağıdaki yedek slayt listesine taşındı. Soru gelirse açılır.
+**Kesilen içerik silinmedi.** Önceki sürümdeki ekip matrisi, bütçe kırılımı, rekabet analizi ve veri yönetimi ya bu 12 slayda sıkıştırıldı ya da aşağıdaki yedek slayt listesine taşındı.
 
 ---
 
 
 ## Slayt 1 — Denetci.AI
 
-*01 · İstanbul Medeniyet Üniversitesi Teknopark · Proje değerlendirme*
+*01  ·  İstanbul Medeniyet Üniversitesi Teknopark · Proje değerlendirme*
 
-- **FirmaARGELOG A.Ş.:** 
-- **Proje koduARGELOG-002:** 
-- **Süre12 ay:** 
-- **İş gücü39 adam-ay · 4 kişi:** 
-- **Bütçe7.000.000 ₺:** 
-- **Kapsam5746 · 4691:** 
-- **HazırlıkTHS 5 → 7:** 
+*Denetçi Rolünde Nöro-Sembolik Yerel Yapay Zekâ*
+
+> Hesabı motor yapar · bulguyu model inceler · kararı insan verir
+
+- **Firma:** ARGELOG A.Ş.
+- **Süre:** 12 ay
+- **İş gücü:** 39 adam-ay · 4 kişi
+- **Bütçe:** 7.000.000 ₺
+- **Kapsam:** 5746 · 4691
+- **Hazırlık:** THS 5 → 7
 
 **Konuşma metni:**
 > Projemizin adı Denetci.AI. Mimarinin teknik adı nöro-sembolik: sembolik taraf kurallarla kesin hesap yapan bir motor, nöral taraf öğrenen bir dil modeli. İkisini tek sistemde birleştiriyoruz.
@@ -36,21 +47,17 @@
 >
 > Dört araştırma sorumuz var; slaytlarda AS-1'den AS-4'e kısaltacağım. Üçü yapay zekâ bileşenine, biri onun dayandığı kural tabanına ait.
 
-
 ---
 
 ## Slayt 2 — Geçmiş dönem, kendi kural sürümüyle yeniden kurulamıyor
 
-*02 · Problem*
+*02  ·  Problem*
+
+Türkiye'de 1.720 Ar-Ge ve Tasarım Merkezi ile 113 bölgedeki 13.452 firma, personel başına yılda yaklaşık bir milyon TL'lik teşvik akışını elektronik tabloyla yönetiyor. Tablo tek kural sürümü taşır.
 
 **Şema.** Elektronik tabloda tek kural sürümü tüm dönemleri besler ve değişiklikte üzerine yazılır; Denetci.AI'da her dönem kendi mühürlü kural sürümüne bağlıdır.
 
-*Şema altı:* Elektronik tablo tek sürüm tutar ve değişiklikte üzerine yazar; bu yüzden kapanmış bir dönem denetimde yeniden üretilemez. Ürünün sembolik katmanı her döneme kendi kural sürümünü bağlar.
-
-- 1.720 Ar-Ge ve Tasarım Merkezi, 113 bölgede 13.452 firma; personel başına yıllık ~1 mn ₺ teşvik
-- Farkı yorumlayacak, sorgulayacak ve kanıt isteyecek uzman emeği kıt ve pahalı
-
-*T.C. Sanayi ve Teknoloji Bakanlığı istatistikleri, Haziran ve Ağustos 2026.*
+*Şema altı:* Elektronik tablo tek sürüm tutar ve değişiklikte üzerine yazar; bu yüzden kapanmış bir dönem denetimde yeniden üretilemez. Ürünün sembolik katmanı her döneme kendi kural sürümünü bağlar. Sorunun ikinci yarısı daha ağırdır: farkı yorumlayacak, sorgulayacak ve kanıt isteyecek uzman emeği kıt ve pahalıdır. T.C. Sanayi ve Teknoloji Bakanlığı istatistikleri, Haziran ve Ağustos 2026.
 
 **Konuşma metni:**
 > Türkiye'de 1.720 Ar-Ge ve Tasarım Merkezi, 13.452 teknopark firması var. Her biri her ay bordroyla iç içe geçmiş teşvik hesapları yapıyor. Bir Ar-Ge personeli başına yıllık teşvik yaklaşık bir milyon TL; 150 kişilik bir merkezde yılda yüz milyon TL düzeyinde bir akış.
@@ -59,22 +66,17 @@
 >
 > Sorunun ikinci yarısı daha önemli. Bir fark bulunduğunda onu yorumlamak, doğru soruyu sormak ve hangi belgeye bakılacağını belirlemek tamamen uzman emeğine bağlı. Bu emek kıt, pahalı ve ölçeklenemez.
 
-
 ---
 
 ## Slayt 3 — Yapay zekâ evet, hesaplayıcı koltuğunda değil
 
-*03 · Tasarım kararı*
+*03  ·  Tasarım kararı*
+
+Mali ve hukuki alanda üretken yapay zekâ genellikle hesabı ve kararı üreten konumda deneniyor. Ölçümler bu konumun savunulamadığını gösteriyor.
 
 **Şema.** Ölçülmüş dayanaksız yanıt oranları: Llama 2 %88, ChatGPT-4 %58, hukuka özel ticari araçlar %17 ile 33 arası, projenin hedef eşiği yüzde 1 veya altı.
 
-*Şema altı:* Hukuk alanında ölçülmüş oranlar. Erişim destekli ticari araçlar oranı düşürüyor ancak ortadan kaldırmıyor; alt şerit projenin kendine koyduğu eşiktir.
-
-- Halüsinasyon giderilebilir bir arıza değil; ölçme biçiminin yapısal sonucu
-- Bir tutarın yüzde on yedi ihtimalle uydurma olması denetim ortamında kabul edilemez
-- Karar: modelin rolü daraltıldı. Hesap yapmaz, karar vermez
-
-*Dahl vd. 2024, Journal of Legal Analysis; Magesh vd. 2025, Journal of Empirical Legal Studies; Kalai vd. 2026, Nature. Künyeler EK‑7.*
+*Şema altı:* Hukuk alanında ölçülmüş oranlar. Erişim destekli ticari araçlar oranı düşürüyor ancak ortadan kaldırmıyor; alt şerit projenin kendine koyduğu eşiktir. Bir tutarın yüzde on yedi ihtimalle uydurma olması denetim ortamında kabul edilemez; bu yüzden modelin rolü daraltıldı. Dahl vd. 2024, Journal of Legal Analysis; Magesh vd. 2025, Journal of Empirical Legal Studies; Kalai vd. 2026, Nature. Künyeler EK‑7.
 
 **Konuşma metni:**
 > Projenin en kritik tasarım kararı bu. Stanford ekibinin 2024 ölçümü, gerçek mahkeme kararları hakkında doğrulanabilir sorular sorulduğunda ChatGPT-4'ün yüzde 58, Llama 2'nin yüzde 88 oranında dayanaksız yanıt ürettiğini gösterdi.
@@ -83,19 +85,17 @@
 >
 > Bizim alanımızda bir tutarın yüzde on yedi ihtimalle uydurma olması kabul edilemez. Bu yüzden yapay zekânın rolünü bilinçli olarak daralttık. En alttaki şerit bizim eşiğimiz; nasıl tutturacağımızı yedinci slaytta anlatacağım.
 
-
 ---
 
 ## Slayt 4 — Hesabı motor yapar, kararı insan verir
 
-*04 · İş bölümü*
+*04  ·  İş bölümü*
+
+Roller kesin çizgiyle ayrıldı. Model hiçbir aşamada tutar hesaplamaz; bu ayrım kod düzeyinde kurulu ve denetim iziyle kanıtlanabilir.
 
 **Şema.** Motor farkı üretir, model bulguyu inceler, doğrulama kapısı atıfları denetler, insan karar verir ve getirilen belgeyle motor yeniden koşar. Modelden tutara giden bir yol yoktur.
 
-*Şema altı:* Çarpı işaretli kesik çizgi projenin taşıyıcı tercihidir: modelden tutara giden bir yol yoktur. Bu nedenle modelin yanılması hatalı bir tutar değil, gereksiz bir inceleme adımı üretir.
-
-- Ayrım kod düzeyinde kurulu ve denetim iziyle kanıtlanabilir
-- YMM'nin tasdik yetkisi ve sorumluluğu değişmez; ürün beyan üretmez, göndermez, tasdik etmez
+*Şema altı:* Çarpı işaretli kesik çizgi projenin taşıyıcı tercihidir: modelden tutara giden bir yol yoktur. Bu nedenle modelin yanılması hatalı bir tutar değil, gereksiz bir inceleme adımı üretir. Yeminli Mali Müşavirin tasdik yetkisi ve sorumluluğu değişmez: ürün beyan üretmez, göndermez, tasdik etmez.
 
 **Konuşma metni:**
 > İş bölümümüz şu. Motor hesaplar. Bulduğu farkı model inceler: bu fark ne anlama geliyor, hangi kural sürümünün uygulanmamasıyla tutarlı, bir denetçi burada ne sorardı, hangi belgeyi istemeli. Kapı modelin her atfını kural tabanına karşı doğrular. İnsan karar verir. Getirilen belgeyle motor yeniden koşar ve döngü kapanır.
@@ -104,20 +104,20 @@
 >
 > Literatürde bu yaklaşımın adı var. Program destekli dil modelleri çalışması, modelin problemi doğru parçalasa bile hesap adımında hata yaptığını, hesabı deterministik bir yürütücüye devretmenin bu hatayı ortadan kaldırdığını gösteriyor. Kambhampati ve arkadaşları da dil modellerinin kendilerini doğrulayamadığını, ancak dış doğrulayıcılarla çevrelendiklerinde değerli olduklarını söylüyor. Kapımız tam olarak böyle bir dış doğrulayıcı.
 
-
 ---
 
 ## Slayt 5 — Denetçi rolü, motorun kendi çıktısıyla öğretilebilir mi?
 
-*05 · Araştırma Sorusu 1*
+*05  ·  Araştırma Sorusu 1*
+
+Bu göreve elle etiketli veri üretmek ölçeklenmez. Doğrulanmış deterministik motoru referans kaynağı olarak kullanıyoruz.
 
 **Şema.** Senaryo, enjeksiyon ve pilot verisi motordan geçer, fark imzası ve kural sürümü üretir, buradan eğitim çiftleri çıkar; araştırma yönlendirme görevinde etiketi motorun yeniden koşumu otomatik olarak koyar.
 
-*Şema altı:* Etiketin kaynağı model değil, 96 gerçek dönemde kuruş farksız doğrulanmış motordur. Özyineleme olmadığı için sentetik veriyle eğitimin bilinen çöküş mekanizması bu hatta oluşmaz.
+*Şema altı:* Etiketin kaynağı model değil, 96 gerçek dönemde kuruş farksız doğrulanmış motordur. Özyineleme olmadığı için sentetik veriyle eğitimin bilinen çöküş mekanizması bu hatta oluşmaz. Hacim: ≥60 senaryodan yaklaşık 2.000-3.000, ≥400 vakadan 1.500-2.500 örnek; pilot başına ≥200 gerçek fark kalemi.
 
-- Hacim: ≥60 senaryodan ~2.000-3.000, ≥400 vakadan ~1.500-2.500 örnek; pilot başına ≥200 gerçek fark kalemi
-
-> **Başarısızlık eşiği · ay 10 ve 12Yönlendirme isabeti ≥ %70  |  ince ayarsız temel modele karşı ≥ 15 puan**
+> **Başarısızlık eşiği · ay 10 ve 12**
+> Yönlendirme isabeti ≥ %70  |  ince ayarsız temel modele karşı ≥ 15 puan
 > Uzmanın bulgularının ≥ %80'i yakalanır  |  soru nitelenme oranı ≥ %70
 
 **Konuşma metni:**
@@ -127,21 +127,20 @@
 >
 > Sentetik veri riskini biliyoruz. Nature'daki çalışma, modelin kendi ürettiği veriyle özyinelemeli eğitilmesinin geri dönüşsüz çöküşe yol açtığını gösterdi. Bizde özyineleme yok: veriyi model değil, doksan altı gerçek dönemde kuruş farksız doğrulanmış motor üretiyor.
 
-
 ---
 
 ## Slayt 6 — Dayanaksız iddia kullanıcıya hiç ulaşmaz
 
-*06 · Araştırma Sorusu 2*
+*06  ·  Araştırma Sorusu 2*
+
+Dil modellerinin bilinen zayıflığı akıcı ama dayanaksız iddia üretmeleridir. Mevzuat alanında bu, var olmayan bir maddeye atıf ya da o dönemde yürürlükte olmayan bir kurala dayanma biçiminde çıkar.
 
 **Şema.** Model bulguları doğrulama kapısında iki soruya tabi tutulur; geçenler kullanıcıya gider, elenenler ince ayara olumsuz örnek olarak döner.
 
-*Şema altı:* Kapı hiçbir tutarı gizlemez: motorun bulduğu fark her koşulda kullanıcıya gider. Elenen şey tutar değil, modelin o fark üzerine yazdığı yorumdur.
+*Şema altı:* Kapı hiçbir tutarı gizlemez: motorun bulduğu fark her koşulda kullanıcıya gider. Elenen şey tutar değil, modelin o fark üzerine yazdığı yorumdur. Dil modelleri kendi akıl yürütme hatasını düzeltemez; bu yüzden doğrulama dışsal ve sembolik olmak zorundadır.
 
-- Dil modelleri kendi akıl yürütme hatasını düzeltemez; doğrulama dışsal ve sembolik olmalı. Kapının haklı bulguyu eleme oranı da ayrıca ölçülür
-
-> **Başarısızlık eşiği · ay 10Atıf doğruluğu ≥ %98  |  desteksiz iddia ≤ %1**
-> 
+> **Başarısızlık eşiği · ay 10**
+> Atıf doğruluğu ≥ %98  |  desteksiz iddia ≤ %1
 
 **Konuşma metni:**
 > İkinci soru: küçük bir modelin ürettiği gerekçeler sembolik bir kural tabanına karşı doğrulanarak kanıta bağlı tutulabilir mi?
@@ -150,21 +149,20 @@
 >
 > Neden model bunu kendi kendine yapamıyor? Çünkü yapamadığı ölçüldü. Huang ve arkadaşlarının ICLR 2024 çalışması, dil modellerinin dışarıdan geri bildirim almadan akıl yürütme hatalarını düzeltemediğini, hatta denemenin çoğu kez performansı düşürdüğünü gösterdi. Bir noktayı kendim söyleyeyim: kapı doğru bulguları da eleyebilir ve bunu ölçmeyi taahhüt ediyoruz. En kötü sonucu, kullanıcının bugünkü gibi yorumsuz bir farkla kalmasıdır.
 
-
 ---
 
 ## Slayt 7 — Farkı bulmak kolay, nedenini atamak zor
 
-*07 · Araştırma Sorusu 3*
+*07  ·  Araştırma Sorusu 3*
+
+Farkı bulmak deterministiktir ve rutin yazılımdır. Belirsizlik, farkın nedenine güvenilir biçimde atanmasındadır.
 
 **Şema.** Tek bir fark tutarı yedi ayrı kök nedenle açıklanabilir; sembolik katman bu kümeyi eksiksiz üretir, nöral katman sıralar ve kanıt belgesi ister, ayırt edilemeyen kalem belirsiz olarak raporlanır.
 
-*Şema altı:* Klasik bir tanımlanabilirlik problemi: yedi neden matematiksel olarak aynı fark görüntüsünü üretir. Sembolik katman doğruluğu, nöral katman verimliliği taşır. Ayırt edilemeyen kalem tek nedene zorlanmaz.
+*Şema altı:* Klasik bir tanımlanabilirlik problemi: yedi neden matematiksel olarak aynı fark görüntüsünü üretir. Sembolik katman doğruluğu, nöral katman verimliliği taşır. Ayırt edilemeyen kalem tek nedene zorlanmaz. İki eşik farklı paydadadır ve bilerek kilitlidir: zor vakaları belirsize atmak tutar payını şişirir. Model tabanlı teşhis: Reiter 1987; de Kleer ve Williams 1987. Künyeler EK‑7 bölüm 6.
 
-- İki metrik farklı paydadadır ve bilerek kilitlidir: zor vakaları belirsize atmak tutar payını şişirir
-
-> **Başarısızlık eşiği · ay 10 ve 12Kalem bazında ≥ %85  |  ilk üç hipotezde ≥ %90  |  belirsiz tutar payı ≤ %5**
-> 
+> **Başarısızlık eşiği · ay 10 ve 12**
+> Kalem bazında ≥ %85  |  ilk üç hipotezde ≥ %90  |  belirsiz tutar payı ≤ %5
 
 **Konuşma metni:**
 > Üçüncü soru teşhisle ilgili. Farkı bulmak deterministiktir; iki sayıyı çıkarırsınız. Asıl belirsizlik farkın nedenine güvenilir biçimde atanmasında.
@@ -173,20 +171,20 @@
 >
 > Bir soruyu ben sorayım: zor vakaların hepsini belirsiz etiketleyip yüzde 85'i kolayca tutturamaz mısınız? İki metriği bilerek birbirine kilitledik. Doğruluk kalem bazında, belirsiz payı tutar bazında ölçülüyor ve tavanı yüzde beş.
 
-
 ---
 
 ## Slayt 8 — Her dönem kendi kuralıyla, üç ayrı eksende
 
-*08 · Araştırma Sorusu 4*
+*08  ·  Araştırma Sorusu 4*
+
+Modelin her atfının doğrulanabilmesi, kural tabanının her dönem için o gün yürürlükte olan kuralı kesin olarak bilmesini gerektirir.
 
 **Şema.** Parametre, hesap şeması ve bilgi tarihi eksenleri ayrı ayrı sürümlenir; as-of kesiti üç eksenden o tarihte geçerli olan sürümü seçer.
 
-*Şema altı:* Üç eksen birbirinden bağımsız sürümlenir. Kapanmış bir dönemi yeniden üretmek, üç eksenin kesişiminden o tarihte geçerli olan sürümü seçebilmektir; bu alanda hazır bir çözümü bulunmayan bir bilgi temsili problemidir.
+*Şema altı:* Üç eksen birbirinden bağımsız sürümlenir. Kapanmış bir dönemi yeniden üretmek, üç eksenin kesişiminden o tarihte geçerli olan sürümü seçebilmektir; bu alanda hazır bir çözümü bulunmayan bir bilgi temsili problemidir. Sorunun ikinci yarısı, rejime özgü mantığın ne kadarının kural dosyasına taşınabildiğidir; 4691 bunun sınama alanıdır.
 
-- Sorunun ikinci yarısı: rejime özgü mantığın ne kadarı kural dosyasına taşınabilir? 4691 sınama alanıdır ve iki rejim bir aradaysa aralarındaki sınır da denetlenmelidir
-
-> **Başarısızlık eşiği · ay 7 ve 8YMM teyitli gerçek çapa 96 → ≥ 140  |  oranı doğrulanmamış ay için ne hesap ne rapor üretilir**
+> **Başarısızlık eşiği · ay 7 ve 8**
+> YMM teyitli gerçek çapa 96 → ≥ 140  |  oranı doğrulanmamış ay için ne hesap ne rapor üretilir
 > 4691 kurallarının ≥ %90'ı kod yazılmadan tanımlanmalı  |  kaçış ≤ 3
 
 **Konuşma metni:**
@@ -196,16 +194,17 @@
 >
 > Dikey kesik çizgi as-of kesiti. Bu problemin veritabanı literatüründe adı var ve SQL 2011 standardında dilin içine alınmış durumda; bizim katkımız üç ekseni bir teşvik rejiminin hesap mantığıyla birleştirmek. Son olarak: yeni bir tebliğ çıkarsa modeli yeniden eğitmiyoruz. Model oran ve limit taşımıyor, yeni tebliğ yeni bir kural dosyasıdır.
 
-
 ---
 
 ## Slayt 9 — Beş karşılaştırma kolu, mühürlü eşik
 
-*09 · Ölçüm düzeneği*
+*09  ·  Ölçüm düzeneği*
+
+Bir yapay zekâ iddiası ancak ölçüm düzeneği kadar değerlidir. Aynı kör test seti beş kolda koşulur.
 
 **Şema.** Aynı kör test seti beş kolda koşulur: ince ayarlı model, ince ayarsız model, erişim destekli kol, alan dışı genel model ve uzman denetçi.
 
-*Şema altı:* Üçüncü kol, "neden erişim destekli üretim yetmiyor da ince ayar gerekiyor" sorusunun cevabını tahmine değil ölçüme bağlar. AS-3 için ayrıca kural tabanlı bir sembolik taban çizgisi koşulur.
+*Şema altı:* Üçüncü kol, "neden erişim destekli üretim yetmiyor da ince ayar gerekiyor" sorusunun cevabını tahmine değil ölçüme bağlar. AS-3 için ayrıca kural tabanlı bir sembolik taban çizgisi koşulur. Üçüncü kol, "neden erişim destekli üretim yetmiyor da ince ayar gerekiyor" sorusunun cevabını tahmine değil ölçüme bağlar.
 
 | Soru | Eşik | Ay |
 |---|---|---|
@@ -214,7 +213,8 @@
 | AS-3 | Kalem bazında ≥ %85; ilk üçte ≥ %90; belirsiz tutar ≤ %5 | 10, 12 |
 | AS-4 | Çapa 96 → ≥ 140; kural dosyasıyla kapsama ≥ %90; kaçış ≤ 3 | 7, 8 |
 
-> **Ön kayıtEşikler ve kör test seti ay 7'de mühürlenip TTO ve YMM nezdinde saklanır.**
+> **Ön kayıt**
+> Eşikler ve kör test seti ay 7'de mühürlenip TTO ve YMM nezdinde saklanır.
 > Ölçümden sonra ne eşik ne payda değişir. Sızıntı kontrolü EK‑6 §4'te yazılıdır.
 
 **Konuşma metni:**
@@ -224,12 +224,13 @@
 >
 > En önemli taahhüdümüz alttaki şerit: bütün eşikler ve kör test seti yedinci ayda mühürlenip Teknoloji Transfer Ofisi ile YMM nezdinde yazılı olarak saklanacak. Ölçümden sonra ne eşiği ne paydayı değiştiririz.
 
-
 ---
 
 ## Slayt 10 — Yedi iş paketi, beş ölçüm kapısı
 
-*10 · İş planı*
+*10  ·  İş planı*
+
+Her iş paketinin adam-ayı, ayı ve çıkış kriteri yazılı. Hesap çekirdeği proje öncesinde geliştirildi ve başlangıç varlığı olarak beyan edildi.
 
 **Şema.** On iki aylık takvimde yedi iş paketi ve ay 7, 8, 10, 11, 12'deki ölçüm kapıları.
 
@@ -243,8 +244,6 @@
 | Analiz ve test uzmanı | 9 | Patent, marka, akademik danışmanlık | %4 |
 | Toplam · 3,25 TZE | 39 | Seyahat, bulut GPU, lisans, sarf, öngörülemeyen | %12 |
 
-- 31 adam-ay Ar-Ge, 8 adam-ay geliştirme; hesap çekirdeği proje öncesinde geliştirildi ve başlangıç varlığı olarak beyan edildi
-
 **Konuşma metni:**
 > Yedi iş paketi, her birinin adam-ayı, ayı ve çıkış kriteri yazılı. Koyu şerit İP5, yani projenin yapay zekâ ekseni: 10 adam-ay, ay 6'dan 12'ye. Kritik yol İP2'nin yedinci aydaki kural tabanı kapısından ve İP4'ün sekizinci aydaki senaryo setlerinden geçiyor.
 >
@@ -252,18 +251,17 @@
 >
 > Bütçenin yüzde 72'si personel; donanım payı yüzde dört. Bu bir ekipman alma projesi değil. YMM kalemi projenin ölçüm altın standardını üretiyor: kural setlerinin madde teyidi, parametre tablosunun doğrulanması, pilot mutabakat denetimi ve kör değerlendirmede uzman etiketleme.
 
-
 ---
 
 ## Slayt 11 — Başarısızlık hatalı tutar üretmez
 
-*11 · Risk*
+*11  ·  Risk*
+
+Hakem heyetinin haklı olarak soracağı soru: yapay zekâ bileşeni hedefe ulaşamazsa yedi milyon TL boşa mı gitmiş olur?
 
 **Şema.** Model yanıldığında sonuç yalnızca gereksiz bir inceleme adımıdır ve tutar değişmez; motorun parametresi doğrulanmamışsa sert kural hesabı ve raporu tamamen durdurur.
 
-*Şema altı:* Asimetri tasarım tercihidir. Nöral katmanın hatası ilerler ama zarar vermez; sembolik katmanın teyitsizliği hiç ilerlemez. Doğruluğu model değil motor taşıdığı için ürün, araştırma sorusu düşse bile çalışır.
-
-- AS-1 tutmazsa olumsuz sonuçlu araştırma sorusu olarak raporlanır; ürün sembolik katmanla eksiksiz çalışır
+*Şema altı:* Asimetri tasarım tercihidir. Nöral katmanın hatası ilerler ama zarar vermez; sembolik katmanın teyitsizliği hiç ilerlemez. Doğruluğu model değil motor taşıdığı için ürün, araştırma sorusu düşse bile çalışır. AS-1 tutmazsa olumsuz sonuçlu araştırma sorusu olarak raporlanır; ürün sembolik katman üzerinden eksiksiz çalışmayı sürdürür.
 
 **Konuşma metni:**
 > Hakem heyetinin haklı olarak soracağı soru şu: yapay zekâ bileşeni hedefe ulaşamazsa yedi milyon TL boşa mı gitmiş olur?
@@ -272,12 +270,13 @@
 >
 > AS-1 tutmazsa bunu olumsuz sonuçlu bir araştırma sorusu olarak, veri kaynağı ve hacim etkisi ölçümleriyle birlikte raporlarız; bu da bilimsel bir çıktıdır. Ürün ise sembolik katman üzerinden eksiksiz çalışmaya devam eder: geçmiş dönem mutabakatı, kök-neden teşhisi, mühürlü baz, denetim savunma dosyası ve cari dönem kontrolü modele bağlı değil.
 
-
 ---
 
 ## Slayt 12 — Geriye ne kalacak
 
-*12 · Kapanış*
+*12  ·  Kapanış*
+
+Proje sonunda geriye dört somut şey kalacak.
 
 | # | Çıktı | Kanıtı |
 |---|---|---|
@@ -286,8 +285,10 @@
 | 3 | THS 7 prototip, iki referans vaka | Tüpraş ve Kale Seramik'te ücretli pilot; yazılı ihtiyaç görüşleri alındı |
 | 4 | Fikri mülkiyet | Marka başvurusu; ay 9'da patentlenebilirlik ön değerlendirmesi |
 
-- TTO'dan talebimiz: yapay zekâ tarafında akademisyen danışmanlığı; ay 7 ve ay 10'da bağımsız gözden geçirme
-- Bölgeye taahhüdümüz: 4 kişiyle başlayıp 6; beş bölge firmasına 4691 ön sürümü; iki seminer; ortak bildiri
+> Araştırma sorusu düşerse bile ürün sembolik katman üzerinden eksiksiz çalışır.
+> Hesabı motor yapar, bulguyu model inceler, kararı insan verir.
+
+TTO'dan talebimiz: yapay zekâ tarafında akademisyen danışmanlığı; ay 7 ve ay 10'da bağımsız gözden geçirme. Bölgeye taahhüdümüz: 4 kişiyle başlayıp 6; beş bölge firmasına 4691 ön sürümü; iki seminer; TTO ile ortak bildiri.
 
 **Konuşma metni:**
 > Toparlayayım. Proje sonunda geriye dört somut şey kalacak. Doğrulanmış, zaman-farkındalıklı bir kural tabanı; denetçi rolündeki yerel model ve onu ölçen düzenek; iki sanayi kuruluşunda gerçek veriyle çalışan bir prototip; ve fikri mülkiyet.
@@ -298,9 +299,7 @@
 >
 > Son cümlem şu: araştırma sorusu düşerse bile ürün çalışır, çünkü doğruluğu model değil motor taşıyor. Hesabı motor yapar, bulguyu model inceler, kararı insan verir. Teşekkür ederim.
 
-
 ---
-
 
 # YEDEK SLAYTLAR
 
