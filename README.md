@@ -16,7 +16,7 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 
 | Belge | İçerik |
 |---|---|
-| **[`hakem-sunumu.md`](hakem-sunumu.md)** | **Hakem heyetine sunulacak 21 slayt:** başlık, en fazla 5 madde, konuşma metni ve görsel notu. Her araştırma sorusu yanlışlanabilir bir başarısızlık eşiğine bağlanmıştır. Sonunda sunum öncesi karar bekleyen maddeler ve düzeltilecek portal kayıtları listelenir. |
+| **[`hakem-sunumu.md`](hakem-sunumu.md)** | **Hakem heyetine sunulacak 12 slayt:** her slaytta bir iddia, bir şema ve en fazla iki satır; ayrıntı konuşma metninde. Onunda gerçek şema vardır (kural sürümünün kaybı, iş bölümü döngüsü, veri hattı, doğrulama kapısı, tanımlanabilirlik yelpazesi, üç eksenli sürümleme, karşılaştırma kolları, takvim, risk asimetrisi). Dört araştırma sorusunun her biri yanlışlanabilir bir başarısızlık eşiğine bağlıdır. Sonunda 12 yedek slayt listesi, karar bekleyen maddeler ve düzeltilecek portal kayıtları yer alır. |
 | [`hakem-sunumu-soru-cevap.md`](hakem-sunumu-soru-cevap.md) | Hakem heyetinin soracağı 43 zor soru ve 30-60 saniyelik savunma cevapları: dokuz başlıkta, her soruda dayanak ve yapılmaması gereken savunma hatası. |
 | [`ek-7-akademik-kaynakca.md`](ek-7-akademik-kaynakca.md) | **EK-7.** Sunumdaki her sayısal iddianın dayanağı: 98 doğrulanmış akademik ve kurumsal künye, 10 bölümde. Künyesi birincil kaynaktan teyit edilemeyen 26 kayıt gerekçesiyle birlikte elenmiş ve ayrı bölümde listelenmiştir. |
 
