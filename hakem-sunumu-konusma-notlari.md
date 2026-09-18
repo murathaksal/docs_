@@ -18,6 +18,8 @@ Her slayt dört parça hâlinde verilmiştir:
 
 **Toplam hedef: 14 dakika 45 saniye.** Soru-cevap için en az 10 dakika bırakın.
 
+**Dil kaydı.** Slayt başlıkları, Proje Bilgi Formu'ndaki araştırma sorusu adlarıyla eşitlenmiştir; hakem elindeki formla ekrandaki başlığı doğrudan eşleştirebilir. Konuşurken de formun terimlerini kullanın: nöro-sembolik mimari, deterministik hesap çekirdeği, zaman-farkındalıklı kural tabanı, sembolik doğrulama kapısı, abdüktif kök-neden teşhisi, denetçi rolündeki dar kapsamlı model. Aynı kavram için ikinci bir isim uydurmayın; heyet bunu tutarsızlık olarak okur.
+
 ---
 
 ## Sunum öncesi beş dakika
@@ -54,7 +56,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 2 — Problem
+## Slayt 2 — Kapanmış dönem, kendi kural sürümüyle yeniden üretilemiyor
 
 **Süre:** 75 sn · toplam 2:00
 **Şemada göster:** Üstteki tek kutuyu ve ondan dört döneme inen okları; sonra kutunun sağındaki kendine dönen oku ("üzerine yazılır"); sonra alttaki dört sürümlü şeridi.
@@ -77,7 +79,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 3 — Tasarım kararı
+## Slayt 3 — Mevzuat alanında dil modeli hesap ve karar üretemez
 
 **Süre:** 75 sn · toplam 3:15
 **Şemada göster:** Sırayla en uzun çubuğu (%88), sonra %58'i, sonra %17-33 bandını; en son alttaki kısa koyu çubuğu (kendi eşiğimiz).
@@ -102,7 +104,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 4 — İş bölümü
+## Slayt 4 — İş bölümü: motor hesaplar, model inceler, insan karar verir
 
 **Süre:** 90 sn · toplam 4:45
 **Şemada göster:** Soldan sağa dört kutuyu sırayla; sonra alttaki uzun geri dönüş okunu; **en son ve en uzun süre çarpı işaretli kesik çizgiyi.**
@@ -125,7 +127,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 5 — AS-1
+## Slayt 5 — AS-1 · Denetçi rolü dar kapsamlı bir modele öğretilebilir mi?
 
 **Süre:** 90 sn · toplam 6:15
 **Şemada göster:** Soldaki üç kaynağı; sonra MOTOR kutusunu; **sonra alttaki geri dönüş okunu** ("belge getir, motor koş, çözdü mü").
@@ -150,7 +152,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 6 — AS-2
+## Slayt 6 — AS-2 · Gerekçeler kural tabanına karşı kanıta bağlanabilir mi?
 
 **Süre:** 75 sn · toplam 7:30
 **Şemada göster:** Ortadaki kapı kutusunun içindeki iki soruyu; sonra yukarı çıkan "kullanıcıya" okunu ve aşağı inen "elenen" okunu; sonra en alttaki geri dönüş okunu.
@@ -171,7 +173,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 7 — AS-3
+## Slayt 7 — AS-3 · Abdüktif kök-neden teşhisi
 
 **Süre:** 75 sn · toplam 8:45
 **Şemada göster:** Soldaki tek tutarı; sonra yelpazeyi açan yedi oku; sonra sağdaki daralma zincirini (sırala → kanıt iste → tek neden veya belirsiz).
@@ -196,7 +198,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 8 — AS-4
+## Slayt 8 — AS-4 · Üç eksenli sürümleme ve ifade edilebilirlik sınırı
 
 **Süre:** 90 sn · toplam 10:15
 **Şemada göster:** Üç şeridi yukarıdan aşağıya; ortadaki şeritte iki işaretli olayı; sonra dikey kesik çizgiyi (as-of kesiti).
@@ -221,10 +223,10 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 9 — Ölçüm düzeneği
+## Slayt 9 — Ölçüm düzeneği ve başarısızlık eşikleri
 
 **Süre:** 75 sn · toplam 11:30
-**Şemada göster:** Sol kutudan çıkan beş oku; **özellikle üçüncü kolu** (erişim destekli). Sonra alttaki eşik tablosunu ve en alttaki ön kayıt şeridini.
+**Şemada göster:** Sol kutudan çıkan beş oku; **özellikle üçüncü kolu** (erişim destekli). Sağdaki gri notlar her kolun neyi ölçtüğünü söyler. Sonra eşik tablosunu ve en alttaki ön kayıt şeridini.
 
 **Söyle:**
 
@@ -242,10 +244,10 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 10 — İş planı, ekip, bütçe
+## Slayt 10 — İş paketleri, ölçüm kapıları ve kaynak dağılımı
 
 **Süre:** 75 sn · toplam 12:45
-**Şemada göster:** Koyu şeridi (İP5); sonra dikey kesik kapı çizgilerini; sonra alttaki tabloda personel satırını ve %72'yi.
+**Şemada göster:** Koyu şeridi (İP5); sonra dikey kesik kapı çizgilerini ve alttaki kapı numaralarını; sonra tabloda personel satırını ve %72'yi.
 
 **Söyle:**
 
@@ -265,7 +267,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 11 — Risk
+## Slayt 11 — Başarısızlık senaryosu ve risk asimetrisi
 
 **Süre:** 60 sn · toplam 13:45
 **Şemada göster:** Üstteki hattı soldan sağa; sonra alttaki hattaki kalın dikey engeli.
@@ -284,7 +286,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ---
 
-## Slayt 12 — Kapanış
+## Slayt 12 — Proje çıktıları ve teknopark katkısı
 
 **Süre:** 60 sn · toplam 14:45
 **Şemada göster:** Dört çıktı satırını sırayla; sonra en alttaki alıntı bloğunu.
