@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "denetci-ai/sema/g1",
+  "title": "G1 — Bulgu yorumlama çıktısı",
+  "description": "Model kök neden ADAYLARINI sıralar ve açıklar. Tutar üretmez, sınıfı kesinleştirmez, kapanış kararı vermez.",
+  "type": "object",
+  "required": ["kok_neden_adaylari", "ayirt_edilebilir", "kanit_talebi"],
+  "additionalProperties": false,
+  "properties": {
+    "kok_neden_adaylari": {
+      "type": "array", "minItems": 1, "maxItems": 3,
+      "description": "Olasılık sırasına göre. AS-2 metriği ilk üç aday üzerinden ölçülür.",
+      "items": {
+        "type": "object",
+        "required": ["sira", "sinif", "hipotez_kodu", "aciklama", "mevzuat_ref"],
+        "additionalProperties": false,
+        "properties": {
+          "sira":     {"type": "integer", "minimum": 1, "maximum": 3},
+          "sinif":    {"enum": ["S1", "S2", "S3", "S4a", "S4b", "S4c", "S5"]},
+          "hipotez_kodu": {"type": "string", "pattern": "^H-[A-ZÇĞİÖŞÜ0-9-]{3,30}$"},
+          "aciklama": {"type": "string", "minLength": 40, "maxLength": 700,
+                       "description": "Düz Türkçe. Tutar iddiası içeremez (bkz. dogrula.py tutar_yasagi)."},
+          "mevzuat_ref": {"type": "string", "minLength": 6,
+                       "description": "Zorunlu. Atıfsız hipotez şema geçerli değildir."}
+        }
+      }
+    },
+    "ayirt_edilebilir": {"type": "boolean",
+      "description": "false ise adaylardan biri S5 olmalı ve belirsizlik_notu dolu olmalıdır (S5: tek nedene zorlanmaz)."},
+    "belirsizlik_notu": {"type": ["string", "null"], "maxLength": 400},
+    "kanit_talebi": {"type": "array", "minItems": 0, "maxItems": 4, "items": {"type": "string", "minLength": 4}}
+  },
+  "allOf": [{
+    "if":   {"properties": {"ayirt_edilebilir": {"const": false}}},
+    "then": {"required": ["belirsizlik_notu"],
+             "properties": {"belirsizlik_notu": {"type": "string", "minLength": 20},
+                            "kok_neden_adaylari": {"contains": {"properties": {"sinif": {"const": "S5"}}}}}}
+  }]
+}

@@ -1,0 +1,595 @@
+{
+  "surum": "1.0",
+  "tarih": "2026-09-22",
+  "not": "EK-6 Kaynak A. Her senaryo tek ve bilinen bir kök nedenli kontrollü bozulmadır; kök neden, çözen belge ve beklenen sorular inşa gereği bilinir. Gerçek kütüphane hedefi ≥60 senaryodur; bu dosya deseni gösteren 12 senaryoyu taşır.",
+  "sinif_tanimlari": {
+    "S1": "Tolerans içi (kişi-kalem ±0,01 TL, dönem toplamı ±1 TL) — bulgu değildir",
+    "S2": "Yöntem/yorum farkı — muhasebe politikası profiline yazılır",
+    "S3": "Veri eksiği / sınıflandırılamaz — asla tutar iddiasına dönüşmez",
+    "S4a": "Gerçek fark, lehte ve tahsil edilebilir (SGK: 5510 Ek m.17 penceresi; GV/DV: VUK düzeltme zamanaşımı)",
+    "S4b": "Gerçek fark, lehte ama geriye tahsil edilemez — önlenen yıllık kayba çevrilir",
+    "S4c": "Gerçek fark, aleyhte (fazla yararlanma) — geri isteme ve gecikme zammı riski",
+    "S5": "Ayırt edilemez — dürüstçe belirsiz raporlanır, tek nedene zorlanmaz"
+  },
+  "senaryolar": [
+    {
+      "id": "S01",
+      "ad": "Eğitim derecesi oranının mezuniyet ayından önce uygulanması",
+      "ihlal_edilen_kural": [
+        "K9"
+      ],
+      "mevzuat_ref": "5746 sayılı Kanun md. 3; gelir vergisi stopaj teşvikinde terkin oranı öğrenim derecesine bağlıdır, oran mezuniyet tarihini izleyen aydan itibaren uygulanır",
+      "bozulma": "Yüksek lisans diploması yıl içinde alınmışken, mezuniyet ayından önceki aylara da yüksek lisans oranı uygulanmıştır.",
+      "beklenen_sinif": "S4c",
+      "hipotez_kodu": "H-TERKIN-ORAN-ERKEN",
+      "rakip_hipotez": "H-TAVAN-UYGULANMAMIS",
+      "ayirt_edilebilir": true,
+      "cozen_belge": "diploma/YÖK mezun belgesi",
+      "cozen_alan": "mezuniyet_tarihi",
+      "parametre_uzayi": {
+        "alfa_beyan": [
+          0.9,
+          0.95
+        ],
+        "alfa_dogru": [
+          0.8,
+          0.9
+        ],
+        "matrah": [
+          42500.0,
+          61000.0,
+          88000.0
+        ],
+        "ay_sayisi": [
+          2,
+          3
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "{kisi} için yüksek lisans diploması hangi tarihte alınmıştır ve terkin oranı hangi aydan itibaren yükseltilmiştir?",
+          "amac": "kanıt talebi"
+        },
+        {
+          "soru": "Mezuniyet öncesi aylarda uygulanan oranın dayanağı nedir; oranı belirleyen belge dosyada mevcut mudur?",
+          "amac": "kanıt talebi"
+        },
+        {
+          "soru": "Aynı hata diğer personel için de tekrar ediyor mu; oran atama süreci kişi bazlı mı yürütülüyor?",
+          "amac": "kapsam doğrulama"
+        }
+      ],
+      "rakip_sinif": "S4c",
+      "rakip_mevzuat_ref": "7555 sayılı düzenlemenin ücret tavanı; tavanı aşan matrah payı ayrı kanun türüyle bildirilmelidir",
+      "rakip_kural": "K4"
+    },
+    {
+      "id": "S02",
+      "ad": "Ücret tavanının ay ortası yürürlüğünün göz ardı edilmesi",
+      "ihlal_edilen_kural": [
+        "K4"
+      ],
+      "mevzuat_ref": "7555 sayılı düzenlemenin ücret tavanı 01.08.2025'te ay ortasında yürürlüğe girmiştir; tavanı aşan matrah payı 5510-serisi kanun türüyle ayrı belge satırı olarak bildirilmelidir",
+      "bozulma": "Tavanın yürürlüğe girdiği ayda tavan uygulanmamış, tavan üstü matrah payı için 5510 satırı açılmamıştır.",
+      "beklenen_sinif": "S4c",
+      "hipotez_kodu": "H-TAVAN-UYGULANMAMIS",
+      "rakip_hipotez": "H-DONEM-ANAHTARI-YARIYIL",
+      "ayirt_edilebilir": true,
+      "cozen_belge": "SGK onaylı hizmet listesi",
+      "cozen_alan": "kanun_turu_satirlari",
+      "parametre_uzayi": {
+        "tavan": [
+          195000.0
+        ],
+        "matrah": [
+          240000.0,
+          310000.0
+        ],
+        "kisi_sayisi": [
+          1,
+          3
+        ],
+        "ay_sayisi": [
+          1
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Ağustos 2025 bildiriminde tavan üstü matrah payı için 5510-serisi ayrı satır açılmış mıdır?",
+          "amac": "kanıt talebi"
+        },
+        {
+          "soru": "Tavan kararı hesap kütüğünde yarıyıl anahtarıyla mı yoksa aylık çözünürlükle mi tutulmaktadır?",
+          "amac": "politika tespiti"
+        }
+      ],
+      "rakip_sinif": "S2",
+      "rakip_mevzuat_ref": "5746 sayılı Kanun md. 3 uygulamasında dönem anahtarının çözünürlüğü; yarıyıl anahtarı ay ortası yürürlüğü temsil edemez",
+      "rakip_kural": "K8"
+    },
+    {
+      "id": "S03",
+      "ad": "Beş puanlık indirim uygunluğunun bilinmemesi",
+      "ihlal_edilen_kural": [
+        "K5"
+      ],
+      "mevzuat_ref": "5510 sayılı Kanun md. 81; beş puanlık prim indiriminden yararlanma muaccel prim borcu bulunmaması koşuluna bağlıdır, kanun türü seçimi (05746 / 15746) bu duruma göre yapılır",
+      "bozulma": "Ayın muaccel SGK borç durumu dosyada yoktur; seçilen kanun türünün doğruluğu doğrulanamamaktadır.",
+      "beklenen_sinif": "S3",
+      "hipotez_kodu": "H-BES-PUAN-BILINMIYOR",
+      "rakip_hipotez": null,
+      "ayirt_edilebilir": true,
+      "cozen_belge": "e-Borcu Yoktur / muaccel borç sorgusu",
+      "cozen_alan": "muaccel_borc_durumu",
+      "parametre_uzayi": {
+        "matrah": [
+          120000.0,
+          175000.0
+        ],
+        "ay_sayisi": [
+          1,
+          2
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "İlgili ayda muaccel SGK prim borcu bulunuyor muydu; e-Borcu Yoktur belgesi dosyaya eklenebilir mi?",
+          "amac": "kanıt talebi"
+        },
+        {
+          "soru": "Kanun türü seçimi aylık borç durumuna göre mi yapılıyor, yoksa yıl boyunca sabit mi bırakılıyor?",
+          "amac": "politika tespiti"
+        }
+      ],
+      "rakip_sinif": null,
+      "rakip_mevzuat_ref": null,
+      "rakip_kural": null
+    },
+    {
+      "id": "S04",
+      "ad": "Aynı fark imzasını iki hipotezin açıklaması",
+      "ihlal_edilen_kural": [
+        "K4",
+        "K9"
+      ],
+      "mevzuat_ref": "5746 sayılı Kanun md. 3 (terkin oranı) ile 7555 sayılı düzenlemenin ücret tavanı; iki kuralın etkisi aynı yönde ve yakın büyüklükte fark üretebilir",
+      "bozulma": "Fark imzası hem erken uygulanan terkin oranıyla hem de uygulanmayan tavanla açıklanabilmektedir; eldeki belgeler ikisini ayırmaya yetmez.",
+      "beklenen_sinif": "S5",
+      "hipotez_kodu": "H-TERKIN-ORAN-ERKEN",
+      "rakip_hipotez": "H-TAVAN-UYGULANMAMIS",
+      "ayirt_edilebilir": false,
+      "cozen_belge": "diploma/YÖK mezun belgesi",
+      "cozen_alan": "mezuniyet_tarihi",
+      "parametre_uzayi": {
+        "matrah": [
+          205000.0,
+          232000.0
+        ],
+        "ay_sayisi": [
+          1,
+          2
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Mezuniyet belgesi ve tavan üstü satır bildirimi birlikte sunulabilir mi; iki kayıt olmadan neden tekil olarak atanamamaktadır?",
+          "amac": "hipotez ayrıştırma"
+        },
+        {
+          "soru": "Bu kalem için iki olası neden de aynı düzeltme tutarını doğuruyor mu, yoksa düzeltme yolu farklı mı işliyor?",
+          "amac": "risk uyarısı"
+        }
+      ],
+      "rakip_sinif": "S5",
+      "rakip_mevzuat_ref": "7555 sayılı düzenlemenin ücret tavanı; tavanı aşan matrah payı ayrı kanun türüyle bildirilmelidir",
+      "rakip_kural": "K4"
+    },
+    {
+      "id": "S05",
+      "ad": "Ek bildirim toplamı ile Tablo-1 terkin satırının uyuşmaması",
+      "ihlal_edilen_kural": [
+        "K6"
+      ],
+      "mevzuat_ref": "5746 sayılı Kanun md. 3 uyarınca gelir vergisi stopaj teşviki; MUHSGK Tablo-1 terkin satırı ile Ar-Ge personel ek bildirim tablosu toplamı birbirini tutmalıdır",
+      "bozulma": "Ek bildirim tablosu toplamı ile beyannamenin terkin satırı birbirini tutmamaktadır; uyumsuzluk başlı başına bulgudur.",
+      "beklenen_sinif": "S4a",
+      "hipotez_kodu": "H-EK-BILDIRIM-UYUMSUZ",
+      "rakip_hipotez": "H-NUSHA-ZINCIRI",
+      "ayirt_edilebilir": true,
+      "cozen_belge": "Ar-Ge personel ek bildirim XML",
+      "cozen_alan": "kisi_bazli_terkin_toplami",
+      "parametre_uzayi": {
+        "tablo1": [
+          412000.0,
+          538000.0
+        ],
+        "ek_bildirim_sapma": [
+          -18500.0,
+          9200.0
+        ],
+        "ay_sayisi": [
+          1
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Dönem için verilmiş düzeltme beyannamesi var mıdır; mutabakat son geçerli nüshaya mı yapılmıştır?",
+          "amac": "kanıt talebi"
+        },
+        {
+          "soru": "Ek bildirimdeki kişi kümesi ile Tablo-1'deki çalışan sayısı aynı mıdır?",
+          "amac": "kapsam doğrulama"
+        }
+      ],
+      "rakip_sinif": "S3",
+      "rakip_mevzuat_ref": "213 sayılı Vergi Usul Kanunu düzeltme beyannamesi hükümleri; mutabakat son geçerli nüshaya yapılır",
+      "rakip_kural": "K14"
+    },
+    {
+      "id": "S06",
+      "ad": "Yuvarlama kaynaklı tolerans içi fark",
+      "ihlal_edilen_kural": [
+        "K2"
+      ],
+      "mevzuat_ref": "Tolerans bandı sürümlü bir hesap parametresidir (kişi-kalem ±0,01 TL, dönem toplamı ±1 TL); mevzuat ihlali değildir",
+      "bozulma": "Kalem düzeyinde kuruş yuvarlaması dönem toplamında küçük bir artık bırakmıştır.",
+      "beklenen_sinif": "S1",
+      "hipotez_kodu": "H-YUVARLAMA",
+      "rakip_hipotez": null,
+      "ayirt_edilebilir": true,
+      "cozen_belge": "bordro dökümü",
+      "cozen_alan": "kalem_yuvarlama_yonu",
+      "parametre_uzayi": {
+        "artik": [
+          0.31,
+          0.68
+        ],
+        "kisi_sayisi": [
+          40,
+          62
+        ],
+        "ay_sayisi": [
+          1
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Yuvarlama yönü tüm dönemlerde tutarlı uygulanıyor mu?",
+          "amac": "politika tespiti"
+        }
+      ],
+      "rakip_sinif": null,
+      "rakip_mevzuat_ref": null,
+      "rakip_kural": null
+    },
+    {
+      "id": "S07",
+      "ad": "Gelir vergisi ödeme ayı kayması",
+      "ihlal_edilen_kural": [
+        "K6",
+        "K8"
+      ],
+      "mevzuat_ref": "5746 sayılı Kanun md. 3; terkin, ücretin ödendiği aya ilişkin muhtasar beyanname üzerinden işler — firma politikası gereği ödeme ayı ile çalışma ayı ayrışabilir",
+      "bozulma": "Firma ücreti izleyen ayda ödemekte, teşvik kaydı çalışma ayına yazılmaktadır; fark, tüm dönemlerde aynı yönde ve aynı desendedir.",
+      "beklenen_sinif": "S2",
+      "hipotez_kodu": "H-ODEME-AYI-KAYMASI",
+      "rakip_hipotez": "H-EKSIK-BILDIRIM",
+      "ayirt_edilebilir": true,
+      "cozen_belge": "MUHSGK Tablo-1",
+      "cozen_alan": "donem_eslemesi",
+      "parametre_uzayi": {
+        "matrah": [
+          96000.0,
+          154000.0
+        ],
+        "ay_sayisi": [
+          3,
+          4
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Ücret ödeme takvimi tüm dönemlerde aynı mı; teşvik kaydı ödeme ayına mı çalışma ayına mı bağlanıyor?",
+          "amac": "politika tespiti"
+        },
+        {
+          "soru": "Bu eşleme muhasebe politikası profiline yazılıp geçmiş dönemlerin tamamına tutarlı uygulanabilir mi?",
+          "amac": "politika tespiti"
+        }
+      ],
+      "rakip_sinif": "S4a",
+      "rakip_mevzuat_ref": "5746 sayılı Kanun md. 3; kapsamdaki personelin ek bildirime alınmaması terkini eksiltir",
+      "rakip_kural": "K6"
+    },
+    {
+      "id": "S08",
+      "ad": "Aynı ücret üzerinden 5746 ve 4691 çifte istisnası",
+      "ihlal_edilen_kural": [
+        "K1",
+        "K13"
+      ],
+      "mevzuat_ref": "5746 sayılı Kanun md. 4; aynı personelin aynı ücreti üzerinden 4691 sayılı Kanun kapsamındaki istisnayla birlikte mükerrer yararlanma mümkün değildir",
+      "bozulma": "Bölge içinde ve Ar-Ge merkezinde birlikte görünen personelin aynı ücreti iki rejimde de istisnaya konu edilmiştir.",
+      "beklenen_sinif": "S4c",
+      "hipotez_kodu": "H-MUKERRER-YARARLANMA",
+      "rakip_hipotez": "H-KAPSAM-KAYDI-HATALI",
+      "ayirt_edilebilir": true,
+      "cozen_belge": "özlük dosyası / işe giriş bildirgesi",
+      "cozen_alan": "gorev_yeri_ve_rejim_kaydi",
+      "parametre_uzayi": {
+        "matrah": [
+          78000.0,
+          112000.0
+        ],
+        "kisi_sayisi": [
+          1,
+          2
+        ],
+        "ay_sayisi": [
+          2,
+          3
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Bu personelin ücretinin hangi kısmı bölge faaliyetine, hangi kısmı merkez faaliyetine aittir?",
+          "amac": "hipotez ayrıştırma"
+        },
+        {
+          "soru": "Paylaştırma bir yazılı politikaya mı dayanıyor; geri isteme riski değerlendirilmiş midir?",
+          "amac": "risk uyarısı"
+        }
+      ],
+      "rakip_sinif": "S3",
+      "rakip_mevzuat_ref": "5746 sayılı Kanun md. 2 kapsam tanımı; görev yeri ve rejim kaydı özlük dosyasından doğrulanır",
+      "rakip_kural": "K1"
+    },
+    {
+      "id": "S09",
+      "ad": "Destek personeli oranının aşılması",
+      "ihlal_edilen_kural": [
+        "K10"
+      ],
+      "mevzuat_ref": "5746 sayılı Kanun md. 3 ve uygulama yönetmeliği; destek personeline tanınan teşvik, tam zaman eşdeğer Ar-Ge personeli sayısının belirli oranıyla sınırlıdır",
+      "bozulma": "Bazı aylarda destek personeli sayısı, tam zaman eşdeğer Ar-Ge personeline göre hesaplanan azami sınırı aşmıştır.",
+      "beklenen_sinif": "S4c",
+      "hipotez_kodu": "H-DESTEK-ORANI-ASIM",
+      "rakip_hipotez": "H-GOREV-SINIFI-HATALI",
+      "ayirt_edilebilir": true,
+      "cozen_belge": "özlük dosyası / işe giriş bildirgesi",
+      "cozen_alan": "gorev_sinifi_arge_destek",
+      "parametre_uzayi": {
+        "arge_tze": [
+          18.0,
+          24.5
+        ],
+        "destek_kisi": [
+          3,
+          4
+        ],
+        "ay_sayisi": [
+          2
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Aşım aylarında destek personeli sayımı tam zaman eşdeğer üzerinden mi yapılmıştır?",
+          "amac": "kanıt talebi"
+        },
+        {
+          "soru": "Görev sınıfı (Ar-Ge / destek) atamaları özlük dosyasıyla uyumlu mudur?",
+          "amac": "kapsam doğrulama"
+        }
+      ],
+      "rakip_sinif": "S3",
+      "rakip_mevzuat_ref": "5746 sayılı Kanun md. 2; Ar-Ge ve destek personeli ayrımı görev tanımına bağlıdır",
+      "rakip_kural": "K1"
+    },
+    {
+      "id": "S10",
+      "ad": "4691 rejiminde eğitim dereceli oran uygulanması",
+      "ihlal_edilen_kural": [
+        "K9"
+      ],
+      "mevzuat_ref": "4691 sayılı Teknoloji Geliştirme Bölgeleri Kanunu geçici md. 2; bölgede çalışan personelin ücretine tanınan gelir vergisi istisnası öğrenim derecesine göre oranlanmaz",
+      "bozulma": "5746 alışkanlığıyla, 4691 kapsamındaki personele eğitim derecesine bağlı oran uygulanmıştır; rejim dallanması atlanmıştır.",
+      "beklenen_sinif": "S4c",
+      "hipotez_kodu": "H-REJIM-DALLANMASI",
+      "rakip_hipotez": "H-TERKIN-ORAN-ERKEN",
+      "ayirt_edilebilir": true,
+      "cozen_belge": "MUHSGK Tablo-1",
+      "cozen_alan": "rejim_kodu",
+      "parametre_uzayi": {
+        "matrah": [
+          64000.0,
+          91000.0
+        ],
+        "alfa_beyan": [
+          0.9,
+          0.95
+        ],
+        "ay_sayisi": [
+          2,
+          3
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Bu personel hangi rejim kapsamında bildirilmiştir; bildirim 4691 ise oran neden derece bağlı uygulanmıştır?",
+          "amac": "kanıt talebi"
+        },
+        {
+          "soru": "Hesap kütüğünde rejim, parametre vektörünün birincil anahtarı mıdır?",
+          "amac": "politika tespiti"
+        }
+      ],
+      "rakip_sinif": "S4c",
+      "rakip_mevzuat_ref": "5746 sayılı Kanun md. 3; terkin oranı öğrenim derecesine bağlıdır — bu rejimde geçerli değildir",
+      "rakip_kural": "K9"
+    },
+    {
+      "id": "S11",
+      "ad": "Kurumlar vergisi köprüsünde açıklanamayan artık",
+      "ihlal_edilen_kural": [
+        "K13"
+      ],
+      "mevzuat_ref": "5746 sayılı Kanun md. 3 Ar-Ge indirimi; yıllık indirim tutarı, ücret dışı harcama bileşenleriyle birlikte kurumlar vergisi beyannamesindeki indirim satırıyla köprülenebilmelidir",
+      "bozulma": "On iki aylık indirim toplamı ile beyannamedeki satır arasındaki fark, ücret dışı bileşenlerle açıklanamamaktadır. Artığın yönü tek başına çift yararlanmaya da eksik indirime de bağlanabildiğinden kalem tek nedene zorlanmaz.",
+      "beklenen_sinif": "S5",
+      "hipotez_kodu": "H-KV-KOPRU-ARTIK",
+      "rakip_hipotez": "H-UCRET-DISI-BILESEN-EKSIK",
+      "ayirt_edilebilir": false,
+      "cozen_belge": "KV beyannamesi Ar-Ge indirimi satırı",
+      "cozen_alan": "ucret_disi_bilesen_dokumu",
+      "parametre_uzayi": {
+        "yillik_toplam": [
+          4820000.0,
+          6150000.0
+        ],
+        "artik": [
+          212000.0,
+          96000.0
+        ],
+        "ay_sayisi": [
+          12
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Amortisman, malzeme ve dışarıdan sağlanan fayda kalemlerinin dökümü köprü tablosuna eklenebilir mi?",
+          "amac": "kanıt talebi"
+        },
+        {
+          "soru": "Artık, çift yararlanmadan mı yoksa eksik indirimden mi doğuyor; iki yön de değerlendirilmiş midir?",
+          "amac": "hipotez ayrıştırma"
+        }
+      ],
+      "rakip_sinif": "S5",
+      "rakip_mevzuat_ref": "5746 sayılı Kanun md. 3 Ar-Ge indirimi; ücret dışı harcama bileşenleri köprü tablosuyla açıklanır",
+      "rakip_kural": "K13"
+    },
+    {
+      "id": "S12",
+      "ad": "Sosyal güvenlik destek primli personelde teşvik uygulanması",
+      "ihlal_edilen_kural": [
+        "K11"
+      ],
+      "mevzuat_ref": "5510 sayılı Kanun md. 30 kapsamında sosyal güvenlik destek primine tabi çalışan; bu kişide 5746 sigorta primi işveren hissesi desteği ve işsizlik primi doğmaz, belge türü destek primi olmalıdır",
+      "bozulma": "Destek primine tabi kişide 5746 prim teşviki sıfırdan farklı bildirilmiştir.",
+      "beklenen_sinif": "S4c",
+      "hipotez_kodu": "H-SGDP-TESVIK",
+      "rakip_hipotez": null,
+      "ayirt_edilebilir": true,
+      "cozen_belge": "SGDP belge türü kaydı",
+      "cozen_alan": "belge_turu",
+      "parametre_uzayi": {
+        "matrah": [
+          58000.0,
+          73500.0
+        ],
+        "kisi_sayisi": [
+          1
+        ],
+        "ay_sayisi": [
+          2,
+          3
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Bu kişi için bildirilen belge türü destek primi midir; bordro, hizmet listesi ve yeniden hesap aynı anda uyuyor mu?",
+          "amac": "kanıt talebi"
+        }
+      ],
+      "rakip_sinif": null,
+      "rakip_mevzuat_ref": null,
+      "rakip_kural": null
+    },
+    {
+      "id": "S13",
+      "ad": "Sigorta primi desteğinin geriye yararlanma penceresi dışında kalması",
+      "ihlal_edilen_kural": [
+        "K1",
+        "K2"
+      ],
+      "mevzuat_ref": "5746 sayılı Kanun md. 3 sigorta primi işveren hissesi desteği; 5510 sayılı Kanun Ek md. 17 geriye yönelik yararlanmayı yaklaşık altı aylık bir pencereyle sınırlar",
+      "bozulma": "Kapsamdaki personel için bazı aylarda destek hiç bildirilmemiştir; eksik aylar geriye yararlanma penceresinin dışındadır.",
+      "beklenen_sinif": "S4b",
+      "hipotez_kodu": "H-EKSIK-BILDIRIM",
+      "rakip_hipotez": "H-KAPSAM-KAYDI-HATALI",
+      "ayirt_edilebilir": true,
+      "cozen_belge": "SGK onaylı hizmet listesi",
+      "cozen_alan": "kanun_turu_satirlari",
+      "parametre_uzayi": {
+        "matrah": [
+          88000.0,
+          134000.0
+        ],
+        "kisi_sayisi": [
+          2,
+          5
+        ],
+        "ay_sayisi": [
+          3,
+          4
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Bu aylarda personel 5746-serisi kanun türüyle hiç bildirilmemiş midir; bildirim süreci hangi adımda kopmuştur?",
+          "amac": "kanıt talebi"
+        },
+        {
+          "soru": "Pencere kapandığı için geri alınamayan tutar, süreç düzeltilirse yıllık olarak hangi büyüklükte tekrar etmeyecektir?",
+          "amac": "risk uyarısı"
+        }
+      ],
+      "rakip_sinif": "S3",
+      "rakip_mevzuat_ref": "5746 sayılı Kanun md. 2 kapsam tanımı; bildirilmeyen personel kapsam kaydından doğrulanır",
+      "rakip_kural": "K1"
+    },
+    {
+      "id": "S14",
+      "ad": "Gelir vergisi terkininin eksik beyan edilmesi (düzeltme zamanaşımı içinde)",
+      "ihlal_edilen_kural": [
+        "K6",
+        "K14"
+      ],
+      "mevzuat_ref": "5746 sayılı Kanun md. 3 gelir vergisi stopaj teşviki; 213 sayılı Vergi Usul Kanunu düzeltme zamanaşımı beş yıldır",
+      "bozulma": "Kapsamdaki bazı personel ek bildirime alınmadığı için terkin eksik beyan edilmiştir; dönem düzeltme zamanaşımı içindedir.",
+      "beklenen_sinif": "S4a",
+      "hipotez_kodu": "H-EK-BILDIRIM-EKSIK-KISI",
+      "rakip_hipotez": "H-GOREV-SINIFI-HATALI",
+      "ayirt_edilebilir": true,
+      "cozen_belge": "Ar-Ge personel ek bildirim XML",
+      "cozen_alan": "kisi_bazli_terkin_toplami",
+      "parametre_uzayi": {
+        "matrah": [
+          73000.0,
+          118000.0
+        ],
+        "kisi_sayisi": [
+          2,
+          3
+        ],
+        "ay_sayisi": [
+          2,
+          3
+        ]
+      },
+      "beklenen_sorular": [
+        {
+          "soru": "Ek bildirime alınmayan personel hangi ölçüte göre kapsam dışı bırakılmıştır?",
+          "amac": "kapsam doğrulama"
+        },
+        {
+          "soru": "Dönem düzeltme zamanaşımı içinde olduğuna göre düzeltme beyannamesi verilmesi değerlendirilmiş midir?",
+          "amac": "kanıt talebi"
+        }
+      ],
+      "rakip_sinif": "S3",
+      "rakip_mevzuat_ref": "5746 sayılı Kanun md. 2; Ar-Ge ve destek personeli ayrımı görev tanımına bağlıdır",
+      "rakip_kural": "K1"
+    }
+  ]
+}

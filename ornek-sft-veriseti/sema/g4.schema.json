@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "denetci-ai/sema/g4",
+  "title": "G4 — Belge alan çıkarımı çıktısı",
+  "description": "Belge metninden yapılandırılmış alanlar. Doğruluk, belgenin kendi özet satırlarıyla iç-toplam kontrolünden gelir.",
+  "type": "object",
+  "required": ["belge_turu", "donem", "alanlar", "ic_toplam_kontrolu"],
+  "additionalProperties": false,
+  "properties": {
+    "belge_turu": {"enum": ["MUHSGK Tablo-1", "SGK onaylı hizmet listesi", "SGK tahakkuk fişi",
+                            "Ar-Ge personel ek bildirim XML", "MUHSGK damga vergisi tablosu"]},
+    "donem":  {"type": "string", "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"},
+    "alanlar":{"type": "array", "minItems": 1,
+      "items": {"type": "object", "required": ["ad", "deger", "birim"], "additionalProperties": false,
+        "properties": {"ad": {"type": "string", "minLength": 2},
+                       "deger": {"type": ["number", "string"]},
+                       "birim": {"enum": ["TL", "gün", "kişi", "kod", "tarih", "oran"]},
+                       "kisi_token": {"type": ["string", "null"], "pattern": "^P-[0-9A-F]{6}$"}}}},
+    "ic_toplam_kontrolu": {"type": "object", "required": ["gecti", "aciklama"], "additionalProperties": false,
+      "properties": {"gecti": {"type": "boolean"}, "aciklama": {"type": "string", "minLength": 15}}}
+  }
+}

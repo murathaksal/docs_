@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "denetci-ai/sema/kayit",
+  "title": "SFT eğitim kaydı (ortak zarf)",
+  "type": "object",
+  "required": [
+    "kayit_id",
+    "gorev",
+    "kaynak",
+    "kurulus_id",
+    "donem",
+    "rejim",
+    "mevzuat_snapshot",
+    "bolme",
+    "etiket_kaynagi",
+    "girdi",
+    "cikti",
+    "mesajlar",
+    "uretim"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "kayit_id": {
+      "type": "string",
+      "pattern": "^[ABC]-S[0-9]{2}-p[0-9]{2}-G[1-4]-[0-9]{4}$"
+    },
+    "gorev": {
+      "enum": [
+        "G1",
+        "G2",
+        "G3",
+        "G4"
+      ]
+    },
+    "kaynak": {
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ],
+      "description": "A: sentetik senaryo kütüphanesi · B: hata enjeksiyonlu set · C: pilot mutabakat kaydı"
+    },
+    "senaryo_id": {
+      "type": "string",
+      "pattern": "^S[0-9]{2}$"
+    },
+    "kurulus_id": {
+      "type": "string",
+      "pattern": "^KUR-(SENT|ENJ|PILOT)-[0-9]{2}$",
+      "description": "Bölme anahtarının birinci bileşeni. Gerçek kuruluş adı hiçbir kayıtta bulunmaz."
+    },
+    "donem": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+    },
+    "rejim": {
+      "enum": [
+        "5746",
+        "4691",
+        "5746+4691"
+      ]
+    },
+    "mevzuat_snapshot": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2]) @ bilgi:[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "bolme": {
+      "enum": [
+        "egitim",
+        "kalibrasyon",
+        "kor-test"
+      ]
+    },
+    "etiket_kaynagi": {
+      "enum": [
+        "insa-geregi",
+        "motor-dogrulamali",
+        "belge-ic-toplam",
+        "insan-kapanis"
+      ],
+      "description": "EK-6 §1: etiketi insan değil deterministik motor üretir. insan-kapanis yalnız kaynak C'de görülür."
+    },
+    "ihlal_edilen_kural": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^K([1-9]|1[0-4])$"
+      }
+    },
+    "girdi": {
+      "type": "object"
+    },
+    "cikti": {
+      "type": "object"
+    },
+    "mesajlar": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "rol",
+          "icerik"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "rol": {
+            "enum": [
+              "sistem",
+              "kullanici",
+              "asistan"
+            ]
+          },
+          "icerik": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "uretim": {
+      "type": "object",
+      "required": [
+        "uretici",
+        "surum",
+        "tohum"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "uretici": {
+          "type": "string"
+        },
+        "surum": {
+          "type": "string"
+        },
+        "tohum": {
+          "type": "integer"
+        },
+        "motor_kosum": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "denetci-ai/sema/g2",
+  "title": "G2 — Araştırma yönlendirme çıktısı",
+  "description": "Tek somut sonraki adım: hangi belgeye bakılacak, hangi alan kontrol edilecek. Etiketi motor doğrular (EK-6 §6).",
+  "type": "object",
+  "required": ["belge", "alan", "kapsam", "gerekce"],
+  "additionalProperties": false,
+  "properties": {
+    "belge":  {"enum": ["SGK onaylı hizmet listesi", "SGK tahakkuk fişi", "MUHSGK Tablo-1",
+                        "Ar-Ge personel ek bildirim XML", "MUHSGK damga vergisi tablosu", "GİB tahakkuk fişi",
+                        "bordro dökümü", "diploma/YÖK mezun belgesi", "özlük dosyası / işe giriş bildirgesi",
+                        "PDKS / görevlendirme kaydı", "KV beyannamesi Ar-Ge indirimi satırı",
+                        "e-Borcu Yoktur / muaccel borç sorgusu", "SGDP belge türü kaydı"]},
+    "alan":   {"type": "string", "minLength": 3, "maxLength": 80},
+    "kapsam": {"type": "object", "required": ["donem_araligi"], "additionalProperties": false,
+               "properties": {"donem_araligi": {"type": "string", "minLength": 7},
+                              "kisi_token": {"type": ["string", "null"], "pattern": "^P-[0-9A-F]{6}$"}}},
+    "gerekce":{"type": "string", "minLength": 30, "maxLength": 500},
+    "beklenen_etki": {"enum": ["fark tolerans bandına iner", "hipotezler ayrışır", "sınıf S3'ten çıkar",
+                               "karşı-olgusal hesap doğrulanır"]}
+  }
+}

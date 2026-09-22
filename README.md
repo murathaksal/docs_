@@ -44,6 +44,7 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 | [`ek-5-firma-tanitim-dosyasi.md`](ek-5-firma-tanitim-dosyasi.md) | Kurumsal kimlik, referanslar, mali tablolar ve finansman beyanı *(mali veriler doldurulacak)* |
 | [`ek-6-sft-denetim-verisi-uretim-yontemi.md`](ek-6-sft-denetim-verisi-uretim-yontemi.md) | Denetçi rolündeki dar kapsamlı modelin eğitim verisi (SFT) üretim yöntemi: oracle ilkesi, G1–G4 görevleri, kaynak hatları, hacim ve sızıntı denetimleri |
 | [`ek-7-akademik-kaynakca.md`](ek-7-akademik-kaynakca.md) | Sunum ve formdaki iddiaların akademik/kurumsal dayanak kaydı: 98 doğrulanmış künye ve elenen 26 kaydın gerekçesi |
+| **[`ornek-sft-veriseti/`](ornek-sft-veriseti/)** | **EK-6'nın çalışan örneği.** Denetçi rolündeki modelin eğitim verisinin biçimini ve kalite disiplinini gösteren 168 kayıtlık örnek veri seti: dört görev için JSON şeması, 14 mevzuat referanslı senaryo, parametrik üretici (`uret.py`) ve EK-6 §4'teki kontrolleri çalıştırılabilir hâle getiren on denetim (`dogrula.py`). Hacim değil desen gösterir; hedef hacim 4.000–6.000 örnektir |
 
 ## 📚 Analiz arşivi (karar gerekçeleri)
 
