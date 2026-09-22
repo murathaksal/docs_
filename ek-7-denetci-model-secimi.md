@@ -4,6 +4,8 @@
 
 *Lisans doğrulama tarihi: 17.09.2026. Aşağıdaki birincil ve yedek adayların lisans metinleri bu tarihte depo içindeki `LICENSE` dosyasından birebir okunmuştur.*
 
+*Güncelleme 22.09.2026: §4.5, Eylül 2026'nın üçüncü haftasında duyurulan “Sistem-1 karar modeli” sınıfını (Jev / TypeSafe AI) değerlendirmek üzere eklenmiştir. Bu ekleme aday kümesini değiştirmez; §2'deki karar aynen geçerlidir.*
+
 ---
 
 ## 1. Seçimi belirleyen dört zorunlu ölçüt
@@ -81,6 +83,42 @@ Aşağıdaki liste, "neden bu model değil" sorusunun cevabıdır ve seçimin ke
 ### 4.4 Parametre sınıfı veya doğrulanabilirlik nedeniyle elenenler
 Trendyol LLM serisi (4 milyar ve altında üretken model yok; en küçüğü 7 B), YTÜ CE COSMOS `Turkish-Llama-8b` / `Turkish-Gemma-9b`, `Turkcell-LLM-7b` ve benzerleri: hem **1-4 milyar taahhüdünü aşarlar** hem de taban modelleri Llama/Gemma olduğu için **lisans mirası** §4.1'deki kısıtları geri getirir. Gemma 4 E4B (4,5 B etkin / 8 B toplam) parametre taahhüdünü aşar ve ölçülmüş CPU hızı 2-5 tok/s'dir.
 
+### 4.5 Yeni bir model sınıfı: "Sistem-1 karar modelleri" (Jev / TypeSafe AI)
+
+*Bu alt bölüm 22.09.2026'da eklenmiştir ve bu ekin ilk sürümünden sonra ortaya çıkan bir model sınıfını kapsar. Hakem heyetinin "bu yeni sınıfı neden kullanmıyorsunuz?" sorusunun hazır cevabıdır.*
+
+**Ne olduğu.** TypeSafe AI (kurucu Diogo Almeida; OpenAI'da ChatGPT ve RLHF çalışmalarında yer almıştır), 16-18.09.2026'da **Jev** adlı modeli duyurdu. Jev metin üretmez; girdiyi değerlendirip doğrudan **tipli ve kalibre edilmiş karar** döndürür: boolean, sonlu seçenek kümesinden bir etiket, skor veya olasılık dağılımı. Firma, Kahneman'ın ayrımına atıfla buna **"Sistem 1 modeli"** diyor; eğitim yöntemini **RLCD** (*Reinforcement Learning from Calibrated Decisions*) olarak adlandırıyor ve modelin yalnızca sentetik veriyle eğitildiğini belirtiyor. Mimari açıklanmamıştır: birincil kaynakta kurucu mimariye ilişkin soruları yanıtlamamakta, dış gözlemciler modelin açık ağırlıklı bir LLM üzerine kurulduğundan şüphelenmektedir. "Otoregresif olmayan, tek geçişte paralel örnekleyici" tanımı **ikincil kaynaklara aittir; hakemli bir teknik makale veya ayrıntılı model kartı yayımlanmamıştır.**
+
+**Neden bu eke giriyor.** Jev'in hedef aldığı iş, bu projenin İP5'te yaptığı işin bir alt kümesidir: serbest metin değil, sonlu seçenek kümesinden karar üretmek. Dolayısıyla "bu sınıf varken neden hâlâ üretken bir model ince ayarlanıyor?" sorusu meşrudur ve dosyada cevaplanmalıdır.
+
+**Dört zorunlu ölçüte göre değerlendirme (19.09.2026 itibarıyla):**
+
+| Ölçüt | Jev'in durumu | Sonuç |
+|---|---|---|
+| **Ö1** — türev ağırlığın ticari yeniden dağıtımı | Ağırlık yayımlanmamıştır. Model yalnızca TypeSafe API'si ve satıcıları (Vercel AI Gateway, OpenRouter) üzerinden kapalı olarak sunulmaktadır; parametre sayısı dahi açıklanmamıştır | **Mutlak eleyici** |
+| **Ö2** — kendi ince ayarlı ağırlığımızın GGUF'a çevrilmesi | Ağırlık olmadığı için konu dışıdır; ince ayar veya yerel dönüşüm yolu yoktur | **Eleyici** |
+| **Ö3** — Türkçe mali-hukuki metin | Yayımlanmış dil desteği listesi veya Türkçe başarım verisi yoktur | **Kanıtsız** |
+| **Ö4** — 1-4 milyar sınıfı, GPU'suz 16 GB makinede yerel çalışma | Yerel çalıştırma ve kendi kendine barındırma (self-hosting) seçeneği sunulmamaktadır | **Mutlak eleyici** |
+
+**Ölçütlerin ötesinde, mimari vaatle doğrudan çelişki.** Ürün, müşteri tesisine kurulan **kapalı devre** masaüstü uygulamadır ve çıkarım müşteride CPU üzerinde yapılır (§6'nın 6. maddesindeki "eğitim: kiralık GPU, yalnız sentetik/anonim veri — çıkarım: müşteride CPU, kapalı devre" ayrımı). Bulut API'sine bağımlı bir karar motoru; (a) bordro, sendika aidatı ve engellilik indirimi gibi **KVKK md. 6 kapsamındaki özel nitelikli kişisel veriyi** yurt dışındaki bir hizmet sağlayıcıya aktarmak, (b) internet erişimi kısıtlı denetim ortamlarında ürünü çalışamaz hâle getirmek, (c) tek bir satıcının fiyat, sürüm ve erişim kararına bağımlılık yaratmak anlamına gelir. Bu üç sonuç, ürünün **yerel ve kapalı devre** olma iddiasını ortadan kaldırır.
+
+**Doğrulanabilirlik kaydı (dosyaya bu haliyle yazılmalıdır).** Jev'e ilişkin başarım ve maliyet iddiaları **kaynaklar arasında tutarsızdır** ve hiçbiri bağımsız olarak doğrulanmamıştır:
+- Üretici, sınıflandırma görevlerinde sınır modellere kıyasla 40-200× hız ve 40-400× maliyet avantajı bildirmektedir.
+- Erken kullanıcı raporları çok daha ölçülüdür: bir kullanıcı 5-18× hız farkı bildirirken, bir diğeri Jev'i bir rakip modele göre **10-20× daha pahalı** bulmuştur.
+- İlan edilen fiyatlandırma girdi tokeni üzerinden ölçülmekte (çıktı tokeni ücretsiz), üretici ortalama karar maliyetini ~0,0004 ABD doları olarak vermektedir.
+
+Bu tablo ekin §3'teki kuralıyla aynı yere çıkar: **üreticinin bildirdiği sayı, ölçülmüş sayı değildir.** Kaynak niteliği: genel teknoloji basını (18.09.2026) ve ikincil teknik bloglar (19.09.2026); birincil teknik yayın yoktur.
+
+**Sonuç: Jev ürün modeli değildir ve aday kümesine girmez.** §2'deki karar değişmemiştir.
+
+**Ancak fikir izlemeye alınır — "yerel Sistem-1 karar başlığı" (İP5 alt işi).** Bu model sınıfının doğruladığı şey, projenin zaten yaptığı tercihtir: tutarı deterministik motor hesaplar, model yalnızca sonlu bir seçenek kümesinden karar verir, çıktı GBNF ile şemaya zorlanır. Trendin eklediği tek yeni fikir, bu kararın **üretken bir çözücüden değil, kalibre edilmiş bir karar başlığından** alınmasıdır. Bunun yerel karşılığı hem mümkün hem de ucuzdur:
+
+1. **Aynı taban, ikinci bir baş.** §2'deki Qwen3 tabanının gövdesi ortak kalır; sınıflandırma/yönlendirme alt görevinde (bulgu var mı, hangi mevzuat maddesi, hangi kanıt türü) token token üretim yerine **tek geçişte olasılık dağılımı** veren bir sınıflandırma başı eğitilir. Eğitim verisi §5 Faz 2'deki altın standart setin aynısıdır; ek veri toplama maliyeti doğurmaz.
+2. **Doğrudan §5'teki zorunlu KPI'ya hizmet eder.** Ekin en tehlikeli hata modu olarak tanımladığı **"yanlış ama şema-geçerli"** oranının ilacı kalibrasyondur: kalibre edilmiş bir güven skoru, modelin *"kanıt yetersiz"* diyerek **çekimser kalmasına** sayısal eşik koyar. Üretken çözücüde böyle bir eşik yoktur; sert şema zorlaması hatayı gizler.
+3. **Hız bütçesine doğrudan etki eder.** §3'teki aritmetikte 30 saniyeyi yiyen şey çıktı token sayısıdır. Ayıklama (triyaj) adımı üretken çözücüden çıkarılırsa 4 milyarlık kademe yalnızca gerçekten yorum gereken bulgularda çalışır; kalan kütle tek geçişte kapanır.
+
+**Kapı ve dürüstlük kaydı.** Yukarıdaki üç madde **hipotezdir, ölçüm değildir.** Yerel karar başlığının tam üretken çözücüye kıyasla kalibrasyon ve doğruluk kazancı §5 Faz 2 metrikleriyle ölçülmeden ürüne alınmaz ve Ar-Ge dosyasına kazanım olarak yazılamaz. Faz 3'ün "ince ayarsız taban önce ölçülür ve kilitlenir" kuralı bu alt iş için de aynen geçerlidir.
+
 ## 5. Seçimi kesinleştirecek ölçüm protokolü
 
 Form, "model boyutu ve nicemleme düzeyi referans bilgisayarda ölçülerek seçilir" taahhüdünü içerir. Karar mekanizması budur; §2'deki sıralama yalnızca protokole giren aday kümesini belirler.
@@ -107,6 +145,7 @@ Form, "model boyutu ve nicemleme düzeyi referans bilgisayarda ölçülerek seç
 - **Taban A (zorunlu):** ince ayarsız Qwen3-4B-Instruct-2507, aynı istem, aynı GBNF, aynı nicemleme. Faz 3'e başlamadan **önce** ölçülür ve kilitlenir.
 - **Taban B (zorunlu):** alan-dışı genel model — `Phi-4-mini-instruct` (MIT, Türkçe resmî dil listesinde).
 - **Taban C (opsiyonel):** `Kumru-2B`, ince ayarlı ve ince ayarsız iki koşuda — Türkçe-yerli tokenizer'ın hız kazancı gerçekte ne kadar?
+- **Taban D (opsiyonel, yalnız laboratuvar):** bulut tabanlı bir Sistem-1 karar modeli (§4.5) — yalnız sentetik/anonim veriyle ve yalnız sınıflandırma alt görevinde, "tipli karar sınıfının tavanı neresi" sorusunu cevaplamak için. Gerçek müşteri verisiyle **hiçbir koşulda** çalıştırılmaz, ürüne girmez.
 - **Tavan ölçümü (ürüne girmez):** Qwen3-4B-Thinking-2507 veya daha büyük bir Apache-2.0 model, yalnız laboratuvarda, yalnız sentetik/anonim veriyle. "4 milyarla ulaşılabilecek tavan neresi" sorusunu cevaplar.
 
 ## 6. Lisans yükümlülüklerinin ürüne yansıması
@@ -131,6 +170,7 @@ Aşağıdaki maddeler bu çalışmada kesinleştirilememiştir. Ar-Ge dosyasınd
 4. Kumru-2B'nin kendi kart iddiası ile bağımsız kıyas sonucu arasındaki çelişki çözülememiştir; bu nedenle ürün modeli değil, **karşılaştırma tabanı** olarak konumlandırılmıştır.
 5. Qwen3.5 ailesinin llama.cpp dönüştürücü desteği izlenecektir (issue #27019 / PR #27132). Birleşirse Faz 1'de yeniden değerlendirilir.
 6. Kumru-2B deposunda ayrı `LICENSE` dosyası bulunmadığı için, karşılaştırma tabanı olarak dahi kullanılmadan önce VNGRS'den yazılı lisans teyidi alınacaktır.
+7. **Sistem-1 karar modeli sınıfı (§4.5) izlemeye alınmıştır.** Jev'in mimarisi, parametre sayısı ve Türkçe başarımı açıklanmamıştır; başarım ve maliyet iddiaları bağımsız doğrulanmamış, kaynaklar arasında çelişiklidir. Dosyada kesin ifade olarak kullanılamaz. İzlenecek iki gelişme: (a) ağırlıkların veya kendi kendine barındırma seçeneğinin açılması — açılırsa Ö1 ve Ö4 yeniden değerlendirilir; (b) açık ağırlıklı eşdeğer bir kalibre karar başlığı yönteminin yayımlanması — bu durumda §4.5'teki yerel karar başlığı alt işi Faz 2'de doğrudan ölçüme alınır.
 
 ---
 
