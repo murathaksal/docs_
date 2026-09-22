@@ -1,6 +1,6 @@
 # KONUŞMA NOTLARI: Denetci.AI hakem sunumu
 
-*Sunum günü elde tutulacak teslim metni. Slaytlar: `hakem-sunumu.md` ve yayımlanmış sunum destesi. Zor sorular: `hakem-sunumu-soru-cevap.md`.*
+*Sunum günü elde tutulacak teslim metni. Bu notlar sunum destesinin içinde değildir; deste yalnızca slaytları gösterir. Slaytlar: `hakem-sunumu.html`. Zor sorular: `hakem-sunumu-soru-cevap.md`.*
 
 ---
 
@@ -24,8 +24,8 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Sunum öncesi beş dakika
 
-1. **Destede "tümü" görünümünü kapatın**, slayt 1'de olduğunuzdan emin olun (klavye: `Home`).
-2. **Konuşma metni açık mı kontrol edin.** Ekranı yansıtıyorsanız `N` ile kapatın; heyet notlarınızı görmesin.
+1. **Destede slayt 1'de olduğunuzdan emin olun** (klavye: `Home`). "Tüm slaytlar" ızgarası açıksa `G` ile kapatın.
+2. **Bu notlar destede yoktur;** ayrı bir belgedir. Yansıtılan ekranda yalnızca slaytlar görünür, notları ikinci ekranda veya basılı olarak tutun.
 3. **Şu üç sayıyı tekrarlayın:** 1.720 merkez · 39 adam-ay · 7.000.000 ₺. Bunlar en sık sorulanlar.
 4. **Ekler elinizde olsun:** EK-1 rekabet tablosu, EK-4 efor matrisi, EK-6 veri hattı, EK-7 kaynakça. Heyet dayanak isterse sayfayı açın, anlatmayın.
 5. **Son cümleyi bir kez içinizden söyleyin:** "Hesabı motor yapar, bulguyu model inceler, kararı insan verir."

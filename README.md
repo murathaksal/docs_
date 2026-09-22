@@ -16,10 +16,11 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 
 | Belge | İçerik |
 |---|---|
-| **[`hakem-sunumu.html`](hakem-sunumu.html)** | **Sunum dosyası.** Sabit 16:9 slaytlar, beyaz zemin, tek renk; şemalar vektörel (SVG). Tarayıcıda açılır, tam ekran çalışır, `P` ile PDF'e yazdırılır (her slayt bir sayfa). Konuşma metni `N` ile altta açılır, ekrana yansıtılmaz. Klavye: ok tuşları gezinir, `G` tüm slaytlar, `S` sade görünüm |
-| [`Denetci-AI-hakem-sunumu.pptx`](Denetci-AI-hakem-sunumu.pptx) | Aynı sunumun PowerPoint sürümü; şemalar gömülü görsel olarak taşınır, konuşma metinleri konuşmacı notu alanındadır |
+| **[`hakem-sunumu.html`](hakem-sunumu.html)** | **Sunum dosyası.** Tek sayfalık, indirilebilir HTML: sabit 16:9 slaytlar, beyaz zemin, tek renk; şemalar vektörel (SVG), dış dosya bağımlılığı yok. Tarayıcıda açılır, tam ekran çalışır, `P` ile PDF'e yazdırılır (her slayt bir sayfa). Konuşma metni bu dosyada **yoktur**; ekranda yalnızca slaytlar görünür. Klavye: ok tuşları gezinir, `G` tüm slaytlar, `S` sade görünüm |
+| **[`hakem-sunumu-konusma-notlari.html`](hakem-sunumu-konusma-notlari.html)** | **Konuşma metni, ayrı dosya.** Aynı içeriğin tek sayfalık, yazdırılabilir sürümü: slayt başına süre, şemada gösterilecek yer, konuşma metni, çıpa cümle ve geçiş. İkinci ekranda veya basılı olarak kullanılır, sunumda yansıtılmaz (Ctrl+P ile A4 çıktı) |
+| [`Denetci-AI-hakem-sunumu.pptx`](Denetci-AI-hakem-sunumu.pptx) | Aynı sunumun PowerPoint sürümü; şemalar gömülü görsel olarak taşınır, konuşma metinleri konuşmacı notu alanındadır. Asıl sunum dosyası HTML sürümüdür |
 | [`hakem-sunumu.md`](hakem-sunumu.md) | Slaytların metin içeriği ve şema tarifleri. Konuşma metinleri bu dosyadan ayrılmıştır |
-| [`hakem-sunumu-konusma-notlari.md`](hakem-sunumu-konusma-notlari.md) | **Sunum günü elde tutulacak teslim metni:** slayt başına süre ve kümülatif dakika, şemada neyin gösterileceği, konuşma metni, çıpa cümle ve geçiş. Sunum öncesi kontrol listesi ve soru-cevap açılışı da içerir |
+| [`hakem-sunumu-konusma-notlari.md`](hakem-sunumu-konusma-notlari.md) | Konuşma metninin kaynak (Markdown) sürümü; yukarıdaki HTML bu dosyadan üretilir. Slayt başına süre ve kümülatif dakika, şemada neyin gösterileceği, konuşma metni, çıpa cümle ve geçiş; sunum öncesi kontrol listesi ve soru-cevap açılışı |
 | [`hakem-sunumu-soru-cevap.md`](hakem-sunumu-soru-cevap.md) | Hakem heyetinin soracağı 43 zor soru ve 30-60 saniyelik savunma cevapları: dokuz başlıkta, her soruda dayanak ve yapılmaması gereken savunma hatası. |
 | [`ek-7-akademik-kaynakca.md`](ek-7-akademik-kaynakca.md) | **EK-7.** Sunumdaki her sayısal iddianın dayanağı: 98 doğrulanmış akademik ve kurumsal künye, 10 bölümde. Künyesi birincil kaynaktan teyit edilemeyen 26 kayıt gerekçesiyle birlikte elenmiş ve ayrı bölümde listelenmiştir. |
 
