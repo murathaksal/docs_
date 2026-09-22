@@ -2,6 +2,12 @@
 
 Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analizi ve teknopark başvuru hazırlığı çalışmasının kayıtlarını içerir.
 
+## 📦 Tek dosya: başvuru dosyası
+
+| Belge | İçerik |
+|---|---|
+| **[`basvuru-dosyasi.html`](basvuru-dosyasi.html)** | **Hakem sunumu + başvuru formu + yedi ek, tek dosyada.** Tek sayfalık, indirilebilir HTML; dış dosya bağımlılığı yoktur. Bölüm A: on iki slayt, şemalar vektörel olarak gömülü. Bölüm B: Proje Bilgi Formu'nun tamamı. Bölüm C: EK-1…EK-7. Kenar çubuğundan gezinilir, `Ctrl+P` ile A4 dikey PDF olur (≈43 sayfa). Sonunda dosya kaydı: her kaynak belgenin boyutu, tarihi ve SHA-256 özeti. *Konuşma metni, soru-cevap hazırlığı ve portal kontrol listeleri bu dosyaya alınmamıştır; onlar hazırlık belgeleridir.* |
+
 ## 🟢 Güncel ve geçerli belgeler
 
 | Belge | İçerik |

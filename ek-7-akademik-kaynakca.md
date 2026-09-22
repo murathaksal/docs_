@@ -18,7 +18,7 @@
 **[GarcezLamb2023]** Garcez, A. d'Avila & Lamb, L. C. (2023). Neurosymbolic AI: the 3rd wave. Artificial Intelligence Review, 56(11), 12387-12406.
   https://doi.org/10.1007/s10462-023-10448-w
   *Bulgu:* Yapay zekânın üçüncü dalgası, öğrenen sinir ağları ile kural tabanlı sembolik akıl yürütmeyi tek mimaride birleştirmektir; güven, güvenlik ve açıklanabilirlik ancak bu birleşimle sağlanır.
-  *Projede:* Projenin genel mimari tezi (AS-1 + AS-2): sinirsel ogrenme ile sembolik bilgi temsili/mantiksal cikarimi ilkeli bicimde birlestirmek. Sunumda 'nöro-sembolik' teriminin ilk aciklandigi slaytin akademik dayanagi.
+  *Projede:* Projenin genel mimari tezi (AS-1 + AS-2): sinirsel öğrenme ile sembolik bilgi temsili/mantıksal çıkarımı ilkeli biçimde birleştirmek. Sunumda "nöro-sembolik" teriminin ilk açıklandığı slaytın akademik dayanağı.
 
 **[Booch2021]** Booch, G., Fabiano, F., Horesh, L., Kate, K., Lenchner, J., Linck, N., Loreggia, A., Murgesan, K., Mattei, N., Rossi, F. & Srivastava, B. (2021). Thinking Fast and Slow in AI. Proceedings of the AAAI Conference on Artificial Intelligence, 35(17), 15042-15046.
   https://ojs.aaai.org/index.php/AAAI/article/view/17765

@@ -35,16 +35,19 @@ Okuma notları: Kıdemli geliştirici 12 ay boyunca tam zamanlı olarak projede 
 **Projeye ayrılan efor:** [ ] adam/ay ([ ]. ve [ ]. aylar arası)
 
 **Öğrenim:**
+
 | Derece | Bölüm | Kurum | Yıl |
 |---|---|---|---|
 | [Lisans / Yüksek Lisans / Doktora] | [ ] | [ ] | [ ] |
 
 **Mesleki deneyim:**
+
 | Dönem | Kurum | Görev | Projeyle ilgili başlıca sorumluluk |
 |---|---|---|---|
 | [yyyy-yyyy] | [ ] | [ ] | [ ] |
 
 **Projeyle doğrudan ilgili deneyim** *(hakemin asıl okuduğu bölüm; somut ve ölçülü yazılır):*
+
 - [ör. "Firmanın mevcut teşvik hesap çekirdeğinin geliştirilmesi ve 96 çapa testinin kurulması"]
 - [ör. "X yıl kural tabanlı hesaplama sistemleri / finansal yazılım deneyimi"]
 
