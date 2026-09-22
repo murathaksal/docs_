@@ -55,5 +55,5 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 5. **EK-2 şablonunu** iki pilot kuruluşa gönder ve imzalı niyet mektuplarını topla; kurumsal imza süreci 2-4 hafta sürdüğü için başvurudan en az bir ay önce başlat.
 6. **EK-1'i** sunum öncesi bir kez daha gözden geçir (ürün siteleri değişmiş olabilir).
 7. **EK-4 ve EK-5'teki** kişi ve mali bilgileri doldur; EK-5'in ekler listesindeki resmî belgeleri (sicil gazetesi, imza sirküleri, borcu yoktur yazıları, mali tablolar) topla.
-8. **EK-6'daki** mevzuat referanslı senaryo kütüphanesi (≥60 senaryo) için YMM ile senaryo yazım ve teyit takvimini kararlaştır; anonimleştirilmiş mutabakat oturumu kayıtlarının kullanımı için pilot kuruluşların yazılı onayını niyet mektubuna ekle.
+8. **EK-6'daki** mevzuat referanslı senaryo kütüphanesi (≥150 senaryo) için YMM ile senaryo yazım ve teyit takvimini kararlaştır; anonimleştirilmiş mutabakat oturumu kayıtlarının kullanımı için pilot kuruluşların yazılı onayını niyet mektubuna ekle.
 9. Sunum öncesi CBAM'e ilişkin kesme kararının dayanağını (Ek-I kapsamı, yükümlü taraf) hukuk/gümrük müşaviriyle bir kez teyit ettir; karar değişmeyecek olsa da beyan güvenliği için.
