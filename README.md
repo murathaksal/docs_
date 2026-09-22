@@ -16,7 +16,8 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 
 | Belge | İçerik |
 |---|---|
-| **[`Denetci-AI-hakem-sunumu.pptx`](Denetci-AI-hakem-sunumu.pptx)** | **Sunum dosyası.** 12 slayt, beyaz zemin, tek renk; onunda gömülü şema. Konuşma metinleri her slaydın konuşmacı notu alanındadır. 16:9, PowerPoint ve Keynote ile açılır |
+| **[`hakem-sunumu.html`](hakem-sunumu.html)** | **Sunum dosyası.** Sabit 16:9 slaytlar, beyaz zemin, tek renk; şemalar vektörel (SVG). Tarayıcıda açılır, tam ekran çalışır, `P` ile PDF'e yazdırılır (her slayt bir sayfa). Konuşma metni `N` ile altta açılır, ekrana yansıtılmaz. Klavye: ok tuşları gezinir, `G` tüm slaytlar, `S` sade görünüm |
+| [`Denetci-AI-hakem-sunumu.pptx`](Denetci-AI-hakem-sunumu.pptx) | Aynı sunumun PowerPoint sürümü; şemalar gömülü görsel olarak taşınır, konuşma metinleri konuşmacı notu alanındadır |
 | [`hakem-sunumu.md`](hakem-sunumu.md) | Slaytların metin içeriği ve şema tarifleri. Konuşma metinleri bu dosyadan ayrılmıştır |
 | [`hakem-sunumu-konusma-notlari.md`](hakem-sunumu-konusma-notlari.md) | **Sunum günü elde tutulacak teslim metni:** slayt başına süre ve kümülatif dakika, şemada neyin gösterileceği, konuşma metni, çıpa cümle ve geçiş. Sunum öncesi kontrol listesi ve soru-cevap açılışı da içerir |
 | [`hakem-sunumu-soru-cevap.md`](hakem-sunumu-soru-cevap.md) | Hakem heyetinin soracağı 43 zor soru ve 30-60 saniyelik savunma cevapları: dokuz başlıkta, her soruda dayanak ve yapılmaması gereken savunma hatası. |
