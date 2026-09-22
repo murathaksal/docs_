@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="tr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Konuşma notları · yalın sürüm</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root{
+  --ink:#111214; --mid:#4E5055; --light:#8E9197;
+  --rule:#E6E6E4; --rule2:#C4C4C1; --paper:#FFFFFF; --tint:#F6F6F5;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,"Courier New",monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:56px 40px 90px}
+h1,h2,h3{font-weight:400;margin:0;letter-spacing:-.012em;text-wrap:balance}
+p{margin:0 0 1em} p:last-child{margin:0}
+code{font-family:var(--mono);font-size:.88em;color:var(--ink)}
+b{font-weight:600}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--light)}
+
+header{border-bottom:1px solid var(--rule2);padding-bottom:26px;margin-bottom:34px}
+h1{font-size:40px;line-height:1.08;margin:14px 0 10px}
+.sub{font-size:16.5px;color:var(--mid);max-width:62ch;font-style:italic}
+.tot{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px 34px;font-family:var(--mono);font-size:12px;color:var(--mid)}
+.tot b{color:var(--ink);font-weight:500}
+
+section.pre{margin-bottom:30px}
+section.pre h2{font-size:19px;margin:0 0 12px}
+.pre p,.pre li{color:var(--mid);max-width:68ch}
+.pre ol,.pre ul{margin:0 0 1em;padding-left:0;list-style:none;counter-reset:c}
+.pre ol>li{counter-increment:c;position:relative;padding-left:32px;margin-bottom:9px;max-width:68ch}
+.pre ol>li::before{content:counter(c);position:absolute;left:0;top:2px;font-family:var(--mono);
+  font-size:11px;color:var(--light);border:1px solid var(--rule2);width:19px;height:19px;
+  display:grid;place-items:center;border-radius:50%}
+.pre ul>li{position:relative;padding-left:22px;margin-bottom:7px;max-width:68ch}
+.pre ul>li::before{content:"";position:absolute;left:3px;top:.72em;width:5px;height:1px;background:var(--light)}
+
+.tbl{overflow-x:auto;margin:0 0 20px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);
+  font-weight:400;text-align:left;padding:0 14px 8px 0;border-bottom:1px solid var(--rule2);vertical-align:bottom}
+td{padding:10px 14px 10px 0;border-bottom:1px solid var(--rule);color:var(--mid);vertical-align:top}
+td:first-child{color:var(--ink)}
+th:last-child,td:last-child{padding-right:0}
+
+article{border-top:1px solid var(--rule2);padding-top:22px;margin-top:30px;break-inside:avoid;page-break-inside:avoid}
+.hd{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.num{font-family:var(--mono);font-size:22px;color:var(--ink);font-variant-numeric:tabular-nums}
+.time{font-family:var(--mono);font-size:11.5px;color:var(--light);letter-spacing:.06em;margin-left:auto;white-space:nowrap}
+article h2{font-size:22px;line-height:1.18;margin:0 0 16px;max-width:52ch}
+.row{display:grid;grid-template-columns:104px 1fr;gap:14px;margin-bottom:14px;align-items:start}
+.row .k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);padding-top:5px}
+.row .v{color:var(--mid);max-width:64ch}
+.say p{margin-bottom:11px;font-size:17px;line-height:1.62;color:var(--ink);max-width:64ch}
+.ornek{background:var(--tint);padding:13px 16px;font-size:15.5px;line-height:1.55;color:var(--mid);max-width:66ch}
+.cipa{border-left:2px solid var(--ink);padding:3px 0 3px 15px;font-size:16px;color:var(--ink);max-width:62ch}
+.gecis{font-style:italic;color:var(--mid);max-width:62ch}
+.sorul{font-size:14.5px;line-height:1.5;color:var(--light);max-width:68ch}
+.sorul b{color:var(--mid)}
+.extra{border-left:2px solid var(--rule2);padding:2px 0 2px 14px;font-size:14.5px;color:var(--mid);max-width:66ch;line-height:1.5}
+.extra b{color:var(--ink);font-weight:600}
+
+.qa{border-top:1px solid var(--rule2);margin-top:44px;padding-top:26px}
+.qa h2{font-size:24px;margin:0 0 18px}
+.qa h3{font-size:14px;font-family:var(--mono);font-weight:400;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--light);margin:26px 0 12px}
+.qa p,.qa li{color:var(--mid);max-width:68ch}
+.qa ol{margin:0 0 1em;padding-left:0;list-style:none;counter-reset:r}
+.qa ol>li{counter-increment:r;position:relative;padding-left:30px;margin-bottom:10px;max-width:68ch}
+.qa ol>li::before{content:counter(r) ".";position:absolute;left:0;top:0;line-height:inherit;
+  font-family:var(--mono);font-size:12px;color:var(--light)}
+.qa em{font-size:13.5px;color:var(--light)}
+footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:11px;color:var(--light);letter-spacing:.06em}
+
+@media print{
+  @page{size:A4 portrait;margin:16mm 15mm}
+  .wrap{max-width:none;padding:0}
+  body{font-size:11pt}
+  h1{font-size:25pt} article h2{font-size:14.5pt} .say p{font-size:11.5pt}
+  .num{font-size:15pt} article{margin-top:20px;padding-top:16px}
+  .ornek{background:none;border:1px solid var(--rule)}
+  table{font-size:9.5pt} tr{break-inside:avoid} thead{display:table-header-group}
+}
+@media (max-width:640px){
+  .wrap{padding:34px 20px 70px}
+  .row{grid-template-columns:1fr;gap:4px}
+  .row .k{padding-top:0}
+}
+</style><div class="wrap"><header><div class="eyebrow">ARGELOG-002 &nbsp;·&nbsp; İstanbul Medeniyet Üniversitesi Teknopark</div><h1>Konuşma notları · yalın sürüm</h1><p class="sub">Ayrıntılı sürümün sade dille yazılmış karşılığı. Slaytlar, süreler ve sıralama aynıdır; değişen yalnızca anlatım. Terimler yerine gündelik karşılıkları kullanılır, her teknik kavram bir örnekle açılır, akademik atıflar konuşmadan çıkarılıp &quot;Sorarlarsa&quot; satırına konur. Slaytlar: <code>hakem-sunumu.html</code>. Ayrıntılı sürüm: <code>hakem-sunumu-konusma-notlari.md</code>. Zor sorular: <code>hakem-sunumu-soru-cevap.md</code>.</p><div class="tot"><span>Toplam hedef <b>15 dk 10 sn</b></span><span><b>12</b> slayt</span><span>Soru-cevap için en az <b>10 dakika</b> bırakın</span></div></header><section class="pre"><h2>Hangi sürümü kullanmalı</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Durum</th>
+<th>Sürüm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Heyette alan dışından üye var; mevzuat veya yapay zekâ uzmanı olmayan hakem bulunuyor</td>
+<td><strong>Bu sürüm</strong></td>
+</tr>
+<tr>
+<td>Heyet dar uzman; atıf ve ölçüm ayrıntısı bekleniyor</td>
+<td>Ayrıntılı sürüm</td>
+</tr>
+<tr>
+<td>Emin değilseniz</td>
+<td><strong>Bu sürümle konuşun,</strong> ayrıntıyı "Sorarlarsa" satırlarından verin</td>
+</tr>
+</tbody>
+</table></div>
+<p>İki sürüm birbirinin yerine geçer: süreler, çıpa cümleler ve geçişler birebir aynıdır. Ortada bir sürümden diğerine geçebilirsiniz.</p></section><section class="pre"><h2>Kullanım</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Parça</th>
+<th>Ne işe yarar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Süre</strong></td>
+<td>Slayt için ayrılan saniye ve kümülatif dakika</td>
+</tr>
+<tr>
+<td><strong>Şemada göster</strong></td>
+<td>Ekranda neyi işaret edeceğiniz</td>
+</tr>
+<tr>
+<td><strong>Söyle</strong></td>
+<td>Konuşma metni. Kısa cümleler; ezberlemeyin, mantığı kalsın</td>
+</tr>
+<tr>
+<td><strong>Örnek</strong></td>
+<td>O slaytın tek somut hikâyesi. Soyut kaldığınızı hissederseniz buraya dönün</td>
+</tr>
+<tr>
+<td><strong>Çıpa cümle</strong></td>
+<td>Heyette kalması gereken tek cümle</td>
+</tr>
+<tr>
+<td><strong>Geçiş</strong></td>
+<td>Sonraki slayta bağlayan cümle</td>
+</tr>
+<tr>
+<td><strong>Sorarlarsa</strong></td>
+<td>Konuşmada söylemediğiniz dayanak: rakam, kaynak, ek ayrıntı</td>
+</tr>
+</tbody>
+</table></div></section><section class="pre"><h2>Terimlerin sade karşılığı</h2>
+<p>Formda ve slaytlarda teknik terim geçiyor. Siz sade karşılığını kullanın; hakem terimi kullanırsa siz de o terime geçin. İkisini bir kez yan yana söyleyin, sonra sadesinde kalın.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Slayttaki / formdaki terim</th>
+<th>Konuşurken söyleyeceğiniz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nöro-sembolik mimari</td>
+<td>Hesap makinesi ile okuyup yazan bir asistanın birlikte çalışması</td>
+</tr>
+<tr>
+<td>Deterministik hesap çekirdeği</td>
+<td>Kuralları harfiyen uygulayan hesap motoru; aynı girdiye hep aynı sonucu verir</td>
+</tr>
+<tr>
+<td>Zaman-farkındalıklı kural tabanı</td>
+<td>Her ayın kendi kuralını hatırlayan kural defteri</td>
+</tr>
+<tr>
+<td>Sembolik doğrulama kapısı</td>
+<td>Modelin söylediğini kural defterine karşı kontrol eden kapı</td>
+</tr>
+<tr>
+<td>Abdüktif kök-neden teşhisi</td>
+<td>Farkın sebebini bulma; doktorun teşhis koyması gibi</td>
+</tr>
+<tr>
+<td>Denetçi rolündeki dar kapsamlı model</td>
+<td>Yalnızca bu işi yapan, küçük, kurum içinde çalışan yapay zekâ</td>
+</tr>
+<tr>
+<td>Şema zorlamalı çıktı</td>
+<td>Modelin serbest metin değil, boş bir formu doldurarak cevap vermesi</td>
+</tr>
+<tr>
+<td>Kör test seti</td>
+<td>Önceden mühürlenmiş, eğitimde hiç kullanılmayan sınav soruları</td>
+</tr>
+<tr>
+<td>Teknoloji hazırlık seviyesi (THS)</td>
+<td>Olgunluk basamağı: 5 laboratuvarda çalışıyor, 7 sahada çalışıyor demek</td>
+</tr>
+</tbody>
+</table></div></section><section class="pre"><h2>Sunum öncesi beş dakika</h2>
+<ol>
+<li><strong>Destede slayt 1'de olduğunuzdan emin olun</strong> (klavye: <code>Home</code>). "Tüm slaytlar" ızgarası açıksa <code>G</code> ile kapatın.</li>
+<li><strong>Bu notlar destede yoktur;</strong> ayrı bir belgedir. Yansıtılan ekranda yalnızca slaytlar görünür.</li>
+<li><strong>Şu üç sayıyı tekrarlayın:</strong> 1.720 merkez · 39 adam-ay · 7.000.000 ₺.</li>
+<li><strong>Şu tek örneği tekrarlayın:</strong> yüksek lisans diploması Mart'ta alınmış, oran Ocak'tan uygulanmış, 8.500 lira fark. Bu örnek sunumun dört yerinde işinize yarayacak.</li>
+<li><strong>Ekler elinizde olsun:</strong> EK-1 rekabet tablosu, EK-4 efor matrisi, EK-6 veri hattı, EK-7 kaynakça.</li>
+<li><strong>Son cümleyi bir kez içinizden söyleyin:</strong> "Hesabı motor yapar, bulguyu model inceler, kararı insan verir."</li>
+</ol></section><article><div class="hd"><span class="num">01</span><span class="time">70 sn &nbsp;·&nbsp; toplam 1:10</span></div><h2>Kapak</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Önce zaman eğrisi (2013 kuruluş → 2026 Nisan&#x27;da doğrulanmış motor → 2027 Ekim&#x27;de saha prototipi), sonra referans kuruluş şeridi.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Teşekkür ederim. Önce kısaca kendimizi tanıtayım. ARGELOG 2013&#x27;ten beri sanayi kuruluşlarına Ar-Ge ve teşvik süreçleri için yazılım yapıyor ve danışmanlık veriyor. Ekranda gördüğünüz kuruluşlar müşterilerimiz.</p><p>Bu on üç yılda bir hesap motoru geliştirdik. Bu motor, 5746 ve 4691 teşviklerini kurallarına göre hesaplıyor. Nisan ayında doksan altı gerçek dönemde test ettik; hepsinde kuruşu kuruşuna doğru çıktı.</p><p>Bugün sizden istediğimiz şey şu: bu çalışan motorun üzerine bir yapay zekâ katmanı kurmak.</p><p>Projenin adı Denetci.AI. Tek cümlesi şu: hesabı motor yapar, bulguyu model inceler, kararı insan verir.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Bu slaytta ayrı bir örnek gerekmiyor; zaman eğrisinin kendisi hikâyeyi anlatıyor. Eğriyi parmağınızla soldan sağa takip edin.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Hesabı motor yapar, bulguyu model inceler, kararı insan verir.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Önce çözdüğümüz problemi göstereyim.&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Motorun teknik adı deterministik hesap çekirdeği; proje başlangıç varlığı olarak beyan edildi (form, İş Paketleri bölümü). Doksan altı test &quot;çapa testi&quot; adıyla geçiyor. Mimarinin adı nöro-sembolik.</div></div></div></article><article><div class="hd"><span class="num">02</span><span class="time">75 sn &nbsp;·&nbsp; toplam 2:25</span></div><h2>Kapanmış dönem, kendi kural sürümüyle yeniden üretilemiyor</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Üstteki tek kutuyu ve ondan dört yıla inen okları; sonra kutunun sağındaki kendine dönen oku; sonra alttaki dört sürümlü şeridi.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Türkiye&#x27;de 1.720 Ar-Ge merkezi ve 13.452 bölge firması var. Hepsi her ay bordroyla iç içe geçmiş teşvik hesapları yapıyor. Bu hesaplar çoğunlukla elektronik tabloda tutuluyor.</p><p>Elektronik tablonun bir sorunu var: tek bir kural sürümü taşır. Oran değiştiğinde eskisinin üzerine yazarsınız. Geçmiş yılın oranı dosyada kalmaz.</p><p>Üstteki şerit bugünü gösteriyor: tek kutu, dört yıla hizmet ediyor. Alttaki şerit bizim yaptığımızı gösteriyor: her yıl kendi mühürlü kural sürümüne bağlı kalıyor.</p><p>Ama asıl ağır kısım bu değil. Bir fark bulunduğunda onu yorumlayacak, doğru soruyu soracak ve hangi belgenin isteneceğini bilecek uzman lazım. O uzman az, pahalı ve her firmaya yetmiyor.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">2023 yılının teşvik hesabını bugün yeniden yaparsanız, bugünün oranlarıyla yaparsınız. O yılın oranını hatırlayan bir defteriniz yoksa, denetimde &quot;bu rakam nasıl çıktı&quot; sorusuna belgeyle cevap veremezsiniz.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Asıl darboğaz hesap değil, farkı yorumlayacak uzman emeği.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Burada akla hemen yapay zekâ geliyor. Ama hangi işi yapacak?&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Ar-Ge personeli başına yıllık teşvik yaklaşık bir milyon TL; 150 kişilik bir merkezde yılda yüz milyon TL düzeyinde akış. Sayılar Sanayi ve Teknoloji Bakanlığı istatistiklerinden; künyeler EK-7&#x27;de.</div></div></div><div class="row"><div class="k">Geride kalırsanız</div><div class="v "><div class="extra">Pazar sayılarını atlayın, doğrudan örneğe geçin.</div></div></div></article><article><div class="hd"><span class="num">03</span><span class="time">75 sn &nbsp;·&nbsp; toplam 3:40</span></div><h2>Mevzuat alanında dil modeli hesap ve karar üretemez</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Sırayla en uzun çubuğu (%88), sonra %58&#x27;i, sonra %17–33 bandını; en son alttaki kısa koyu çubuğu.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Bu, projenin en önemli tasarım kararı. Sorulması gereken soru şu: yapay zekâ bu işte hesabı yapabilir mi?</p><p>Cevap hayır, ve bu bir tahmin değil, ölçülmüş bir sonuç. Stanford ekibi gerçek mahkeme kararları hakkında doğrulanabilir sorular sordu. Yaygın kullanılan modeller, sorulara verdikleri cevapların yüzde 58 ile yüzde 88&#x27;inde dayanaksız bilgi üretti. Yani uydurdu.</p><p>&quot;Genel model değil, hukuka özel araç kullanırız&quot; diyebilirsiniz. Aynı ekip onları da ölçtü: en pahalı ticari araçlarda bile oran yüzde 17 ile 33 arasında kaldı.</p><p>Bu giderilebilir bir arıza değil. Modeller boş bırakmak yerine tahmin etmeye eğitiliyor. Sınavda bilmediği soruyu boş bırakmayan öğrenci gibi.</p><p>Teşvik hesabında bir tutarın yüzde on yedi ihtimalle uydurma olması kabul edilebilir değil. Bu yüzden yapay zekânın işini bilinçli olarak daralttık.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Bir modele &quot;bu personelin gelir vergisi terkin oranı kaç&quot; diye sorarsanız size bir oran söyler. O oran doğru da olabilir, uydurma da. Hangisi olduğunu anlamanın bir yolu yok. Oysa kural defterine bakan bir motor size hem oranı hem de dayandığı maddeyi verir.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Yapay zekâyı hesaplayıcı koltuğuna oturtmuyoruz, çünkü o koltuk ölçülerek savunulamaz hâle geldi.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Peki hangi koltuğa oturtuyoruz?&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Ölçümler Dahl ve arkadaşları 2024 (Journal of Legal Analysis) ile Magesh ve arkadaşları 2025 (Journal of Empirical Legal Studies). &quot;Boş bırakmayan öğrenci&quot; benzetmesinin dayanağı Kalai ve arkadaşları 2026 (Nature). Künyeler EK-7 bölüm 2&#x27;de. <b>Hafızadan ek rakam vermeyin.</b></div></div></div></article><article><div class="hd"><span class="num">04</span><span class="time">90 sn &nbsp;·&nbsp; toplam 5:10</span></div><h2>İş bölümü: motor hesaplar, model inceler, insan karar verir</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Soldan sağa dört kutuyu sırayla; sonra alttaki geri dönüş okunu; <b>en son ve en uzun süre çarpı işaretli kesik çizgiyi.</b></div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>İş bölümümüz dört adımda.</p><p>Bir: motor hesaplar ve farkı bulur. İki: model o farka bakar ve şunu söyler — bu fark ne anlama geliyor olabilir, hangi belgeye bakmak gerekir, bir denetçi burada ne sorardı. Üç: kapı, modelin söylediği her mevzuat maddesini kural defterine karşı kontrol eder. Dört: kararı insan verir. Belge gelince motor yeniden koşar ve döngü kapanır.</p><p>Şemadaki çarpı işaretli kesik çizgi bu sunumun en önemli ayrıntısı. Modelden tutara giden bir yol yok. Model hiçbir rakam üretmiyor, hiçbir rakama dokunmuyor.</p><p>Bunun sonucu şu: model yanılırsa ortaya yanlış bir tutar çıkmaz. Gereksiz bir belge istemiş oluruz, o kadar.</p><p>Kararı insan veriyor. Ürün beyanname göndermiyor, tasdik etmiyor.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Bunu somutlaştırayım. Bir mühendis yüksek lisansını Mart ayında bitirmiş. Ama terkin oranı Ocak ayından itibaren yüksek lisans oranıyla uygulanmış. Motor farkı buluyor: iki ay için 8.500 lira fazla yararlanma. Model şunu söylüyor: &quot;Bu, diploma tarihinin yanlış girilmesinden kaynaklanıyor olabilir; mezuniyet belgesine bakın.&quot; Belge geliyor, motor yeniden koşuyor, fark kapanıyor. Kararı mali müşavir veriyor. Model bu süreçte tek bir rakam üretmedi.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Modelden tutara giden bir yol yok; bu yüzden modelin yanılması hatalı tutar üretmez.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Şimdi dört araştırma sorusuna geçiyorum. Dördünün de düşebilir bir ölçütü var.&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Bu yaklaşımın literatürdeki adı program destekli dil modelleri; hesabın deterministik bir yürütücüye devredilmesi. Kambhampati ve arkadaşları modelin kendini doğrulayamadığını, dış doğrulayıcıyla çevrelendiğinde güçlü olduğunu gösteriyor. EK-7 bölüm 1 ve 3.</div></div></div><div class="row"><div class="k">Bu slaytta acele etmey</div><div class="v "><div class="extra">Heyet buradan ikna olursa geri kalanı teknik ayrıntıdır.</div></div></div></article><article><div class="hd"><span class="num">05</span><span class="time">90 sn &nbsp;·&nbsp; toplam 6:40</span></div><h2>AS-1 · Denetçi rolü dar kapsamlı bir modele öğretilebilir mi?</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Soldaki üç kaynağı; sonra MOTOR kutusunu; <b>sonra alttaki geri dönüş okunu.</b></div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Birinci sorumuz: bir denetçinin yaptığı ön inceleme işi, küçük ve kurum içinde çalışan bir modele öğretilebilir mi?</p><p>Buradaki zorluk eğitim verisi. Modeli eğitmek için binlerce soru-cevap çifti lazım. Normalde bu cevapları bir uzmanın elle yazması gerekir. Bizde o kaynak yok, olsa da yetişmez.</p><p>Çözümümüz şu: cevapları uzman değil, doğrulanmış motor üretiyor. Motor zaten her koşumda girdiyi, uygulanan kuralı ve sonucu kesin olarak veriyor. Eğitim verisinin &quot;doğru cevap&quot; tarafı buradan çıkıyor.</p><p>En sağlam olduğumuz yer alttaki geri dönüş oku. &quot;Hangi belgeye bakmalı&quot; görevinde doğruluk bir yorum değil, mekanik bir olgu: önerilen belgeyi getir, motoru yeniden koş, fark kapandı mı kapanmadı mı. Cevap evet ya da hayır.</p><p>Dürüst olayım: insan üç yerde devrede. Senaryoların mevzuat referansını yazarken, pilot oturumlarda kapanış kararını verirken, ve sınav sorularını onaylarken.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Bir öğrenciye soru çözdürüp cevabını cevap anahtarından işaretlemek gibi. Cevap anahtarını biz yazmıyoruz; doksan altı gerçek dönemde kuruşu kuruşuna doğrulanmış motor yazıyor.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Etiketi model değil, doğrulanmış motor koyuyor.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;İkinci soru, modelin söylediklerinin nasıl kanıta bağlandığı.&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Veri üretim yöntemi EK-6&#x27;da; örnek veri seti <code>ornek-sft-veriseti/</code> dizininde çalışır hâlde. Modelin araç çağırmayı elle etiketsiz öğrenebildiğine emsal: Toolformer. Kendi ürettiği veriyle eğitilen modelin çöktüğü bulgusu Nature&#x27;da; bizde özyineleme yok, veriyi model değil motor üretiyor.</div></div></div><div class="row"><div class="k">Geride kalırsanız</div><div class="v "><div class="extra">&quot;İnsan üç yerde devrede&quot; cümlesini atlamayın; dürüstlük sinyali odur.</div></div></div></article><article><div class="hd"><span class="num">06</span><span class="time">75 sn &nbsp;·&nbsp; toplam 7:55</span></div><h2>AS-2 · Gerekçeler kural tabanına karşı kanıta bağlanabilir mi?</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Ortadaki kapı kutusunun içindeki iki soruyu; sonra yukarı çıkan &quot;kullanıcıya&quot; okunu ve aşağı inen &quot;elenen&quot; okunu; sonra en alttaki geri dönüş okunu.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>İkinci soru: modelin söylediği gerekçeler kanıta bağlanabilir mi?</p><p>Model serbest metin yazmıyor. Boş bir form dolduruyor ve o formda her gerekçe bir mevzuat maddesine bağlanmak zorunda.</p><p>Kapı iki soru soruyor: bu madde gerçekten var mı, ve o ayda yürürlükte miydi? İkisinden birine hayır cevabı gelirse cümle kullanıcıya hiç ulaşmıyor.</p><p>Neden model bunu kendi kendine yapamıyor? Çünkü yapamadığı ölçüldü: dil modelleri dışarıdan geri bildirim almadan kendi hatalarını düzeltemiyor, denedikleri zaman çoğu kez daha kötü oluyor. Kontrolün dışarıdan yapılması şart.</p><p>Bir zayıflığı kendim söyleyeyim: kapı doğru bulguları da eleyebilir. Bunu ölçmeyi taahhüt ediyoruz. Ama en kötü sonuç şu: kullanıcı bugün zaten olduğu gibi yorumsuz bir farkla kalır. Kapı hiçbir tutarı gizlemiyor; elediği şey yorum.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Model &quot;5746 sayılı Kanun&#x27;un 3. maddesine göre terkin oranı yanlış uygulanmış&quot; diyor. Kapı bakıyor: 3. madde var mı? Var. O ayda yürürlükte miydi? Evet. Cümle geçiyor. Model uydurulmuş bir madde numarası verseydi, o cümle kullanıcıya hiç gitmeyecekti.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Kapı hiçbir tutarı gizlemez; elediği şey yalnızca modelin yorumudur.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Üçüncü soru teşhisle ilgili ve projenin en zor kısmı.&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Modelin kendini düzeltemediği bulgusu Huang ve arkadaşları, ICLR 2024. Formdaki terim: sembolik doğrulama kapısı, şema zorlamalı çıktı. Elenen cümleler bir sonraki eğitim turuna olumsuz örnek olarak dönüyor.</div></div></div></article><article><div class="hd"><span class="num">07</span><span class="time">75 sn &nbsp;·&nbsp; toplam 9:10</span></div><h2>AS-3 · Farkın sebebini bulma</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Soldaki tek tutarı; sonra yelpazeyi açan yedi oku; sonra sağdaki daralma zincirini.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Farkı bulmak kolay: iki sayıyı çıkarırsınız. Zor olan, farkın sebebini doğru söylemek.</p><p>Şemadaki yelpaze problemi anlatıyor. Tek bir fark tutarını yedi ayrı sebep açıklayabilir: yuvarlama, kapsam farkı, kısmi çalışma, üst sınır, oran farkı, eksik belge, gerçek hata. Hepsi aynı rakamı üretebilir.</p><p>İş bölümü şöyle: sembolik taraf, yani kural defteri, olası sebeplerin hiçbirini atlamadan hepsini listeliyor. Yapay zekâ tarafı ise onları en olasıdan en az olasıya sıralıyor ve hangi belgenin ayırt edici olduğunu söylüyor.</p><p>Bir soruyu ben sorayım: zor vakaların hepsine &quot;belirsiz&quot; deyip yüzde 85&#x27;i kolayca tutturamaz mısınız? Bunu engellemek için iki ölçüyü birbirine kilitledik. Doğruluk kalem sayısıyla, belirsiz payı ise tutarla ölçülüyor ve tavanı yüzde beş.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Doktorun teşhis koyması gibi. Ateş tek başına yedi hastalıkta da görülür. İyi doktor tek hastalık söyleyip geçmez; olasılıkları sıralar ve &quot;şu tahlili yaptıralım&quot; der. Bizim modelin işi de bu: sebebi sıralamak ve hangi belgenin ayırt edeceğini söylemek. Ayırt edemiyorsa &quot;belirsiz&quot; demek zorunda; tahmin yürütmesi yasak.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Kural defteri sebepleri eksiksiz üretir, yapay zekâ onları sıralar; ayırt edilemeyen kalem tek sebebe zorlanmaz.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Dördüncü soru, bu modelin dayanacağı kural defteri.&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Formdaki terim abdüktif kök-neden teşhisi. Kırk yıllık literatürü var: Reiter 1987 teşhisi tek tahmin değil aday kümesi olarak tanımlar; de Kleer ve Williams &quot;adayları en çok ayrıştıracak sonraki ölçüm hangisi&quot; sorusunu sorar. Bizim &quot;hangi belgeyi istemeli&quot; görevimiz tam olarak budur. EK-7 bölüm 6.</div></div></div><div class="row"><div class="k">Kendi sorunuzu sormayı</div><div class="v "><div class="extra">Heyet o soruyu zaten soracak; siz sorarsanız cevap savunma değil tasarım olur.</div></div></div></article><article><div class="hd"><span class="num">08</span><span class="time">90 sn &nbsp;·&nbsp; toplam 10:40</span></div><h2>AS-4 · Her ayın kendi kuralını hatırlayan defter</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Üç şeridi yukarıdan aşağıya; ortadaki şeritte iki işaretli olayı; sonra dikey kesik çizgiyi.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Modelin her cümlesinin kontrol edilebilmesi için kural defterinin her ay için o gün geçerli olan kuralı kesin bilmesi gerekiyor. Dördüncü sorumuz bu defteri kurmakla ilgili.</p><p>Üç tür değişiklik var, üç şerit onları gösteriyor.</p><p>Üstteki kolay: oran değişir. Defterde sayıyı değiştirirsiniz, olur biter.</p><p>Ortadaki zor. Bazen değişen oran değil, hesabın neyin üzerinden yapılacağı. İki örnek vereyim. 2022&#x27;de asgari geçim indirimi kaldırıldı; hesaba giren matrahın tanımı değişti. 2025&#x27;te ücret tavanı ayın ortasında, 1 Ağustos&#x27;ta yürürlüğe girdi; o ay ikiye bölündü. Bunlar sayı değişikliği değil, hesabın şeklinin değişmesi.</p><p>Alttaki de zor. Aynı döneme sonradan düzeltme beyannamesi verilir. Artık o dönemin birden fazla geçerli hâli olur ve hangisine göre konuştuğunuzu söylemeniz gerekir.</p><p>Son olarak sık gelen bir soruyu peşinen cevaplayayım: 2028&#x27;de yeni bir tebliğ çıkarsa modeli yeniden mi eğiteceğiz? Hayır. Model hiçbir oran ve limit taşımıyor. Yeni tebliğ, yeni bir kural dosyası demek.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Ortadaki şeridi somutlaştırayım. Diyelim bir personelin ücreti tavanın üstünde. 1 Ağustos 2025&#x27;ten önce hesap bir türlü, sonra başka türlü yapılıyor. O ay için tek bir kural yok, ayın içinde kural değişiyor. Defter bunu ay ay değil gün gün tutmak zorunda.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Model oran ve limit taşımaz; mevzuat değişince kural dosyası değişir, model değil.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Şimdi bunları nasıl ölçeceğimize geçiyorum.&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Formdaki terimler: parametre değişikliği, girdi semantiği değişikliği, bilgi zamanı ekseni, as-of yeniden üretim. Tavan düzenlemesi 7555 sayılı. İki rejim bir aradaysa 5746&#x27;nın 4. maddesi aynı kazançtan çifte yararlanmayı yasaklar; bu sınırı da denetliyoruz. 4691 iyi bir sınama alanı, çünkü orada teşvik eğitim derecesine bağlı değil.</div></div></div><div class="row"><div class="k">Geride kalırsanız</div><div class="v "><div class="extra">Alttaki şeridi tek cümleye indirin; iki mevzuat örneğini atlamayın.</div></div></div></article><article><div class="hd"><span class="num">09</span><span class="time">75 sn &nbsp;·&nbsp; toplam 11:55</span></div><h2>Ölçüm düzeneği ve başarısızlık eşikleri</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Sol kutudan çıkan beş oku; <b>özellikle üçüncü kolu.</b> Sonra eşik tablosunu ve en alttaki ön kayıt şeridini.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Bir yapay zekâ iddiası, ancak onu ölçen düzenek kadar değerlidir. En çok emeği buraya verdik.</p><p>Aynı sınavı beş farklı kurulumda koşuyoruz. Üçüncüsü önemli: kural defterini modele doğrudan veriyoruz ve soruyoruz — bu kadarı yetiyor mu, yoksa modeli gerçekten eğitmek gerekiyor mu? Böylece bu sorunun cevabı tahmin değil ölçüm oluyor.</p><p>Tablodaki dört eşiğin her biri düşebilir. Eşiği tutturamazsak bunu saklamayız, olumsuz sonuç olarak raporlarız.</p><p>Bir eşiğin nereden geldiğini göstereyim: &quot;hangi belgeye bakmalı&quot; sorusunda hedefimiz yüzde 70 isabet. Bu sayıyı literatürden almadık. Kural defteri bir fark için ortalama üç ila beş sebep üretiyor; yani rastgele seçseniz yüzde 20-33 tutturursunuz. Yüzde 70, bunun iki ila üç buçuk katı.</p><p>En önemli taahhüdümüz en alttaki şerit: bütün eşikler ve sınav soruları yedinci ayda mühürlenip Teknoloji Transfer Ofisi ile mali müşavir nezdinde yazılı olarak saklanacak.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Sınav sorularını sınavdan önce mühürleyip notere bırakmak gibi. Ölçüm yapıldıktan sonra ne soruyu ne geçme notunu değiştirebiliriz.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Eşikleri ay 7&#x27;de mühürleyip TTO&#x27;ya teslim ediyoruz; ölçümden sonra eşik de payda da değişmez.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Bu ölçümleri hangi takvimde ve hangi kaynakla yapacağız?&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Üçüncü kolun teknik adı erişim destekli üretim. AS-3 için ayrıca basit bir kural tabanlı taban çizgisi koşuyoruz; yapay zekâ ona yetişemezse ucuz olanı ürüne koyar ve bunu olumsuz sonuç olarak yazarız. Dört eşiğin tamamı formun araştırma soruları bölümünde.</div></div></div></article><article><div class="hd"><span class="num">10</span><span class="time">75 sn &nbsp;·&nbsp; toplam 13:10</span></div><h2>İş paketleri, ölçüm kapıları ve kaynak dağılımı</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Koyu şeridi; sonra dikey kesik kapı çizgilerini; sonra tabloda personel satırını ve %72&#x27;yi.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Yedi iş paketimiz var. Her birinin kaç adam-ay olduğu, hangi aylarda yapılacağı ve neyi bitirmiş sayılacağı yazılı. Adam-ayı tanımlanmamış tek bir taahhüdümüz yok.</p><p>Koyu şerit projenin yapay zekâ ekseni: 10 adam-ay, altıncı aydan on ikinci aya.</p><p>Açıkça söylemem gereken bir şey var. Hesap motoru proje başlamadan önce firmamızda geliştirildi. Bunu başlangıç varlığı olarak beyan ettik, saklamıyoruz. &quot;O zaman Ar-Ge içeriği azalmıyor mu&quot; diye sorabilirsiniz. Tersi oluyor: çalışan bir motorun üzerine kurduğumuz için Ar-Ge eforunun on dokuz adam-ayını doğrudan yapay zekâya ayırabiliyoruz.</p><p>Dört kişilik ekip, 39 adam-ay. Bütçenin yüzde 72&#x27;si personel, donanım payı yüzde dört. Bu bir ekipman alma projesi değil.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Mali müşavirlik kalemi neden var, onu somutlaştırayım: kural defterindeki her maddeyi madde madde teyit ettiriyoruz, pilot mutabakatlarını denetletiyoruz ve kör sınavda doğru cevapları uzmana işaretletiyoruz. Yani ölçümün &quot;doğru cevap&quot; tarafını bağımsız bir uzman yazıyor.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Çalışan bir motorun üzerine kurduğumuz için Ar-Ge eforunun 19 adam-ayı doğrudan yapay zekâya ayrılabiliyor.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Şimdi en önemli soruya geliyorum: ya tutmazsa?&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Kritik yol, kural defteri kapısının yedinci ayda ve senaryo setlerinin sekizinci ayda kapanmasından geçiyor. Efor dağılımı EK-4&#x27;te, personel maliyeti dayanağı EK-3&#x27;te.</div></div></div><div class="row"><div class="k">Geride kalırsanız</div><div class="v "><div class="extra">Bütçe cümlesini kısaltın, &quot;başlangıç varlığı&quot; paragrafını atlamayın. Heyet bunu formdan öğrenirse saklandığı izlenimi doğar.</div></div></div></article><article><div class="hd"><span class="num">11</span><span class="time">60 sn &nbsp;·&nbsp; toplam 14:10</span></div><h2>Başarısızlık senaryosu ve risk asimetrisi</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Üstteki hattı soldan sağa; sonra alttaki hattaki kalın dikey engeli.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Heyetin haklı olarak soracağı soru şu: yapay zekâ tutmazsa yedi milyon lira boşa mı gitti?</p><p>Cevap hayır. Nedeni şemada.</p><p>Üstteki hat: model yanılırsa ortaya yanlış bir tutar çıkmaz, gereksiz bir inceleme adımı çıkar.</p><p>Alttaki hat: motorun kuralı doğrulanmamışsa sert bir kural devreye giriyor ve o ay için ne hesap ne rapor üretiliyor. Bu bir uyarı mesajı değil, motorun içine gömülü bir engel.</p><p>Yapay zekâ hedefine ulaşamazsa bunu olumsuz sonuçlu bir araştırma sorusu olarak raporlarız; bu da bilimsel bir çıktıdır. Ürün ise çalışmaya devam eder: geçmiş dönem mutabakatı, mühürlü kural defteri ve denetim savunma dosyası modele bağlı değil.</p></div></div><div class="row"><div class="k">Örnek</div><div class="v "><div class="ornek">Somut karşılığı şu: model &quot;mezuniyet belgesine bakın&quot; der, bakarsınız, ilgisi çıkmaz. Kaybınız bir belge isteme adımı. Buna karşılık motor yanlış hesaplasaydı, yanlış bir beyan riski doğardı. İşte bu yüzden hesabı modele vermiyoruz.</div></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Doğruluğu model değil motor taşıdığı için, araştırma sorusu düşse bile ürün çalışır.</div></div></div><div class="row"><div class="k">Geçiş</div><div class="v "><div class="gecis">&quot;Toparlıyorum.&quot;</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Sert kuralın formdaki karşılığı: Resmî Gazete referansıyla doğrulanmamış parametreli ay hesaplanmaz.</div></div></div></article><article><div class="hd"><span class="num">12</span><span class="time">60 sn &nbsp;·&nbsp; toplam 15:10</span></div><h2>Proje çıktıları ve teknopark katkısı</h2><div class="row"><div class="k">Şemada göster</div><div class="v ">Dört çıktı satırını sırayla; sonra en alttaki alıntı bloğunu.</div></div><div class="row"><div class="k">Söyle</div><div class="v say"><p>Proje sonunda geriye dört somut şey kalacak.</p><p>Birincisi, 5746 ve 4691 için doğrulanmış bir kural defteri; bugünkü doksan altı doğrulanmış dönem en az yüz kırka çıkacak. İkincisi, kurum içinde çalışan denetçi modeli ve onu ölçen düzenek. Üçüncüsü, iki sanayi kuruluşunda gerçek veriyle çalışan bir prototip. Dördüncüsü fikri mülkiyet.</p><p>İkincisini vurgulamak istiyorum: ölçüm düzeneği modelin kendisi kadar önemli. Çünkü bu alanda eksik olan şey model değil, ölçüm.</p><p>Neden teknoparkta? Üç şey aynı anda burada: 4691 kurallarının ilk kullanıcıları, yapay zekâ tarafındaki akademik danışmanlık, ve ölçümlerimizi gözden geçirecek bağımsız göz. Bağımsız gözden geçirmeyi kendi lehimize değil, sonucun güvenilirliği için istiyoruz.</p><p>Son cümlem: araştırma sorusu düşerse bile ürün çalışır, çünkü doğruluğu model değil motor taşıyor. Hesabı motor yapar, bulguyu model inceler, kararı insan verir.</p><p>Teşekkür ederim, sorularınızı almaktan memnuniyet duyarım.</p></div></div><div class="row"><div class="k">Çıpa cümle</div><div class="v "><div class="cipa">Bu alanda eksik olan şey model değil, ölçüm.</div></div></div><div class="row"><div class="k">Sorarlarsa</div><div class="v "><div class="sorul">Teknoparka taahhütlerimiz: 4 kişiyle başlayıp 6&#x27;ya çıkmak, beş bölge firmasına 4691 ön sürümü, iki seminer, TTO ile ortak bildiri.</div></div></div><div class="row"><div class="k">Son saniye</div><div class="v "><div class="extra">Cümleyi bitirdikten sonra susun. Doldurma cümlesi kurmayın; ilk soruyu bekleyin.</div></div></div></article><div class="qa"><h2>Soru-cevap için</h2><h2>İlk otuz saniyede yapılacaklar</h2>
+<ol>
+<li><strong>Soruyu tekrar edin.</strong> Hem düşünme süresi kazanırsınız hem yanlış anlaşılmayı önlersiniz.</li>
+<li><strong>Hangi slayta ait olduğunu söyleyin</strong> ve o slayta dönün. Şemaya bakarak cevap vermek sözle cevap vermekten güçlüdür.</li>
+<li><strong>Cevabınız bir sayı içeriyorsa neyin içinde olduğunu da söyleyin.</strong> "Yüzde 70" değil, "üç ila beş aday arasından yüzde 70".</li>
+</ol>
+<h2>En olası altı soru ve hangi yedek slayda dönüleceği</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Soru</th>
+<th>Yedek slayt</th>
+<th>Tam cevap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sentetik veriyle eğitim sağlam mı?</td>
+<td>Y8 · EK-6 veri hattı</td>
+<td>S1</td>
+</tr>
+<tr>
+<td>Motor da bir yazılım, nasıl güveniyorsunuz?</td>
+<td>Y9 · çapa kapsama matrisi</td>
+<td>S2</td>
+</tr>
+<tr>
+<td>15 puanlık fark istatistiksel olarak anlamlı mı?</td>
+<td>Y10 · örneklem ve test planı</td>
+<td>S5</td>
+</tr>
+<tr>
+<td>Bu Ar-Ge mi, mühendislik mi?</td>
+<td>—</td>
+<td>S14</td>
+</tr>
+<tr>
+<td>Pilotlar gerçekten ücretli olacak mı?</td>
+<td>Y11 · dört kapılı pilot akışı</td>
+<td>S27</td>
+</tr>
+<tr>
+<td>Yanlış beyan verilirse sorumlu kim?</td>
+<td>Y5 · sorumluluk ve insan gözetimi</td>
+<td>S32</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Numaralar <code>hakem-sunumu-soru-cevap.md</code> dosyasındaki soru numaralarıdır; 43 sorunun tamamı orada.</em></p>
+<h2>Üç savunma kuralı</h2>
+<ol>
+<li><strong>Zayıf noktayı hakemden önce siz söyleyin.</strong> Kabul edilen bir sınır, savunulan bir sınırdan güçlüdür.</li>
+<li><strong>Bilinmeyeni bilinmeyen olarak söyleyin.</strong> "Ölçeceğiz" cevabı, uydurulmuş bir kesinlikten iyidir.</li>
+<li><strong>Dosyayı aşmayın.</strong> Sunumda söylediğiniz her taahhüdün başvuru dosyasında karşılığı olmalı.</li>
+</ol>
+<h2>Terim gelirse ne diyeceksiniz</h2>
+<p>Hakem teknik terimi kullanırsa paniğe gerek yok; terim sizin de terimeniz. Bir kez karşılığını söyleyin, sonra devam edin.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Hakem şunu sorarsa</th>
+<th>Siz şöyle başlayın</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Abdüktif çıkarım nasıl işliyor?"</td>
+<td>"Farkın sebebini bulma kısmı. Kural defteri bütün olası sebepleri üretiyor, model onları sıralıyor…"</td>
+</tr>
+<tr>
+<td>"Bitemporal modeli nasıl kurdunuz?"</td>
+<td>"İki tarih birden tutuyoruz: kuralın geçerli olduğu ay, ve o bilgiyi öğrendiğimiz tarih…"</td>
+</tr>
+<tr>
+<td>"Şema zorlaması ne demek?"</td>
+<td>"Model serbest metin yazmıyor, boş bir form dolduruyor…"</td>
+</tr>
+<tr>
+<td>"Erişim destekli üretim yeterli olmaz mı?"</td>
+<td>"Bunu ölçüyoruz; beş kolun üçüncüsü tam olarak bu…"</td>
+</tr>
+<tr>
+<td>"Halüsinasyon oranınız kaç?"</td>
+<td>"Kendi eşiğimiz desteksiz iddia için yüzde bir; ölçtüğümüz kör test setinde raporlayacağız…"</td>
+</tr>
+</tbody>
+</table></div></div><footer>Denetci.AI &nbsp;·&nbsp; ARGELOG-002 &nbsp;·&nbsp; Konuşma notları · yalın sürüm. Yazdırmak için Ctrl+P / Cmd+P.</footer></div>
+</html>
