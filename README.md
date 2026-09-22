@@ -16,8 +16,9 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 
 | Belge | İçerik |
 |---|---|
-| **[`hakem-sunumu.md`](hakem-sunumu.md)** | **Hakem heyetine sunulacak 12 slayt:** her slaytta bir iddia, bir giriş cümlesi ve bir şema; madde listesi yok. Onunda gerçek şema vardır (kural sürümünün kaybı, iş bölümü döngüsü, veri hattı, doğrulama kapısı, tanımlanabilirlik yelpazesi, üç eksenli sürümleme, karşılaştırma kolları, takvim, risk asimetrisi). Dört araştırma sorusunun her biri yanlışlanabilir bir başarısızlık eşiğine bağlıdır. Sonunda 12 yedek slayt listesi, karar bekleyen maddeler ve düzeltilecek portal kayıtları yer alır. |
-| [`hakem-sunumu-konusma-notlari.md`](hakem-sunumu-konusma-notlari.md) | **Sunum günü elde tutulacak teslim metni:** slayt başına süre ve kümülatif dakika, şemada neyin gösterileceği, konuşma metni, o slayttan kalması gereken çıpa cümle ve sonraki slayta geçiş. Sunum öncesi beş dakikalık kontrol listesi ve soru-cevap açılışı da içerir. |
+| **[`Denetci-AI-hakem-sunumu.pptx`](Denetci-AI-hakem-sunumu.pptx)** | **Sunum dosyası.** 12 slayt, beyaz zemin, tek renk; onunda gömülü şema. Konuşma metinleri her slaydın konuşmacı notu alanındadır. 16:9, PowerPoint ve Keynote ile açılır |
+| [`hakem-sunumu.md`](hakem-sunumu.md) | Slaytların metin içeriği ve şema tarifleri. Konuşma metinleri bu dosyadan ayrılmıştır |
+| [`hakem-sunumu-konusma-notlari.md`](hakem-sunumu-konusma-notlari.md) | **Sunum günü elde tutulacak teslim metni:** slayt başına süre ve kümülatif dakika, şemada neyin gösterileceği, konuşma metni, çıpa cümle ve geçiş. Sunum öncesi kontrol listesi ve soru-cevap açılışı da içerir |
 | [`hakem-sunumu-soru-cevap.md`](hakem-sunumu-soru-cevap.md) | Hakem heyetinin soracağı 43 zor soru ve 30-60 saniyelik savunma cevapları: dokuz başlıkta, her soruda dayanak ve yapılmaması gereken savunma hatası. |
 | [`ek-7-akademik-kaynakca.md`](ek-7-akademik-kaynakca.md) | **EK-7.** Sunumdaki her sayısal iddianın dayanağı: 98 doğrulanmış akademik ve kurumsal künye, 10 bölümde. Künyesi birincil kaynaktan teyit edilemeyen 26 kayıt gerekçesiyle birlikte elenmiş ve ayrı bölümde listelenmiştir. |
 
