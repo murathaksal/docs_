@@ -13,6 +13,15 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 | [`denetci-ai-kalite-surecleri-uyarlama-degerlendirmesi.md`](denetci-ai-kalite-surecleri-uyarlama-degerlendirmesi.md) | Denetci.AI mimarisinin kalite yönetim sistemi denetimine uyarlanabilirliği: katman katman aktarım analizi, oracle sorunu, iş modeli ve pazar değerlendirmesi. Sonuç: ardıl proje (ARGELOG-003) olarak ele alınmalı; **mevcut başvurunun kapsamı değişmez.** Karar, 120-150 geçmiş bulgu üzerinde yapılacak kapsama ölçümüne bağlanmıştır. |
 
 
+## 🎤 Hakem sunumu
+
+| Belge | İçerik |
+|---|---|
+| **[`hakem-sunumu.md`](hakem-sunumu.md)** | **Hakem heyetine sunulacak 12 slayt:** her slaytta bir iddia, bir giriş cümlesi ve bir şema; madde listesi yok. Onunda gerçek şema vardır (kural sürümünün kaybı, iş bölümü döngüsü, veri hattı, doğrulama kapısı, tanımlanabilirlik yelpazesi, üç eksenli sürümleme, karşılaştırma kolları, takvim, risk asimetrisi). Dört araştırma sorusunun her biri yanlışlanabilir bir başarısızlık eşiğine bağlıdır. Sonunda 12 yedek slayt listesi, karar bekleyen maddeler ve düzeltilecek portal kayıtları yer alır. |
+| [`hakem-sunumu-konusma-notlari.md`](hakem-sunumu-konusma-notlari.md) | **Sunum günü elde tutulacak teslim metni:** slayt başına süre ve kümülatif dakika, şemada neyin gösterileceği, konuşma metni, o slayttan kalması gereken çıpa cümle ve sonraki slayta geçiş. Sunum öncesi beş dakikalık kontrol listesi ve soru-cevap açılışı da içerir. |
+| [`hakem-sunumu-soru-cevap.md`](hakem-sunumu-soru-cevap.md) | Hakem heyetinin soracağı 43 zor soru ve 30-60 saniyelik savunma cevapları: dokuz başlıkta, her soruda dayanak ve yapılmaması gereken savunma hatası. |
+| [`ek-7-akademik-kaynakca.md`](ek-7-akademik-kaynakca.md) | **EK-7.** Sunumdaki her sayısal iddianın dayanağı: 98 doğrulanmış akademik ve kurumsal künye, 10 bölümde. Künyesi birincil kaynaktan teyit edilemeyen 26 kayıt gerekçesiyle birlikte elenmiş ve ayrı bölümde listelenmiştir. |
+
 ## 📎 Başvuru ekleri
 
 | Ek | İçerik |
@@ -26,6 +35,7 @@ Bu depo, Argelog A.Ş. için yürütülen Ar-Ge proje seçimi, market-fit analiz
 | [`ek-4-proje-ekibi-ozgecmisleri.md`](ek-4-proje-ekibi-ozgecmisleri.md) | Ekip kompozisyonu, efor dağılımı ve özgeçmiş şablonu *(kişi bilgileri doldurulacak)* |
 | [`ek-5-firma-tanitim-dosyasi.md`](ek-5-firma-tanitim-dosyasi.md) | Kurumsal kimlik, referanslar, mali tablolar ve finansman beyanı *(mali veriler doldurulacak)* |
 | [`ek-6-sft-denetim-verisi-uretim-yontemi.md`](ek-6-sft-denetim-verisi-uretim-yontemi.md) | Denetçi rolündeki dar kapsamlı modelin eğitim verisi (SFT) üretim yöntemi: oracle ilkesi, G1–G4 görevleri, kaynak hatları, hacim ve sızıntı denetimleri |
+| [`ek-7-akademik-kaynakca.md`](ek-7-akademik-kaynakca.md) | Sunum ve formdaki iddiaların akademik/kurumsal dayanak kaydı: 98 doğrulanmış künye ve elenen 26 kaydın gerekçesi |
 
 ## 📚 Analiz arşivi (karar gerekçeleri)
 
