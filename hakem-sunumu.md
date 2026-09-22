@@ -34,12 +34,23 @@
 
 > Hesabı motor yapar · bulguyu model inceler · kararı insan verir
 
-- **Firma:** ARGELOG A.Ş.
-- **Süre:** 12 ay
-- **İş gücü:** 39 adam-ay · 4 kişi
-- **Bütçe:** 7.000.000 ₺
-- **Kapsam:** 5746 · 4691
-- **Hazırlık:** THS 5 → 7
+*Künye satırı:* 12 ay · 39 adam-ay, 4 kişi · 7.000.000 ₺ · 5746 + 4691 · THS 5 → 7
+
+### ARGELOG A.Ş. · Ar-Ge, teknoloji ve inovasyon yönetimi yazılımları
+
+**Şema (zaman eğrisi).** Soldan sağa hafifçe yükselen bir eğri üzerinde beş kilometre taşı; son taştan sonra eğri kesikli devam eder (gelecek):
+
+| Tarih | Kilometre taşı | Açıklama |
+|---|---|---|
+| 2013 | Kuruluş | Ar-Ge, teknoloji ve inovasyon yönetimi yazılımları; sanayi kuruluşlarına danışmanlık |
+| 2013 – 2026 | On üç yıllık saha birikimi | 5746 süreçlerinde sanayi kuruluşlarına yazılım geliştirme |
+| 2026 · Nisan | Hesap çekirdeği doğrulandı | 96 çapa testinin tamamı kuruş farksız; proje başlangıç varlığı; THS 5 |
+| 2026 · Ekim | Denetci.AI başlangıcı | Deterministik motorun üzerine denetçi rolünde yerel model |
+| 2027 · Ekim | THS 7 prototip | Tüpraş ve Kale Seramik'te ücretli pilot; iki referans vaka |
+
+**Referans kuruluşlar.** İki satırlık logo şeridi: Tüpraş, TÜBİTAK MAM, Eczacıbaşı, Kalekim, FLO, Kale Jet Motorları, World Medicine, SAM, VitrA, Demirören Teknoloji, Kale Seramik, Erdemir. Logolar destenin tek renk sistemine uyacak biçimde tek tona indirilmiş ve eşit optik ağırlığa normalize edilmiştir.
+
+**Köşe markası.** Her slaytın sağ altında ARGELOG markası bulunur. *Not: kurumsal logo dosyası indirilemediği için şimdilik tipografik bir amblem kullanılmaktadır; logo dosyası geldiğinde değiştirilecektir.*
 
 ---
 

@@ -16,7 +16,7 @@ Her slayt dört parça hâlinde verilmiştir:
 | **Çıpa cümle** | O slayttan heyette kalması gereken tek cümle. Başka her şey düşse bu düşmemeli |
 | **Geçiş** | Sonraki slayta bağlayan cümle. Bu cümleler sunumun omurgasıdır |
 
-**Toplam hedef: 14 dakika 45 saniye.** Soru-cevap için en az 10 dakika bırakın.
+**Toplam hedef: 15 dakika 10 saniye.** Soru-cevap için en az 10 dakika bırakın.
 
 **Dil kaydı.** Slayt başlıkları, Proje Bilgi Formu'ndaki araştırma sorusu adlarıyla eşitlenmiştir; hakem elindeki formla ekrandaki başlığı doğrudan eşleştirebilir. Konuşurken de formun terimlerini kullanın: nöro-sembolik mimari, deterministik hesap çekirdeği, zaman-farkındalıklı kural tabanı, sembolik doğrulama kapısı, abdüktif kök-neden teşhisi, denetçi rolündeki dar kapsamlı model. Aynı kavram için ikinci bir isim uydurmayın; heyet bunu tutarsızlık olarak okur.
 
@@ -39,12 +39,14 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 1 — Kapak
 
-**Süre:** 45 sn · toplam 0:45
-**Şemada göster:** Ekranın altındaki künye satırı; özellikle 12 ay, 39 adam-ay, 7 milyon TL.
+**Süre:** 70 sn · toplam 1:10
+**Şemada göster:** Önce zaman eğrisi (2013 kuruluş → 2026 Nisan'da doğrulanmış çekirdek → 2027 Ekim'de THS 7), sonra referans kuruluş şeridi. Künye satırında özellikle 12 ay, 39 adam-ay, 7 milyon TL.
 
 **Söyle:**
 
-> Teşekkür ederim. Projemizin adı Denetci.AI. Mimarinin teknik adı nöro-sembolik; terimi hemen açayım. Sembolik taraf, kurallarla kesin hesap yapan bir motordur: aynı girdiye her zaman aynı sonucu verir. Nöral taraf ise öğrenen bir dil modelidir. Biz bu ikisini tek sistemde birleştiriyoruz.
+> Teşekkür ederim. Kısaca kendimizi tanıtayım: ARGELOG, 2013'ten bu yana sanayi kuruluşlarına Ar-Ge, teknoloji ve inovasyon yönetimi yazılımları geliştiriyor ve danışmanlık veriyor. Ekranda gördüğünüz kuruluşlar bugünkü referanslarımız. Bu projenin başlangıç varlığı olan deterministik teşvik hesap motoru bu on üç yıllık saha birikimiyle üretildi; Nisan 2026'da 96 çapa testinin tamamını kuruş farksız geçerek iç doğrulamasını tamamladı. Bugün sizden istediğimiz, o çalışan motorun üzerine yapay zekâ bileşenini kurmak.
+>
+> Projemizin adı Denetci.AI. Mimarinin teknik adı nöro-sembolik; terimi hemen açayım. Sembolik taraf, kurallarla kesin hesap yapan bir motordur: aynı girdiye her zaman aynı sonucu verir. Nöral taraf ise öğrenen bir dil modelidir. Biz bu ikisini tek sistemde birleştiriyoruz.
 >
 > Projeyi tek cümleyle anlatayım: hesabı motor yapar, bulguyu model inceler, kararı insan verir.
 >
@@ -58,7 +60,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 2 — Kapanmış dönem, kendi kural sürümüyle yeniden üretilemiyor
 
-**Süre:** 75 sn · toplam 2:00
+**Süre:** 75 sn · toplam 2:25
 **Şemada göster:** Üstteki tek kutuyu ve ondan dört döneme inen okları; sonra kutunun sağındaki kendine dönen oku ("üzerine yazılır"); sonra alttaki dört sürümlü şeridi.
 
 **Söyle:**
@@ -81,7 +83,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 3 — Mevzuat alanında dil modeli hesap ve karar üretemez
 
-**Süre:** 75 sn · toplam 3:15
+**Süre:** 75 sn · toplam 3:40
 **Şemada göster:** Sırayla en uzun çubuğu (%88), sonra %58'i, sonra %17-33 bandını; en son alttaki kısa koyu çubuğu (kendi eşiğimiz).
 
 **Söyle:**
@@ -106,7 +108,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 4 — İş bölümü: motor hesaplar, model inceler, insan karar verir
 
-**Süre:** 90 sn · toplam 4:45
+**Süre:** 90 sn · toplam 5:10
 **Şemada göster:** Soldan sağa dört kutuyu sırayla; sonra alttaki uzun geri dönüş okunu; **en son ve en uzun süre çarpı işaretli kesik çizgiyi.**
 
 **Söyle:**
@@ -129,7 +131,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 5 — AS-1 · Denetçi rolü dar kapsamlı bir modele öğretilebilir mi?
 
-**Süre:** 90 sn · toplam 6:15
+**Süre:** 90 sn · toplam 6:40
 **Şemada göster:** Soldaki üç kaynağı; sonra MOTOR kutusunu; **sonra alttaki geri dönüş okunu** ("belge getir, motor koş, çözdü mü").
 
 **Söyle:**
@@ -154,7 +156,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 6 — AS-2 · Gerekçeler kural tabanına karşı kanıta bağlanabilir mi?
 
-**Süre:** 75 sn · toplam 7:30
+**Süre:** 75 sn · toplam 7:55
 **Şemada göster:** Ortadaki kapı kutusunun içindeki iki soruyu; sonra yukarı çıkan "kullanıcıya" okunu ve aşağı inen "elenen" okunu; sonra en alttaki geri dönüş okunu.
 
 **Söyle:**
@@ -175,7 +177,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 7 — AS-3 · Abdüktif kök-neden teşhisi
 
-**Süre:** 75 sn · toplam 8:45
+**Süre:** 75 sn · toplam 9:10
 **Şemada göster:** Soldaki tek tutarı; sonra yelpazeyi açan yedi oku; sonra sağdaki daralma zincirini (sırala → kanıt iste → tek neden veya belirsiz).
 
 **Söyle:**
@@ -200,7 +202,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 8 — AS-4 · Üç eksenli sürümleme ve ifade edilebilirlik sınırı
 
-**Süre:** 90 sn · toplam 10:15
+**Süre:** 90 sn · toplam 10:40
 **Şemada göster:** Üç şeridi yukarıdan aşağıya; ortadaki şeritte iki işaretli olayı; sonra dikey kesik çizgiyi (as-of kesiti).
 
 **Söyle:**
@@ -225,7 +227,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 9 — Ölçüm düzeneği ve başarısızlık eşikleri
 
-**Süre:** 75 sn · toplam 11:30
+**Süre:** 75 sn · toplam 11:55
 **Şemada göster:** Sol kutudan çıkan beş oku; **özellikle üçüncü kolu** (erişim destekli). Sağdaki gri notlar her kolun neyi ölçtüğünü söyler. Sonra eşik tablosunu ve en alttaki ön kayıt şeridini.
 
 **Söyle:**
@@ -246,7 +248,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 10 — İş paketleri, ölçüm kapıları ve kaynak dağılımı
 
-**Süre:** 75 sn · toplam 12:45
+**Süre:** 75 sn · toplam 13:10
 **Şemada göster:** Koyu şeridi (İP5); sonra dikey kesik kapı çizgilerini ve alttaki kapı numaralarını; sonra tabloda personel satırını ve %72'yi.
 
 **Söyle:**
@@ -269,7 +271,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 11 — Başarısızlık senaryosu ve risk asimetrisi
 
-**Süre:** 60 sn · toplam 13:45
+**Süre:** 60 sn · toplam 14:10
 **Şemada göster:** Üstteki hattı soldan sağa; sonra alttaki hattaki kalın dikey engeli.
 
 **Söyle:**
@@ -288,7 +290,7 @@ Her slayt dört parça hâlinde verilmiştir:
 
 ## Slayt 12 — Proje çıktıları ve teknopark katkısı
 
-**Süre:** 60 sn · toplam 14:45
+**Süre:** 60 sn · toplam 15:10
 **Şemada göster:** Dört çıktı satırını sırayla; sonra en alttaki alıntı bloğunu.
 
 **Söyle:**
